@@ -13,8 +13,14 @@
           </v-card-text>
         </v-card>
       </v-flex>
-      <v-flex v-for="skill in category.skills" :key="skill.name" xs2>
-        <v-card>
+      <v-flex
+        v-for="skill in category.skills"
+        :key="skill.name"
+        :xs2="skill.small"
+        :xs12="!skill.small"
+        class="skill"
+      >
+        <v-card @click="click(skill)">
           <v-card-text>
             {{ skill.name }}
           </v-card-text>
@@ -33,10 +39,12 @@ export default {
           name: 'Language',
           skills: [
             {
-              name: 'A'
+              name: 'A',
+              small: true
             },
             {
-              name: 'B'
+              name: 'B',
+              small: true
             }
           ]
         },
@@ -44,15 +52,32 @@ export default {
           name: 'PaaS',
           skills: [
             {
-              name: 'C'
+              name: 'C',
+              small: true
             },
             {
-              name: 'D'
+              name: 'D',
+              small: true
             }
           ]
         }
       ]
     }
+  },
+  methods: {
+    click(target) {
+      if (target.small) {
+        target.small = false
+      } else {
+        target.small = true
+      }
+    }
   }
 }
 </script>
+
+<style>
+.skill {
+  transition: 1s;
+}
+</style>
