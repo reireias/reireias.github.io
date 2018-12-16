@@ -21,6 +21,10 @@
         class="skill"
       >
         <v-card @click="click(skill)">
+          <v-img
+            src="nuxt.png"
+            height="125px"
+          />
           <v-card-text>
             {{ skill.name }}
           </v-card-text>
