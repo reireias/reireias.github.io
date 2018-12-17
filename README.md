@@ -20,3 +20,35 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.
+
+## TODO
+
+- PostgreSQL
+
+- GoogleHome
+- MQTT
+- IFTTT
+
+- Linux
+  - CentOS
+  - RedHat
+  - Linux Mint
+  - Ubuntu
+  - zsh
+  - vim
+  - neovim
+
+- Infra
+  - AWS
+  - Docker
+  - VMware
+  - Firebase
+  - Ansible
+
+- Monitoring
+  - Prometheus
+  - cAdvisor
+  - Grafana
+  - logstash
+  - Elasticsearch
+  - Kibana
