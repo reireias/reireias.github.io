@@ -20,7 +20,7 @@
         xs2
         text-xs-center
       >
-        <v-card @click="click(skill)">
+        <v-card>
           <center>
             <v-card-media
               :src="skill.image"
@@ -102,8 +102,32 @@ export default {
           ]
         },
         {
-          name: 'Middleware',
+          name: 'Infrastructure',
           skills: [
+            {
+              name: 'AWS',
+              image: 'aws.png'
+            },
+            {
+              name: 'GCP',
+              image: 'gcp.png'
+            },
+            {
+              name: 'Firebase',
+              image: 'firebase.png'
+            },
+            {
+              name: 'Docker',
+              image: 'docker.png'
+            },
+            {
+              name: 'VMWare',
+              image: 'vmware.png'
+            },
+            {
+              name: 'Ansible',
+              image: 'ansible.png'
+            },
             {
               name: 'Nginx',
               image: 'nginx.png'
@@ -115,23 +139,66 @@ export default {
           ]
         },
         {
-          name: 'Infrastructure',
-          skills: [
-          ]
-        },
-        {
           name: 'Linux',
           skills: [
+            {
+              name: 'RHEL',
+              image: 'redhat.png'
+            },
+            {
+              name: 'CentOS',
+              image: 'centos.png'
+            },
+            {
+              name: 'Linux Mint',
+              image: 'linuxmint.png'
+            },
+            {
+              name: 'Ubuntu',
+              image: 'ubuntu.png'
+            }
           ]
         },
         {
           name: 'Monitoring',
           skills: [
+            {
+              name: 'Prometheus',
+              image: 'prometheus.png'
+            },
+            {
+              name: 'cAdvisor',
+              image: 'cadvisor.png'
+            },
+            {
+              name: 'Grafana',
+              image: 'grafana.png'
+            },
+            {
+              name: 'Elasticsearch',
+              image: 'elasticsearch.png'
+            },
+            {
+              name: 'Logstash',
+              image: 'logstash.png'
+            },
+            {
+              name: 'Kibana',
+              image: 'kibana.png'
+            }
           ]
         },
         {
           name: 'Tools',
           skills: [
+            {
+              name: 'Vim',
+              image: 'vim.png'
+            },
+            {
+              name: 'Neovim',
+              image: 'neovim.png'
+            },
             {
               name: 'TravisCI',
               image: 'travisci.png'
