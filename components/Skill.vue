@@ -63,6 +63,10 @@ export default {
               image: 'vuetifyjs.png'
             },
             {
+              name: 'Riot.js',
+              image: 'riot.png'
+            },
+            {
               name: 'ESLint',
               image: 'eslint.png'
             },
@@ -84,10 +88,6 @@ export default {
           name: 'Server Side',
           skills: [
             {
-              name: 'Java',
-              image: 'java.png'
-            },
-            {
               name: 'Go',
               image: 'golang.png'
             },
@@ -98,6 +98,22 @@ export default {
             {
               name: 'C#',
               image: 'csharp.png'
+            },
+            {
+              name: 'Java',
+              image: 'java.png'
+            },
+            {
+              name: 'SpringBoot',
+              image: 'spring.png'
+            },
+            {
+              name: 'PostgreSQL',
+              image: 'postgresql.png'
+            },
+            {
+              name: 'SQLite',
+              image: 'sqlite.png'
             }
           ]
         },
@@ -192,6 +208,18 @@ export default {
           name: 'Tools',
           skills: [
             {
+              name: 'Git',
+              image: 'git.png'
+            },
+            {
+              name: 'GitHub',
+              image: 'github.png'
+            },
+            {
+              name: 'GitLab',
+              image: 'gitlab.png'
+            },
+            {
               name: 'Vim',
               image: 'vim.png'
             },
@@ -202,6 +230,10 @@ export default {
             {
               name: 'TravisCI',
               image: 'travisci.png'
+            },
+            {
+              name: 'Jenkins',
+              image: 'jenkins.png'
             }
           ]
         }
