@@ -1,12 +1,7 @@
 <template>
   <v-app>
-    <v-toolbar fixed app :clipped-left="clipped">
-      <v-toolbar-title v-text="title" />
-    </v-toolbar>
     <v-content>
-      <v-container grid-list-md>
-        <nuxt />
-      </v-container>
+      <nuxt />
     </v-content>
   </v-app>
 </template>
@@ -16,7 +11,7 @@ export default {
   data() {
     return {
       clipped: false,
-      title: 'Vuetify.js'
+      title: 'reireias'
     }
   }
 }
