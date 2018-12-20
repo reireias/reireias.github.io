@@ -5,7 +5,7 @@
       <vue-particles
         class="particles"
         color="#dedede"
-        particleOpacity="0.7"
+        :particleOpacity="0.7"
         linesColor="#ffffff"
         :particlesNumber="80"
         shapeType="circle"
@@ -20,7 +20,7 @@
         clickMode="repulse"
       />
       <!-- eslint-enable -->
-      <div class="absolute">
+      <div class="profile">
         <center>
           <v-avatar size="200">
             <v-img
@@ -30,8 +30,30 @@
               width="200px"
             />
           </v-avatar>
-          <p><i class="fab fa-twitter" aria-hidden="true" />@reirei_As</p>
-          <p><i class="fab fa-github" />reireias</p>
+          <h1>reireias</h1>
+          <v-btn
+            flat
+            icon
+            href="https://twitter.com/reirei_As"
+            target="_blank"
+          >
+            <i class="fab fa-twitter" aria-hidden="true" />
+          </v-btn>
+          <v-btn
+            flat
+            icon
+            href="https://github.com/reireias"
+            target="_blank"
+          >
+            <i class="fab fa-github" aria-hidden="true" />
+          </v-btn>
+          <v-btn
+            flat
+            icon
+            href="mailto:reireias4@gmail.com"
+          >
+            <i class="fas fa-envelope" aria-hidden="true" />
+          </v-btn>
         </center>
       </div>
     </div>
@@ -58,14 +80,30 @@ export default {
   position: relative;
   height: 500px;
 }
-.absolute {
+.profile {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translateY(-50%) translateX(-50%);
   -webkit- transform: translateY(-50%) translateX(-50%);
 }
+.profile h1 {
+  font-weight: normal;
+}
+.profile p {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+.v-avatar {
+  margin: 5px;
+}
 .icon {
   background-color: white;
+}
+.profile .v-btn {
+  margin: 2px;
+}
+.fab, .fas {
+  font-size: 24px;
 }
 </style>

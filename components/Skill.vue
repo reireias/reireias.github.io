@@ -17,12 +17,14 @@
         v-for="skill in category.skills"
         :key="skill.name"
         class="skill"
-        xs2
+        xs4
+        sm3
+        md2
         text-xs-center
       >
         <v-card>
           <center>
-            <v-card-media
+            <v-img
               :src="skill.image"
               height="100px"
               width="100px"
