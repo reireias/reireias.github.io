@@ -13,6 +13,11 @@ export default {
       clipped: false,
       title: 'reireias'
     }
+  },
+  head() {
+    return {
+      title: this.title
+    }
   }
 }
 </script>
