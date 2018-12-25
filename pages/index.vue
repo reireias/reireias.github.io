@@ -30,7 +30,7 @@
               width="200px"
             />
           </v-avatar>
-          <h1>reireias</h1>
+          <h1>@reireias</h1>
           <v-btn
             flat
             icon
