@@ -54,6 +54,15 @@
           >
             <i class="fas fa-envelope" aria-hidden="true" />
           </v-btn>
+          <v-btn
+            flat
+            icon
+            href="https://qiita.com/reireias"
+            target="_blank"
+            style="text-transform: none;"
+          >
+            Qiita
+          </v-btn>
         </center>
       </div>
     </div>
@@ -71,6 +80,9 @@ export default {
 </script>
 
 <style>
+h1 {
+  font-weight: normal;
+}
 .particles {
   width: 100%;
   height: 100%;

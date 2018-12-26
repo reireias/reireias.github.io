@@ -16,6 +16,7 @@
       </v-flex>
     </v-layout>
     -->
+    <h1>Skill</h1>
     <v-select
       v-model="sort"
       :items="sorters"
