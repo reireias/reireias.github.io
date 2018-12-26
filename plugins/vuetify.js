@@ -10,8 +10,9 @@ import Vuetify, {
   VCardText,
   VBtn,
   VImg,
-  VRadioGroup,
-  VRadio
+  // VRadioGroup,
+  // VRadio,
+  VSelect
 } from 'vuetify/lib'
 
 Vue.use(Vuetify, {
@@ -26,8 +27,9 @@ Vue.use(Vuetify, {
     VCardText,
     VBtn,
     VImg,
-    VRadioGroup,
-    VRadio
+    // VRadioGroup,
+    // VRadio,
+    VSelect
   },
   directives: {
   }
