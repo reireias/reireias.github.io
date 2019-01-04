@@ -1,21 +1,5 @@
 <template>
   <v-container grid-list-md>
-    <!--
-    <v-layout justify-center>
-      <v-flex xs7 sm5 md3>
-        <v-radio-group v-model="sort" row>
-          <v-radio
-            v-for="sorter in sorters"
-            :key="sorter"
-            :label="sorter"
-            :value="sorter"
-            color="purple accent-3"
-            @change="sortChange(sorter)"
-          />
-        </v-radio-group>
-      </v-flex>
-    </v-layout>
-    -->
     <h1>Skill</h1>
     <v-select
       v-model="sort"
@@ -308,18 +292,6 @@ export default {
     }
   },
   methods: {
-    /*
-    sortChange(sorter) {
-      this.skills.sort((a, b) => {
-        switch (sorter) {
-          case "name":
-            return a.name.localeCompare(b.name)
-          case "category":
-            return a.id - b.id
-        }
-      })
-    }
-    */
     sortChange() {
       this.skills.sort((a, b) => {
         switch (this.sort) {
