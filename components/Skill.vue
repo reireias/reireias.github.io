@@ -19,12 +19,7 @@
       >
         <v-card>
           <center>
-            <v-img
-              :src="skill.image"
-              height="100px"
-              width="100px"
-              contain
-            />
+            <v-img :src="skill.image" height="100px" width="100px" contain />
           </center>
           <v-card-text class="name">
             {{ skill.name }}
@@ -39,8 +34,8 @@
 export default {
   data() {
     return {
-      sorters: ["category", "name"],
-      sort: "category",
+      sorters: ['category', 'name'],
+      sort: 'category',
       skills: [
         {
           id: 1,
@@ -295,9 +290,9 @@ export default {
     sortChange() {
       this.skills.sort((a, b) => {
         switch (this.sort) {
-          case "name":
+          case 'name':
             return a.name.localeCompare(b.name)
-          case "category":
+          case 'category':
             return a.id - b.id
         }
       })

@@ -31,27 +31,13 @@
             />
           </v-avatar>
           <h1>@reireias</h1>
-          <v-btn
-            flat
-            icon
-            href="https://twitter.com/reirei_As"
-            target="_blank"
-          >
+          <v-btn flat icon href="https://twitter.com/reirei_As" target="_blank">
             <i class="fab fa-twitter" aria-hidden="true" />
           </v-btn>
-          <v-btn
-            flat
-            icon
-            href="https://github.com/reireias"
-            target="_blank"
-          >
+          <v-btn flat icon href="https://github.com/reireias" target="_blank">
             <i class="fab fa-github" aria-hidden="true" />
           </v-btn>
-          <v-btn
-            flat
-            icon
-            href="mailto:reireias4@gmail.com"
-          >
+          <v-btn flat icon href="mailto:reireias4@gmail.com">
             <i class="fas fa-envelope" aria-hidden="true" />
           </v-btn>
           <v-btn
@@ -115,7 +101,8 @@ h1 {
 .profile .v-btn {
   margin: 2px;
 }
-.fab, .fas {
+.fab,
+.fas {
   font-size: 24px;
 }
 </style>

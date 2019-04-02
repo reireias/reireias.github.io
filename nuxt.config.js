@@ -1,10 +1,13 @@
+import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
+import pkg from './package'
+
 export default {
-  mode: 'spa',
+  mode: 'universal',
   /*
-  ** Headers of the page
-  */
+   ** Headers of the page
+   */
   head: {
-    title: 'pages',
+    title: pkg.name,
     meta: [
       {
         charset: 'utf-8'
@@ -16,7 +19,7 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: 'github pages'
+        content: pkg.description
       }
     ],
     link: [
@@ -33,30 +36,35 @@ export default {
       {
         rel: 'stylesheet',
         href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css',
-        integrity: 'sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP',
+        integrity:
+          'sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP',
         crossorigin: 'anonymous'
       }
     ]
   },
-  plugins: [
-    '~/plugins/vuetify.js',
-    '~/plugins/particles.js'
-  ],
+  plugins: ['@/plugins/vuetify', '@/plugins/particles'],
   css: ['~/assets/style/app.styl'],
   /*
-  ** Customize the progress bar color
-  */
+   ** Customize the progress bar color
+   */
   loading: { color: '#3B8070' },
   /*
-  ** Build configuration
-  */
+   ** Build configuration
+   */
   build: {
-    extractCSS: true,
+    transpile: ['vuetify/lib'],
+    plugins: [new VuetifyLoaderPlugin()],
+    loaders: {
+      stylus: {
+        import: ['~assets/style/variables.styl']
+      }
+    },
     /*
-    ** Run ESLint on save
-    */
-    extend(config, { isDev }) {
-      if (isDev && process.client) {
+     ** You can extend webpack config here
+     */
+    extend(config, ctx) {
+      // Run ESLint on save
+      if (ctx.isDev && ctx.isClient) {
         config.module.rules.push({
           enforce: 'pre',
           test: /\.(js|vue)$/,
