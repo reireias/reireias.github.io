@@ -1,25 +1,27 @@
 <template>
   <div>
     <div class="relative">
-      <!-- eslint-disable vue/attribute-hyphenation -->
-      <vue-particles
-        class="particles"
-        color="#dedede"
-        :particleOpacity="0.7"
-        linesColor="#ffffff"
-        :particlesNumber="80"
-        shapeType="circle"
-        :particleSize="4"
-        :linesWidth="1"
-        :lineLinked="true"
-        :lineOpacity="0.4"
-        :linesDistance="150"
-        :moveSpeed="3"
-        :hoverEffect="false"
-        :clickEffect="true"
-        clickMode="repulse"
-      />
-      <!-- eslint-enable -->
+      <no-ssr>
+        <!-- eslint-disable vue/attribute-hyphenation -->
+        <vue-particles
+          class="particles"
+          color="#dedede"
+          :particleOpacity="0.7"
+          linesColor="#ffffff"
+          :particlesNumber="80"
+          shapeType="circle"
+          :particleSize="4"
+          :linesWidth="1"
+          :lineLinked="true"
+          :lineOpacity="0.4"
+          :linesDistance="150"
+          :moveSpeed="3"
+          :hoverEffect="false"
+          :clickEffect="true"
+          clickMode="repulse"
+        />
+        <!-- eslint-enable -->
+      </no-ssr>
       <div class="profile">
         <center>
           <v-avatar size="200">
