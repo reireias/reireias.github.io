@@ -42,7 +42,7 @@ export default {
       }
     ]
   },
-  plugins: ['@/plugins/vuetify', '@/plugins/particles'],
+  plugins: ['@/plugins/vuetify', { src: '@/plugins/particles', ssr: false }],
   css: ['~/assets/style/app.styl'],
   /*
    ** Customize the progress bar color

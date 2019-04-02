@@ -21,7 +21,6 @@
   "dependencies": {
     "@nuxtjs/pwa": "^2.6.0",
     "nuxt": "^2.5.1",
-    "vue-particles": "^1.0.9",
     "vuetify": "^1.5.5",
     "vuetify-loader": "^1.2.1"
   },
@@ -44,6 +43,7 @@
     "prettier": "^1.16.4",
     "push-dir": "^0.4.1",
     "stylus": "^0.54.5",
-    "stylus-loader": "^3.0.2"
+    "stylus-loader": "^3.0.2",
+    "vue-particles": "^1.0.9"
   }
 }
