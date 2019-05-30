@@ -1,0 +1,17 @@
+---
+language: node_js
+node_js:
+  - 'stable'
+env:
+  secure: s0j8+kX/5qJQb2DLUVSHCrFF+OkG8p//NW+lZA2GFX3JI8/beyhcJLzN+t4o9JJN2ND4n+v3e7j3BoPyE+27wdy7DF34S1OBnJ0OkIoLWUnD0LxKact068+6AV6/MxTTMrCDXWyYTb/4m7unuInLphPBGzZqrFelEpNKgh30iGMoClqr0DkpnMifoWYnhxACsrw3PfsXNyqO5iXvVxC8jdzWNrF3NrEd/5xr2+HjB7YQATpda+qqsl/CuEd5+jpSckwsr46i8urMiO0aQmNbkaxbj4FA0NG1xGtW8kJkbA4D/fK9z+nJeQJ2P6AfSG/2Pp13tQ0tIHgksl15we7jTbHw1OaxNZRjk2bKDL77yQS5TqWOAXeuYhrb9lj+hlY6d7l+S9fCSSyfJ2KIsQVCHQX9WouEjFY75IhJqNIbYv0oAjQiPIu8tidh2oBNfc8pHiLMAQ1tb1dRakoHog1KUiTpvUBq5B/5uF1x36WxEktjW/1YwB1L5uR78Y5sZymx4qKSLyetU7MONFRWWA5xJ6cDgm9QFDdtTqG1GmVPL8M3UOI7y5T7dqKDBh+npHhj74c5sZLN3NR3ZGbGJR4yQTjwgOmR2ZBMYMC5+lPeOYtl24FgRF2Beuseds4EIaKUMPSQjcW6ZrDRK9KQjsRdqo3n3JGav131wZZBztYX8jw=
+cache: yarn
+script:
+  - yarn lint
+  - yarn generate
+deploy:
+  provider: pages
+  skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  local_dir: dist
+  on:
+    branch: source
