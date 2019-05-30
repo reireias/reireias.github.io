@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/reireias/reireias.github.io.svg?branch=source)](https://travis-ci.org/reireias/reireias.github.io)
 # pages
 
 > reireias's github pages
