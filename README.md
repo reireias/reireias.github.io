@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/reireias/reireias.github.io.svg?branch=source)](https://travis-ci.org/reireias/reireias.github.io)
 # pages
 
 > reireias's github pages
@@ -20,26 +21,3 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out the [Nuxt.js](https://github.com/nuxt/nuxt.js) and [Vuetify.js](https://vuetifyjs.com/) documentation.
-
-# TODO
-- ELB
-- ALB, NLB
-- API Gateway
-- EC2
-- ASG
-- RDS
-- Aurora
-- DynamoDB
-- S3
-- CodeBuild
-- CodeCommit
-- CodePipeline
-- Lambda
-- KMS
-- IAM
-- Elasticsearch
-- ElastiCache
-- SQS
-- CloudFormation
-- CloudWatch
-- CloudTrail
