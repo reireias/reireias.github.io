@@ -1,16 +1,21 @@
 <template>
-  <div class="body">
-    <ul id="hexGrid">
-      <li v-for="skill in skills" :key="skill.name" class="hex">
-        <div class="hexIn">
-          <a class="hexLink" href="#">
-            <img :src="skill.image" alt="" />
-            <h1>{{ skill.name }}</h1>
-            <p><br /></p>
-          </a>
-        </div>
-      </li>
-    </ul>
+  <div>
+    <div class="title-text display-4 font-weight-thin">
+      Skills
+    </div>
+    <div class="body">
+      <ul id="hexGrid">
+        <li v-for="skill in skills" :key="skill.name" class="hex">
+          <div class="hexIn">
+            <a class="hexLink" href="#">
+              <img :src="skill.image" alt="" />
+              <h1>{{ skill.name }}</h1>
+              <p><br /></p>
+            </a>
+          </div>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
