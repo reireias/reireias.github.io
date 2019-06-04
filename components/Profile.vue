@@ -14,7 +14,16 @@
               src="icon_trans.png"
               height="200px"
               width="200px"
-            />
+            >
+              <template v-slot:placeholder>
+                <v-layout fill-height align-center justify-center ma-0>
+                  <v-progress-circular
+                    indeterminate
+                    color="primary"
+                  ></v-progress-circular>
+                </v-layout>
+              </template>
+            </v-img>
           </v-avatar>
           <h1>@reireias</h1>
           <v-btn flat icon href="https://twitter.com/reirei_As" target="_blank">
