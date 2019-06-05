@@ -3,19 +3,21 @@
     <div class="title-text display-4 font-weight-thin">
       Skills
     </div>
-    <div class="body">
-      <ul id="hexGrid">
-        <li v-for="skill in skills" :key="skill.name" class="hex">
-          <div class="hexIn">
-            <a class="hexLink" href="#">
-              <img :src="skill.image" alt="" />
-              <h1>{{ skill.name }}</h1>
-              <p><br /></p>
-            </a>
-          </div>
-        </li>
-      </ul>
-    </div>
+    <transition name="fade">
+      <div v-show="loaded" class="body">
+        <ul id="hexGrid">
+          <li v-for="skill in skills" :key="skill.name" class="hex">
+            <div class="hexIn">
+              <a class="hexLink" href="#">
+                <img :src="skill.image" alt="" />
+                <h1>{{ skill.name }}</h1>
+                <p><br /></p>
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </transition>
   </div>
 </template>
 
@@ -23,6 +25,7 @@
 export default {
   data() {
     return {
+      loaded: false,
       sorters: ['category', 'name'],
       sort: 'category',
       skills: [
@@ -275,6 +278,9 @@ export default {
       ]
     }
   },
+  mounted() {
+    this.loaded = true
+  },
   methods: {
     sortChange() {
       this.skills.sort((a, b) => {
@@ -291,6 +297,13 @@ export default {
 </script>
 
 <style>
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 * {
   margin: 0;
   padding: 0;
