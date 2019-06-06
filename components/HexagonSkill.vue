@@ -289,20 +289,6 @@ export default {
 </script>
 
 <style>
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.5s;
-}
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
-  opacity: 0;
-}
-* {
-  margin: 0;
-  padding: 0;
-}
-body {
-  background: rgb(123, 158, 158);
-}
 #hexGrid {
   display: flex;
   flex-wrap: wrap;
@@ -372,7 +358,7 @@ body {
   width: 100%;
   padding: 5%;
   box-sizing: border-box;
-  background-color: rgba(0, 128, 128, 0.8);
+  background-color: rgba(51, 150, 30, 0.8);
   font-weight: 300;
   -webkit-transition: -webkit-transform 0.2s ease-out, opacity 0.3s ease-out;
   transition: transform 0.2s ease-out, opacity 0.3s ease-out;
