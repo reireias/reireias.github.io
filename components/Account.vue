@@ -45,3 +45,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.font-weight-thin a {
+  text-decoration: none;
+}
+</style>

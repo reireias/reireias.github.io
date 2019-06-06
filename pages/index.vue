@@ -1,26 +1,42 @@
 <template>
   <div>
-    <my-header style="margin: 100px;"></my-header>
+    <top style="margin: 100px;"></top>
+
     <div class="title-text display-4 font-weight-thin">
-      Profile
+      Account
     </div>
-    <profile></profile>
+    <account></account>
+
+    <div class="title-text display-4 font-weight-thin">
+      Certificate
+    </div>
+    <certificate></certificate>
+
     <div class="title-text display-4 font-weight-thin">
       Skills
     </div>
     <hexagon-skill></hexagon-skill>
+
+    <div class="title-text display-4 font-weight-thin">
+      Career
+    </div>
+    <timeline></timeline>
   </div>
 </template>
 
 <script>
-import Header from '~/components/Header'
-import Profile from '~/components/Profile'
-import HexagonSkill from '~/components/HexagonSkill.vue'
+import Top from '~/components/Top'
+import Account from '~/components/Account'
+import Certificate from '~/components/Certificate'
+import HexagonSkill from '~/components/HexagonSkill'
+import Timeline from '~/components/Timeline'
 export default {
   components: {
-    'my-header': Header,
-    Profile,
-    HexagonSkill
+    Top,
+    Account,
+    Certificate,
+    HexagonSkill,
+    Timeline
   }
 }
 </script>
@@ -28,5 +44,6 @@ export default {
 <style>
 .title-text {
   padding-left: 20px;
+  color: var(--v-primary-base);
 }
 </style>

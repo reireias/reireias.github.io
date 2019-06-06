@@ -1,20 +1,16 @@
 <template>
-  <div>
-    <transition name="fade">
-      <div v-show="loaded" class="body">
-        <ul id="hexGrid">
-          <li v-for="skill in skills" :key="skill.name" class="hex">
-            <div class="hexIn">
-              <a class="hexLink" href="#">
-                <img :src="skill.image" alt="" />
-                <h1>{{ skill.name }}</h1>
-                <p><br /></p>
-              </a>
-            </div>
-          </li>
-        </ul>
-      </div>
-    </transition>
+  <div class="body">
+    <ul id="hexGrid">
+      <li v-for="skill in skills" :key="skill.name" class="hex">
+        <div class="hexIn">
+          <a class="hexLink" href="javascript:void(0)">
+            <img :src="skill.image" alt="" />
+            <h1>{{ skill.name }}</h1>
+            <p><br /></p>
+          </a>
+        </div>
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -22,7 +18,6 @@
 export default {
   data() {
     return {
-      loaded: false,
       sorters: ['category', 'name'],
       sort: 'category',
       skills: [
@@ -360,7 +355,7 @@ body {
 
 /*** HEX CONTENT **********************************************************************/
 .hex img {
-  background-color: #fff;
+  background-color: #f1f8e9;
   left: -100%;
   right: -100%;
   width: auto;
@@ -410,9 +405,7 @@ body {
 
 /*** HOVER EFFECT  **********************************************************************/
 .hexLink:hover h1,
-.hexLink:focus h1,
-.hexLink:hover p,
-.hexLink:focus p {
+.hexLink:hover p {
   -webkit-transform: translate3d(0, 0, 0);
   -ms-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
