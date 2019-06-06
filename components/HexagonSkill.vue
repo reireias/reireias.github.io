@@ -1,8 +1,5 @@
 <template>
   <div>
-    <div class="title-text display-4 font-weight-thin">
-      Skills
-    </div>
     <transition name="fade">
       <div v-show="loaded" class="body">
         <ul id="hexGrid">
