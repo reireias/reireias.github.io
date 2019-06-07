@@ -67,6 +67,11 @@ export default {
         hid: 'twitter:image',
         name: 'twitter:image',
         content: 'https://reireias.github.io/ogp.png'
+      },
+      {
+        hid: 'source:version',
+        name: 'source:version',
+        content: process.env.TRAVIS_COMMIT
       }
     ],
     link: [
