@@ -79,23 +79,6 @@ export default {
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700|Material+Icons'
-      },
-      {
-        rel: 'stylesheet',
-        href:
-          'https://fonts.googleapis.com/css?family=Noto+Sans+JP:100,400&display=swap&subset=japanese'
-      },
-      {
-        rel: 'stylesheet',
-        href: 'https://use.fontawesome.com/releases/v5.6.1/css/all.css',
-        integrity:
-          'sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP',
-        crossorigin: 'anonymous'
       }
     ]
   },
