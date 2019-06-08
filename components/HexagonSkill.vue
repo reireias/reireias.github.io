@@ -8,10 +8,17 @@
               <source
                 media="(min-width: 600px)"
                 type="image/webp"
-                :srcset="`${skill.image}.webp`"
+                :data-srcset="`${skill.image}.webp`"
               />
-              <source type="image/webp" :srcset="`${skill.image}-small.webp`" />
-              <img :src="`${skill.image}.png`" :alt="skill.name" />
+              <source
+                type="image/webp"
+                :data-srcset="`${skill.image}-small.webp`"
+              />
+              <img
+                class="lazyload"
+                :data-src="`${skill.image}.png`"
+                :alt="skill.name"
+              />
             </picture>
             <h1>{{ skill.name }}</h1>
             <p><br /></p>
@@ -23,6 +30,7 @@
 </template>
 
 <script>
+import 'lazysizes'
 export default {
   data() {
     return {
