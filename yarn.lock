@@ -3065,6 +3065,11 @@ dot-prop@^4.1.1:
   dependencies:
     is-obj "^1.0.0"
 
+dropcss@^1.0.13:
+  version "1.0.13"
+  resolved "https://registry.yarnpkg.com/dropcss/-/dropcss-1.0.13.tgz#dc23ec2fb22da5a953621728d50294cd3b7953bd"
+  integrity sha512-KVMqXt88fXK8TNvv+3k31HQBCvkvjOEwDEyaJogrtx4e6m699/YD9cKyWsi4HEjGNZMvMV0uCDDP1l9S4Kyerg==
+
 duplexer@^0.1.1:
   version "0.1.1"
   resolved "https://registry.yarnpkg.com/duplexer/-/duplexer-0.1.1.tgz#ace6ff808c1ce66b57d1ebf97977acb02334cfc1"
