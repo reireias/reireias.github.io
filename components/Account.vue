@@ -9,10 +9,10 @@
       wrap
     >
       <v-flex xs6 sm4 md2>
-        <div class="display-1 font-weight-thin">{{ account.name }}:</div>
+        <div class="account-text font-weight-thin">{{ account.name }}:</div>
       </v-flex>
       <v-flex xs6 sm4 md2>
-        <div class="display-1 font-weight-thin">
+        <div class="account-text font-weight-thin">
           <a :href="account.url">{{ account.text }}</a>
         </div>
       </v-flex>
@@ -49,5 +49,14 @@ export default {
 <style>
 .font-weight-thin a {
   text-decoration: none;
+}
+.account-text {
+  font-size: 34px;
+  line-height: 40px;
+}
+@media (max-width: 600px) {
+  .account-text {
+    font-size: 24px;
+  }
 }
 </style>

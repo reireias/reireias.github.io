@@ -8,10 +8,10 @@
       row
       wrap
     >
-      <v-flex md4>
+      <v-flex xs12 sm4 md4>
         <div class="profile-text font-weight-thin">{{ item.key }}：</div>
       </v-flex>
-      <v-flex xs8 sm7 md6>
+      <v-flex xs11 offset-xs1 sm7 md6>
         <div class="profile-text font-weight-thin">{{ item.value }}</div>
       </v-flex>
     </v-layout>
@@ -45,5 +45,10 @@ export default {
 .profile-text {
   font-size: 34px;
   line-height: 40px;
+}
+@media (max-width: 700px) {
+  .profile-text {
+    font-size: 24px;
+  }
 }
 </style>

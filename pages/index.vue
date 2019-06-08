@@ -1,28 +1,28 @@
 <template>
   <div>
-    <top style="margin: 100px;"></top>
+    <top style="margin-top: 100px; margin-bottom: 100px;"></top>
 
-    <div class="title-text display-4 font-weight-thin">
+    <div class="title-text font-weight-thin">
       Profile
     </div>
     <profile></profile>
 
-    <div class="title-text display-4 font-weight-thin">
+    <div class="title-text font-weight-thin">
       Account
     </div>
     <account></account>
 
-    <div class="title-text display-4 font-weight-thin">
+    <div class="title-text font-weight-thin">
       Certificate
     </div>
     <certificate></certificate>
 
-    <div class="title-text display-4 font-weight-thin">
+    <div class="title-text font-weight-thin">
       Skills
     </div>
     <hexagon-skill></hexagon-skill>
 
-    <div class="title-text display-4 font-weight-thin">
+    <div class="title-text font-weight-thin">
       Career
     </div>
     <timeline></timeline>
@@ -50,7 +50,14 @@ export default {
 
 <style>
 .title-text {
+  font-size: 112px;
+  line-height: 1;
   padding-left: 20px;
   color: var(--v-primary-base);
+}
+@media (max-width: 600px) {
+  .title-text {
+    font-size: 56px;
+  }
 }
 </style>

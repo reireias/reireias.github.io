@@ -34,4 +34,9 @@ export default {
   font-size: 34px;
   line-height: 40px;
 }
+@media (max-width: 600px) {
+  .certificate-text {
+    font-size: 24px;
+  }
+}
 </style>

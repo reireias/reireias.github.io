@@ -298,6 +298,7 @@ export default {
   font-family: 'Raleway', sans-serif;
   font-size: 15px;
   list-style-type: none;
+  padding-left: 0px;
 }
 
 .hex {
@@ -399,12 +400,12 @@ export default {
 
 /*** HEXAGON SIZING AND EVEN ROW INDENTATION *****************************************************************/
 @media (min-width: 1201px) {
-  /* <- 5-4  hexagons per row */
+  /* <- 10-9  hexagons per row */
   #hexGrid {
     padding-bottom: 4.4%;
   }
   .hex {
-    width: 10%; /* = 100 / 5 */
+    width: 10%; /* = 100 / 10 */
   }
   .hex:nth-child(19n + 11) {
     /* first hexagon of even rows */
@@ -413,9 +414,37 @@ export default {
 }
 
 @media (max-width: 1200px) and (min-width: 901px) {
-  /* <- 4-3  hexagons per row */
+  /* <- 8-7  hexagons per row */
   #hexGrid {
     padding-bottom: 5.5%;
+  }
+  .hex {
+    width: 12.5%; /* = 100 / 8 */
+  }
+  .hex:nth-child(15n + 9) {
+    /* first hexagon of even rows */
+    margin-left: 6.25%; /* = width of .hex / 2  to indent even rows */
+  }
+}
+
+@media (max-width: 900px) and (min-width: 601px) {
+  /* <- 6-5  hexagons per row */
+  #hexGrid {
+    padding-bottom: 7.4%;
+  }
+  .hex {
+    width: 16.666%; /* = 100 / 6 */
+  }
+  .hex:nth-child(11n + 7) {
+    /* first hexagon of even rows */
+    margin-left: 8.333%; /* = width of .hex / 2  to indent even rows */
+  }
+}
+
+@media (max-width: 600px) {
+  /* <- 4-3  hexagons per row */
+  #hexGrid {
+    padding-bottom: 11.2%;
   }
   .hex {
     width: 25%; /* = 100 / 4 */
@@ -423,34 +452,6 @@ export default {
   .hex:nth-child(7n + 5) {
     /* first hexagon of even rows */
     margin-left: 12.5%; /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 900px) and (min-width: 601px) {
-  /* <- 3-2  hexagons per row */
-  #hexGrid {
-    padding-bottom: 7.4%;
-  }
-  .hex {
-    width: 33.333%; /* = 100 / 3 */
-  }
-  .hex:nth-child(5n + 4) {
-    /* first hexagon of even rows */
-    margin-left: 16.666%; /* = width of .hex / 2  to indent even rows */
-  }
-}
-
-@media (max-width: 600px) {
-  /* <- 2-1  hexagons per row */
-  #hexGrid {
-    padding-bottom: 11.2%;
-  }
-  .hex {
-    width: 50%; /* = 100 / 3 */
-  }
-  .hex:nth-child(3n + 3) {
-    /* first hexagon of even rows */
-    margin-left: 25%; /* = width of .hex / 2  to indent even rows */
   }
 }
 

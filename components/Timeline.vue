@@ -2,7 +2,7 @@
   <v-container grid-list-md>
     <v-layout>
       <v-flex xs12>
-        <v-timeline dark>
+        <v-timeline dark :dense="dense">
           <v-timeline-item v-for="item in history" :key="item.title">
             <template v-slot:opposite>
               <span
@@ -11,9 +11,15 @@
               ></span>
             </template>
             <v-card dark>
-              <v-card-title class="timeline-card-title primary--text">{{
-                item.title
-              }}</v-card-title>
+              <v-card-title
+                v-if="dense"
+                class="timeline-card-title primary--text"
+              >
+                {{ item.year }} {{ item.title }}
+              </v-card-title>
+              <v-card-title v-else class="timeline-card-title primary--text">
+                {{ item.title }}
+              </v-card-title>
               <v-card-text v-if="item.text" class="timeline-card-text">
                 <ul>
                   <li v-for="textItem in item.text" :key="textItem">
@@ -33,6 +39,7 @@
 export default {
   data() {
     return {
+      dense: false,
       history: [
         {
           year: 2007,
@@ -71,6 +78,18 @@ export default {
           ]
         }
       ]
+    }
+  },
+  mounted() {
+    this.handleResize()
+    window.addEventListener('resize', this.handleResize)
+  },
+  beforeDestroy() {
+    window.removeEventListener('resize', this.handleResize)
+  },
+  methods: {
+    handleResize() {
+      this.dense = window.innerWidth < 600
     }
   }
 }
