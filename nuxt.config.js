@@ -3,11 +3,11 @@ import pkg from './package'
 
 export default {
   mode: 'universal',
-  /*
-   ** Headers of the page
-   */
   head: {
     title: pkg.name,
+    htmlAttrs: {
+      lang: 'ja'
+    },
     meta: [
       {
         charset: 'utf-8'
@@ -84,13 +84,7 @@ export default {
   },
   plugins: ['@/plugins/vuetify'],
   css: ['~/assets/style/app.styl'],
-  /*
-   ** Customize the progress bar color
-   */
   loading: { color: '#3B8070' },
-  /*
-   ** Build configuration
-   */
   build: {
     transpile: ['vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
@@ -99,9 +93,6 @@ export default {
         import: ['~assets/style/variables.styl']
       }
     },
-    /*
-     ** You can extend webpack config here
-     */
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
