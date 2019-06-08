@@ -5,7 +5,12 @@
         <div class="hexIn">
           <a class="hexLink" href="javascript:void(0)">
             <picture>
-              <source type="image/webp" :srcset="`${skill.image}.webp`" />
+              <source
+                media="(min-width: 600px)"
+                type="image/webp"
+                :srcset="`${skill.image}.webp`"
+              />
+              <source type="image/webp" :srcset="`${skill.image}-small.webp`" />
               <img :src="`${skill.image}.png`" :alt="skill.name" />
             </picture>
             <h1>{{ skill.name }}</h1>
