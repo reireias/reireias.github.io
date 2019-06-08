@@ -4,7 +4,10 @@
       <li v-for="skill in skills" :key="skill.name" class="hex">
         <div class="hexIn">
           <a class="hexLink" href="javascript:void(0)">
-            <img :src="skill.image" alt="" />
+            <picture>
+              <source type="image/webp" :srcset="`${skill.image}.webp`" />
+              <img :src="`${skill.image}.png`" :alt="skill.name" />
+            </picture>
             <h1>{{ skill.name }}</h1>
             <p><br /></p>
           </a>
@@ -25,247 +28,247 @@ export default {
           id: 1,
           category: 'Front End',
           name: 'Node.js',
-          image: 'nodejs.png'
+          image: 'nodejs'
         },
         {
           id: 2,
           category: 'Front End',
           name: 'Vue.js',
-          image: 'vuejs.png'
+          image: 'vuejs'
         },
         {
           id: 3,
           category: 'Front End',
           name: 'Nuxt.js',
-          image: 'nuxt.png'
+          image: 'nuxt'
         },
         {
           id: 4,
           category: 'Front End',
           name: 'Vuetify.js',
-          image: 'vuetifyjs.png'
+          image: 'vuetifyjs'
         },
         {
           id: 5,
           category: 'Front End',
           name: 'Riot.js',
-          image: 'riot.png'
+          image: 'riot'
         },
         {
           id: 6,
           category: 'Front End',
           name: 'ESLint',
-          image: 'eslint.png'
+          image: 'eslint'
         },
         {
           id: 7,
           category: 'Front End',
           name: 'Prettier',
-          image: 'prettier.png'
+          image: 'prettier'
         },
         {
           id: 8,
           category: 'Front End',
           name: 'Babel',
-          image: 'babel.png'
+          image: 'babel'
         },
         {
           id: 9,
           category: 'Front End',
           name: 'webpack',
-          image: 'webpack.png'
+          image: 'webpack'
         },
         {
           id: 10,
           category: 'Server Side',
           name: 'Go',
-          image: 'golang.png'
+          image: 'golang'
         },
         {
           id: 11,
           category: 'Server Side',
           name: 'Python',
-          image: 'python.png'
+          image: 'python'
         },
         {
           id: 12,
           category: 'Server Side',
           name: 'C#',
-          image: 'csharp.png'
+          image: 'csharp'
         },
         {
           id: 13,
           category: 'Server Side',
           name: 'Java',
-          image: 'java.png'
+          image: 'java'
         },
         {
           id: 14,
           category: 'Server Side',
           name: 'SpringBoot',
-          image: 'spring.png'
+          image: 'spring'
         },
         {
           id: 15,
           category: 'Server Side',
           name: 'PostgreSQL',
-          image: 'postgresql.png'
+          image: 'postgresql'
         },
         {
           id: 16,
           category: 'Server Side',
           name: 'SQLite',
-          image: 'sqlite.png'
+          image: 'sqlite'
         },
         {
           id: 17,
           category: 'Infrastructure',
           name: 'AWS',
-          image: 'aws.png'
+          image: 'aws'
         },
         {
           id: 18,
           category: 'Infrastructure',
           name: 'GCP',
-          image: 'gcp.png'
+          image: 'gcp'
         },
         {
           id: 19,
           category: 'Infrastructure',
           name: 'Firebase',
-          image: 'firebase.png'
+          image: 'firebase'
         },
         {
           id: 20,
           category: 'Infrastructure',
           name: 'Docker',
-          image: 'docker.png'
+          image: 'docker'
         },
         {
           id: 21,
           category: 'Infrastructure',
           name: 'VMWare',
-          image: 'vmware.png'
+          image: 'vmware'
         },
         {
           id: 22,
           category: 'Infrastructure',
           name: 'Ansible',
-          image: 'ansible.png'
+          image: 'ansible'
         },
         {
           id: 23,
           category: 'Infrastructure',
           name: 'Nginx',
-          image: 'nginx.png'
+          image: 'nginx'
         },
         {
           id: 24,
           category: 'Infrastructure',
           name: 'Tomcat',
-          image: 'tomcat.png'
+          image: 'tomcat'
         },
         {
           id: 25,
           category: 'Linux',
           name: 'RHEL',
-          image: 'redhat.png'
+          image: 'redhat'
         },
         {
           id: 26,
           category: 'Linux',
           name: 'CentOS',
-          image: 'centos.png'
+          image: 'centos'
         },
         {
           id: 27,
           category: 'Linux',
           name: 'Linux Mint',
-          image: 'linuxmint.png'
+          image: 'linuxmint'
         },
         {
           id: 28,
           category: 'Linux',
           name: 'Ubuntu',
-          image: 'ubuntu.png'
+          image: 'ubuntu'
         },
         {
           id: 29,
           category: 'Monitoring',
           name: 'Prometheus',
-          image: 'prometheus.png'
+          image: 'prometheus'
         },
         {
           id: 30,
           category: 'Monitoring',
           name: 'cAdvisor',
-          image: 'cadvisor.png'
+          image: 'cadvisor'
         },
         {
           id: 31,
           category: 'Monitoring',
           name: 'Grafana',
-          image: 'grafana.png'
+          image: 'grafana'
         },
         {
           id: 32,
           category: 'Monitoring',
           name: 'Elasticsearch',
-          image: 'elasticsearch.png'
+          image: 'elasticsearch'
         },
         {
           id: 33,
           category: 'Monitoring',
           name: 'Logstash',
-          image: 'logstash.png'
+          image: 'logstash'
         },
         {
           id: 34,
           category: 'Monitoring',
           name: 'Kibana',
-          image: 'kibana.png'
+          image: 'kibana'
         },
         {
           id: 35,
           category: 'Tools',
           name: 'Git',
-          image: 'git.png'
+          image: 'git'
         },
         {
           id: 36,
           category: 'Tools',
           name: 'GitHub',
-          image: 'github.png'
+          image: 'github'
         },
         {
           id: 37,
           category: 'Tools',
           name: 'GitLab',
-          image: 'gitlab.png'
+          image: 'gitlab'
         },
         {
           id: 38,
           category: 'Tools',
           name: 'Vim',
-          image: 'vim.png'
+          image: 'vim'
         },
         {
           id: 39,
           category: 'Tools',
           name: 'Neovim',
-          image: 'neovim.png'
+          image: 'neovim'
         },
         {
           id: 40,
           category: 'Tools',
           name: 'TravisCI',
-          image: 'travisci.png'
+          image: 'travisci'
         },
         {
           id: 41,
           category: 'Tools',
           name: 'Jenkins',
-          image: 'jenkins.png'
+          image: 'jenkins'
         }
       ]
     }
@@ -332,7 +335,6 @@ export default {
   display: block;
   width: 100%;
   height: 100%;
-  text-align: center;
   color: #fff;
   overflow: hidden;
   -webkit-transform: skewY(-30deg) rotate3d(0, 0, 1, 60deg);
@@ -341,6 +343,11 @@ export default {
 }
 
 /*** HEX CONTENT **********************************************************************/
+.hex picture {
+  width: 100%;
+  height: 100%;
+}
+
 .hex img {
   background-color: #f1f8e9;
   left: -100%;
@@ -354,8 +361,22 @@ export default {
   transform: rotate3d(0, 0, 0, 0deg);
 }
 
+.hex source {
+  background-color: #f1f8e9;
+  left: -50%;
+  right: -50%;
+  width: auto;
+  height: 100%;
+  margin: 0 auto;
+  padding: 20%;
+  -webkit-transform: rotate3d(0, 0, 0, 0deg);
+  -ms-transform: rotate3d(0, 0, 0, 0deg);
+  transform: rotate3d(0, 0, 0, 0deg);
+}
+
 .hex h1,
 .hex p {
+  text-align: center;
   width: 100%;
   padding: 5%;
   box-sizing: border-box;
