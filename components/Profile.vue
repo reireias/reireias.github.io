@@ -9,10 +9,10 @@
       wrap
     >
       <v-flex xs12 sm4 md4>
-        <div class="profile-text font-weight-thin">{{ item.key }}：</div>
+        <div class="profile-text">{{ item.key }}：</div>
       </v-flex>
       <v-flex xs11 offset-xs1 sm7 md6>
-        <div class="profile-text font-weight-thin">{{ item.value }}</div>
+        <div class="profile-text">{{ item.value }}</div>
       </v-flex>
     </v-layout>
   </v-container>

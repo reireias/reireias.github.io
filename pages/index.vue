@@ -2,27 +2,27 @@
   <div>
     <top style="margin-top: 100px; margin-bottom: 100px;"></top>
 
-    <div class="title-text font-weight-thin">
+    <div class="title-text">
       Profile
     </div>
     <profile></profile>
 
-    <div class="title-text font-weight-thin">
+    <div class="title-text">
       Account
     </div>
     <account></account>
 
-    <div class="title-text font-weight-thin">
+    <div class="title-text">
       Certificate
     </div>
     <certificate></certificate>
 
-    <div class="title-text font-weight-thin">
+    <div class="title-text">
       Skills
     </div>
     <hexagon-skill></hexagon-skill>
 
-    <div class="title-text font-weight-thin">
+    <div class="title-text">
       Career
     </div>
     <timeline></timeline>

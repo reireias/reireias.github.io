@@ -2,7 +2,7 @@
   <v-container grid-list-md>
     <v-layout align-center justify-center row wrap>
       <v-flex xs12>
-        <div class="certificate-text font-weight-thin">
+        <div class="certificate-text">
           <ul>
             <li v-for="certificate in certificates" :key="certificate">
               {{ certificate }}

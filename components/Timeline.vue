@@ -3,7 +3,11 @@
     <v-layout>
       <v-flex xs12>
         <v-timeline dark :dense="dense">
-          <v-timeline-item v-for="item in history" :key="item.title">
+          <v-timeline-item
+            v-for="item in history"
+            :key="item.title"
+            :color="item.color"
+          >
             <template v-slot:opposite>
               <span
                 class="timeline-headline font-weight-bold"
@@ -13,11 +17,14 @@
             <v-card dark>
               <v-card-title
                 v-if="dense"
-                class="timeline-card-title primary--text"
+                :class="`timeline-card-title ${item.color}--text`"
               >
                 {{ item.year }} {{ item.title }}
               </v-card-title>
-              <v-card-title v-else class="timeline-card-title primary--text">
+              <v-card-title
+                v-else
+                :class="`timeline-card-title ${item.color}--text`"
+              >
                 {{ item.title }}
               </v-card-title>
               <v-card-text v-if="item.text" class="timeline-card-text">
@@ -44,11 +51,13 @@ export default {
         {
           year: 2007,
           title: '筑波大学 入学',
+          color: 'primary',
           text: ['理工学群 工学システム学類へ入学', '学士(工学)を取得']
         },
         {
           year: 2011,
           title: '筑波大学大学院 進学',
+          color: 'primary',
           text: [
             'システム情報工学研究科 リスク工学専攻へ進学',
             '研究テーマはクラスタリング(クラスター分析)',
@@ -58,11 +67,13 @@ export default {
         },
         {
           year: 2012,
-          title: 'JAPAN MENSA会員に'
+          title: 'JAPAN MENSA会員に',
+          color: 'secondary'
         },
         {
           year: 2013,
           title: '富士ゼロックス株式会社 入社',
+          color: 'primary',
           text: [
             'ソフトウェア開発部門に配属',
             '機械翻訳サービス、中小企業向けBtoB向けクラウドストレージサービス、大企業向けクラウドストレージサービスなどを担当',
@@ -73,6 +84,7 @@ export default {
         {
           year: 2018,
           title: 'メドピア株式会社 入社',
+          color: 'primary',
           text: [
             'SRE兼サーバーサイドエンジニアとして、サービスのコンテナ化やRuby on Railsでの実装を担当'
           ]
