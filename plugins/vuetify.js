@@ -6,7 +6,7 @@ Vue.use(Vuetify, {
   theme: {
     primary: colors.lightGreen.accent2,
     accent: colors.grey.darken3,
-    secondary: colors.pink.accent2,
+    secondary: colors.lightBlue.accent1,
     info: colors.teal.lighten1,
     warning: colors.amber.base,
     error: colors.deepOrange.accent4,
