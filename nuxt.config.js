@@ -85,7 +85,6 @@ export default {
   plugins: ['@/plugins/vuetify'],
   css: ['~/assets/style/app.styl'],
   loading: { color: '#3B8070' },
-  modules: ['@nuxtjs/pwa'],
   build: {
     transpile: ['vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
