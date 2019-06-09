@@ -13,3 +13,4 @@ dist
 # other
 tmp
 .env
+sw.*
