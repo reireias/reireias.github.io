@@ -12,3 +12,4 @@ dist
 
 # other
 tmp
+.env

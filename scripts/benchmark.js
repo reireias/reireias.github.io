@@ -3,6 +3,7 @@ const fs = require('fs')
 const qs = require('qs')
 const axios = require('axios')
 const dateFormat = require('dateformat')
+require('dotenv').config()
 
 const LIMIT = 10
 const TARGET_URL = process.argv[2]
@@ -35,19 +36,23 @@ const saveJsonFile = (obj, client) => {
 const main = async () => {
   if (await waitDeploy()) {
     ;['desktop', 'mobile'].forEach(async client => {
+      const params = {
+        url: TARGET_URL,
+        locale: 'ja',
+        category: [
+          'accessibility',
+          'best-practices',
+          'performance',
+          'pwa',
+          'seo'
+        ],
+        strategy: client
+      }
+      if (process.env.PAGE_SPEED_INSIGHTS_URL) {
+        params.key = process.env.PAGE_SPEED_INSIGHTS_URL
+      }
       const result = await axios.get(PAGE_SPEED_INSIGHTS_URL, {
-        params: {
-          url: TARGET_URL,
-          locale: 'ja',
-          category: [
-            'accessibility',
-            'best-practices',
-            'performance',
-            'pwa',
-            'seo'
-          ],
-          strategy: client
-        },
+        params: params,
         paramsSerializer: params =>
           qs.stringify(params, { arrayFormat: 'repeat' })
       })
