@@ -13,6 +13,7 @@
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "generate": "nuxt generate",
     "dropcss": "node scripts/dropcss.js",
+    "addpreload": "node scripts/preload.js",
     "deploy": "push-dir --dir=dist --branch=master --cleanup",
     "benchmark": "node scripts/benchmark.js https://reireias.github.io $(git rev-parse HEAD)"
   },
@@ -48,6 +49,7 @@
     "eslint-plugin-vue": "^5.2.2",
     "http-server": "^0.11.1",
     "husky": "^2.3.0",
+    "jsdom": "^15.1.1",
     "prettier": "^1.18.0",
     "push-dir": "^0.4.1",
     "stylus": "^0.54.5",
