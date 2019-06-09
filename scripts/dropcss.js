@@ -1,19 +1,17 @@
 /* eslint no-console: 0 */
 const fs = require('fs')
 const dropcss = require('dropcss')
+const cheerio = require('cheerio')
 
-const html = fs.readFileSync('./dist/index.html').toString()
-
-fs.readdirSync('./dist/_nuxt').forEach(file => {
-  if (file.endsWith('.css')) {
-    const path = `./dist/_nuxt/${file}`
-    const css = fs.readFileSync(path).toString()
-
-    const cleaned = dropcss({
-      html,
-      css
-    })
-
-    fs.writeFileSync(path, cleaned.css)
-  }
+const htmlPath = './dist/index.html'
+const html = fs.readFileSync(htmlPath).toString()
+const $ = cheerio.load(html, { decodeEntities: false })
+$('style').each((_, element) => {
+  const css = element.children[0].data
+  const cleaned = dropcss({
+    html,
+    css
+  })
+  element.children[0].data = cleaned.css
 })
+fs.writeFileSync(htmlPath, $.html())

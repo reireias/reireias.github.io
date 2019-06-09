@@ -86,7 +86,6 @@ export default {
   css: ['~/assets/style/app.styl'],
   loading: { color: '#3B8070' },
   build: {
-    extractCSS: true,
     transpile: ['vuetify/lib'],
     plugins: [new VuetifyLoaderPlugin()],
     loaders: {
