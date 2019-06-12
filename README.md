@@ -34,6 +34,12 @@ yarn generate
 yarn dropcss
 ```
 
+## deploy to master branch
+
+```bash
+yarn deploy
+```
+
 ## run static site for local
 
 ```bash
