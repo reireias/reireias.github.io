@@ -10,7 +10,7 @@
 export default {
   data() {
     return {
-      title: 'reireias'
+      title: 'Tech or Cat'
     }
   },
   head() {

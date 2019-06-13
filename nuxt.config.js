@@ -4,7 +4,7 @@ import pkg from './package'
 export default {
   mode: 'universal',
   head: {
-    title: pkg.name,
+    title: 'Tech or Cat',
     htmlAttrs: {
       lang: 'ja'
     },
@@ -56,7 +56,7 @@ export default {
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: pkg.name
+        content: 'Tech or Cat'
       },
       {
         hid: 'twitter:description',
