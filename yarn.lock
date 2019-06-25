@@ -3087,10 +3087,10 @@ dotenv@^8.0.0:
   resolved "https://registry.yarnpkg.com/dotenv/-/dotenv-8.0.0.tgz#ed310c165b4e8a97bb745b0a9d99c31bda566440"
   integrity sha512-30xVGqjLjiUOArT4+M5q9sYdvuR4riM6yK9wMcas9Vbp6zZa+ocC9dp6QoftuhTPhFAiLK/0C5Ni2nou/Bk8lg==
 
-dropcss@^1.0.13:
-  version "1.0.13"
-  resolved "https://registry.yarnpkg.com/dropcss/-/dropcss-1.0.13.tgz#dc23ec2fb22da5a953621728d50294cd3b7953bd"
-  integrity sha512-KVMqXt88fXK8TNvv+3k31HQBCvkvjOEwDEyaJogrtx4e6m699/YD9cKyWsi4HEjGNZMvMV0uCDDP1l9S4Kyerg==
+dropcss@^1.0.14:
+  version "1.0.14"
+  resolved "https://registry.yarnpkg.com/dropcss/-/dropcss-1.0.14.tgz#bbc3d78c2a81c4417377e5b4fee437e1c0e1d419"
+  integrity sha512-meQQHWsW2ayZKEwHgE4bM828F9E/Srz3EoBjOrLIqlVZR0ZBM8pR2iJSNqBB3V1f3ylKR+RX7rsDBiDkGSqiEw==
 
 duplexer@^0.1.1:
   version "0.1.1"
