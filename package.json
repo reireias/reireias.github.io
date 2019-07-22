@@ -50,7 +50,7 @@
     "eslint-plugin-vue": "^5.2.2",
     "http-server": "^0.11.1",
     "husky": "^3.0.1",
-    "prettier": "^1.18.0",
+    "prettier": "^1.18.2",
     "push-dir": "^0.4.1",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
