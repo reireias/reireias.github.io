@@ -52,7 +52,7 @@ const main = async () => {
         params.key = process.env.PAGE_SPEED_INSIGHTS_URL
       }
       const result = await axios.get(PAGE_SPEED_INSIGHTS_URL, {
-        params: params,
+        params,
         paramsSerializer: params =>
           qs.stringify(params, { arrayFormat: 'repeat' })
       })
