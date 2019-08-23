@@ -34,7 +34,7 @@
     "babel-eslint": "^10.0.1",
     "cheerio": "^1.0.0-rc.3",
     "dateformat": "^3.0.3",
-    "dotenv": "^8.0.0",
+    "dotenv": "^8.1.0",
     "dropcss": "^1.0.15",
     "eslint": "^5.15.1",
     "eslint-config-prettier": "^6.0.0",
