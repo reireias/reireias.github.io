@@ -52,7 +52,7 @@
     "husky": "^3.0.4",
     "prettier": "^1.18.2",
     "push-dir": "^0.4.1",
-    "stylus": "^0.54.5",
+    "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2"
   }
 }
