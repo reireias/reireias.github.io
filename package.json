@@ -37,7 +37,7 @@
     "dotenv": "^8.1.0",
     "dropcss": "^1.0.15",
     "eslint": "^5.15.1",
-    "eslint-config-prettier": "^6.0.0",
+    "eslint-config-prettier": "^6.1.0",
     "eslint-config-standard": ">=14.0.1",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-import": ">=2.16.0",
