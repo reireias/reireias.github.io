@@ -26,11 +26,11 @@
     "@nuxtjs/pwa": "^2.6.0",
     "lazysizes": "^5.1.2",
     "nuxt": "^2.9.2",
-    "vuetify": "^1.5.16",
-    "vuetify-loader": "^1.2.1"
+    "vuetify": "^2.1.5"
   },
   "devDependencies": {
     "@nuxtjs/eslint-config": "^1.1.2",
+    "@nuxtjs/vuetify": "^1.9.0",
     "@vue/test-utils": "^1.0.0-beta.29",
     "axios": "^0.19.0",
     "babel-eslint": "^10.0.3",

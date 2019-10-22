@@ -1,4 +1,4 @@
-import VuetifyLoaderPlugin from 'vuetify-loader/lib/plugin'
+import colors from 'vuetify/es5/util/colors'
 import pkg from './package'
 
 export default {
@@ -82,17 +82,30 @@ export default {
       }
     ]
   },
-  plugins: ['@/plugins/vuetify'],
+  plugins: [],
   css: ['~/assets/style/app.styl'],
   loading: { color: '#3B8070' },
-  build: {
-    transpile: ['vuetify/lib'],
-    plugins: [new VuetifyLoaderPlugin()],
-    loaders: {
-      stylus: {
-        import: ['~assets/style/variables.styl']
+  buildModules: ['@nuxtjs/vuetify'],
+  vuetify: {
+    theme: {
+      dark: true,
+      themes: {
+        dark: {
+          primary: colors.lightGreen.accent2,
+          accent: colors.grey.darken3,
+          secondary: colors.lightBlue.accent1,
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3
+        }
+      },
+      options: {
+        customProperties: true
       }
-    },
+    }
+  },
+  build: {
     extend(config, ctx) {
       // Run ESLint on save
       if (ctx.isDev && ctx.isClient) {
