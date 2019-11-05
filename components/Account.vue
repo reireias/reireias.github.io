@@ -1,23 +1,17 @@
 <template>
-  <v-container grid-list-md>
-    <v-layout
-      v-for="account in accounts"
-      :key="account.name"
-      align-center
-      justify-center
-      row
-      wrap
-    >
-      <v-flex xs6 sm4 md2>
-        <div class="account-text">{{ account.name }}:</div>
-      </v-flex>
-      <v-flex xs6 sm4 md2>
-        <div class="account-text">
-          <a class="secondary--text" :href="account.url">{{ account.text }}</a>
-        </div>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-card>
+    <v-card-title class="secondary--text">
+      Account
+    </v-card-title>
+    <v-container>
+      <v-row v-for="account in accounts" :key="account.name" justify="center">
+        <v-col cols="2">{{ account.name }}</v-col>
+        <v-col cols="2"
+          ><a :hred="account.url">{{ account.text }}</a></v-col
+        >
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>
@@ -45,15 +39,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.account-text {
-  font-size: 34px;
-  line-height: 40px;
-}
-@media (max-width: 600px) {
-  .account-text {
-    font-size: 24px;
-  }
-}
-</style>

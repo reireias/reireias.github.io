@@ -88,12 +88,12 @@ export default {
   buildModules: ['@nuxtjs/vuetify'],
   vuetify: {
     theme: {
-      dark: true,
+      dark: false,
       themes: {
-        dark: {
-          primary: colors.lightGreen.accent2,
+        light: {
+          primary: colors.purple.accent4,
           accent: colors.grey.darken3,
-          secondary: colors.lightBlue.accent1,
+          secondary: colors.indigo.accent4,
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,

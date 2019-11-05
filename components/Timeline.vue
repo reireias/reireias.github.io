@@ -1,45 +1,48 @@
 <template>
-  <v-container grid-list-md>
-    <v-layout>
-      <v-flex xs12>
-        <v-timeline dark :dense="dense">
-          <v-timeline-item
-            v-for="item in history"
-            :key="item.title"
-            :color="item.color"
-          >
-            <template v-slot:opposite>
-              <span
-                class="timeline-headline font-weight-bold"
-                v-text="item.year"
-              ></span>
-            </template>
-            <v-card dark>
-              <v-card-title
-                v-if="dense"
-                :class="`timeline-card-title ${item.color}--text`"
-              >
-                {{ item.year }} {{ item.title }}
-              </v-card-title>
-              <v-card-title
-                v-else
-                :class="`timeline-card-title ${item.color}--text`"
-              >
-                {{ item.title }}
-              </v-card-title>
-              <v-card-text v-if="item.text" class="timeline-card-text">
-                <ul>
-                  <li v-for="textItem in item.text" :key="textItem">
-                    {{ textItem }}
-                  </li>
-                </ul>
-              </v-card-text>
-            </v-card>
-          </v-timeline-item>
-        </v-timeline>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-card>
+    <v-card-title class="secondary--text">TODO</v-card-title>
+    <v-container grid-list-md>
+      <v-layout>
+        <v-flex xs12>
+          <v-timeline :dense="dense">
+            <v-timeline-item
+              v-for="item in history"
+              :key="item.title"
+              :color="item.color"
+            >
+              <template v-slot:opposite>
+                <span
+                  class="timeline-headline font-weight-bold"
+                  v-text="item.year"
+                ></span>
+              </template>
+              <v-card>
+                <v-card-title
+                  v-if="dense"
+                  :class="`timeline-card-title ${item.color}--text`"
+                >
+                  {{ item.year }} {{ item.title }}
+                </v-card-title>
+                <v-card-title
+                  v-else
+                  :class="`timeline-card-title ${item.color}--text`"
+                >
+                  {{ item.title }}
+                </v-card-title>
+                <v-card-text v-if="item.text" class="timeline-card-text">
+                  <ul>
+                    <li v-for="textItem in item.text" :key="textItem">
+                      {{ textItem }}
+                    </li>
+                  </ul>
+                </v-card-text>
+              </v-card>
+            </v-timeline-item>
+          </v-timeline>
+        </v-flex>
+      </v-layout>
+    </v-container>
+  </v-card>
 </template>
 
 <script>

@@ -1,17 +1,18 @@
 <template>
-  <v-container grid-list-md>
-    <v-layout align-center justify-center row wrap>
-      <v-flex xs12>
-        <div class="certificate-text">
-          <ul>
-            <li v-for="certificate in certificates" :key="certificate">
-              {{ certificate }}
-            </li>
-          </ul>
-        </div>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-card>
+    <v-card-title class="secondary--text">
+      Certificate
+    </v-card-title>
+    <v-container>
+      <v-row
+        v-for="certificate in certificates"
+        :key="certificate"
+        justify="center"
+      >
+        <v-col cols="4">{{ certificate }}</v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>
@@ -28,15 +29,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.certificate-text {
-  font-size: 34px;
-  line-height: 40px;
-}
-@media (max-width: 600px) {
-  .certificate-text {
-    font-size: 24px;
-  }
-}
-</style>

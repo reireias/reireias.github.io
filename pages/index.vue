@@ -1,54 +1,62 @@
 <template>
-  <div>
-    <top style="margin-top: 100px; margin-bottom: 100px;"></top>
-
-    <div class="title-text">
-      Profile
-    </div>
-    <profile></profile>
-
-    <div class="title-text">
-      Account
-    </div>
-    <account></account>
-
-    <div class="title-text">
-      Certificate
-    </div>
-    <certificate></certificate>
-
-    <div class="title-text">
-      Skills
-    </div>
-    <hexagon-skill></hexagon-skill>
-
-    <div class="title-text">
-      Career
-    </div>
-    <timeline></timeline>
-  </div>
+  <v-container>
+    <v-row justify="center">
+      <v-col>
+        <div class="header-text">Tech or Cat</div>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <profile></profile>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <account></account>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <certificate></certificate>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <skill></skill>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col>
+        <timeline></timeline>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
-import Top from '~/components/Top'
 import Profile from '~/components/Profile'
 import Account from '~/components/Account'
 import Certificate from '~/components/Certificate'
-import HexagonSkill from '~/components/HexagonSkill'
+import Skill from '~/components/Skill'
 import Timeline from '~/components/Timeline'
 export default {
   components: {
-    Top,
     Profile,
     Account,
     Certificate,
-    HexagonSkill,
+    Skill,
     Timeline
   }
 }
 </script>
 
 <style>
+.header-text {
+  text-align: center;
+  font-size: 56px;
+  color: var(--v-primary-base);
+  margin-bottom: 20px;
+}
 .title-text {
   font-size: 112px;
   line-height: 1;

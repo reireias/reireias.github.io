@@ -1,21 +1,20 @@
 <template>
-  <v-container grid-list-md>
-    <v-layout
-      v-for="item in maps"
-      :key="item.key"
-      align-center
-      justify-center
-      row
-      wrap
-    >
-      <v-flex xs12 sm4 md4>
-        <div class="profile-text">{{ item.key }}：</div>
-      </v-flex>
-      <v-flex xs11 offset-xs1 sm7 md6>
-        <div class="profile-text">{{ item.value }}</div>
-      </v-flex>
-    </v-layout>
-  </v-container>
+  <v-card width="100%">
+    <v-card-title class="secondary--text">
+      Profile
+    </v-card-title>
+    <center>
+      <v-avatar size="150">
+        <v-img class="bordered-avatar" src="icon_trans.webp"></v-img>
+      </v-avatar>
+    </center>
+    <v-container>
+      <v-row v-for="item in maps" :key="item.key" justify="center">
+        <v-col cols="2">{{ item.key }}</v-col>
+        <v-col cols="2">{{ item.value }}</v-col>
+      </v-row>
+    </v-container>
+  </v-card>
 </template>
 
 <script>
@@ -42,6 +41,12 @@ export default {
 </script>
 
 <style>
+.bordered-avatar {
+  background: #f1f8e9;
+  border: solid 2px;
+  border-radius: 100px;
+  border-color: var(--v-primary-base) !important;
+}
 .profile-text {
   font-size: 34px;
   line-height: 40px;
