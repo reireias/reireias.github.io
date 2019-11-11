@@ -54,7 +54,7 @@
     "http-server": "^0.11.1",
     "husky": "^3.0.9",
     "jest": "^24.9.0",
-    "prettier": "^1.18.2",
+    "prettier": "^1.19.1",
     "push-dir": "^0.4.1",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
