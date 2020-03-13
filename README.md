@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/reireias/reireias.github.io.svg?branch=source)](https://travis-ci.org/reireias/reireias.github.io)
+![deploy](https://github.com/reireias/reireias.github.io/workflows/deploy/badge.svg) ![test](https://github.com/reireias/reireias.github.io/workflows/test/badge.svg)
 # REIREIAS'S GITHUB PAGES
 
 https://reireias.github.id
