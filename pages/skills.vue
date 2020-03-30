@@ -74,11 +74,19 @@
               <v-icon>mdi-aws</v-icon>
               &nbsp;AWS
             </div>
-            <br />
+            <ul>
+              <li>業務経験5年</li>
+              <li>
+                AWSソリューションアーキテクトアソシエイト資格を取得（2018年）
+              </li>
+            </ul>
             <div class="title left-border-primary">
               <v-icon>mdi-google-cloud</v-icon>
               &nbsp;GCP
             </div>
+            <ul>
+              <li>趣味で触る程度</li>
+            </ul>
           </v-card-text>
         </v-card>
       </v-col>
@@ -90,7 +98,7 @@
             OS
           </v-card-title>
           <v-card-text>
-            下記Linux OSに関して、本番環境で運用実績あり<br />
+            本番環境で構築/運用をしたことのあるOS<br />
             RHEL/CentOS/Amazon Linux/Ubuntu/Alpine
           </v-card-text>
         </v-card>
@@ -103,6 +111,7 @@
             ミドルウェア
           </v-card-title>
           <v-card-text>
+            本番環境で構築/運用をしたことのあるミドルウェア<br />
             Nginx, MySQL, PostgreSQL, Redis, Elasticsearch, Postfix, Squid
           </v-card-text>
         </v-card>
@@ -115,6 +124,7 @@
             SaaS
           </v-card-title>
           <v-card-text>
+            本番環境で運用をしたことのあるSaaS<br />
             SendGrid, DataDog, Rollbar
           </v-card-text>
         </v-card>
@@ -127,6 +137,7 @@
             ツール
           </v-card-title>
           <v-card-text>
+            本番環境で運用をしたことのあるツール<br />
             Terraform, Docker, Vagrant, VMware, Prometheus, Git, Vim, tmux, zsh
           </v-card-text>
         </v-card>

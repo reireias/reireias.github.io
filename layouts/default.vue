@@ -35,12 +35,12 @@
           </v-list-item-icon>
           <v-list-item-title>Job</v-list-item-title>
         </v-list-item>
-        <!-- <v-list-item to="/articles" nuxt exact> -->
-        <!--   <v-list-item-icon> -->
-        <!--     <v-icon>mdi-pencil</v-icon> -->
-        <!--   </v-list-item-icon> -->
-        <!--   <v-list-item-title>Article</v-list-item-title> -->
-        <!-- </v-list-item> -->
+        <v-list-item to="/articles" nuxt exact>
+          <v-list-item-icon>
+            <v-icon>mdi-pencil</v-icon>
+          </v-list-item-icon>
+          <v-list-item-title>Article</v-list-item-title>
+        </v-list-item>
       </v-list>
     </v-navigation-drawer>
     <v-content>

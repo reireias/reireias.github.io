@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`articles should be vue instance 1`] = `
+"<v-container-stub tag=\\"div\\">
+  <v-row-stub tag=\\"div\\" justify=\\"center\\">
+    <div class=\\"display-3\\">Article</div>
+  </v-row-stub>
+  <v-row-stub tag=\\"div\\" justify=\\"center\\">
+    <v-col-stub cols=\\"12\\" sm=\\"6\\" tag=\\"div\\">
+      <v-card-stub loaderheight=\\"4\\" href=\\"https://qiita.com/reireias/items/0d87de18f43f27a8ed9b\\" tag=\\"div\\" target=\\"_blank\\">
+        <v-img-stub height=\\"300\\" options=\\"[object Object]\\" position=\\"center center\\" src=\\"/article01.jpg\\" transition=\\"fade-transition\\"></v-img-stub>
+        <v-card-title-stub class=\\"bottom-border-primary title\\">
+          ラズパイ4で作るディスプレイ付きKubernetesクラスター
+        </v-card-title-stub>
+        <v-card-text-stub>
+          こだわりが詰まった作品です
+        </v-card-text-stub>
+      </v-card-stub>
+    </v-col-stub>
+    <v-col-stub cols=\\"12\\" sm=\\"6\\" tag=\\"div\\">
+      <v-card-stub loaderheight=\\"4\\" href=\\"https://qiita.com/reireias/items/2e377b2a42e4cb3aded1\\" tag=\\"div\\" target=\\"_blank\\">
+        <v-img-stub height=\\"300\\" options=\\"[object Object]\\" position=\\"center center\\" src=\\"/article02.png\\" transition=\\"fade-transition\\"></v-img-stub>
+        <v-card-title-stub class=\\"bottom-border-primary title\\">
+          Firebase + Nuxt.js + RaspberryPiで作る猫監視システム
+        </v-card-title-stub>
+        <v-card-text-stub>
+          Firebaseの様々な機能を試してるうちに思いついたシステムです
+        </v-card-text-stub>
+      </v-card-stub>
+    </v-col-stub>
+  </v-row-stub>
+</v-container-stub>"
+`;

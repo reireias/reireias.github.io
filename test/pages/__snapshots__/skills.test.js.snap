@@ -131,11 +131,20 @@ exports[`skills should be vue instance 1`] = `
           <div class=\\"title left-border-primary\\">
             <v-icon-stub>mdi-aws</v-icon-stub>
             &nbsp;AWS
-          </div> <br>
+          </div>
+          <ul>
+            <li>業務経験5年</li>
+            <li>
+              AWSソリューションアーキテクトアソシエイト資格を取得（2018年）
+            </li>
+          </ul>
           <div class=\\"title left-border-primary\\">
             <v-icon-stub>mdi-google-cloud</v-icon-stub>
             &nbsp;GCP
           </div>
+          <ul>
+            <li>趣味で触る程度</li>
+          </ul>
         </v-card-text-stub>
       </v-card-stub>
     </v-col-stub>
@@ -147,7 +156,7 @@ exports[`skills should be vue instance 1`] = `
           OS
         </v-card-title-stub>
         <v-card-text-stub>
-          下記Linux OSに関して、本番環境で運用実績あり<br>
+          本番環境で構築/運用をしたことのあるOS<br>
           RHEL/CentOS/Amazon Linux/Ubuntu/Alpine
         </v-card-text-stub>
       </v-card-stub>
@@ -160,6 +169,7 @@ exports[`skills should be vue instance 1`] = `
           ミドルウェア
         </v-card-title-stub>
         <v-card-text-stub>
+          本番環境で構築/運用をしたことのあるミドルウェア<br>
           Nginx, MySQL, PostgreSQL, Redis, Elasticsearch, Postfix, Squid
         </v-card-text-stub>
       </v-card-stub>
@@ -172,6 +182,7 @@ exports[`skills should be vue instance 1`] = `
           SaaS
         </v-card-title-stub>
         <v-card-text-stub>
+          本番環境で運用をしたことのあるSaaS<br>
           SendGrid, DataDog, Rollbar
         </v-card-text-stub>
       </v-card-stub>
@@ -184,6 +195,7 @@ exports[`skills should be vue instance 1`] = `
           ツール
         </v-card-title-stub>
         <v-card-text-stub>
+          本番環境で運用をしたことのあるツール<br>
           Terraform, Docker, Vagrant, VMware, Prometheus, Git, Vim, tmux, zsh
         </v-card-text-stub>
       </v-card-stub>
