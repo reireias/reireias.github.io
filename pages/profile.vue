@@ -1,0 +1,125 @@
+<template>
+  <v-container class="profile-container">
+    <v-row justify="center">
+      <div class="display-3">Profile</div>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" sm="8">
+        <v-card flat>
+          <v-card-title class="bottom-border-primary">
+            Profile
+          </v-card-title>
+          <v-container>
+            <v-row
+              v-for="attribute in attributes"
+              :key="attribute.name"
+              justify="center"
+            >
+              <v-col>
+                <div
+                  :class="`title left-border-${attribute.color}`"
+                  v-text="attribute.name"
+                ></div>
+              </v-col>
+              <v-col>
+                <div class="body-1" v-text="attribute.value"></div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="8">
+        <v-card flat>
+          <v-card-title class="bottom-border-accent">
+            Accounts
+          </v-card-title>
+          <v-container>
+            <v-row
+              v-for="account in accounts"
+              :key="account.name"
+              justify="center"
+            >
+              <v-col>
+                <div :class="`title left-border-${account.color}`">
+                  <v-icon v-if="account.icon" v-text="account.icon"></v-icon>
+                  {{ account.name }}
+                </div>
+              </v-col>
+              <v-col>
+                <div class="title">
+                  <a
+                    :href="account.url"
+                    target="_blank"
+                    v-text="account.value"
+                  ></a>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      attributes: [
+        {
+          name: '生年月日',
+          value: '1988/xx/xx',
+          color: 'primary'
+        },
+        {
+          name: '職種',
+          value: 'SRE / Webアプリケーションエンジニア',
+          color: 'primary-darken'
+        },
+        {
+          name: '好きなもの',
+          value: 'ネコ / 新技術',
+          color: 'secondary'
+        }
+      ],
+      accounts: [
+        {
+          name: 'GitHub',
+          value: 'reireias',
+          url: 'http://github.com/reireias',
+          icon: 'mdi-github',
+          color: 'accent'
+        },
+        {
+          name: 'Twitter',
+          value: 'reirei_As',
+          url: 'http://twitter.com/reirei_As',
+          icon: 'mdi-twitter',
+          color: 'info-darken'
+        },
+        {
+          name: 'Qiita',
+          value: 'reireias',
+          url: 'http://qiita.com/reireias',
+          icon: 'mdi-web',
+          color: 'info'
+        },
+        {
+          name: 'Speaker Deck',
+          value: 'reireias',
+          url: 'https://speakerdeck.com/reireias',
+          icon: 'mdi-web',
+          color: 'accent'
+        }
+      ]
+    }
+  }
+}
+</script>
+
+<style>
+.profile-container .v-card .col {
+  align-self: center;
+}
+</style>

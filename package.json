@@ -5,7 +5,7 @@
   "author": "reireias <reireias@gmail.com>",
   "private": true,
   "scripts": {
-    "dev": "nuxt -o",
+    "dev": "nuxt",
     "build": "nuxt build",
     "start": "nuxt start",
     "start-static": "http-server ./dist",
@@ -29,9 +29,11 @@
     "vuetify": "^2.2.15"
   },
   "devDependencies": {
+    "@mdi/font": "^5.0.45",
     "@nuxtjs/eslint-config": "^2.0.2",
     "@nuxtjs/vuetify": "^1.11.0",
     "@vue/test-utils": "^1.0.0-beta.31",
+    "animejs": "^3.1.0",
     "axios": "^0.19.2",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.1.0",
@@ -54,6 +56,7 @@
     "http-server": "^0.12.1",
     "husky": "^4.2.3",
     "jest": "^24.9.0",
+    "nuxt-webfontloader": "^1.1.0",
     "prettier": "^1.19.1",
     "push-dir": "^0.4.1",
     "stylus": "^0.54.7",

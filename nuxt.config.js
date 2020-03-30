@@ -83,13 +83,24 @@ export default {
     ]
   },
   plugins: [],
-  css: ['~/assets/style/app.styl'],
+  css: [],
   loading: { color: '#3B8070' },
+  transition: 'page',
+  modules: ['nuxt-webfontloader'],
   buildModules: ['@nuxtjs/vuetify'],
   vuetify: {
+    customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: false,
+      dark: true,
       themes: {
+        dark: {
+          primary: '#1eb980',
+          secondary: '#045d56',
+          accent: '#72deff',
+          info: '#b15dff',
+          warning: '#ffcf44',
+          error: '#ff6859'
+        },
         light: {
           primary: '#268bd2',
           accent: colors.grey.darken3,
@@ -103,6 +114,11 @@ export default {
       options: {
         customProperties: true
       }
+    }
+  },
+  webfontloader: {
+    google: {
+      families: ['Roboto Condensed:400']
     }
   },
   build: {

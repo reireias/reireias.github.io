@@ -1,0 +1,177 @@
+<template>
+  <v-container>
+    <v-row justify="center">
+      <div class="display-3">Skills</div>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" sm="8">
+        <v-card flat>
+          <v-card-title class="bottom-border-primary">
+            できること≒業務経験
+          </v-card-title>
+          <v-card-text>
+            <div class="title left-border-primary">SRE</div>
+            <ul>
+              <li>AWS/GCPでのインフラ構築</li>
+              <li>Terraform/CloudFormationによるIaCの実現</li>
+              <li>CI/CDパイプラインの構築</li>
+              <li>アーキテクチャ設計</li>
+              <li>AWS Lambda等を用いた各種運用ツールの作成</li>
+              <li>
+                CircleCI/Travis CI/GitHub ActionsによるCI設定および高速化
+              </li>
+              <li>レガシーシステムからAWS/GCPへの移行</li>
+              <li>インフラ/低レイヤー層の社内教育</li>
+              <li>
+                サイト全体のパフォーマンス改善(クエリチューニング/キャパシティ設計/CDN等)
+              </li>
+              <li>DWHとBIツールによる分析基盤の構築</li>
+            </ul>
+            <br />
+            <div class="title left-border-primary">Webアプリケーション開発</div>
+            <ul>
+              <li>Webアプリケーション開発のリードエンジニア</li>
+              <li>開発環境の改善</li>
+            </ul>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" sm="8">
+        <v-card flat>
+          <v-card-title class="bottom-border-primary">
+            プログラミング言語
+          </v-card-title>
+          <v-card-text>
+            <div
+              v-for="lang in langs"
+              :key="lang.name"
+              style="margin-bottom: 16px;"
+            >
+              <div class="title left-border-primary">
+                <v-icon v-text="lang.icon"></v-icon>
+                &nbsp;{{ lang.name }}
+              </div>
+              <div>
+                <ul>
+                  <li v-for="line in lang.lines" :key="line" v-text="line"></li>
+                </ul>
+              </div>
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" sm="8">
+        <v-card flat>
+          <v-card-title class="bottom-border-primary">
+            IaaS
+          </v-card-title>
+          <v-card-text>
+            <div class="title left-border-primary">
+              <v-icon>mdi-aws</v-icon>
+              &nbsp;AWS
+            </div>
+            <br />
+            <div class="title left-border-primary">
+              <v-icon>mdi-google-cloud</v-icon>
+              &nbsp;GCP
+            </div>
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" sm="8">
+        <v-card flat>
+          <v-card-title class="bottom-border-primary">
+            OS
+          </v-card-title>
+          <v-card-text>
+            下記Linux OSに関して、本番環境で運用実績あり<br />
+            RHEL/CentOS/Amazon Linux/Ubuntu/Alpine
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" sm="8">
+        <v-card flat>
+          <v-card-title class="bottom-border-primary">
+            ミドルウェア
+          </v-card-title>
+          <v-card-text>
+            Nginx, MySQL, PostgreSQL, Redis, Elasticsearch, Postfix, Squid
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" sm="8">
+        <v-card flat>
+          <v-card-title class="bottom-border-primary">
+            SaaS
+          </v-card-title>
+          <v-card-text>
+            SendGrid, DataDog, Rollbar
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" sm="8">
+        <v-card flat>
+          <v-card-title class="bottom-border-primary">
+            ツール
+          </v-card-title>
+          <v-card-text>
+            Terraform, Docker, Vagrant, VMware, Prometheus, Git, Vim, tmux, zsh
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+  </v-container>
+</template>
+
+<script>
+export default {
+  data() {
+    return {
+      langs: [
+        {
+          name: 'Ruby',
+          icon: 'mdi-language-ruby',
+          lines: ['実務経験1年', 'Webサービス開発で利用']
+        },
+        {
+          name: 'Java',
+          icon: 'mdi-language-java',
+          lines: ['実務経験6年', 'Webサービス開発で利用']
+        },
+        {
+          name: 'Python',
+          icon: 'mdi-language-python',
+          lines: ['実務経験3年', '主にCLIツール、Lambda用コードとして利用']
+        },
+        {
+          name: 'Golang',
+          icon: 'mdi-language-go',
+          lines: ['実務経験2年', '主にCLIツール、Lambda用コードとして利用']
+        },
+        {
+          name: 'C#',
+          icon: 'mdi-language-csharp',
+          lines: ['実務経験2年', 'Webサービス開発で利用']
+        },
+        {
+          name: 'javascript',
+          icon: 'mdi-language-javascript',
+          lines: ['実務経験7年', 'Webサービス開発で利用']
+        }
+      ]
+    }
+  }
+}
+</script>
