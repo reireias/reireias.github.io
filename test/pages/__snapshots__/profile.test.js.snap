@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`profile should be vue instance 1`] = `
+"<v-container-stub tag=\\"div\\" class=\\"profile-container\\">
+  <v-row-stub tag=\\"div\\" justify=\\"center\\">
+    <div class=\\"display-3\\">Profile</div>
+  </v-row-stub>
+  <v-row-stub tag=\\"div\\" justify=\\"center\\">
+    <v-col-stub cols=\\"12\\" sm=\\"8\\" tag=\\"div\\">
+      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\">
+        <v-card-title-stub class=\\"bottom-border-primary\\">
+          Profile
+        </v-card-title-stub>
+        <v-container-stub tag=\\"div\\">
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"title left-border-primary\\">生年月日</div>
+            </v-col-stub>
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"body-1\\">1988/xx/xx</div>
+            </v-col-stub>
+          </v-row-stub>
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"title left-border-primary-darken\\">職種</div>
+            </v-col-stub>
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"body-1\\">SRE / Webアプリケーションエンジニア</div>
+            </v-col-stub>
+          </v-row-stub>
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"title left-border-secondary\\">好きなもの</div>
+            </v-col-stub>
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"body-1\\">ネコ / 新技術</div>
+            </v-col-stub>
+          </v-row-stub>
+        </v-container-stub>
+      </v-card-stub>
+    </v-col-stub>
+    <v-col-stub cols=\\"12\\" sm=\\"8\\" tag=\\"div\\">
+      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\">
+        <v-card-title-stub class=\\"bottom-border-accent\\">
+          Accounts
+        </v-card-title-stub>
+        <v-container-stub tag=\\"div\\">
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"title left-border-accent\\">
+                <v-icon-stub></v-icon-stub>
+                GitHub
+              </div>
+            </v-col-stub>
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"title\\"><a href=\\"http://github.com/reireias\\" target=\\"_blank\\">reireias</a></div>
+            </v-col-stub>
+          </v-row-stub>
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"title left-border-info-darken\\">
+                <v-icon-stub></v-icon-stub>
+                Twitter
+              </div>
+            </v-col-stub>
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"title\\"><a href=\\"http://twitter.com/reirei_As\\" target=\\"_blank\\">reirei_As</a></div>
+            </v-col-stub>
+          </v-row-stub>
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"title left-border-info\\">
+                <v-icon-stub></v-icon-stub>
+                Qiita
+              </div>
+            </v-col-stub>
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"title\\"><a href=\\"http://qiita.com/reireias\\" target=\\"_blank\\">reireias</a></div>
+            </v-col-stub>
+          </v-row-stub>
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"title left-border-accent\\">
+                <v-icon-stub></v-icon-stub>
+                Speaker Deck
+              </div>
+            </v-col-stub>
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"title\\"><a href=\\"https://speakerdeck.com/reireias\\" target=\\"_blank\\">reireias</a></div>
+            </v-col-stub>
+          </v-row-stub>
+        </v-container-stub>
+      </v-card-stub>
+    </v-col-stub>
+  </v-row-stub>
+</v-container-stub>"
+`;

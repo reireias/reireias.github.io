@@ -1,0 +1,98 @@
+// Ref: https://github.com/nuxt-community/vuetify-module#customvariables
+//
+// The variables you want to modify
+// $font-size-root: 20px;
+.bottom-border-base {
+  background-repeat: no-repeat;
+  background-size: 100% 2px;
+  background-position-y: bottom;
+  // like display-1
+  font-size: 34px;
+  font-weight: 400;
+  line-height: 40px;
+  margin-bottom: 10px;
+}
+
+.bottom-border-primary {
+  @extend .bottom-border-base;
+  background-image: linear-gradient(
+    to right,
+    var(--v-secondary-base) 10%,
+    var(--v-primary-darken2) 10%,
+    var(--v-primary-darken2) 50%,
+    var(--v-primary-base) 50%,
+    var(--v-primary-base) 90%,
+    var(--v-secondary-base) 90%
+  );
+}
+
+.bottom-border-accent {
+  @extend .bottom-border-base;
+  background-image: linear-gradient(
+    to right,
+    var(--v-accent-base) 10%,
+    var(--v-info-darken2) 10%,
+    var(--v-info-darken2) 50%,
+    var(--v-info-base) 50%,
+    var(--v-info-base) 90%,
+    var(--v-accent-base) 90%
+  );
+}
+
+.bottom-border-red {
+  @extend .bottom-border-base;
+  background-image: linear-gradient(
+    to right,
+    var(--v-warning-base) 10%,
+    var(--v-error-base) 10%,
+    var(--v-error-base) 50%,
+    var(--v-error-lighten3) 50%,
+    var(--v-error-lighten3) 90%,
+    var(--v-warning-base) 90%
+  );
+}
+
+.left-border-primary {
+  border-left: solid 2px var(--v-primary-base);
+  padding-left: 10px;
+}
+
+.left-border-primary-darken {
+  border-left: solid 2px var(--v-primary-darken2);
+  padding-left: 10px;
+}
+
+.left-border-secondary {
+  border-left: solid 2px var(--v-secondary-base);
+  padding-left: 10px;
+}
+
+.left-border-accent {
+  border-left: solid 2px var(--v-accent-base);
+  padding-left: 10px;
+}
+
+.left-border-info {
+  border-left: solid 2px var(--v-info-base);
+  padding-left: 10px;
+}
+
+.left-border-info-darken {
+  border-left: solid 2px var(--v-info-darken2);
+  padding-left: 10px;
+}
+
+.left-border-warning {
+  border-left: solid 2px var(--v-warning-base);
+  padding-left: 10px;
+}
+
+.left-border-error {
+  border-left: solid 2px var(--v-error-base);
+  padding-left: 10px;
+}
+
+.left-border-error-lighten {
+  border-left: solid 2px var(--v-error-lighten3);
+  padding-left: 10px;
+}
