@@ -110,18 +110,19 @@ export default {
 }
 */
 
+// TODO: move to assets
 .theme--dark {
   &.v-application,
   &.v-navigation-drawer {
-    background: #33333d;
+    background: #33333d !important;
   }
 
   .v-app-bar.v-toolbar.v-sheet {
-    background: #33333d;
+    background: #33333d !important;
   }
 
   &.v-card {
-    background: #373740;
+    background: #373740 !important;
   }
 }
 
