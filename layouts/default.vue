@@ -37,7 +37,7 @@
           <v-container>
             <v-row justify="center">
               <v-avatar tile size="75">
-                <v-img src="icon_trans.png"></v-img>
+                <v-img src="/icon.png"></v-img>
               </v-avatar>
             </v-row>
           </v-container>
@@ -110,18 +110,19 @@ export default {
 }
 */
 
+// TODO: move to assets
 .theme--dark {
   &.v-application,
   &.v-navigation-drawer {
-    background: #33333d;
+    background: #33333d !important;
   }
 
   .v-app-bar.v-toolbar.v-sheet {
-    background: #33333d;
+    background: #33333d !important;
   }
 
   &.v-card {
-    background: #373740;
+    background: #373740 !important;
   }
 }
 

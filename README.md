@@ -28,12 +28,6 @@ yarn dev
 yarn generate
 ```
 
-## remove unused css
-
-```bash
-yarn dropcss
-```
-
 ## deploy to master branch
 
 ```bash
