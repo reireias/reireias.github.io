@@ -103,13 +103,6 @@ export default {
   display: none;
 }
 
-/* TODO: overwrite font */
-/*
-.v-application {
-  font-family: 'Roboto Condensed', Robot, sans-serif;
-}
-*/
-
 .page-enter,
 .page-leave {
   opacity: 0;

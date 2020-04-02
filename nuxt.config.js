@@ -89,7 +89,7 @@ export default {
   modules: ['nuxt-webfontloader'],
   buildModules: ['@nuxtjs/vuetify'],
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
+    customVariables: ['~/assets/app.scss'],
     theme: {
       dark: true,
       themes: {
