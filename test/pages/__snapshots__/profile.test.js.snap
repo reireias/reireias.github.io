@@ -6,40 +6,12 @@ exports[`profile should be vue instance 1`] = `
     <div class=\\"display-3\\">Profile</div>
   </v-row-stub>
   <v-row-stub tag=\\"div\\" justify=\\"center\\">
-    <v-col-stub cols=\\"12\\" sm=\\"8\\" tag=\\"div\\">
-      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\">
-        <v-card-title-stub class=\\"bottom-border-primary\\">
-          Profile
-        </v-card-title-stub>
-        <v-container-stub tag=\\"div\\">
-          <v-row-stub tag=\\"div\\" justify=\\"center\\">
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"title left-border-primary\\">生年月日</div>
-            </v-col-stub>
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"body-1\\">1988/xx/xx</div>
-            </v-col-stub>
-          </v-row-stub>
-          <v-row-stub tag=\\"div\\" justify=\\"center\\">
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"title left-border-primary-darken\\">職種</div>
-            </v-col-stub>
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"body-1\\">SRE / Webアプリケーションエンジニア</div>
-            </v-col-stub>
-          </v-row-stub>
-          <v-row-stub tag=\\"div\\" justify=\\"center\\">
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"title left-border-secondary\\">好きなもの</div>
-            </v-col-stub>
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"body-1\\">ネコ / 新技術</div>
-            </v-col-stub>
-          </v-row-stub>
-        </v-container-stub>
-      </v-card-stub>
+    <v-col-stub cols=\\"12\\" md=\\"8\\" tag=\\"div\\">
+      <profile-stub></profile-stub>
     </v-col-stub>
-    <v-col-stub cols=\\"12\\" sm=\\"8\\" tag=\\"div\\">
+  </v-row-stub>
+  <v-row-stub tag=\\"div\\" justify=\\"center\\">
+    <v-col-stub cols=\\"12\\" md=\\"8\\" tag=\\"div\\">
       <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\">
         <v-card-title-stub class=\\"bottom-border-accent\\">
           Accounts

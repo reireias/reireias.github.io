@@ -4,31 +4,12 @@
       <div class="display-3">Profile</div>
     </v-row>
     <v-row justify="center">
-      <v-col cols="12" sm="8">
-        <v-card flat>
-          <v-card-title class="bottom-border-primary">
-            Profile
-          </v-card-title>
-          <v-container>
-            <v-row
-              v-for="attribute in attributes"
-              :key="attribute.name"
-              justify="center"
-            >
-              <v-col>
-                <div
-                  :class="`title left-border-${attribute.color}`"
-                  v-text="attribute.name"
-                ></div>
-              </v-col>
-              <v-col>
-                <div class="body-1" v-text="attribute.value"></div>
-              </v-col>
-            </v-row>
-          </v-container>
-        </v-card>
+      <v-col cols="12" md="8">
+        <profile></profile>
       </v-col>
-      <v-col cols="12" sm="8">
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" md="8">
         <v-card flat>
           <v-card-title class="bottom-border-accent">
             Accounts
@@ -63,7 +44,12 @@
 </template>
 
 <script>
+import Profile from '~/components/Profile'
+
 export default {
+  components: {
+    Profile
+  },
   data() {
     return {
       attributes: [
@@ -117,9 +103,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.profile-container .v-card .col {
-  align-self: center;
-}
-</style>
