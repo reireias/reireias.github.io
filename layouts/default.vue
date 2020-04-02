@@ -84,7 +84,7 @@
 export default {
   data() {
     return {
-      title: 'Tech or Cat'
+      title: 'reireias.dev'
     }
   },
   mounted() {
