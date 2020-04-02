@@ -96,3 +96,16 @@
   border-left: solid 2px var(--v-error-lighten3);
   padding-left: 10px;
 }
+
+// background
+.reireias.theme--dark.v-application {
+  .v-content,
+  .v-navigation-drawer,
+  .v-app-bar.v-toolbar.v-sheet {
+    background: #33333d;
+  }
+
+  .v-card {
+    background: #373740;
+  }
+}

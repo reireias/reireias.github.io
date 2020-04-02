@@ -1,5 +1,5 @@
 <template>
-  <v-app ref="app" class="hide">
+  <v-app ref="app" class="hide reireias">
     <v-app-bar class="d-md-none top-menu" flat>
       <v-container>
         <v-row justify="center">
@@ -109,22 +109,6 @@ export default {
   font-family: 'Roboto Condensed', Robot, sans-serif;
 }
 */
-
-// TODO: move to assets
-.theme--dark {
-  &.v-application,
-  &.v-navigation-drawer {
-    background: #33333d !important;
-  }
-
-  .v-app-bar.v-toolbar.v-sheet {
-    background: #33333d !important;
-  }
-
-  &.v-card {
-    background: #373740 !important;
-  }
-}
 
 .page-enter,
 .page-leave {
