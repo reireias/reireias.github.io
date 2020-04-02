@@ -12,7 +12,6 @@
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
     "generate": "nuxt generate",
-    "dropcss": "node scripts/dropcss.js",
     "deploy": "push-dir --dir=dist --branch=master --cleanup",
     "benchmark": "node scripts/benchmark.js https://reireias.github.io $(git rev-parse HEAD)",
     "test": "jest"
@@ -40,7 +39,6 @@
     "cheerio": "^1.0.0-rc.3",
     "dateformat": "^3.0.3",
     "dotenv": "^8.2.0",
-    "dropcss": "^1.0.16",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-config-standard": ">=14.1.0",
