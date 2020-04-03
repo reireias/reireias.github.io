@@ -124,7 +124,7 @@ import SkillCard from '~/components/SkillCard'
 
 export default {
   components: {
-    SkillCard
+    SkillCard,
   },
   data() {
     return {
