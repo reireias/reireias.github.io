@@ -48,8 +48,8 @@ export default {
         this.$vuetify.theme.themes.dark.info,
         this.$vuetify.theme.themes.dark.warning,
         this.$vuetify.theme.themes.dark.accent,
-        this.$vuetify.theme.themes.dark.accent
-      ]
+        this.$vuetify.theme.themes.dark.accent,
+      ],
     }
   },
   mounted() {
@@ -60,27 +60,27 @@ export default {
       this.show = true
       anime({
         targets: '.debug',
-        translateX: 250
+        translateX: 250,
       })
       const timeline = anime.timeline({
-        targets: ['.debug-svg path']
+        targets: ['.debug-svg path'],
       })
       timeline.add({
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
         duration: 500,
-        delay: (el, i) => i * 200 + 500
+        delay: (el, i) => i * 200 + 500,
       })
       timeline.add(
         {
           easing: 'easeInOutSine',
           fill: ['transparent', (el, i) => this.colors[i]],
-          duration: 500
+          duration: 500,
         },
         '-=200'
       )
-    }
-  }
+    },
+  },
 }
 </script>
 

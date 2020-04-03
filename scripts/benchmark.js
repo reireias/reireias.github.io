@@ -18,7 +18,7 @@ const waitDeploy = async () => {
     if (res.data.indexOf(VERSION) > 0) {
       return true
     }
-    await new Promise(resolve => setTimeout(resolve, 60 * 1000))
+    await new Promise((resolve) => setTimeout(resolve, 60 * 1000))
     count += 1
   }
   return false
@@ -35,7 +35,7 @@ const saveJsonFile = (obj, client) => {
 
 const main = async () => {
   if (await waitDeploy()) {
-    ;['desktop', 'mobile'].forEach(async client => {
+    ;['desktop', 'mobile'].forEach(async (client) => {
       const params = {
         url: TARGET_URL,
         locale: 'ja',
@@ -44,17 +44,17 @@ const main = async () => {
           'best-practices',
           'performance',
           'pwa',
-          'seo'
+          'seo',
         ],
-        strategy: client
+        strategy: client,
       }
       if (process.env.PAGE_SPEED_INSIGHTS_URL) {
         params.key = process.env.PAGE_SPEED_INSIGHTS_URL
       }
       const result = await axios.get(PAGE_SPEED_INSIGHTS_URL, {
         params,
-        paramsSerializer: params =>
-          qs.stringify(params, { arrayFormat: 'repeat' })
+        paramsSerializer: (params) =>
+          qs.stringify(params, { arrayFormat: 'repeat' }),
       })
 
       if (result.status !== 200) {
