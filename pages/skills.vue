@@ -5,61 +5,34 @@
     </v-row>
     <v-row justify="center">
       <v-col cols="12" sm="8">
-        <v-card flat>
-          <v-card-title class="bottom-border-primary">
-            できること≒業務経験
-          </v-card-title>
-          <v-card-text>
-            <div class="title left-border-primary">SRE</div>
-            <ul>
-              <li>AWS/GCPでのインフラ構築</li>
-              <li>Terraform/CloudFormationによるIaCの実現</li>
-              <li>CI/CDパイプラインの構築</li>
-              <li>アーキテクチャ設計</li>
-              <li>AWS Lambda等を用いた各種運用ツールの作成</li>
-              <li>
-                CircleCI/Travis CI/GitHub ActionsによるCI設定および高速化
-              </li>
-              <li>レガシーシステムからAWS/GCPへの移行</li>
-              <li>インフラ/低レイヤー層の社内教育</li>
-              <li>
-                サイト全体のパフォーマンス改善(クエリチューニング/キャパシティ設計/CDN等)
-              </li>
-              <li>DWHとBIツールによる分析基盤の構築</li>
-            </ul>
-            <br />
-            <div class="title left-border-primary">Webアプリケーション開発</div>
-            <ul>
-              <li>Webアプリケーション開発のリードエンジニア</li>
-              <li>開発環境の改善</li>
-            </ul>
-          </v-card-text>
-        </v-card>
+        <skill-card></skill-card>
       </v-col>
     </v-row>
     <v-row justify="center">
       <v-col cols="12" sm="8">
-        <v-card flat>
+        <v-card class="language-card" flat>
           <v-card-title class="bottom-border-primary">
             プログラミング言語
           </v-card-title>
-          <v-card-text>
-            <div
-              v-for="lang in langs"
-              :key="lang.name"
-              style="margin-bottom: 16px;"
-            >
-              <div class="title left-border-primary">
-                <v-icon v-text="lang.icon"></v-icon>
-                &nbsp;{{ lang.name }}
-              </div>
-              <div>
-                <ul>
-                  <li v-for="line in lang.lines" :key="line" v-text="line"></li>
-                </ul>
-              </div>
-            </div>
-          </v-card-text>
+          <v-container>
+            <v-row v-for="lang in langs" :key="lang.name" justify="center">
+              <v-col>
+                <div class="left-border-primary">
+                  <v-icon v-text="lang.icon"></v-icon>
+                  &nbsp;{{ lang.name }}
+                </div>
+                <div>
+                  <ul>
+                    <li
+                      v-for="line in lang.lines"
+                      :key="line"
+                      v-text="line"
+                    ></li>
+                  </ul>
+                </div>
+              </v-col>
+            </v-row>
+          </v-container>
         </v-card>
       </v-col>
     </v-row>
@@ -70,7 +43,7 @@
             IaaS
           </v-card-title>
           <v-card-text>
-            <div class="title left-border-primary">
+            <div class="left-border-primary">
               <v-icon>mdi-aws</v-icon>
               &nbsp;AWS
             </div>
@@ -80,7 +53,7 @@
                 AWSソリューションアーキテクトアソシエイト資格を取得（2018年）
               </li>
             </ul>
-            <div class="title left-border-primary">
+            <div class="left-border-primary">
               <v-icon>mdi-google-cloud</v-icon>
               &nbsp;GCP
             </div>
@@ -147,7 +120,12 @@
 </template>
 
 <script>
+import SkillCard from '~/components/SkillCard'
+
 export default {
+  components: {
+    SkillCard
+  },
   data() {
     return {
       langs: [
@@ -186,3 +164,10 @@ export default {
   }
 }
 </script>
+
+<style lang="scss">
+.language-card .col {
+  align-self: center;
+  font-size: 20px;
+}
+</style>

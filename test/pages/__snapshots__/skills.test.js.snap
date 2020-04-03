@@ -7,117 +7,101 @@ exports[`skills should be vue instance 1`] = `
   </v-row-stub>
   <v-row-stub tag=\\"div\\" justify=\\"center\\">
     <v-col-stub cols=\\"12\\" sm=\\"8\\" tag=\\"div\\">
-      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\">
-        <v-card-title-stub class=\\"bottom-border-primary\\">
-          できること≒業務経験
-        </v-card-title-stub>
-        <v-card-text-stub>
-          <div class=\\"title left-border-primary\\">SRE</div>
-          <ul>
-            <li>AWS/GCPでのインフラ構築</li>
-            <li>Terraform/CloudFormationによるIaCの実現</li>
-            <li>CI/CDパイプラインの構築</li>
-            <li>アーキテクチャ設計</li>
-            <li>AWS Lambda等を用いた各種運用ツールの作成</li>
-            <li>
-              CircleCI/Travis CI/GitHub ActionsによるCI設定および高速化
-            </li>
-            <li>レガシーシステムからAWS/GCPへの移行</li>
-            <li>インフラ/低レイヤー層の社内教育</li>
-            <li>
-              サイト全体のパフォーマンス改善(クエリチューニング/キャパシティ設計/CDN等)
-            </li>
-            <li>DWHとBIツールによる分析基盤の構築</li>
-          </ul> <br>
-          <div class=\\"title left-border-primary\\">Webアプリケーション開発</div>
-          <ul>
-            <li>Webアプリケーション開発のリードエンジニア</li>
-            <li>開発環境の改善</li>
-          </ul>
-        </v-card-text-stub>
-      </v-card-stub>
+      <skill-card-stub></skill-card-stub>
     </v-col-stub>
   </v-row-stub>
   <v-row-stub tag=\\"div\\" justify=\\"center\\">
     <v-col-stub cols=\\"12\\" sm=\\"8\\" tag=\\"div\\">
-      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\">
+      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\" class=\\"language-card\\">
         <v-card-title-stub class=\\"bottom-border-primary\\">
           プログラミング言語
         </v-card-title-stub>
-        <v-card-text-stub>
-          <div style=\\"margin-bottom: 16px;\\">
-            <div class=\\"title left-border-primary\\">
-              <v-icon-stub></v-icon-stub>
-              &nbsp;Ruby
-            </div>
-            <div>
-              <ul>
-                <li>実務経験1年</li>
-                <li>Webサービス開発で利用</li>
-              </ul>
-            </div>
-          </div>
-          <div style=\\"margin-bottom: 16px;\\">
-            <div class=\\"title left-border-primary\\">
-              <v-icon-stub></v-icon-stub>
-              &nbsp;Java
-            </div>
-            <div>
-              <ul>
-                <li>実務経験6年</li>
-                <li>Webサービス開発で利用</li>
-              </ul>
-            </div>
-          </div>
-          <div style=\\"margin-bottom: 16px;\\">
-            <div class=\\"title left-border-primary\\">
-              <v-icon-stub></v-icon-stub>
-              &nbsp;Python
-            </div>
-            <div>
-              <ul>
-                <li>実務経験3年</li>
-                <li>主にCLIツール、Lambda用コードとして利用</li>
-              </ul>
-            </div>
-          </div>
-          <div style=\\"margin-bottom: 16px;\\">
-            <div class=\\"title left-border-primary\\">
-              <v-icon-stub></v-icon-stub>
-              &nbsp;Golang
-            </div>
-            <div>
-              <ul>
-                <li>実務経験2年</li>
-                <li>主にCLIツール、Lambda用コードとして利用</li>
-              </ul>
-            </div>
-          </div>
-          <div style=\\"margin-bottom: 16px;\\">
-            <div class=\\"title left-border-primary\\">
-              <v-icon-stub></v-icon-stub>
-              &nbsp;C#
-            </div>
-            <div>
-              <ul>
-                <li>実務経験2年</li>
-                <li>Webサービス開発で利用</li>
-              </ul>
-            </div>
-          </div>
-          <div style=\\"margin-bottom: 16px;\\">
-            <div class=\\"title left-border-primary\\">
-              <v-icon-stub></v-icon-stub>
-              &nbsp;javascript
-            </div>
-            <div>
-              <ul>
-                <li>実務経験7年</li>
-                <li>Webサービス開発で利用</li>
-              </ul>
-            </div>
-          </div>
-        </v-card-text-stub>
+        <v-container-stub tag=\\"div\\">
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"left-border-primary\\">
+                <v-icon-stub></v-icon-stub>
+                &nbsp;Ruby
+              </div>
+              <div>
+                <ul>
+                  <li>実務経験1年</li>
+                  <li>Webサービス開発で利用</li>
+                </ul>
+              </div>
+            </v-col-stub>
+          </v-row-stub>
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"left-border-primary\\">
+                <v-icon-stub></v-icon-stub>
+                &nbsp;Java
+              </div>
+              <div>
+                <ul>
+                  <li>実務経験6年</li>
+                  <li>Webサービス開発で利用</li>
+                </ul>
+              </div>
+            </v-col-stub>
+          </v-row-stub>
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"left-border-primary\\">
+                <v-icon-stub></v-icon-stub>
+                &nbsp;Python
+              </div>
+              <div>
+                <ul>
+                  <li>実務経験3年</li>
+                  <li>主にCLIツール、Lambda用コードとして利用</li>
+                </ul>
+              </div>
+            </v-col-stub>
+          </v-row-stub>
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"left-border-primary\\">
+                <v-icon-stub></v-icon-stub>
+                &nbsp;Golang
+              </div>
+              <div>
+                <ul>
+                  <li>実務経験2年</li>
+                  <li>主にCLIツール、Lambda用コードとして利用</li>
+                </ul>
+              </div>
+            </v-col-stub>
+          </v-row-stub>
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"left-border-primary\\">
+                <v-icon-stub></v-icon-stub>
+                &nbsp;C#
+              </div>
+              <div>
+                <ul>
+                  <li>実務経験2年</li>
+                  <li>Webサービス開発で利用</li>
+                </ul>
+              </div>
+            </v-col-stub>
+          </v-row-stub>
+          <v-row-stub tag=\\"div\\" justify=\\"center\\">
+            <v-col-stub tag=\\"div\\">
+              <div class=\\"left-border-primary\\">
+                <v-icon-stub></v-icon-stub>
+                &nbsp;javascript
+              </div>
+              <div>
+                <ul>
+                  <li>実務経験7年</li>
+                  <li>Webサービス開発で利用</li>
+                </ul>
+              </div>
+            </v-col-stub>
+          </v-row-stub>
+        </v-container-stub>
       </v-card-stub>
     </v-col-stub>
   </v-row-stub>
@@ -128,7 +112,7 @@ exports[`skills should be vue instance 1`] = `
           IaaS
         </v-card-title-stub>
         <v-card-text-stub>
-          <div class=\\"title left-border-primary\\">
+          <div class=\\"left-border-primary\\">
             <v-icon-stub>mdi-aws</v-icon-stub>
             &nbsp;AWS
           </div>
@@ -138,7 +122,7 @@ exports[`skills should be vue instance 1`] = `
               AWSソリューションアーキテクトアソシエイト資格を取得（2018年）
             </li>
           </ul>
-          <div class=\\"title left-border-primary\\">
+          <div class=\\"left-border-primary\\">
             <v-icon-stub>mdi-google-cloud</v-icon-stub>
             &nbsp;GCP
           </div>
