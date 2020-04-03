@@ -11,7 +11,7 @@ describe('profile', () => {
   it('should be vue instance', () => {
     const wrapper = shallowMount(target, {
       localVue,
-      Vuetify
+      Vuetify,
     })
     expect(wrapper.isVueInstance()).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()

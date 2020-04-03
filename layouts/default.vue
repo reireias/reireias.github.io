@@ -84,7 +84,7 @@
 export default {
   data() {
     return {
-      title: 'reireias.dev'
+      title: 'reireias.dev',
     }
   },
   mounted() {
@@ -92,9 +92,9 @@ export default {
   },
   head() {
     return {
-      title: this.title
+      title: this.title,
     }
-  }
+  },
 }
 </script>
 

@@ -132,36 +132,36 @@ export default {
         {
           name: 'Ruby',
           icon: 'mdi-language-ruby',
-          lines: ['実務経験1年', 'Webサービス開発で利用']
+          lines: ['実務経験1年', 'Webサービス開発で利用'],
         },
         {
           name: 'Java',
           icon: 'mdi-language-java',
-          lines: ['実務経験6年', 'Webサービス開発で利用']
+          lines: ['実務経験6年', 'Webサービス開発で利用'],
         },
         {
           name: 'Python',
           icon: 'mdi-language-python',
-          lines: ['実務経験3年', '主にCLIツール、Lambda用コードとして利用']
+          lines: ['実務経験3年', '主にCLIツール、Lambda用コードとして利用'],
         },
         {
           name: 'Golang',
           icon: 'mdi-language-go',
-          lines: ['実務経験2年', '主にCLIツール、Lambda用コードとして利用']
+          lines: ['実務経験2年', '主にCLIツール、Lambda用コードとして利用'],
         },
         {
           name: 'C#',
           icon: 'mdi-language-csharp',
-          lines: ['実務経験2年', 'Webサービス開発で利用']
+          lines: ['実務経験2年', 'Webサービス開発で利用'],
         },
         {
           name: 'javascript',
           icon: 'mdi-language-javascript',
-          lines: ['実務経験7年', 'Webサービス開発で利用']
-        }
-      ]
+          lines: ['実務経験7年', 'Webサービス開発で利用'],
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 

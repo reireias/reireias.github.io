@@ -6,81 +6,81 @@ export default {
   head: {
     title: 'reireias.dev',
     htmlAttrs: {
-      lang: 'ja'
+      lang: 'ja',
     },
     meta: [
       {
-        charset: 'utf-8'
+        charset: 'utf-8',
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        content: 'width=device-width, initial-scale=1',
       },
       {
         hid: 'description',
         name: 'description',
-        content: pkg.description
+        content: pkg.description,
       },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: 'reireias portfolio'
+        content: 'reireias portfolio',
       },
       { hid: 'og:type', property: 'og:type', content: 'website' },
       {
         hid: 'og:url',
         property: 'og:url',
-        content: 'https://reireias.github.io'
+        content: 'https://reireias.github.io',
       },
       { hid: 'og:title', property: 'og:title', content: 'reireias portfolio' },
       {
         hid: 'og:description',
         property: 'og:description',
-        content: pkg.description
+        content: pkg.description,
       },
       {
         hid: 'og:image',
         property: 'og:image',
-        content: 'https://reireias.github.io/ogp.png'
+        content: 'https://reireias.github.io/ogp.png',
       },
       {
         hid: 'twitter:card',
         name: 'twitter:card',
-        content: 'summary_large_image'
+        content: 'summary_large_image',
       },
       {
         hid: 'twitter:site',
         name: 'twitter:site',
-        content: '@reirei_As'
+        content: '@reirei_As',
       },
       {
         hid: 'twitter:title',
         name: 'twitter:title',
-        content: 'reireias.dev'
+        content: 'reireias.dev',
       },
       {
         hid: 'twitter:description',
         name: 'twitter:description',
-        content: pkg.description
+        content: pkg.description,
       },
       {
         hid: 'twitter:image',
         name: 'twitter:image',
-        content: 'https://reireias.github.io/ogp.png'
+        content: 'https://reireias.github.io/ogp.png',
       },
       {
         hid: 'source:version',
         name: 'source:version',
-        content: process.env.TRAVIS_COMMIT
-      }
+        content: process.env.TRAVIS_COMMIT,
+      },
     ],
     link: [
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.ico'
-      }
-    ]
+        href: '/favicon.ico',
+      },
+    ],
   },
   plugins: [],
   css: [],
@@ -99,7 +99,7 @@ export default {
           accent: '#72deff',
           info: '#b15dff',
           warning: '#ffcf44',
-          error: '#ff6859'
+          error: '#ff6859',
         },
         light: {
           primary: '#268bd2',
@@ -108,18 +108,18 @@ export default {
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3
-        }
+          success: colors.green.accent3,
+        },
       },
       options: {
-        customProperties: true
-      }
-    }
+        customProperties: true,
+      },
+    },
   },
   webfontloader: {
     google: {
-      families: ['Roboto Condensed:400']
-    }
+      families: ['Roboto Condensed:400'],
+    },
   },
   build: {
     extend(config, ctx) {
@@ -129,9 +129,9 @@ export default {
           enforce: 'pre',
           test: /\.(js|vue)$/,
           loader: 'eslint-loader',
-          exclude: /(node_modules)/
+          exclude: /(node_modules)/,
         })
       }
-    }
-  }
+    },
+  },
 }

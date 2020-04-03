@@ -48,7 +48,7 @@ import Profile from '~/components/Profile'
 
 export default {
   components: {
-    Profile
+    Profile,
   },
   data() {
     return {
@@ -56,18 +56,18 @@ export default {
         {
           name: '生年月日',
           value: '1988/xx/xx',
-          color: 'primary'
+          color: 'primary',
         },
         {
           name: '職種',
           value: 'SRE / Webアプリケーションエンジニア',
-          color: 'primary-darken'
+          color: 'primary-darken',
         },
         {
           name: '好きなもの',
           value: 'ネコ / 新技術',
-          color: 'secondary'
-        }
+          color: 'secondary',
+        },
       ],
       accounts: [
         {
@@ -75,31 +75,31 @@ export default {
           value: 'reireias',
           url: 'http://github.com/reireias',
           icon: 'mdi-github',
-          color: 'accent'
+          color: 'accent',
         },
         {
           name: 'Twitter',
           value: 'reirei_As',
           url: 'http://twitter.com/reirei_As',
           icon: 'mdi-twitter',
-          color: 'info-darken'
+          color: 'info-darken',
         },
         {
           name: 'Qiita',
           value: 'reireias',
           url: 'http://qiita.com/reireias',
           icon: 'mdi-web',
-          color: 'info'
+          color: 'info',
         },
         {
           name: 'Speaker Deck',
           value: 'reireias',
           url: 'https://speakerdeck.com/reireias',
           icon: 'mdi-web',
-          color: 'accent'
-        }
-      ]
+          color: 'accent',
+        },
+      ],
     }
-  }
+  },
 }
 </script>

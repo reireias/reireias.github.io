@@ -31,31 +31,31 @@ export default {
       attributes: [
         {
           name: '生年月日',
-          value: '1988/xx/xx'
+          value: '1988/xx/xx',
         },
         {
           name: '職業',
-          value: 'SRE 兼 Webアプリケーションエンジニア'
+          value: 'SRE 兼 Webアプリケーションエンジニア',
         },
         {
           name: '好きな動物',
-          value: '猫科'
+          value: '猫科',
         },
         {
           name: '好きなOS',
-          value: 'Linux'
+          value: 'Linux',
         },
         {
           name: '趣味',
-          value: '新技術で遊ぶこと'
+          value: '新技術で遊ぶこと',
         },
         {
           name: 'その他',
-          value: 'Japan MENSA会員'
-        }
-      ]
+          value: 'Japan MENSA会員',
+        },
+      ],
     }
-  }
+  },
 }
 </script>
 
