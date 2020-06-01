@@ -20,7 +20,7 @@
     "@nuxtjs/pwa": "^2.6.0",
     "lazysizes": "^5.2.0",
     "nuxt": "^2.12.2",
-    "vuetify": "^2.2.20"
+    "vuetify": "^2.2.30"
   },
   "devDependencies": {
     "@mdi/font": "^5.0.45",
