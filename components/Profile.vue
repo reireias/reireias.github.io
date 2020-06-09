@@ -35,19 +35,23 @@ export default {
         },
         {
           name: '職業',
-          value: 'SRE 兼 Webアプリケーションエンジニア',
+          value: 'SRE/Webアプリケーションエンジニア',
         },
         {
           name: '好きな動物',
-          value: '猫科',
+          value: '猫科全般',
         },
         {
           name: '好きなOS',
           value: 'Linux',
         },
         {
+          name: '好きなLinux Distribution',
+          value: 'Linux Mint',
+        },
+        {
           name: '趣味',
-          value: '新技術で遊ぶこと',
+          value: '新技術で遊ぶこと/自作PC/ゲーム全般',
         },
         {
           name: 'その他',

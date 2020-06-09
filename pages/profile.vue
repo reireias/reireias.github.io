@@ -52,23 +52,6 @@ export default {
   },
   data() {
     return {
-      attributes: [
-        {
-          name: '生年月日',
-          value: '1988/xx/xx',
-          color: 'primary',
-        },
-        {
-          name: '職種',
-          value: 'SRE / Webアプリケーションエンジニア',
-          color: 'primary-darken',
-        },
-        {
-          name: '好きなもの',
-          value: 'ネコ / 新技術',
-          color: 'secondary',
-        },
-      ],
       accounts: [
         {
           name: 'GitHub',

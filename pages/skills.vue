@@ -5,18 +5,25 @@
     </v-row>
     <v-row justify="center">
       <v-col cols="12" sm="8">
-        <skill-card></skill-card>
+        <sre-skill-card></sre-skill-card>
+      </v-col>
+    </v-row>
+    <v-row justify="center">
+      <v-col cols="12" sm="8">
+        <web-skill-card></web-skill-card>
       </v-col>
     </v-row>
   </v-container>
 </template>
 
 <script>
-import SkillCard from '~/components/SkillCard'
+import SreSkillCard from '~/components/SreSkillCard'
+import WebSkillCard from '~/components/WebSkillCard'
 
 export default {
   components: {
-    SkillCard,
+    SreSkillCard,
+    WebSkillCard,
   },
 }
 </script>
