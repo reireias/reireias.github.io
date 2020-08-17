@@ -32,8 +32,8 @@
 </template>
 
 <script>
-import anime from 'animejs/lib/anime.es.js'
 import { logo } from '~/constants/svg'
+const anime = require('animejs')
 
 export default {
   data() {
