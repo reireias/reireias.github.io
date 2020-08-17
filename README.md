@@ -1,7 +1,7 @@
 ![deploy](https://github.com/reireias/reireias.github.io/workflows/deploy/badge.svg) ![test](https://github.com/reireias/reireias.github.io/workflows/test/badge.svg)
 # REIREIAS'S GITHUB PAGES
 
-https://reireias.github.id
+https://reireias.dev
 
 Vue.js + Vuetify.js + Nuxt.js
 

@@ -33,7 +33,7 @@
 
 <script>
 import { logo } from '~/constants/svg'
-const anime = require('animejs')
+const anime = require('animejs').default
 
 export default {
   data() {
