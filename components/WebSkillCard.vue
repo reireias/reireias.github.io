@@ -54,6 +54,11 @@
   </v-card>
 </template>
 
+<script lang="ts">
+import Vue from 'vue'
+export default Vue.extend({})
+</script>
+
 <style lang="scss">
 .web-skill-card .col {
   align-self: center;

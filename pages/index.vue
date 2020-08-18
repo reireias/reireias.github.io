@@ -31,11 +31,12 @@
   </v-container>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue'
 import { logo } from '~/constants/svg'
 const anime = require('animejs').default
 
-export default {
+export default Vue.extend({
   data() {
     return {
       show: false,
@@ -69,19 +70,19 @@ export default {
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
         duration: 500,
-        delay: (_, i) => i * 200 + 500,
+        delay: (_: any, i: number) => i * 200 + 500,
       })
       timeline.add(
         {
           easing: 'easeInOutSine',
-          fill: ['transparent', (_, i) => this.colors[i]],
+          fill: ['transparent', (_: any, i: number) => this.colors[i]],
           duration: 500,
         },
         '-=200'
       )
     },
   },
-}
+})
 </script>
 
 <style lang="scss">

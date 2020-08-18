@@ -16,14 +16,15 @@
   </v-container>
 </template>
 
-<script>
-import SreSkillCard from '~/components/SreSkillCard'
-import WebSkillCard from '~/components/WebSkillCard'
+<script lang="ts">
+import Vue from 'vue'
+import SreSkillCard from '~/components/SreSkillCard.vue'
+import WebSkillCard from '~/components/WebSkillCard.vue'
 
-export default {
+export default Vue.extend({
   components: {
     SreSkillCard,
     WebSkillCard,
   },
-}
+})
 </script>
