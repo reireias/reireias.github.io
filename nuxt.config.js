@@ -87,7 +87,7 @@ export default {
   loading: { color: '#3B8070' },
   transition: 'page',
   modules: ['nuxt-webfontloader'],
-  buildModules: ['@nuxtjs/vuetify'],
+  buildModules: ['@nuxtjs/vuetify', '@nuxt/typescript-build'],
   vuetify: {
     customVariables: ['~/assets/app.scss'],
     theme: {

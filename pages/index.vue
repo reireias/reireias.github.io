@@ -69,12 +69,12 @@ export default {
         strokeDashoffset: [anime.setDashoffset, 0],
         easing: 'easeInOutSine',
         duration: 500,
-        delay: (el, i) => i * 200 + 500,
+        delay: (_, i) => i * 200 + 500,
       })
       timeline.add(
         {
           easing: 'easeInOutSine',
-          fill: ['transparent', (el, i) => this.colors[i]],
+          fill: ['transparent', (_, i) => this.colors[i]],
           duration: 500,
         },
         '-=200'
