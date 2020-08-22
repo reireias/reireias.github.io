@@ -17,11 +17,11 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import { defineComponent } from '@vue/composition-api'
 import SreSkillCard from '~/components/SreSkillCard.vue'
 import WebSkillCard from '~/components/WebSkillCard.vue'
 
-export default Vue.extend({
+export default defineComponent({
   components: {
     SreSkillCard,
     WebSkillCard,

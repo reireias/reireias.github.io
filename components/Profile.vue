@@ -24,43 +24,41 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({
-  data() {
-    return {
-      colors: ['primary', 'primary-darken', 'secondary'],
-      attributes: [
-        {
-          name: '生年月日',
-          value: '1988/xx/xx',
-        },
-        {
-          name: '職業',
-          value: 'SRE/Webアプリケーションエンジニア',
-        },
-        {
-          name: '好きな動物',
-          value: '猫科全般',
-        },
-        {
-          name: '好きなOS',
-          value: 'Linux',
-        },
-        {
-          name: '好きなLinux Distribution',
-          value: 'Linux Mint',
-        },
-        {
-          name: '趣味',
-          value: '新技術で遊ぶこと/自作PC/ゲーム全般',
-        },
-        {
-          name: 'その他',
-          value: 'Japan MENSA会員',
-        },
-      ],
-    }
+import { defineComponent } from '@vue/composition-api'
+export default defineComponent({
+  setup() {
+    const colors = ['primary', 'primary-darken', 'secondary']
+    const attributes = [
+      {
+        name: '生年月日',
+        value: '1988/xx/xx',
+      },
+      {
+        name: '職業',
+        value: 'SRE/Webアプリケーションエンジニア',
+      },
+      {
+        name: '好きな動物',
+        value: '猫科全般',
+      },
+      {
+        name: '好きなOS',
+        value: 'Linux',
+      },
+      {
+        name: '好きなLinux Distribution',
+        value: 'Linux Mint',
+      },
+      {
+        name: '趣味',
+        value: '新技術で遊ぶこと/自作PC/ゲーム全般',
+      },
+      {
+        name: 'その他',
+        value: 'Japan MENSA会員',
+      },
+    ]
+    return { colors, attributes }
   },
 })
 </script>
