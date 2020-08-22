@@ -13,7 +13,6 @@ describe('skills', () => {
       localVue,
       Vuetify,
     })
-    expect(wrapper.isVueInstance()).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()
   })
 })

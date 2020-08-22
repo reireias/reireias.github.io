@@ -13,7 +13,6 @@ describe('articles', () => {
       localVue,
       Vuetify,
     })
-    expect(wrapper.isVueInstance()).toBeTruthy()
     expect(wrapper.html()).toMatchSnapshot()
   })
 })
