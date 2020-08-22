@@ -32,33 +32,36 @@
 </template>
 
 <script lang="ts">
-import Vue from 'vue'
+import {
+  defineComponent,
+  ref,
+  getCurrentInstance,
+  onMounted,
+} from '@vue/composition-api'
 import { logo } from '~/constants/svg'
 const anime = require('animejs').default
 
-export default Vue.extend({
-  data() {
-    return {
-      show: false,
-      logo,
-      colors: [
-        this.$vuetify.theme.themes.dark.primary,
-        this.$vuetify.theme.themes.dark.info,
-        this.$vuetify.theme.themes.dark.warning,
-        this.$vuetify.theme.themes.dark.primary,
-        this.$vuetify.theme.themes.dark.info,
-        this.$vuetify.theme.themes.dark.warning,
-        this.$vuetify.theme.themes.dark.accent,
-        this.$vuetify.theme.themes.dark.accent,
-      ],
-    }
-  },
-  mounted() {
-    this.run()
-  },
-  methods: {
-    run() {
-      this.show = true
+const useVuetify = () => {
+  const vm = getCurrentInstance()
+  return vm!.$vuetify
+}
+
+export default defineComponent({
+  setup() {
+    const show = ref(false)
+    const vuetify = useVuetify()
+    const colors = [
+      vuetify.theme.themes.dark.primary,
+      vuetify.theme.themes.dark.info,
+      vuetify.theme.themes.dark.warning,
+      vuetify.theme.themes.dark.primary,
+      vuetify.theme.themes.dark.info,
+      vuetify.theme.themes.dark.warning,
+      vuetify.theme.themes.dark.accent,
+      vuetify.theme.themes.dark.accent,
+    ]
+    const run = () => {
+      show.value = true
       anime({
         targets: '.debug',
         translateX: 250,
@@ -75,12 +78,22 @@ export default Vue.extend({
       timeline.add(
         {
           easing: 'easeInOutSine',
-          fill: ['transparent', (_: any, i: number) => this.colors[i]],
+          fill: ['transparent', (_: any, i: number) => colors[i]],
           duration: 500,
         },
         '-=200'
       )
-    },
+    }
+    onMounted(() => {
+      run()
+    })
+
+    return {
+      show,
+      logo,
+      colors,
+      run,
+    }
   },
 })
 </script>

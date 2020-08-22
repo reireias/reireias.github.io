@@ -82,7 +82,7 @@ export default {
       },
     ],
   },
-  plugins: [],
+  plugins: ['@/plugins/composition-api'],
   css: [],
   loading: { color: '#3B8070' },
   transition: 'page',
