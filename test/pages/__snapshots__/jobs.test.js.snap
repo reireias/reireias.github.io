@@ -8,9 +8,7 @@ exports[`jobs should be vue instance 1`] = `
   <v-row-stub tag=\\"div\\" justify=\\"center\\">
     <v-col-stub cols=\\"12\\" sm=\\"8\\" tag=\\"div\\">
       <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\" class=\\"job-card\\">
-        <v-card-title-stub class=\\"bottom-border-primary\\">
-          職歴
-        </v-card-title-stub>
+        <v-card-title-stub class=\\"bottom-border-primary\\"> 職歴 </v-card-title-stub>
         <v-container-stub tag=\\"div\\">
           <v-row-stub tag=\\"div\\" justify=\\"center\\">
             <v-col-stub tag=\\"div\\">
@@ -52,15 +50,11 @@ exports[`jobs should be vue instance 1`] = `
   <v-row-stub tag=\\"div\\" justify=\\"center\\">
     <v-col-stub cols=\\"12\\" sm=\\"8\\" tag=\\"div\\">
       <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\" class=\\"job-card\\">
-        <v-card-title-stub class=\\"bottom-border-accent\\">
-          学歴
-        </v-card-title-stub>
+        <v-card-title-stub class=\\"bottom-border-accent\\"> 学歴 </v-card-title-stub>
         <v-container-stub tag=\\"div\\">
           <v-row-stub tag=\\"div\\">
             <v-col-stub tag=\\"div\\">
-              <div class=\\"left-border-accent\\">
-                筑波大学（2007年〜2011年）
-              </div>
+              <div class=\\"left-border-accent\\">筑波大学（2007年〜2011年）</div>
             </v-col-stub>
           </v-row-stub>
           <v-row-stub tag=\\"div\\">

@@ -11,9 +11,7 @@
     <v-row justify="center">
       <v-col cols="12" md="8">
         <v-card flat>
-          <v-card-title class="bottom-border-accent">
-            Accounts
-          </v-card-title>
+          <v-card-title class="bottom-border-accent"> Accounts </v-card-title>
           <v-container>
             <v-row
               v-for="account in accounts"

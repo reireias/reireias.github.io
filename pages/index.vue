@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <v-col style="display: contents;">
+      <v-col style="display: contents">
         <svg
           v-show="show"
           class="debug-svg"

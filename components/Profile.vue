@@ -1,8 +1,6 @@
 <template>
   <v-card class="profile-card" flat>
-    <v-card-title class="bottom-border-primary">
-      Profile
-    </v-card-title>
+    <v-card-title class="bottom-border-primary"> Profile </v-card-title>
     <v-container>
       <v-row
         v-for="(attribute, index) in attributes"
