@@ -6,9 +6,7 @@
     <v-row justify="center">
       <v-col cols="12" sm="8">
         <v-card class="job-card" flat>
-          <v-card-title class="bottom-border-primary">
-            職歴
-          </v-card-title>
+          <v-card-title class="bottom-border-primary"> 職歴 </v-card-title>
           <v-container>
             <v-row justify="center">
               <v-col>
@@ -50,15 +48,11 @@
     <v-row justify="center">
       <v-col cols="12" sm="8">
         <v-card class="job-card" flat>
-          <v-card-title class="bottom-border-accent">
-            学歴
-          </v-card-title>
+          <v-card-title class="bottom-border-accent"> 学歴 </v-card-title>
           <v-container>
             <v-row>
               <v-col>
-                <div class="left-border-accent">
-                  筑波大学（2007年〜2011年）
-                </div>
+                <div class="left-border-accent">筑波大学（2007年〜2011年）</div>
               </v-col>
             </v-row>
             <v-row>

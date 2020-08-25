@@ -1,8 +1,6 @@
 <template>
   <v-card class="sre-skill-card" flat>
-    <v-card-title class="bottom-border-primary">
-      SRE
-    </v-card-title>
+    <v-card-title class="bottom-border-primary"> SRE </v-card-title>
     <v-container>
       <v-row justify="center">
         <v-col>
@@ -51,9 +49,7 @@
       </v-row>
       <v-row justify="center">
         <v-col>
-          <div class="left-border-secondary">
-            CI/CDパイプラインの構築
-          </div>
+          <div class="left-border-secondary">CI/CDパイプラインの構築</div>
         </v-col>
       </v-row>
       <v-row justify="center">
@@ -76,9 +72,7 @@
       </v-row>
       <v-row justify="center">
         <v-col>
-          <div class="left-border-primary">
-            運用系ツールの作成と運用
-          </div>
+          <div class="left-border-primary">運用系ツールの作成と運用</div>
         </v-col>
       </v-row>
       <v-row justify="center">

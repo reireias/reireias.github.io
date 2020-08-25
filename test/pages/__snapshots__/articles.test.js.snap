@@ -12,9 +12,7 @@ exports[`articles should be vue instance 1`] = `
         <v-card-title-stub class=\\"bottom-border-primary title\\">
           ラズパイ4で作るディスプレイ付きKubernetesクラスター
         </v-card-title-stub>
-        <v-card-text-stub>
-          こだわりが詰まった作品です
-        </v-card-text-stub>
+        <v-card-text-stub> こだわりが詰まった作品です </v-card-text-stub>
       </v-card-stub>
     </v-col-stub>
     <v-col-stub cols=\\"12\\" sm=\\"6\\" tag=\\"div\\">

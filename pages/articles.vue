@@ -13,9 +13,7 @@
           <v-card-title class="bottom-border-primary title">
             ラズパイ4で作るディスプレイ付きKubernetesクラスター
           </v-card-title>
-          <v-card-text>
-            こだわりが詰まった作品です
-          </v-card-text>
+          <v-card-text> こだわりが詰まった作品です </v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6">

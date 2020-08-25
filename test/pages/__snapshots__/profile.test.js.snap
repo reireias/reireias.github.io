@@ -13,9 +13,7 @@ exports[`profile should be vue instance 1`] = `
   <v-row-stub tag=\\"div\\" justify=\\"center\\">
     <v-col-stub cols=\\"12\\" md=\\"8\\" tag=\\"div\\">
       <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\">
-        <v-card-title-stub class=\\"bottom-border-accent\\">
-          Accounts
-        </v-card-title-stub>
+        <v-card-title-stub class=\\"bottom-border-accent\\"> Accounts </v-card-title-stub>
         <v-container-stub tag=\\"div\\"></v-container-stub>
       </v-card-stub>
     </v-col-stub>
