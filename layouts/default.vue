@@ -31,7 +31,7 @@
         </v-row>
       </v-container>
     </v-app-bar>
-    <v-navigation-drawer app mobile-break-point="960" width="100">
+    <v-navigation-drawer app mobile-breakpoint="960" width="100">
       <v-list class="menu" dense>
         <v-list-item>
           <v-container>
@@ -74,9 +74,9 @@
         </v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-content>
+    <v-main>
       <nuxt />
-    </v-content>
+    </v-main>
   </v-app>
 </template>
 
