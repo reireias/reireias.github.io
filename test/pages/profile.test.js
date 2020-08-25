@@ -1,11 +1,13 @@
 import { shallowMount, createLocalVue } from '@vue/test-utils'
 import Vue from 'vue'
 import Vuetify from 'vuetify'
+import CompositionApi from '@vue/composition-api'
 import target from '@/pages/profile'
 
 Vue.use(Vuetify)
 const localVue = createLocalVue()
 localVue.use(Vuetify)
+localVue.use(CompositionApi)
 
 describe('profile', () => {
   it('should be vue instance', () => {
