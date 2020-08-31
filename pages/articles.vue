@@ -10,7 +10,7 @@
           target="_blank"
         >
           <v-img src="/article01.jpg" height="300"></v-img>
-          <v-card-title class="bottom-border-primary title">
+          <v-card-title>
             ラズパイ4で作るディスプレイ付きKubernetesクラスター
           </v-card-title>
           <v-card-text> こだわりが詰まった作品です </v-card-text>
@@ -22,7 +22,7 @@
           target="_blank"
         >
           <v-img src="/article02.png" height="300"></v-img>
-          <v-card-title class="bottom-border-primary title">
+          <v-card-title>
             Firebase + Nuxt.js + RaspberryPiで作る猫監視システム
           </v-card-title>
           <v-card-text>

@@ -1,10 +1,10 @@
 <template>
-  <v-card class="sre-skill-card" flat>
-    <v-card-title class="bottom-border-primary"> SRE </v-card-title>
+  <v-card flat>
+    <v-card-title> SRE </v-card-title>
     <v-container>
       <v-row justify="center">
         <v-col>
-          <div class="left-border-primary">アーキテクチャ/インフラ構成設計</div>
+          <div>アーキテクチャ/インフラ構成設計</div>
         </v-col>
       </v-row>
       <v-row justify="center">
@@ -27,7 +27,7 @@
       </v-row>
       <v-row justify="center">
         <v-col>
-          <div class="left-border-primary-darken">
+          <div>
             Terraform or CloudFormationによるInfrastracture as Codeの実現
           </div>
         </v-col>
@@ -49,7 +49,7 @@
       </v-row>
       <v-row justify="center">
         <v-col>
-          <div class="left-border-secondary">CI/CDパイプラインの構築</div>
+          <div>CI/CDパイプラインの構築</div>
         </v-col>
       </v-row>
       <v-row justify="center">
@@ -72,7 +72,7 @@
       </v-row>
       <v-row justify="center">
         <v-col>
-          <div class="left-border-primary">運用系ツールの作成と運用</div>
+          <div>運用系ツールの作成と運用</div>
         </v-col>
       </v-row>
       <v-row justify="center">
@@ -87,9 +87,7 @@
       </v-row>
       <v-row justify="center">
         <v-col>
-          <div class="left-border-primary-darken">
-            Data WarehouseとBI Toolでの分析/可視化基盤の作成
-          </div>
+          <div>Data WarehouseとBI Toolでの分析/可視化基盤の作成</div>
         </v-col>
       </v-row>
       <v-row justify="center">
@@ -107,9 +105,7 @@
       </v-row>
       <v-row justify="center">
         <v-col>
-          <div class="left-border-secondary">
-            PaaS/Docker/低レイヤー技術の社内教育
-          </div>
+          <div>PaaS/Docker/低レイヤー技術の社内教育</div>
         </v-col>
       </v-row>
       <v-row justify="center">
@@ -132,13 +128,3 @@
 import { defineComponent } from '@vue/composition-api'
 export default defineComponent({})
 </script>
-
-<style lang="scss">
-.sre-skill-card .col {
-  align-self: center;
-  font-size: 20px;
-  p {
-    padding-left: 20px;
-  }
-}
-</style>

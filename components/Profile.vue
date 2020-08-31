@@ -1,17 +1,14 @@
 <template>
-  <v-card class="profile-card" flat>
-    <v-card-title class="bottom-border-primary"> Profile </v-card-title>
+  <v-card flat>
+    <v-card-title> Profile </v-card-title>
     <v-container>
       <v-row
-        v-for="(attribute, index) in attributes"
+        v-for="attribute in attributes"
         :key="attribute.name"
         justify="center"
       >
         <v-col cols="4">
-          <div
-            :class="`left-border-${colors[index % colors.length]}`"
-            v-text="attribute.name"
-          ></div>
+          <div v-text="attribute.name"></div>
         </v-col>
         <v-col cols="8">
           <div v-text="attribute.value"></div>
@@ -60,10 +57,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="scss">
-.profile-card .col {
-  align-self: center;
-  font-size: 20px;
-}
-</style>

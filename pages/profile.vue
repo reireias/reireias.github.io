@@ -1,5 +1,5 @@
 <template>
-  <v-container class="profile-container">
+  <v-container>
     <v-row justify="center">
       <div class="display-3">Profile</div>
     </v-row>
@@ -11,7 +11,7 @@
     <v-row justify="center">
       <v-col cols="12" md="8">
         <v-card flat>
-          <v-card-title class="bottom-border-accent"> Accounts </v-card-title>
+          <v-card-title> Accounts </v-card-title>
           <v-container>
             <v-row
               v-for="account in accounts"
@@ -19,7 +19,7 @@
               justify="center"
             >
               <v-col>
-                <div :class="`title left-border-${account.color}`">
+                <div>
                   <v-icon v-if="account.icon" v-text="account.icon"></v-icon>
                   {{ account.name }}
                 </div>

@@ -62,10 +62,6 @@ export default defineComponent({
     ]
     const run = () => {
       show.value = true
-      anime({
-        targets: '.debug',
-        translateX: 250,
-      })
       const timeline = anime.timeline({
         targets: ['.debug-svg path'],
       })
@@ -97,11 +93,3 @@ export default defineComponent({
   },
 })
 </script>
-
-<style lang="scss">
-.debug {
-  width: 100px;
-  height: 100px;
-  background-color: var(--v-primary-base);
-}
-</style>

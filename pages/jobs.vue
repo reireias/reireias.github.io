@@ -5,14 +5,12 @@
     </v-row>
     <v-row justify="center">
       <v-col cols="12" sm="8">
-        <v-card class="job-card" flat>
-          <v-card-title class="bottom-border-primary"> 職歴 </v-card-title>
+        <v-card flat>
+          <v-card-title> 職歴 </v-card-title>
           <v-container>
             <v-row justify="center">
               <v-col>
-                <div class="left-border-primary">
-                  富士ゼロックス株式会社（2013年〜2019年）
-                </div>
+                <div>富士ゼロックス株式会社（2013年〜2019年）</div>
               </v-col>
             </v-row>
             <v-row>
@@ -26,9 +24,7 @@
             </v-row>
             <v-row>
               <v-col>
-                <div class="left-border-primary">
-                  メドピア株式会社（2019年〜）
-                </div>
+                <div>メドピア株式会社（2019年〜）</div>
               </v-col>
             </v-row>
             <v-row>
@@ -47,12 +43,12 @@
     </v-row>
     <v-row justify="center">
       <v-col cols="12" sm="8">
-        <v-card class="job-card" flat>
-          <v-card-title class="bottom-border-accent"> 学歴 </v-card-title>
+        <v-card flat>
+          <v-card-title> 学歴 </v-card-title>
           <v-container>
             <v-row>
               <v-col>
-                <div class="left-border-accent">筑波大学（2007年〜2011年）</div>
+                <div>筑波大学（2007年〜2011年）</div>
               </v-col>
             </v-row>
             <v-row>
@@ -65,9 +61,7 @@
             </v-row>
             <v-row>
               <v-col>
-                <div class="left-border-info">
-                  筑波大学大学院（2011年〜2013年）
-                </div>
+                <div>筑波大学大学院（2011年〜2013年）</div>
               </v-col>
             </v-row>
             <v-row>
@@ -84,10 +78,3 @@
     </v-row>
   </v-container>
 </template>
-
-<style lang="scss">
-.job-card .col {
-  align-self: center;
-  font-size: 20px;
-}
-</style>
