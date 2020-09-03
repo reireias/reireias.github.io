@@ -1,12 +1,24 @@
 <template>
   <v-app>
+    <v-navigation-drawer app>
+      <v-list>
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title class="title">reireas.dev</v-list-item-title>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-divider></v-divider>
+
+        <v-list-item v-for="link in links" :key="link.to" :to="link.to" nuxt>{{
+          link.name
+        }}</v-list-item>
+      </v-list>
+    </v-navigation-drawer>
     <v-main>
       <v-container>
         <v-row justify="center">
-          <div class="display-4">{{ title }}</div>
-        </v-row>
-        <v-row justify="center">
-          <v-col cols="12" sm="4">
+          <v-col cols="12" sm="8">
             <nuxt />
           </v-col>
         </v-row>
@@ -16,19 +28,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, computed, provide } from '@vue/composition-api'
-import titleStore from '@/stores/title'
-import TitleStoreKey from '@/stores/title-key'
+import { defineComponent } from '@vue/composition-api'
 
 export default defineComponent({
   setup() {
-    const store = titleStore()
-    const title = computed(() => store.title)
-    provide(TitleStoreKey, store)
-
-    return {
-      title,
-    }
+    const links = [
+      {
+        name: 'Home',
+        to: '/',
+      },
+    ]
+    return { links }
   },
 })
 </script>
