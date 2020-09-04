@@ -47,6 +47,7 @@ const useVuetify = () => {
 }
 
 export default defineComponent({
+  layout: 'new',
   setup() {
     const show = ref(false)
     const vuetify = useVuetify()

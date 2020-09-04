@@ -37,6 +37,10 @@ export default defineComponent({
         name: 'Home',
         to: '/',
       },
+      {
+        name: 'Profile',
+        to: '/profile',
+      },
     ]
     return { links }
   },
