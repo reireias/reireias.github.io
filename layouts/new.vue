@@ -41,6 +41,10 @@ export default defineComponent({
         name: 'Profile',
         to: '/profile',
       },
+      {
+        name: 'Skill',
+        to: '/skill',
+      },
     ]
     return { links }
   },
