@@ -49,6 +49,10 @@ export default defineComponent({
         name: 'Job',
         to: '/job',
       },
+      {
+        name: 'Article',
+        to: '/articles',
+      },
     ]
     return { links }
   },

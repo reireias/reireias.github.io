@@ -1,8 +1,7 @@
 <template>
-  <v-container>
-    <v-row justify="center">
-      <div class="display-3">Article</div>
-    </v-row>
+  <div>
+    <page-title title="Article"></page-title>
+
     <v-row justify="center">
       <v-col cols="12" sm="6">
         <v-card
@@ -31,5 +30,17 @@
         </v-card>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api'
+import PageTitle from '@/components/PageTitle.vue'
+
+export default defineComponent({
+  layout: 'new',
+  components: {
+    PageTitle,
+  },
+})
+</script>
