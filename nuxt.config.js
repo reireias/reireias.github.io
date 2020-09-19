@@ -1,4 +1,3 @@
-import colors from 'vuetify/es5/util/colors'
 import pkg from './package'
 
 export default {
@@ -94,21 +93,22 @@ export default {
       dark: true,
       themes: {
         dark: {
-          primary: '#1eb980',
-          secondary: '#045d56',
-          accent: '#72deff',
-          info: '#b15dff',
-          warning: '#ffcf44',
-          error: '#ff6859',
+          primary: '#a6e22e', // green
+          accent: '#ae81ff', // purple
+          secondary: '#66d9ef', // cyan
+          success: '#a6e22e', // green
+          info: '#e6db74', // yellow
+          warning: '#fd971f', // orange
+          error: '#f92672', // red
         },
         light: {
-          primary: '#268bd2',
-          accent: colors.grey.darken3,
-          secondary: '#2aa198',
-          info: colors.teal.lighten1,
-          warning: colors.amber.base,
-          error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
+          primary: '#1976D2',
+          accent: '#e91e63',
+          secondary: '#30b1dc',
+          success: '#4CAF50',
+          info: '#2196F3',
+          warning: '#FB8C00',
+          error: '#FF5252',
         },
       },
       options: {

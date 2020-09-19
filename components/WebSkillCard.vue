@@ -1,14 +1,10 @@
 <template>
-  <v-card class="web-skill-card" flat>
-    <v-card-title class="bottom-border-accent">
-      Webアプリケーション開発
-    </v-card-title>
+  <v-card flat>
+    <v-card-title> Webアプリケーション開発 </v-card-title>
     <v-container>
       <v-row justify="center">
         <v-col>
-          <div class="left-border-accent">
-            Webアプリケーション開発のリーディング
-          </div>
+          <div>Webアプリケーション開発のリーディング</div>
         </v-col>
       </v-row>
       <v-row justify="center">
@@ -35,7 +31,7 @@
       </v-row>
       <v-row justify="center">
         <v-col>
-          <div class="left-border-info-darken">開発環境の構築や改善</div>
+          <div>開発環境の構築や改善</div>
         </v-col>
       </v-row>
       <v-row justify="center">
@@ -58,13 +54,3 @@
 import { defineComponent } from '@vue/composition-api'
 export default defineComponent({})
 </script>
-
-<style lang="scss">
-.web-skill-card .col {
-  align-self: center;
-  font-size: 20px;
-  p {
-    padding-left: 20px;
-  }
-}
-</style>

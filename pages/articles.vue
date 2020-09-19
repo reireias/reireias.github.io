@@ -1,8 +1,7 @@
 <template>
-  <v-container>
-    <v-row justify="center">
-      <div class="display-3">Article</div>
-    </v-row>
+  <div>
+    <page-title title="Article"></page-title>
+
     <v-row justify="center">
       <v-col cols="12" sm="6">
         <v-card
@@ -10,7 +9,7 @@
           target="_blank"
         >
           <v-img src="/article01.jpg" height="300"></v-img>
-          <v-card-title class="bottom-border-primary title">
+          <v-card-title>
             ラズパイ4で作るディスプレイ付きKubernetesクラスター
           </v-card-title>
           <v-card-text> こだわりが詰まった作品です </v-card-text>
@@ -22,7 +21,7 @@
           target="_blank"
         >
           <v-img src="/article02.png" height="300"></v-img>
-          <v-card-title class="bottom-border-primary title">
+          <v-card-title>
             Firebase + Nuxt.js + RaspberryPiで作る猫監視システム
           </v-card-title>
           <v-card-text>
@@ -31,5 +30,17 @@
         </v-card>
       </v-col>
     </v-row>
-  </v-container>
+  </div>
 </template>
+
+<script lang="ts">
+import { defineComponent } from '@vue/composition-api'
+import PageTitle from '@/components/PageTitle.vue'
+
+export default defineComponent({
+  layout: 'new',
+  components: {
+    PageTitle,
+  },
+})
+</script>
