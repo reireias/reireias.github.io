@@ -52,7 +52,7 @@
     "http-server": "^0.12.3",
     "jest": "^24.9.0",
     "nuxt-webfontloader": "^1.1.0",
-    "prettier": "^2.0.5",
+    "prettier": "^2.1.1",
     "push-dir": "^0.4.1",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
