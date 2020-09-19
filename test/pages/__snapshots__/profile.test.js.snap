@@ -4,6 +4,11 @@ exports[`profile should be vue instance 1`] = `
 "<div>
   <page-title-stub title=\\"Profile\\"></page-title-stub>
   <v-container-stub tag=\\"div\\">
+    <v-row-stub tag=\\"div\\" justify=\\"center\\">
+      <v-avatar-stub color=\\"white\\" size=\\"128\\">
+        <v-img-stub options=\\"[object Object]\\" position=\\"center center\\" src=\\"/icon.png\\" transition=\\"fade-transition\\"></v-img-stub>
+      </v-avatar-stub>
+    </v-row-stub>
     <key-value-row-stub k=\\"生年月日\\" v=\\"1988/xx/xx\\"></key-value-row-stub>
     <key-value-row-stub k=\\"職業\\" v=\\"SRE/Webアプリケーションエンジニア\\"></key-value-row-stub>
     <key-value-row-stub k=\\"好きな動物\\" v=\\"猫科全般\\"></key-value-row-stub>

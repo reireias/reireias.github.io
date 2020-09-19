@@ -3,6 +3,12 @@
     <page-title title="Profile"></page-title>
 
     <v-container>
+      <v-row justify="center">
+        <v-avatar color="white" size="128">
+          <v-img src="/icon.png"></v-img>
+        </v-avatar>
+      </v-row>
+
       <key-value-row
         v-for="profile in profiles"
         :key="profile.key"
