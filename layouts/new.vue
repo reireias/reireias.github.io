@@ -60,3 +60,11 @@ export default defineComponent({
   },
 })
 </script>
+
+<style lang="scss">
+.theme--dark {
+  &.v-application {
+    background-color: #272822;
+  }
+}
+</style>
