@@ -4,7 +4,9 @@
       <v-list>
         <v-list-item>
           <v-list-item-content>
-            <v-list-item-title class="title">reireas.dev</v-list-item-title>
+            <v-list-item-title class="title primary--text"
+              >reireas.dev</v-list-item-title
+            >
           </v-list-item-content>
         </v-list-item>
 
