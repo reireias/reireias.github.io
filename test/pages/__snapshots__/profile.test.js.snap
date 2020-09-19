@@ -1,67 +1,60 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`profile should be vue instance 1`] = `
-"<v-container-stub tag=\\"div\\" class=\\"profile-container\\">
-  <v-row-stub tag=\\"div\\" justify=\\"center\\">
-    <div class=\\"display-3\\">Profile</div>
-  </v-row-stub>
-  <v-row-stub tag=\\"div\\" justify=\\"center\\">
-    <v-col-stub cols=\\"12\\" md=\\"8\\" tag=\\"div\\">
-      <profile-stub></profile-stub>
-    </v-col-stub>
-  </v-row-stub>
-  <v-row-stub tag=\\"div\\" justify=\\"center\\">
-    <v-col-stub cols=\\"12\\" md=\\"8\\" tag=\\"div\\">
-      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\">
-        <v-card-title-stub class=\\"bottom-border-accent\\"> Accounts </v-card-title-stub>
-        <v-container-stub tag=\\"div\\">
-          <v-row-stub tag=\\"div\\" justify=\\"center\\">
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"title left-border-accent\\">
-                <v-icon-stub></v-icon-stub>
-                GitHub
-              </div>
-            </v-col-stub>
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"title\\"><a href=\\"http://github.com/reireias\\" target=\\"_blank\\">reireias</a></div>
-            </v-col-stub>
-          </v-row-stub>
-          <v-row-stub tag=\\"div\\" justify=\\"center\\">
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"title left-border-info-darken\\">
-                <v-icon-stub></v-icon-stub>
-                Twitter
-              </div>
-            </v-col-stub>
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"title\\"><a href=\\"http://twitter.com/reirei_As\\" target=\\"_blank\\">reirei_As</a></div>
-            </v-col-stub>
-          </v-row-stub>
-          <v-row-stub tag=\\"div\\" justify=\\"center\\">
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"title left-border-info\\">
-                <v-icon-stub></v-icon-stub>
-                Qiita
-              </div>
-            </v-col-stub>
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"title\\"><a href=\\"http://qiita.com/reireias\\" target=\\"_blank\\">reireias</a></div>
-            </v-col-stub>
-          </v-row-stub>
-          <v-row-stub tag=\\"div\\" justify=\\"center\\">
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"title left-border-accent\\">
-                <v-icon-stub></v-icon-stub>
-                Speaker Deck
-              </div>
-            </v-col-stub>
-            <v-col-stub tag=\\"div\\">
-              <div class=\\"title\\"><a href=\\"https://speakerdeck.com/reireias\\" target=\\"_blank\\">reireias</a></div>
-            </v-col-stub>
-          </v-row-stub>
-        </v-container-stub>
-      </v-card-stub>
-    </v-col-stub>
-  </v-row-stub>
-</v-container-stub>"
+"<div>
+  <page-title-stub title=\\"Profile\\"></page-title-stub>
+  <v-container-stub tag=\\"div\\">
+    <key-value-row-stub k=\\"生年月日\\" v=\\"1988/xx/xx\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"職業\\" v=\\"SRE/Webアプリケーションエンジニア\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"好きな動物\\" v=\\"猫科全般\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"好きなOS\\" v=\\"Linux\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"好きなLinux Distribution\\" v=\\"Linux Mint\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"趣味\\" v=\\"新技術で遊ぶこと/自作PC/ゲーム全般\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"備考\\" v=\\"Japan MENSA会員\\"></key-value-row-stub>
+    <v-row-stub tag=\\"div\\" justify=\\"center\\">
+      <v-col-stub tag=\\"div\\">
+        <div>
+          <v-icon-stub></v-icon-stub>
+          GitHub
+        </div>
+      </v-col-stub>
+      <v-col-stub tag=\\"div\\">
+        <div class=\\"title\\"><a href=\\"http://github.com/reireias\\" target=\\"_blank\\" class=\\"secondary--text\\">reireias</a></div>
+      </v-col-stub>
+    </v-row-stub>
+    <v-row-stub tag=\\"div\\" justify=\\"center\\">
+      <v-col-stub tag=\\"div\\">
+        <div>
+          <v-icon-stub></v-icon-stub>
+          Twitter
+        </div>
+      </v-col-stub>
+      <v-col-stub tag=\\"div\\">
+        <div class=\\"title\\"><a href=\\"http://twitter.com/reirei_As\\" target=\\"_blank\\" class=\\"secondary--text\\">reirei_As</a></div>
+      </v-col-stub>
+    </v-row-stub>
+    <v-row-stub tag=\\"div\\" justify=\\"center\\">
+      <v-col-stub tag=\\"div\\">
+        <div>
+          <!---->
+          Qiita
+        </div>
+      </v-col-stub>
+      <v-col-stub tag=\\"div\\">
+        <div class=\\"title\\"><a href=\\"http://qiita.com/reireias\\" target=\\"_blank\\" class=\\"secondary--text\\">reireias</a></div>
+      </v-col-stub>
+    </v-row-stub>
+    <v-row-stub tag=\\"div\\" justify=\\"center\\">
+      <v-col-stub tag=\\"div\\">
+        <div>
+          <!---->
+          Speaker Deck
+        </div>
+      </v-col-stub>
+      <v-col-stub tag=\\"div\\">
+        <div class=\\"title\\"><a href=\\"https://speakerdeck.com/reireias\\" target=\\"_blank\\" class=\\"secondary--text\\">reireias</a></div>
+      </v-col-stub>
+    </v-row-stub>
+  </v-container-stub>
+</div>"
 `;
