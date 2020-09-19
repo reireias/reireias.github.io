@@ -94,13 +94,13 @@ export default {
       dark: true,
       themes: {
         dark: {
-          primary: '#21CFF3',
-          accent: '#FF4081',
-          secondary: '#ffe18d',
-          success: '#4CAF50',
-          info: '#2196F3',
-          warning: '#FB8C00',
-          error: '#FF5252',
+          primary: '#a6e22e', // green
+          accent: '#ae81ff', // purple
+          secondary: '#66d9ef', // cyan
+          success: '#a6e22e', // green
+          info: '#e6db74', // yellow
+          warning: '#fd971f', // orange
+          error: '#f92672', // red
         },
         light: {
           primary: '#1976D2',

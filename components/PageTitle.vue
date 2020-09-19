@@ -1,6 +1,6 @@
 <template>
   <v-row justify="center">
-    <div class="display-3">{{ title }}</div>
+    <div class="display-3 primary--text">{{ title }}</div>
   </v-row>
 </template>
 

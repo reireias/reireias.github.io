@@ -18,7 +18,12 @@
         </v-col>
         <v-col>
           <div class="title">
-            <a :href="account.url" target="_blank" v-text="account.value"></a>
+            <a
+              class="secondary--text"
+              :href="account.url"
+              target="_blank"
+              v-text="account.value"
+            ></a>
           </div>
         </v-col>
       </v-row>
