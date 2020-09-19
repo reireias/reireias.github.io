@@ -1,6 +1,8 @@
 <template>
   <v-card flat>
-    <v-card-title> Webアプリケーション開発 </v-card-title>
+    <v-card-title class="secondary--text">
+      Webアプリケーション開発
+    </v-card-title>
     <v-container>
       <v-row justify="center">
         <v-col>

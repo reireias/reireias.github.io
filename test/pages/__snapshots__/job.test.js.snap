@@ -4,7 +4,7 @@ exports[`jobs should be vue instance 1`] = `
 "<div>
   <page-title-stub title=\\"Job\\"></page-title-stub>
   <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\">
-    <v-card-title-stub> 職歴 </v-card-title-stub>
+    <v-card-title-stub class=\\"secondary--text\\"> 職歴 </v-card-title-stub>
     <v-container-stub tag=\\"div\\">
       <v-row-stub tag=\\"div\\" justify=\\"center\\">
         <v-col-stub tag=\\"div\\">
@@ -38,7 +38,7 @@ exports[`jobs should be vue instance 1`] = `
     </v-container-stub>
   </v-card-stub> <br>
   <v-card-stub loaderheight=\\"4\\" tag=\\"div\\" flat=\\"true\\">
-    <v-card-title-stub> 学歴 </v-card-title-stub>
+    <v-card-title-stub class=\\"secondary--text\\"> 学歴 </v-card-title-stub>
     <v-container-stub tag=\\"div\\">
       <v-row-stub tag=\\"div\\">
         <v-col-stub tag=\\"div\\">

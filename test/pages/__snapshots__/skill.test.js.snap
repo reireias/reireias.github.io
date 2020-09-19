@@ -3,7 +3,7 @@
 exports[`skills should be vue instance 1`] = `
 "<div>
   <page-title-stub title=\\"Skill\\"></page-title-stub>
-  <sre-skill-card-stub></sre-skill-card-stub>
+  <sre-skill-card-stub></sre-skill-card-stub> <br>
   <web-skill-card-stub></web-skill-card-stub>
 </div>"
 `;

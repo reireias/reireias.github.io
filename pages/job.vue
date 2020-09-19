@@ -3,7 +3,7 @@
     <page-title title="Job"></page-title>
 
     <v-card flat>
-      <v-card-title> 職歴 </v-card-title>
+      <v-card-title class="secondary--text"> 職歴 </v-card-title>
       <v-container>
         <v-row justify="center">
           <v-col>
@@ -40,7 +40,7 @@
     <br />
 
     <v-card flat>
-      <v-card-title> 学歴 </v-card-title>
+      <v-card-title class="secondary--text"> 学歴 </v-card-title>
       <v-container>
         <v-row>
           <v-col>

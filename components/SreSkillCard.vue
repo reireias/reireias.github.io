@@ -1,6 +1,6 @@
 <template>
   <v-card flat>
-    <v-card-title> SRE </v-card-title>
+    <v-card-title class="secondary--text"> SRE </v-card-title>
     <v-container>
       <v-row justify="center">
         <v-col>

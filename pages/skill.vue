@@ -3,6 +3,9 @@
     <page-title title="Skill"></page-title>
 
     <sre-skill-card></sre-skill-card>
+
+    <br />
+
     <web-skill-card></web-skill-card>
   </div>
 </template>
