@@ -49,6 +49,7 @@ const useVuetify = () => {
 export default defineComponent({
   layout: 'new',
   setup() {
+    console.log(anime)
     const show = ref(false)
     const vuetify = useVuetify()
     const colors = [
