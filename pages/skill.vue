@@ -17,7 +17,6 @@ import SreSkillCard from '~/components/SreSkillCard.vue'
 import WebSkillCard from '~/components/WebSkillCard.vue'
 
 export default defineComponent({
-  layout: 'new',
   components: {
     PageTitle,
     SreSkillCard,

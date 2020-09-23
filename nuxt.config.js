@@ -82,13 +82,13 @@ export default {
     ],
   },
   plugins: ['@/plugins/composition-api'],
-  css: [],
+  css: ['@/assets/app.scss'],
   loading: { color: '#3B8070' },
   pageTransition: 'page',
   modules: ['nuxt-webfontloader'],
   buildModules: ['@nuxtjs/vuetify', '@nuxt/typescript-build'],
   vuetify: {
-    customVariables: ['~/assets/app.scss'],
+    customVariables: [],
     theme: {
       dark: true,
       themes: {

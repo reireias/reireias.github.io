@@ -43,7 +43,6 @@ import PageTitle from '@/components/PageTitle.vue'
 import KeyValueRow from '@/components/KeyValueRow.vue'
 
 export default defineComponent({
-  layout: 'new',
   components: {
     PageTitle,
     KeyValueRow,

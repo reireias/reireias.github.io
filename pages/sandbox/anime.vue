@@ -77,7 +77,6 @@ import PageTitle from '@/components/PageTitle.vue'
 import anime from 'animejs'
 
 export default defineComponent({
-  layout: 'new',
   components: {
     PageTitle,
   },

@@ -78,7 +78,6 @@ import { defineComponent } from '@vue/composition-api'
 import PageTitle from '@/components/PageTitle.vue'
 
 export default defineComponent({
-  layout: 'new',
   components: {
     PageTitle,
   },
