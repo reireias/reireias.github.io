@@ -1,7 +1,7 @@
 import pkg from './package'
 
 export default {
-  mode: 'universal',
+  ssr: true,
   head: {
     title: 'reireias.dev',
     htmlAttrs: {
