@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer app>
+  <v-navigation-drawer app width="200">
     <v-list>
       <v-list-item>
         <v-list-item-content>
@@ -42,6 +42,10 @@ export default defineComponent({
       {
         name: 'Article',
         to: '/articles',
+      },
+      {
+        name: 'Sandbox',
+        to: '/sandbox',
       },
     ]
     return { links }

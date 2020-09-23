@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`articles should be vue instance 1`] = `
-"<div>
+"<v-container-stub tag=\\"div\\">
   <page-title-stub title=\\"Article\\"></page-title-stub>
   <v-row-stub tag=\\"div\\" justify=\\"center\\">
     <v-col-stub cols=\\"12\\" sm=\\"6\\" tag=\\"div\\">
@@ -25,5 +25,5 @@ exports[`articles should be vue instance 1`] = `
       </v-card-stub>
     </v-col-stub>
   </v-row-stub>
-</div>"
+</v-container-stub>"
 `;
