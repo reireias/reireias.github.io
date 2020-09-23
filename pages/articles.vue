@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <v-container>
     <page-title title="Article"></page-title>
 
     <v-row justify="center">
@@ -30,7 +30,7 @@
         </v-card>
       </v-col>
     </v-row>
-  </div>
+  </v-container>
 </template>
 
 <script lang="ts">
@@ -38,6 +38,7 @@ import { defineComponent } from '@vue/composition-api'
 import PageTitle from '@/components/PageTitle.vue'
 
 export default defineComponent({
+  layout: 'gridless',
   components: {
     PageTitle,
   },
