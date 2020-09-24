@@ -9,7 +9,7 @@
         </v-row>
         <v-row justify="center">
           <div id="anime1">
-            <div class="circle small el follow-path"></div>
+            <div v-show="run1" class="circle small el follow-path"></div>
             <svg id="svg" width="200" height="200" viewBox="-10 -60 120 120">
               <path
                 fill="none"
@@ -31,9 +31,15 @@
         </v-row>
         <v-row justify="center">
           <div id="anime2">
-            <div class="circle small el1 follow-path"></div>
-            <div class="circle small el2 follow-path orange"></div>
-            <div class="circle small el3 follow-path purple"></div>
+            <div v-show="run2" class="circle small el1 follow-path"></div>
+            <div
+              v-show="run2"
+              class="circle small el2 follow-path orange"
+            ></div>
+            <div
+              v-show="run2"
+              class="circle small el3 follow-path purple"
+            ></div>
             <svg id="svg" width="200" height="200" viewBox="-60 -60 120 120">
               <path
                 class="path1"
@@ -72,9 +78,15 @@
         </v-row>
         <v-row justify="center">
           <div id="anime3">
-            <div class="circle small el1 follow-path"></div>
-            <div class="circle small el2 follow-path orange"></div>
-            <div class="circle small el3 follow-path purple"></div>
+            <div v-show="run3" class="circle small el1 follow-path"></div>
+            <div
+              v-show="run3"
+              class="circle small el2 follow-path orange"
+            ></div>
+            <div
+              v-show="run3"
+              class="circle small el3 follow-path purple"
+            ></div>
             <svg id="svg" width="200" height="200" viewBox="-10 -60 120 120">
               <path
                 fill="none"
@@ -95,7 +107,7 @@
         </v-row>
         <v-row justify="center">
           <div id="anime4">
-            <div class="circle small el follow-path"></div>
+            <div v-show="run4" class="circle small el follow-path"></div>
             <svg id="svg" width="200" height="200" viewBox="0 0 400 400">
               <path
                 fill="none"
@@ -116,7 +128,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent, ref } from '@vue/composition-api'
 import PageTitle from '@/components/PageTitle.vue'
 import anime from 'animejs'
 
@@ -144,64 +156,82 @@ export default defineComponent({
         radius *= ratio
       }
     }
+    const run1 = ref(false)
+    const run2 = ref(false)
+    const run3 = ref(false)
+    const run4 = ref(false)
+
+    const startAnime1 = () => {
+      run1.value = true
+      const path = anime.path('#anime1 path')
+      anime({
+        targets: '#anime1 .el',
+        translateX: path('x'),
+        translateY: path('y'),
+        rotate: path('angle'),
+        easing: 'linear',
+        duration: 2000,
+        loop: true,
+      })
+    }
+    const startAnime2 = () => {
+      run2.value = true
+      for (const i of [1, 2, 3]) {
+        setTimeout(() => {
+          const path = anime.path(`#anime2 path.path${i}`)
+          anime({
+            targets: `#anime2 .el${i}`,
+            translateX: path('x'),
+            translateY: path('y'),
+            rotate: path('angle'),
+            easing: 'linear',
+            duration: 1000,
+            loop: true,
+          })
+        }, 300 * (i - 1))
+      }
+    }
+    const startAnime3 = () => {
+      run3.value = true
+      const path = anime.path(`#anime3 path`)
+      for (const i of [1, 2, 3]) {
+        setTimeout(() => {
+          anime({
+            targets: `#anime3 .el${i}`,
+            translateX: path('x'),
+            translateY: path('y'),
+            rotate: path('angle'),
+            easing: 'linear',
+            duration: 3000,
+            loop: true,
+          })
+        }, 1000 * (i - 1))
+      }
+    }
+    const startAnime4 = () => {
+      run4.value = true
+      const path = anime.path('#anime4 path')
+      anime({
+        targets: '#anime4 .el',
+        translateX: path('x'),
+        translateY: path('y'),
+        rotate: path('angle'),
+        easing: 'linear',
+        duration: 10000,
+        loop: true,
+      })
+    }
+
     return {
       spiral: spiral.join(' '),
-      startAnime1() {
-        const path1 = anime.path('#anime1 path')
-        anime({
-          targets: '#anime1 .el',
-          translateX: path1('x'),
-          translateY: path1('y'),
-          rotate: path1('angle'),
-          easing: 'linear',
-          duration: 2000,
-          loop: true,
-        })
-      },
-      startAnime2() {
-        for (const i of [1, 2, 3]) {
-          setTimeout(() => {
-            const path = anime.path(`#anime2 path.path${i}`)
-            anime({
-              targets: `#anime2 .el${i}`,
-              translateX: path('x'),
-              translateY: path('y'),
-              rotate: path('angle'),
-              easing: 'linear',
-              duration: 1000,
-              loop: true,
-            })
-          }, 300 * (i - 1))
-        }
-      },
-      startAnime3() {
-        const path = anime.path(`#anime3 path`)
-        for (const i of [1, 2, 3]) {
-          setTimeout(() => {
-            anime({
-              targets: `#anime3 .el${i}`,
-              translateX: path('x'),
-              translateY: path('y'),
-              rotate: path('angle'),
-              easing: 'linear',
-              duration: 3000,
-              loop: true,
-            })
-          }, 1000 * (i - 1))
-        }
-      },
-      startAnime4() {
-        const path = anime.path('#anime4 path')
-        anime({
-          targets: '#anime4 .el',
-          translateX: path('x'),
-          translateY: path('y'),
-          rotate: path('angle'),
-          easing: 'linear',
-          duration: 10000,
-          loop: true,
-        })
-      },
+      run1,
+      run2,
+      run3,
+      run4,
+      startAnime1,
+      startAnime2,
+      startAnime3,
+      startAnime4,
     }
   },
 })
