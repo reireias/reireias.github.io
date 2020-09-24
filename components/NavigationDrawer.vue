@@ -24,12 +24,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, getCurrentInstance } from '@vue/composition-api'
-
-const getVuetify = () => {
-  const vm = getCurrentInstance()
-  return vm!.$vuetify
-}
+import { defineComponent, ref } from '@vue/composition-api'
 
 export default defineComponent({
   setup() {
@@ -59,7 +54,7 @@ export default defineComponent({
         to: '/sandbox',
       },
     ]
-    const drawer = ref(getVuetify().breakpoint.sm)
+    const drawer = ref(null)
     return {
       links,
       drawer,
