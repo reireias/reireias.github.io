@@ -161,6 +161,36 @@
         </v-row>
       </v-col>
     </v-row>
+
+    <v-row justify="center">
+      <v-col cols="6">
+        <v-row justify="center">
+          <div class="display-1">Footprints</div>
+        </v-row>
+        <v-row justify="center">
+          <div id="footprints" style="height: 200px">
+            <div
+              v-for="(position, i) in positions"
+              :key="i"
+              class="pad"
+              :style="`margin-top: ${position.top}px; margin-left: ${position.left}px; transform: rotate(${position.deg}deg)`"
+            >
+              <div class="fingers">
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+                <div class="finger"></div>
+              </div>
+              <div class="palm"></div>
+            </div>
+          </div>
+        </v-row>
+        <v-row justify="center">
+          <v-btn outlined @click="startAnime7">start</v-btn>
+        </v-row>
+      </v-col>
+      <v-col cols="6"></v-col>
+    </v-row>
   </v-container>
 </template>
 
@@ -277,6 +307,28 @@ export default defineComponent({
         ],
       })
     }
+    const startAnime7 = () => {
+      anime({
+        targets: '#footprints .pad',
+        scale: [
+          { value: 0, easing: 'linear', duration: 1 },
+          { value: 1, easing: 'easeInOutElastic', duration: 500 },
+        ],
+        opacity: [
+          { value: 1, easing: 'linear', duration: 1 },
+          { value: 1, easing: 'linear', duration: 500 },
+          { value: 0, easing: 'linear', duration: 1500 },
+        ],
+        delay: anime.stagger(1000),
+      })
+    }
+
+    const positions = [
+      { top: 70, left: 150, deg: -90 },
+      { top: 10, left: 20, deg: -90 },
+      { top: 70, left: -110, deg: -90 },
+      { top: 10, left: -240, deg: -90 },
+    ]
 
     return {
       spiral: spiral.join(' '),
@@ -284,12 +336,14 @@ export default defineComponent({
       run2,
       run3,
       run4,
+      positions,
       startAnime1,
       startAnime2,
       startAnime3,
       startAnime4,
       startAnime5,
       startAnime6,
+      startAnime7,
     }
   },
 })
@@ -344,6 +398,59 @@ export default defineComponent({
     display: flex;
     flex-wrap: wrap;
     width: 180px;
+  }
+  .pad {
+    position: absolute;
+    width: 115px;
+    height: 118px;
+    opacity: 0;
+
+    .fingers {
+      position: absolute;
+
+      .finger {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 25px;
+        height: 40px;
+        border: 1px solid #000;
+        border-radius: 100%;
+        box-sizing: border-box;
+        background: var(--v-primary-base);
+
+        &:nth-child(1) {
+          top: 30px;
+          left: 0;
+          transform: rotate(-10deg);
+        }
+        &:nth-child(2) {
+          top: 5px;
+          left: 30px;
+        }
+        &:nth-child(3) {
+          top: 5px;
+          left: 60px;
+        }
+        &:nth-child(4) {
+          top: 30px;
+          left: 90px;
+          transform: rotate(10deg);
+        }
+      }
+    }
+
+    .palm {
+      position: absolute;
+      top: 50px;
+      left: 33px;
+      width: 50px;
+      height: 50px;
+      border-radius: 100%;
+      background: var(--v-primary-base);
+      box-shadow: 8px 10px 0 0 var(--v-primary-base),
+        -8px 10px 0 0 var(--v-primary-base);
+    }
   }
 }
 </style>
