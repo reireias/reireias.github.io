@@ -142,7 +142,24 @@
           <v-btn outlined @click="startAnime5">start</v-btn>
         </v-row>
       </v-col>
-      <v-col cols="6"></v-col>
+      <v-col cols="6">
+        <v-row justify="center">
+          <div class="display-1">Image</div>
+        </v-row>
+        <v-row justify="center">
+          <div style="height: 200px; display: grid">
+            <v-img
+              id="image1"
+              src="/icon.png"
+              width="100"
+              style="margin: auto"
+            ></v-img>
+          </div>
+        </v-row>
+        <v-row justify="center">
+          <v-btn outlined @click="startAnime6">start</v-btn>
+        </v-row>
+      </v-col>
     </v-row>
   </v-container>
 </template>
@@ -251,6 +268,15 @@ export default defineComponent({
         delay: anime.stagger(200, { grid: [9, 9], from: 'center' }),
       })
     }
+    const startAnime6 = () => {
+      anime({
+        targets: '#image1',
+        scale: [
+          { value: 1.3, easing: 'easeOutSine', duration: 100 },
+          { value: 1, easing: 'easeInOutQuad', duration: 500 },
+        ],
+      })
+    }
 
     return {
       spiral: spiral.join(' '),
@@ -263,6 +289,7 @@ export default defineComponent({
       startAnime3,
       startAnime4,
       startAnime5,
+      startAnime6,
     }
   },
 })
