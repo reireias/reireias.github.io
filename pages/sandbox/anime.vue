@@ -122,6 +122,26 @@
           <v-btn outlined @click="startAnime4">start</v-btn>
         </v-row>
       </v-col>
+    </v-row>
+
+    <v-row justify="center">
+      <v-col cols="6">
+        <v-row justify="center">
+          <div class="display-1">Grid</div>
+        </v-row>
+        <v-row justify="center">
+          <div id="grid1" class="grid">
+            <div
+              v-for="i in new Array(81)"
+              :key="i"
+              class="square small el"
+            ></div>
+          </div>
+        </v-row>
+        <v-row justify="center">
+          <v-btn outlined @click="startAnime5">start</v-btn>
+        </v-row>
+      </v-col>
       <v-col cols="6"></v-col>
     </v-row>
   </v-container>
@@ -221,6 +241,16 @@ export default defineComponent({
         loop: true,
       })
     }
+    const startAnime5 = () => {
+      anime({
+        targets: '#grid1 .el',
+        scale: [
+          { value: 0.1, easing: 'easeOutSine', duration: 500 },
+          { value: 1, easing: 'easeInOutQuad', duration: 1200 },
+        ],
+        delay: anime.stagger(200, { grid: [9, 9], from: 'center' }),
+      })
+    }
 
     return {
       spiral: spiral.join(' '),
@@ -232,6 +262,7 @@ export default defineComponent({
       startAnime2,
       startAnime3,
       startAnime4,
+      startAnime5,
     }
   },
 })
@@ -241,6 +272,15 @@ export default defineComponent({
 .anime-page {
   .display-1 {
     color: var(--v-secondary-base);
+  }
+
+  .square {
+    pointer-events: none;
+    width: 28px;
+    height: 28px;
+    margin: 1px;
+    font-size: 12px;
+    background-color: var(--v-error-base);
   }
 
   .circle {
@@ -270,6 +310,13 @@ export default defineComponent({
     position: absolute;
     margin-top: -9px;
     margin-left: -9px;
+  }
+
+  .grid {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 180px;
   }
 }
 </style>
