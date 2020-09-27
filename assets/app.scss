@@ -8,3 +8,17 @@
     }
   }
 }
+
+// v-timeline v-card arrrow color
+.v-application--is-ltr
+  .v-timeline--dense
+  .v-timeline-item
+  .v-timeline-item__body
+  > .v-card {
+  &:before {
+    border-right-color: rgba(0, 0, 0, 0);
+  }
+  &:after {
+    border-right-color: #363636;
+  }
+}
