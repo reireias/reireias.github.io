@@ -15,22 +15,16 @@
         :k="profile.key"
         :v="profile.value"
       ></key-value-row>
-      <v-row v-for="account in accounts" :key="account.name" justify="center">
-        <v-col>
-          <div>
-            <v-icon v-if="account.icon" v-text="account.icon"></v-icon>
-            {{ account.name }}
-          </div>
-        </v-col>
-        <v-col>
-          <div class="title">
-            <a
-              class="secondary--text"
-              :href="account.url"
-              target="_blank"
-              v-text="account.value"
-            ></a>
-          </div>
+      <v-row>
+        <v-col v-for="account in accounts" :key="account.name" cols="6" md="4">
+          <v-card :href="account.url" target="_blank" :color="account.color">
+            <v-card-title>
+              <v-icon>{{ account.icon }}</v-icon>
+              <div style="margin-left: 10px">
+                {{ account.name }}
+              </div>
+            </v-card-title>
+          </v-card>
         </v-col>
       </v-row>
     </v-container>
@@ -84,26 +78,28 @@ export default defineComponent({
         value: 'reireias',
         url: 'http://github.com/reireias',
         icon: 'mdi-github',
-        color: 'accent',
+        color: '#363636',
       },
       {
         name: 'Twitter',
         value: 'reirei_As',
         url: 'http://twitter.com/reirei_As',
         icon: 'mdi-twitter',
-        color: 'info-darken',
+        color: '#1da1f2',
       },
       {
         name: 'Qiita',
         value: 'reireias',
         url: 'http://qiita.com/reireias',
-        color: 'info',
+        icon: 'mdi-link',
+        color: '#55c500',
       },
       {
         name: 'Speaker Deck',
         value: 'reireias',
         url: 'https://speakerdeck.com/reireias',
-        color: 'accent',
+        icon: 'mdi-link',
+        color: '#009287',
       },
     ]
     return { accounts, profiles }
