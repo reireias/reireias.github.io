@@ -4,9 +4,26 @@
 
     <v-container>
       <v-row justify="center">
-        <v-avatar color="white" size="128">
+        <v-avatar color="#5e5e5e" size="128">
           <v-img src="/icon.png"></v-img>
         </v-avatar>
+      </v-row>
+
+      <v-row>
+        <v-col>
+          <v-card>
+            <v-card-title>自己紹介</v-card-title>
+            <v-card-text>
+              <p>
+                ヘルステックベンチャーで働くSREエンジニアです。<br />アーキテクチャ設計、インフラ構築、モニタリング環境構築、ボトルネック改善等のSRE的業務を中心にしつつも、Ruby
+                on Railsを用いたアプリケーション開発もたまに担当したりします。
+              </p>
+              <p>
+                常に新技術や新しいことにチャレンジできる環境に見を置くように心がけています。
+              </p>
+            </v-card-text>
+          </v-card>
+        </v-col>
       </v-row>
 
       <key-value-row
@@ -15,8 +32,13 @@
         :k="profile.key"
         :v="profile.value"
       ></key-value-row>
+    </v-container>
+
+    <page-title title="Socials" style="margin-top: 20px"></page-title>
+
+    <v-container>
       <v-row>
-        <v-col v-for="account in accounts" :key="account.name" cols="6" md="4">
+        <v-col v-for="account in socials" :key="account.name" cols="6" md="4">
           <v-card :href="account.url" target="_blank" :color="account.color">
             <v-card-title>
               <v-icon>{{ account.icon }}</v-icon>
@@ -35,6 +57,8 @@
 import { defineComponent } from '@vue/composition-api'
 import PageTitle from '@/components/PageTitle.vue'
 import KeyValueRow from '@/components/KeyValueRow.vue'
+import socials from '@/constants/socials'
+import profiles from '@/constants/profiles'
 
 export default defineComponent({
   components: {
@@ -42,67 +66,7 @@ export default defineComponent({
     KeyValueRow,
   },
   setup() {
-    const profiles = [
-      {
-        key: '生年月日',
-        value: '1988/xx/xx',
-      },
-      {
-        key: '職業',
-        value: 'SRE/Webアプリケーションエンジニア',
-      },
-      {
-        key: '好きな動物',
-        value: '猫科全般',
-      },
-      {
-        key: '好きなOS',
-        value: 'Linux',
-      },
-      {
-        key: '好きなLinux Distribution',
-        value: 'Linux Mint',
-      },
-      {
-        key: '趣味',
-        value: '新技術で遊ぶこと/自作PC/ゲーム全般',
-      },
-      {
-        key: '備考',
-        value: 'Japan MENSA会員',
-      },
-    ]
-    const accounts = [
-      {
-        name: 'GitHub',
-        value: 'reireias',
-        url: 'http://github.com/reireias',
-        icon: 'mdi-github',
-        color: '#363636',
-      },
-      {
-        name: 'Twitter',
-        value: 'reirei_As',
-        url: 'http://twitter.com/reirei_As',
-        icon: 'mdi-twitter',
-        color: '#1da1f2',
-      },
-      {
-        name: 'Qiita',
-        value: 'reireias',
-        url: 'http://qiita.com/reireias',
-        icon: 'mdi-link',
-        color: '#55c500',
-      },
-      {
-        name: 'Speaker Deck',
-        value: 'reireias',
-        url: 'https://speakerdeck.com/reireias',
-        icon: 'mdi-link',
-        color: '#009287',
-      },
-    ]
-    return { accounts, profiles }
+    return { socials, profiles }
   },
 })
 </script>

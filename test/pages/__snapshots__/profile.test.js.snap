@@ -5,17 +5,39 @@ exports[`profile should be vue instance 1`] = `
   <page-title-stub title=\\"Profile\\"></page-title-stub>
   <v-container-stub tag=\\"div\\">
     <v-row-stub tag=\\"div\\" justify=\\"center\\">
-      <v-avatar-stub color=\\"white\\" size=\\"128\\">
+      <v-avatar-stub color=\\"#5e5e5e\\" size=\\"128\\">
         <v-img-stub options=\\"[object Object]\\" position=\\"center center\\" src=\\"/icon.png\\" transition=\\"fade-transition\\"></v-img-stub>
       </v-avatar-stub>
     </v-row-stub>
+    <v-row-stub tag=\\"div\\">
+      <v-col-stub tag=\\"div\\">
+        <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
+          <v-card-title-stub>自己紹介</v-card-title-stub>
+          <v-card-text-stub>
+            <p>
+              ヘルステックベンチャーで働くSREエンジニアです。<br>アーキテクチャ設計、インフラ構築、モニタリング環境構築、ボトルネック改善等のSRE的業務を中心にしつつも、Ruby
+              on Railsを用いたアプリケーション開発もたまに担当したりします。
+            </p>
+            <p>
+              常に新技術や新しいことにチャレンジできる環境に見を置くように心がけています。
+            </p>
+          </v-card-text-stub>
+        </v-card-stub>
+      </v-col-stub>
+    </v-row-stub>
     <key-value-row-stub k=\\"生年月日\\" v=\\"1988/xx/xx\\"></key-value-row-stub>
-    <key-value-row-stub k=\\"職業\\" v=\\"SRE/Webアプリケーションエンジニア\\"></key-value-row-stub>
-    <key-value-row-stub k=\\"好きな動物\\" v=\\"猫科全般\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"職業\\" v=\\"SRE\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"好きな動物\\" v=\\"猫\\"></key-value-row-stub>
     <key-value-row-stub k=\\"好きなOS\\" v=\\"Linux\\"></key-value-row-stub>
     <key-value-row-stub k=\\"好きなLinux Distribution\\" v=\\"Linux Mint\\"></key-value-row-stub>
-    <key-value-row-stub k=\\"趣味\\" v=\\"新技術で遊ぶこと/自作PC/ゲーム全般\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"好きなエディタ\\" v=\\"NeoVim\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"好きな言語\\" v=\\"Golang\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"好きなShell\\" v=\\"zsh\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"趣味\\" v=\\"新技術で遊ぶこと / 自作PC / ラズパイ / ゲーム全般\\"></key-value-row-stub>
     <key-value-row-stub k=\\"備考\\" v=\\"Japan MENSA会員\\"></key-value-row-stub>
+  </v-container-stub>
+  <page-title-stub title=\\"Socials\\" style=\\"margin-top: 20px;\\"></page-title-stub>
+  <v-container-stub tag=\\"div\\">
     <v-row-stub tag=\\"div\\">
       <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" href=\\"http://github.com/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#363636\\">
