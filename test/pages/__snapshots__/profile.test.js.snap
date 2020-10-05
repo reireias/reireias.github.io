@@ -16,48 +16,46 @@ exports[`profile should be vue instance 1`] = `
     <key-value-row-stub k=\\"好きなLinux Distribution\\" v=\\"Linux Mint\\"></key-value-row-stub>
     <key-value-row-stub k=\\"趣味\\" v=\\"新技術で遊ぶこと/自作PC/ゲーム全般\\"></key-value-row-stub>
     <key-value-row-stub k=\\"備考\\" v=\\"Japan MENSA会員\\"></key-value-row-stub>
-    <v-row-stub tag=\\"div\\" justify=\\"center\\">
-      <v-col-stub tag=\\"div\\">
-        <div>
-          <v-icon-stub></v-icon-stub>
-          GitHub
-        </div>
+    <v-row-stub tag=\\"div\\">
+      <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
+        <v-card-stub loaderheight=\\"4\\" href=\\"http://github.com/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#363636\\">
+          <v-card-title-stub>
+            <v-icon-stub>mdi-github</v-icon-stub>
+            <div style=\\"margin-left: 10px;\\">
+              GitHub
+            </div>
+          </v-card-title-stub>
+        </v-card-stub>
       </v-col-stub>
-      <v-col-stub tag=\\"div\\">
-        <div class=\\"title\\"><a href=\\"http://github.com/reireias\\" target=\\"_blank\\" class=\\"secondary--text\\">reireias</a></div>
+      <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
+        <v-card-stub loaderheight=\\"4\\" href=\\"http://twitter.com/reirei_As\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#1da1f2\\">
+          <v-card-title-stub>
+            <v-icon-stub>mdi-twitter</v-icon-stub>
+            <div style=\\"margin-left: 10px;\\">
+              Twitter
+            </div>
+          </v-card-title-stub>
+        </v-card-stub>
       </v-col-stub>
-    </v-row-stub>
-    <v-row-stub tag=\\"div\\" justify=\\"center\\">
-      <v-col-stub tag=\\"div\\">
-        <div>
-          <v-icon-stub></v-icon-stub>
-          Twitter
-        </div>
+      <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
+        <v-card-stub loaderheight=\\"4\\" href=\\"http://qiita.com/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#55c500\\">
+          <v-card-title-stub>
+            <v-icon-stub>mdi-link</v-icon-stub>
+            <div style=\\"margin-left: 10px;\\">
+              Qiita
+            </div>
+          </v-card-title-stub>
+        </v-card-stub>
       </v-col-stub>
-      <v-col-stub tag=\\"div\\">
-        <div class=\\"title\\"><a href=\\"http://twitter.com/reirei_As\\" target=\\"_blank\\" class=\\"secondary--text\\">reirei_As</a></div>
-      </v-col-stub>
-    </v-row-stub>
-    <v-row-stub tag=\\"div\\" justify=\\"center\\">
-      <v-col-stub tag=\\"div\\">
-        <div>
-          <!---->
-          Qiita
-        </div>
-      </v-col-stub>
-      <v-col-stub tag=\\"div\\">
-        <div class=\\"title\\"><a href=\\"http://qiita.com/reireias\\" target=\\"_blank\\" class=\\"secondary--text\\">reireias</a></div>
-      </v-col-stub>
-    </v-row-stub>
-    <v-row-stub tag=\\"div\\" justify=\\"center\\">
-      <v-col-stub tag=\\"div\\">
-        <div>
-          <!---->
-          Speaker Deck
-        </div>
-      </v-col-stub>
-      <v-col-stub tag=\\"div\\">
-        <div class=\\"title\\"><a href=\\"https://speakerdeck.com/reireias\\" target=\\"_blank\\" class=\\"secondary--text\\">reireias</a></div>
+      <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
+        <v-card-stub loaderheight=\\"4\\" href=\\"https://speakerdeck.com/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#009287\\">
+          <v-card-title-stub>
+            <v-icon-stub>mdi-link</v-icon-stub>
+            <div style=\\"margin-left: 10px;\\">
+              Speaker Deck
+            </div>
+          </v-card-title-stub>
+        </v-card-stub>
       </v-col-stub>
     </v-row-stub>
   </v-container-stub>

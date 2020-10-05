@@ -5,31 +5,37 @@ exports[`skills should be vue instance 1`] = `
   <page-title-stub title=\\"Skill\\"></page-title-stub>
   <v-expansion-panels-stub activeclass=\\"v-item--active\\" multiple=\\"true\\" class=\\"panel\\">
     <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">アーキテクチャ/インフラ構成設計</v-expansion-panel-header-stub>
+      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">システムアーキテクト</v-expansion-panel-header-stub>
       <v-expansion-panel-content-stub>
-        <p>サービスの要件や特性、フェーズ等を考慮した全体のアーキテクチャ設計を行うことが可能です。</p>
-        <p>新規サービスの全体設計や既存サービスへの追加等様々なケースに対応可能です。</p>
-        <p>アーキテクチャ設計をAWSやGCPに落とし込んだインフラ設計も得意としています。</p>
-        <p>特にAWSは等、ELB + EC2 + RDSといったAWS黎明期から存在するパターンの他、ECSを利用したコンテナベースのアプリケーションや、Lambdaを利用したサーバーレス構成、SQS/SNSを活用した非同期処理等、Webアプリケーションの構成で利用する一通りのパターンを構築/運用した経験があり、知見が豊富です。</p>
-        <p>インフラ構成の考案だけでなく、将来のコスト見積もりや、アクセス数に応じたスケーリング設計等も幾度か経験があり、意思決定者に対する資料作成/プレゼンテーションも(あまりやりたくはないですが)対応できます。</p>
+        <p>可用性、コスト、拡張性、運用などを考慮したシステム全体のアーキテクチャ設計を行うことが得意です。</p>
+        <p>プラットフォームはAWS、GCP、自社データセンター等を利用してきました。OSはLinux系を一通り構築に使ったことがあります。</p>
+        <p>最近はAWSのマネージドサービスを活用し極力運用負荷が少なく、かつ、過度に複雑にならないシステム設計とする場合が多いです。</p>
+        <p>過去に業務で構築した経験のある構成は次の通りです。</p>
+        <p>ELB + EC2 + RDS</p>
+        <p>ECS(Fargate)を利用したコンテナベースのアプリケーション</p>
+        <p>API Gateway + LambdaやCloudFront + Lambda Edge等のサーバーレス構成</p>
+        <p>SQS + SNS + Lambdaを利用したキューチェーン型システム</p>
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">Terraform or CloudFormationによるInfrastracture as Codeの実現</v-expansion-panel-header-stub>
+      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">Infrastracture as Codeの実現</v-expansion-panel-header-stub>
       <v-expansion-panel-content-stub>
-        <p>今まで構築したサービスは全てInfrastructure as Codeを実践しています。</p>
-        <p>手動でインフラを構築することは、自分のキャリアの中で今後無いと考えています。</p>
-        <p>ツールに関しては、TeraformやCloudFormationを適切に利用したインフラのコード管理を実践できます。</p>
-        <p>Terraformに関してはmodule/workplaceの使い分けや、CI/CDパイプラインへのplan/applyを組み込んだ完全自動化等を業務で実施してきました。</p>
+        <p>Infrastracture as Codeによる利点と恩恵を考慮した上で、管理/変更/レビュー/運用のしやすいInfrastracture as Codeな世界を実現することができます。</p>
+        <p>ツールとしてはTerraformを利用することが多いですが、CloudFormationによる実装経験もあります。</p>
+        <p>Terraformに関してはTerraform Cloudによるplan/applyの自動化や、AWS/GCP以外にGitHubやTerraform Cloud自体の管理などヘビーに活用しています。</p>
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
       <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">CI/CDパイプラインの構築</v-expansion-panel-header-stub>
       <v-expansion-panel-content-stub>
-        <p>パイプライン自体の構築やCIサービス上での処理の実装、関連するサービス間のセキュアなクレデンシャル管理等が得意です。</p>
-        <p>Linux歴もそこそこ長いので、CI上でのエラー調査も得意としています。</p>
-        <p>GitHub Actions/CircleCI/Travis CI/AWS CodePipeineを業務で扱ってきたので、利用できるサービスや構築したいパイプラインの特性に応じて、CI/CDパイプラインを構築することができると考えています。</p>
-        <p>CircleCI OrbsやGitHub ActionsのActions等の開発経験もあり、社内で共通で利用する処理のCI用ライブラリ化も可能です。</p>
+        <p>CIに関しては、GitHub Actions/CircleCI/Travis CI等の使用経験があり、Linux + Dockerの知識も合わせて適切な設定を行うことができます。</p>
+        <p>CDに関しては主にAWSのCodeシリーズを利用しての構築が得意です。</p>
+        <p>以下に業務で実際に行ってきたものを列挙します。</p>
+        <p>- まれに落ちるテストや時間のかかるテストによるCI詰まりなどの分析/修正</p>
+        <p>- Blue/Greenデプロイメントやロールバック手順の確立</p>
+        <p>- AWS SSMパラメータストアやKMS等を利用した秘匿情報の適切な管理</p>
+        <p>- Dockerイメージビルドの高速化</p>
+        <p>- CI/CDパイプラインにおける適切なキャッシュ設定</p>
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
@@ -74,6 +80,15 @@ exports[`skills should be vue instance 1`] = `
         <p>これらの知識を組み合わせることで、本番環境をなるべく再現しつつも起動が高速で扱いやすいローカルの開発環境を構築したり、クレデンシャル/API</p>
         <p>Tokenのセキュリティや職能/職種に合わせた権限設定を考慮したリポジトリや成果物管理の仕組み等、開発環境とその周辺を構築してきました。</p>
         <p>技術的にこれらを構築するだけでなく、開発フローやブランチ戦略の考案/改善といったことも得意だったりします。</p>
+      </v-expansion-panel-content-stub>
+    </v-expansion-panel-stub>
+    <v-expansion-panel-stub>
+      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">資格</v-expansion-panel-header-stub>
+      <v-expansion-panel-content-stub>
+        <p>AWS ソリューションアーキテクトアソシエイト</p>
+        <p>IPA 応用情報技術者</p>
+        <p>IPA データベーススペシャリスト</p>
+        <p>IPA セキュリティスペシャリスト</p>
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
   </v-expansion-panels-stub>
