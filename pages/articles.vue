@@ -38,9 +38,9 @@ import { defineComponent } from '@vue/composition-api'
 import PageTitle from '@/components/PageTitle.vue'
 
 export default defineComponent({
-  layout: 'gridless',
   components: {
     PageTitle,
   },
+  layout: 'gridless',
 })
 </script>

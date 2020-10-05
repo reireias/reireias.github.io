@@ -200,10 +200,10 @@ import PageTitle from '@/components/PageTitle.vue'
 import anime from 'animejs'
 
 export default defineComponent({
-  layout: 'gridless',
   components: {
     PageTitle,
   },
+  layout: 'gridless',
   setup() {
     const ratio = 0.93
     const loops = 10

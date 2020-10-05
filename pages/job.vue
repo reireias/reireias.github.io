@@ -10,7 +10,7 @@
         small
         :color="item.color"
       >
-        <template v-slot:opposite class="v-timeline-dense-opposite">
+        <template #opposite class="v-timeline-dense-opposite">
           <div class="title" style="margin-top: 4px">
             {{ item.year }}
           </div>
