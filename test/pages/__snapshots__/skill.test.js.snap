@@ -9,12 +9,14 @@ exports[`skills should be vue instance 1`] = `
       <v-expansion-panel-content-stub>
         <p>可用性、コスト、拡張性、運用などを考慮したシステム全体のアーキテクチャ設計を行うことが得意です。</p>
         <p>プラットフォームはAWS、GCP、自社データセンター等を利用してきました。OSはLinux系を一通り構築に使ったことがあります。</p>
-        <p>最近はAWSのマネージドサービスを活用し極力運用負荷が少なく、かつ、過度に複雑にならないシステム設計とする場合が多いです。</p>
+        <p>最近はAWSのマネージドサービスを活用し極力運用負荷が少なく、過度に複雑すぎない、負債になりにくいシステム設計を心がけて設計しています。</p>
         <p>過去に業務で構築した経験のある構成は次の通りです。</p>
-        <p>ELB + EC2 + RDS</p>
-        <p>ECS(Fargate)を利用したコンテナベースのアプリケーション</p>
-        <p>API Gateway + LambdaやCloudFront + Lambda Edge等のサーバーレス構成</p>
-        <p>SQS + SNS + Lambdaを利用したキューチェーン型システム</p>
+        <ul>
+          <li>ELB + EC2 + RDS</li>
+          <li>ECS(Fargate)を利用したコンテナベースのアプリケーション</li>
+          <li>API Gateway + LambdaやCloudFront + Lambda Edge等のサーバーレス構成</li>
+          <li>SQS + SNS + Lambdaを利用したキューチェーン型システム</li>
+        </ul>
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
@@ -26,16 +28,25 @@ exports[`skills should be vue instance 1`] = `
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
+      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">パフォーマンスチューニング</v-expansion-panel-header-stub>
+      <v-expansion-panel-content-stub>
+        <p>Webアプリケーションエンジニア時代から負荷試験や性能改善等を業務で担当してきました。</p>
+        <p>APMやモニタリングツールやプロファイラーを利用した本番環境やCI上のボトルネックの特定と、WebアプリケーションやRDBMSやLinux OSの知識を活用しパフォーマンス改善を行うことができます。</p>
+      </v-expansion-panel-content-stub>
+    </v-expansion-panel-stub>
+    <v-expansion-panel-stub>
       <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">CI/CDパイプラインの構築</v-expansion-panel-header-stub>
       <v-expansion-panel-content-stub>
         <p>CIに関しては、GitHub Actions/CircleCI/Travis CI等の使用経験があり、Linux + Dockerの知識も合わせて適切な設定を行うことができます。</p>
         <p>CDに関しては主にAWSのCodeシリーズを利用しての構築が得意です。</p>
         <p>以下に業務で実際に行ってきたものを列挙します。</p>
-        <p>- まれに落ちるテストや時間のかかるテストによるCI詰まりなどの分析/修正</p>
-        <p>- Blue/Greenデプロイメントやロールバック手順の確立</p>
-        <p>- AWS SSMパラメータストアやKMS等を利用した秘匿情報の適切な管理</p>
-        <p>- Dockerイメージビルドの高速化</p>
-        <p>- CI/CDパイプラインにおける適切なキャッシュ設定</p>
+        <ul>
+          <li>まれに落ちるテストや時間のかかるテストによるCI詰まりなどの分析/修正</li>
+          <li>Blue/Greenデプロイメントやロールバック手順の確立</li>
+          <li>AWS SSMパラメータストアやKMS等を利用した秘匿情報の適切な管理</li>
+          <li>Dockerイメージビルドの高速化</li>
+          <li>CI/CDパイプラインにおける適切なキャッシュ設定</li>
+        </ul>
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
@@ -46,7 +57,7 @@ exports[`skills should be vue instance 1`] = `
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">Data WarehouseとBI Toolでの分析/可視化基盤の作成</v-expansion-panel-header-stub>
+      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">データ分析/可視化基盤の構築</v-expansion-panel-header-stub>
       <v-expansion-panel-content-stub>
         <p>ビッグデータ解析とまではいかないですが、それなりに多量のデータを格納し、分析/可視化するための基盤の構築も何度か経験があります。</p>
         <p>データ量やリアルタイム性、分析する対象に応じて適切なデータ格納方法やデータパイプラインを構築し、ビジネスメンバーの興味関心に応じたダッシュボード作成等を実践してきました。</p>
@@ -54,7 +65,7 @@ exports[`skills should be vue instance 1`] = `
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">PaaS/Docker/低レイヤー技術の社内教育</v-expansion-panel-header-stub>
+      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">インフラや低レイヤー技術の社内教育</v-expansion-panel-header-stub>
       <v-expansion-panel-content-stub>
         <p>数年前からは社内の若手エンジニアへAWSやDocker、Linux、ネットワーク等の社内勉強会を主催したりもしています。</p>
         <p>主に入門〜中級くらいの内容で、社内全体のスキルの底上げや、サービス開発/運用時におけるデバッグやバグ修正の補助となるような内容で実施しています。</p>
@@ -69,8 +80,21 @@ exports[`skills should be vue instance 1`] = `
         <p>認証や非同期処理、大規模システムの結合ビルドの調整等、比較的難易度の高い部分を担当することが多いです。</p>
         <p>最近は若手層への教育を行いながら開発リーダーを務めることが多いです。(スクラムマスター、プロダクトオーナーではないので、開発外部との交渉/調整等は専門外ですが)</p>
         <p>また、IPAの資格で応用情報技術者、セキュリティスペシャリスト、データベーススペシャリストを保有しています。</p>
-        <p>1年以上業務で利用経験のある言語: Ruby, Java, C#</p>
+        <p>1年以上業務で利用経験のある言語: Ruby, Java, C#, js, ts</p>
         <p>同フレームワーク: Ruby on Rails, Spring, Vue.js</p>
+      </v-expansion-panel-content-stub>
+    </v-expansion-panel-stub>
+    <v-expansion-panel-stub>
+      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">開発言語</v-expansion-panel-header-stub>
+      <v-expansion-panel-content-stub>
+        <p>各開発言語の経験とスキルは次の通りです。</p>
+        <ul>
+          <li>Ruby: 実務1年半。Ruby on Railsを利用したWebアプリケーション開発で利用。</li>
+          <li>Golang: 趣味で3年ほど。業務で少し。主にCLIツールやLambda関数の実装など。</li>
+          <li>Java: 実務6年。Spring等基本的なWebアプリケーション開発は一通り経験しています。</li>
+          <li>JavaScript(TypeScript): 社会人歴と同じくらい。実は一番得意な言語。フロントエンド開発以外にもサーバーサイドやLambda関数の実装等に多用しています。</li>
+          <li>C#: .NET Framework時代にアプリケーションを構築したり、MS Officeのプラグインを開発したりしていました。</li>
+        </ul>
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
@@ -85,10 +109,13 @@ exports[`skills should be vue instance 1`] = `
     <v-expansion-panel-stub>
       <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">資格</v-expansion-panel-header-stub>
       <v-expansion-panel-content-stub>
-        <p>AWS ソリューションアーキテクトアソシエイト</p>
-        <p>IPA 応用情報技術者</p>
-        <p>IPA データベーススペシャリスト</p>
-        <p>IPA セキュリティスペシャリスト</p>
+        <p>以下の資格を有しています。</p>
+        <ul>
+          <li>AWS ソリューションアーキテクトアソシエイト</li>
+          <li>IPA 応用情報技術者</li>
+          <li>IPA データベーススペシャリスト</li>
+          <li>IPA セキュリティスペシャリスト</li>
+        </ul>
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
   </v-expansion-panels-stub>

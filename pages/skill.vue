@@ -8,7 +8,12 @@
           skill.header
         }}</v-expansion-panel-header>
         <v-expansion-panel-content>
-          <p v-for="(line, i) in skill.content" :key="i">{{ line }}</p>
+          <template v-for="(line, i) in skill.content">
+            <p v-if="typeof line === 'string'" :key="i">{{ line }}</p>
+            <ul v-else :key="i">
+              <li v-for="(item, j) in line" :key="j">{{ item }}</li>
+            </ul>
+          </template>
         </v-expansion-panel-content>
       </v-expansion-panel>
     </v-expansion-panels>
