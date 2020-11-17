@@ -111,7 +111,8 @@ exports[`skills should be vue instance 1`] = `
       <v-expansion-panel-content-stub>
         <p>以下の資格を有しています。</p>
         <ul>
-          <li>AWS ソリューションアーキテクトアソシエイト</li>
+          <li>AWS ソリューションアーキテクト プロフェッショナル</li>
+          <li>AWS ソリューションアーキテクト アソシエイト</li>
           <li>IPA 応用情報技術者</li>
           <li>IPA データベーススペシャリスト</li>
           <li>IPA セキュリティスペシャリスト</li>
