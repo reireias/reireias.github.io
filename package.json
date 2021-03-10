@@ -17,7 +17,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@nuxtjs/pwa": "^3.2.2",
+    "@nuxtjs/pwa": "^3.3.5",
     "lazysizes": "^5.2.2",
     "nuxt": "^2.14.7",
     "vuetify": "^2.3.16"
