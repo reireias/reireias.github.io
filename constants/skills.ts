@@ -20,6 +20,14 @@ const skills = [
       'Infrastracture as Codeによる利点と恩恵を考慮した上で、管理/変更/レビュー/運用のしやすいInfrastracture as Codeな世界を実現することができます。',
       'ツールとしてはTerraformを利用することが多いですが、CloudFormationによる実装経験もあります。',
       'Terraformに関してはTerraform Cloudによるplan/applyの自動化や、AWS/GCP以外にGitHubやTerraform Cloud自体の管理などヘビーに活用しています。',
+      '最近はGitHub Actionsでplan/applyの自動実行なども行うことがあります。',
+    ],
+  },
+  {
+    header: '社内の全AWSアカウント横断でのセキュリティ対策',
+    content: [
+      '"AWS Well-Architcted"やベストプラクティスに則ったセキュリティ対策の実施が可能です。',
+      '特に複数のAWSアカウントを横断したOrganizationやCloudTrail、SecurityHubを用いた一元的なセキュリティ対策と検知の仕組みの構築を推奨しております。',
     ],
   },
   {
