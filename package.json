@@ -38,7 +38,7 @@
     "cheerio": "^1.0.0-rc.5",
     "dateformat": "^4.5.1",
     "dotenv": "^8.2.0",
-    "eslint": "^7.21.0",
+    "eslint": "^7.23.0",
     "eslint-config-prettier": "^8.1.0",
     "eslint-config-standard": ">=16.0.2",
     "eslint-loader": "^4.0.2",
