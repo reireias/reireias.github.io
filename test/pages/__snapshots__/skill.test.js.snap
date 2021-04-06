@@ -25,6 +25,14 @@ exports[`skills should be vue instance 1`] = `
         <p>Infrastracture as Codeによる利点と恩恵を考慮した上で、管理/変更/レビュー/運用のしやすいInfrastracture as Codeな世界を実現することができます。</p>
         <p>ツールとしてはTerraformを利用することが多いですが、CloudFormationによる実装経験もあります。</p>
         <p>Terraformに関してはTerraform Cloudによるplan/applyの自動化や、AWS/GCP以外にGitHubやTerraform Cloud自体の管理などヘビーに活用しています。</p>
+        <p>最近はGitHub Actionsでplan/applyの自動実行なども行うことがあります。</p>
+      </v-expansion-panel-content-stub>
+    </v-expansion-panel-stub>
+    <v-expansion-panel-stub>
+      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">社内の全AWSアカウント横断でのセキュリティ対策</v-expansion-panel-header-stub>
+      <v-expansion-panel-content-stub>
+        <p>\\"AWS Well-Architcted\\"やベストプラクティスに則ったセキュリティ対策の実施が可能です。</p>
+        <p>特に複数のAWSアカウントを横断したOrganizationやCloudTrail、SecurityHubを用いた一元的なセキュリティ対策と検知の仕組みの構築を推奨しております。</p>
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
