@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@nuxtjs/pwa": "^3.3.5",
-    "lazysizes": "^5.3.0",
+    "lazysizes": "^5.3.2",
     "nuxt": "^2.14.7",
     "vuetify": "^2.3.16"
   },
