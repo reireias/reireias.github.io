@@ -1,4 +1,4 @@
-![deploy](https://github.com/reireias/reireias.github.io/workflows/deploy/badge.svg) ![test](https://github.com/reireias/reireias.github.io/workflows/test/badge.svg)
+[![deploy](https://github.com/reireias/reireias.github.io/workflows/deploy/badge.svg)](https://github.com/reireias/reireias.github.io/actions/workflows/deploy.yml) [![test](https://github.com/reireias/reireias.github.io/workflows/test/badge.svg)](https://github.com/reireias/reireias.github.io/actions/workflows/test.yml)
 # REIREIAS'S GITHUB PAGES
 
 https://reireias.dev
