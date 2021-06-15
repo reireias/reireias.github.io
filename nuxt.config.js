@@ -2,6 +2,7 @@ import pkg from './package'
 
 export default {
   ssr: true,
+  target: 'static',
   head: {
     title: 'reireias.dev',
     htmlAttrs: {
