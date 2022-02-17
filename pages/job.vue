@@ -10,6 +10,7 @@
         small
         :color="item.color"
       >
+        <!-- eslint-disable-next-line vue/no-useless-template-attributes -->
         <template #opposite class="v-timeline-dense-opposite">
           <div class="title" style="margin-top: 4px">
             {{ item.year }}
