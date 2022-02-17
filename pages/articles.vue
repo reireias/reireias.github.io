@@ -5,6 +5,24 @@
     <v-row>
       <v-col cols="12" sm="6">
         <v-card
+          href="https://tech.medpeer.co.jp/entry/2021/10/01/090000"
+          target="_blank"
+        >
+          <v-img
+            src="https://cdn-ak.f.st-hatena.com/images/fotolife/s/satoshitakumi/20210915/20210915154524.png"
+            height="300"
+          ></v-img>
+          <v-card-title>
+            AWS Config + Athena +
+            QuickSightによる複数AWSアカウント横断でのセキュリティ状態の可視化
+          </v-card-title>
+          <v-card-text
+            >多数のAWSアカウントのセキュリティを可視化する仕組みです</v-card-text
+          >
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="6">
+        <v-card
           href="https://qiita.com/reireias/items/0d87de18f43f27a8ed9b"
           target="_blank"
         >
@@ -13,6 +31,21 @@
             ラズパイ4で作るディスプレイ付きKubernetesクラスター
           </v-card-title>
           <v-card-text> こだわりが詰まった作品です </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" sm="6">
+        <v-card
+          href="https://speakerdeck.com/reireias/improving-efficiency-of-aws-account-operations-by-medpeer-sre-team"
+          target="_blank"
+        >
+          <v-img
+            src="https://files.speakerdeck.com/presentations/bbcf01585b25479cb993975808c63709/slide_0.jpg?19573755"
+            height="300"
+          ></v-img>
+          <v-card-title> SREチームによるAWSアカウント運用効率化 </v-card-title>
+          <v-card-text> AWSのイベントで登壇した資料です </v-card-text>
         </v-card>
       </v-col>
       <v-col cols="12" sm="6">

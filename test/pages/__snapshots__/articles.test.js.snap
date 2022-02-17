@@ -5,12 +5,31 @@ exports[`articles should be vue instance 1`] = `
   <page-title-stub title=\\"Article\\"></page-title-stub>
   <v-row-stub tag=\\"div\\">
     <v-col-stub cols=\\"12\\" sm=\\"6\\" tag=\\"div\\">
+      <v-card-stub loaderheight=\\"4\\" href=\\"https://tech.medpeer.co.jp/entry/2021/10/01/090000\\" tag=\\"div\\" target=\\"_blank\\">
+        <v-img-stub height=\\"300\\" options=\\"[object Object]\\" position=\\"center center\\" src=\\"https://cdn-ak.f.st-hatena.com/images/fotolife/s/satoshitakumi/20210915/20210915154524.png\\" transition=\\"fade-transition\\"></v-img-stub>
+        <v-card-title-stub tag=\\"div\\">
+          AWS Config + Athena +
+          QuickSightによる複数AWSアカウント横断でのセキュリティ状態の可視化
+        </v-card-title-stub>
+        <v-card-text-stub tag=\\"div\\">多数のAWSアカウントのセキュリティを可視化する仕組みです</v-card-text-stub>
+      </v-card-stub>
+    </v-col-stub>
+    <v-col-stub cols=\\"12\\" sm=\\"6\\" tag=\\"div\\">
       <v-card-stub loaderheight=\\"4\\" href=\\"https://qiita.com/reireias/items/0d87de18f43f27a8ed9b\\" tag=\\"div\\" target=\\"_blank\\">
         <v-img-stub height=\\"300\\" options=\\"[object Object]\\" position=\\"center center\\" src=\\"/article01.jpg\\" transition=\\"fade-transition\\"></v-img-stub>
         <v-card-title-stub tag=\\"div\\">
           ラズパイ4で作るディスプレイ付きKubernetesクラスター
         </v-card-title-stub>
         <v-card-text-stub tag=\\"div\\"> こだわりが詰まった作品です </v-card-text-stub>
+      </v-card-stub>
+    </v-col-stub>
+  </v-row-stub>
+  <v-row-stub tag=\\"div\\">
+    <v-col-stub cols=\\"12\\" sm=\\"6\\" tag=\\"div\\">
+      <v-card-stub loaderheight=\\"4\\" href=\\"https://speakerdeck.com/reireias/improving-efficiency-of-aws-account-operations-by-medpeer-sre-team\\" tag=\\"div\\" target=\\"_blank\\">
+        <v-img-stub height=\\"300\\" options=\\"[object Object]\\" position=\\"center center\\" src=\\"https://files.speakerdeck.com/presentations/bbcf01585b25479cb993975808c63709/slide_0.jpg?19573755\\" transition=\\"fade-transition\\"></v-img-stub>
+        <v-card-title-stub tag=\\"div\\"> SREチームによるAWSアカウント運用効率化 </v-card-title-stub>
+        <v-card-text-stub tag=\\"div\\"> AWSのイベントで登壇した資料です </v-card-text-stub>
       </v-card-stub>
     </v-col-stub>
     <v-col-stub cols=\\"12\\" sm=\\"6\\" tag=\\"div\\">
