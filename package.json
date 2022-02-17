@@ -55,6 +55,6 @@
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "ts-jest": "^26",
-    "vue-jest": "^4.0.0-rc.0"
+    "vue-jest": "^5.0.0-alpha.10"
   }
 }
