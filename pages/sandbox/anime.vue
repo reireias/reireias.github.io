@@ -196,8 +196,8 @@
 
 <script lang="ts">
 import { defineComponent, ref } from '@vue/composition-api'
-import PageTitle from '@/components/PageTitle.vue'
 import anime from 'animejs'
+import PageTitle from '@/components/PageTitle.vue'
 
 export default defineComponent({
   components: {
