@@ -83,12 +83,16 @@ export default {
       },
     ],
   },
-  plugins: ['@/plugins/composition-api'],
+  plugins: [],
   css: ['@/assets/app.scss'],
   loading: { color: '#3B8070' },
   pageTransition: 'page',
   modules: ['nuxt-webfontloader'],
-  buildModules: ['@nuxtjs/vuetify', '@nuxt/typescript-build'],
+  buildModules: [
+    '@nuxtjs/vuetify',
+    '@nuxt/typescript-build',
+    '@nuxtjs/composition-api/module',
+  ],
   vuetify: {
     customVariables: [],
     theme: {

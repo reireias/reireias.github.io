@@ -112,8 +112,8 @@ import { logo } from '~/constants/svg'
 const anime = require('animejs').default
 
 const useVuetify = () => {
-  const vm = getCurrentInstance()
-  return vm!.$vuetify
+  const instance = getCurrentInstance()
+  return instance!.proxy.$vuetify
 }
 
 const COLOR_CLASSES = [
