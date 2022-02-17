@@ -6,38 +6,38 @@ exports[`jobs should be vue instance 1`] = `
   <v-timeline-stub dense=\\"true\\">
     <v-timeline-item-stub color=\\"secondary\\" filldot=\\"true\\" small=\\"true\\">
       <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
-        <v-card-title-stub class=\\"secondary--text\\">筑波大学 入学</v-card-title-stub>
-        <v-card-text-stub>理工学群 工学システム学類</v-card-text-stub>
+        <v-card-title-stub tag=\\"div\\" class=\\"secondary--text\\">筑波大学 入学</v-card-title-stub>
+        <v-card-text-stub tag=\\"div\\">理工学群 工学システム学類</v-card-text-stub>
       </v-card-stub>
     </v-timeline-item-stub>
     <v-timeline-item-stub color=\\"secondary\\" filldot=\\"true\\" small=\\"true\\">
       <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
-        <v-card-title-stub class=\\"secondary--text\\">同大学 卒業</v-card-title-stub>
-        <v-card-text-stub>学位（工学）を取得</v-card-text-stub>
+        <v-card-title-stub tag=\\"div\\" class=\\"secondary--text\\">同大学 卒業</v-card-title-stub>
+        <v-card-text-stub tag=\\"div\\">学位（工学）を取得</v-card-text-stub>
       </v-card-stub>
     </v-timeline-item-stub>
     <v-timeline-item-stub color=\\"accent\\" filldot=\\"true\\" small=\\"true\\">
       <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
-        <v-card-title-stub class=\\"accent--text\\">筑波大学大学院 入学</v-card-title-stub>
-        <v-card-text-stub>システム情報工学研究科 リスク工学専攻</v-card-text-stub>
+        <v-card-title-stub tag=\\"div\\" class=\\"accent--text\\">筑波大学大学院 入学</v-card-title-stub>
+        <v-card-text-stub tag=\\"div\\">システム情報工学研究科 リスク工学専攻</v-card-text-stub>
       </v-card-stub>
     </v-timeline-item-stub>
     <v-timeline-item-stub color=\\"accent\\" filldot=\\"true\\" small=\\"true\\">
       <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
-        <v-card-title-stub class=\\"accent--text\\">同大学院 卒業</v-card-title-stub>
-        <v-card-text-stub>修士（工学）を取得</v-card-text-stub>
+        <v-card-title-stub tag=\\"div\\" class=\\"accent--text\\">同大学院 卒業</v-card-title-stub>
+        <v-card-text-stub tag=\\"div\\">修士（工学）を取得</v-card-text-stub>
       </v-card-stub>
     </v-timeline-item-stub>
     <v-timeline-item-stub color=\\"warning\\" filldot=\\"true\\" small=\\"true\\">
       <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
-        <v-card-title-stub class=\\"warning--text\\">富士ゼロックス株式会社</v-card-title-stub>
-        <v-card-text-stub>ソリューション開発部にて、BtoBのSaaSを開発</v-card-text-stub>
+        <v-card-title-stub tag=\\"div\\" class=\\"warning--text\\">富士ゼロックス株式会社</v-card-title-stub>
+        <v-card-text-stub tag=\\"div\\">ソリューション開発部にて、BtoBのSaaSを開発</v-card-text-stub>
       </v-card-stub>
     </v-timeline-item-stub>
     <v-timeline-item-stub color=\\"warning\\" filldot=\\"true\\" small=\\"true\\">
       <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
-        <v-card-title-stub class=\\"warning--text\\">メドピア株式会社</v-card-title-stub>
-        <v-card-text-stub>SREとしてアーキテクトやインフラ構築を担当</v-card-text-stub>
+        <v-card-title-stub tag=\\"div\\" class=\\"warning--text\\">メドピア株式会社</v-card-title-stub>
+        <v-card-text-stub tag=\\"div\\">SREとしてアーキテクトやインフラ構築を担当</v-card-text-stub>
       </v-card-stub>
     </v-timeline-item-stub>
   </v-timeline-stub>

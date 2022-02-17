@@ -3,7 +3,7 @@
 exports[`skills should be vue instance 1`] = `
 "<div class=\\"skill-page\\">
   <page-title-stub title=\\"Skill\\"></page-title-stub>
-  <v-expansion-panels-stub activeclass=\\"v-item--active\\" multiple=\\"true\\" tag=\\"div\\" class=\\"panel\\">
+  <v-expansion-panels-stub valuecomparator=\\"[Function]\\" activeclass=\\"v-item--active\\" multiple=\\"true\\" tag=\\"div\\" class=\\"panel\\">
     <v-expansion-panel-stub>
       <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">システムアーキテクト</v-expansion-panel-header-stub>
       <v-expansion-panel-content-stub>

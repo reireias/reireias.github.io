@@ -12,8 +12,8 @@ exports[`profile should be vue instance 1`] = `
     <v-row-stub tag=\\"div\\">
       <v-col-stub tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
-          <v-card-title-stub>自己紹介</v-card-title-stub>
-          <v-card-text-stub>
+          <v-card-title-stub tag=\\"div\\">自己紹介</v-card-title-stub>
+          <v-card-text-stub tag=\\"div\\">
             <p>
               ヘルステックベンチャーで働くSREエンジニアです。<br>アーキテクチャ設計、インフラ構築、モニタリング環境構築、ボトルネック改善等のSRE的業務を中心にしつつも、Ruby
               on Railsを用いたアプリケーション開発もたまに担当したりします。
@@ -41,7 +41,7 @@ exports[`profile should be vue instance 1`] = `
     <v-row-stub tag=\\"div\\">
       <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" href=\\"http://github.com/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#363636\\">
-          <v-card-title-stub>
+          <v-card-title-stub tag=\\"div\\">
             <v-icon-stub>mdi-github</v-icon-stub>
             <div style=\\"margin-left: 10px;\\">
               GitHub
@@ -51,7 +51,7 @@ exports[`profile should be vue instance 1`] = `
       </v-col-stub>
       <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" href=\\"http://twitter.com/reirei_As\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#1da1f2\\">
-          <v-card-title-stub>
+          <v-card-title-stub tag=\\"div\\">
             <v-icon-stub>mdi-twitter</v-icon-stub>
             <div style=\\"margin-left: 10px;\\">
               Twitter
@@ -61,7 +61,7 @@ exports[`profile should be vue instance 1`] = `
       </v-col-stub>
       <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" href=\\"http://qiita.com/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#55c500\\">
-          <v-card-title-stub>
+          <v-card-title-stub tag=\\"div\\">
             <v-icon-stub>mdi-link</v-icon-stub>
             <div style=\\"margin-left: 10px;\\">
               Qiita
@@ -71,7 +71,7 @@ exports[`profile should be vue instance 1`] = `
       </v-col-stub>
       <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" href=\\"https://speakerdeck.com/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#009287\\">
-          <v-card-title-stub>
+          <v-card-title-stub tag=\\"div\\">
             <v-icon-stub>mdi-link</v-icon-stub>
             <div style=\\"margin-left: 10px;\\">
               Speaker Deck
