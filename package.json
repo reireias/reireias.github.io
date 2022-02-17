@@ -12,7 +12,6 @@
     "lint": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lintfix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .",
     "generate": "nuxt generate && echo 'reireias.dev' > dist/CNAME",
-    "deploy": "push-dir --dir=dist --branch=master --cleanup",
     "benchmark": "node scripts/benchmark.js https://reireias.github.io $(git rev-parse HEAD)",
     "test": "jest"
   },
@@ -53,7 +52,6 @@
     "jest": "^26.6.3",
     "nuxt-webfontloader": "^1.1.0",
     "prettier": "^2.3.2",
-    "push-dir": "^0.4.1",
     "stylus": "^0.54.7",
     "stylus-loader": "^3.0.2",
     "vue-jest": "^4.0.0-rc.0"
