@@ -16,7 +16,7 @@
     "test": "jest"
   },
   "dependencies": {
-    "@nuxtjs/composition-api": "^0.31.0",
+    "@nuxtjs/composition-api": "^0.32.0",
     "@nuxtjs/pwa": "^3.3.5",
     "lazysizes": "^5.3.2",
     "nuxt": "^2.15.7"
