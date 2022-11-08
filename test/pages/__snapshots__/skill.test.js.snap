@@ -36,6 +36,13 @@ exports[`skills should be vue instance 1`] = `
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
+      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">ゲームデーの開催</v-expansion-panel-header-stub>
+      <v-expansion-panel-content-stub>
+        <p>実際のセキュリティインシデントさながらの攻撃シナリオを用意し、テスト環境に攻撃を行いそれをチームで調査・対応する訓練を過去に何度か開催してきました。</p>
+        <p>AWSとセキュリティの知識を駆使してより実践的なゲームデーを開催することが可能です。</p>
+      </v-expansion-panel-content-stub>
+    </v-expansion-panel-stub>
+    <v-expansion-panel-stub>
       <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">パフォーマンスチューニング</v-expansion-panel-header-stub>
       <v-expansion-panel-content-stub>
         <p>Webアプリケーションエンジニア時代から負荷試験や性能改善等を業務で担当してきました。</p>
@@ -73,11 +80,16 @@ exports[`skills should be vue instance 1`] = `
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">インフラや低レイヤー技術の社内教育</v-expansion-panel-header-stub>
+      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">社内教育</v-expansion-panel-header-stub>
       <v-expansion-panel-content-stub>
-        <p>数年前からは社内の若手エンジニアへAWSやDocker、Linux、ネットワーク等の社内勉強会を主催したりもしています。</p>
-        <p>主に入門〜中級くらいの内容で、社内全体のスキルの底上げや、サービス開発/運用時におけるデバッグやバグ修正の補助となるような内容で実施しています。</p>
-        <p>また、理解度の面からハンズオン形式にこだわって実施しています。</p>
+        <p>社内のエンジニアへAWSやDocker、Linux、ネットワーク、Webアプリケーションのセキュリティ等の社内勉強会を主催したりもしています。</p>
+        <p>入門〜上級までニーズに応じて様ざなま形式で開催し、社内の技術力の底上げに貢献しています。</p>
+        <p>特に好評な勉強会をいくつか掲載します。</p>
+        <ul>
+          <li>AWS入門</li>
+          <li>OWASP Top 10(RailsGoatハンズオン)</li>
+          <li>Terraformコールドリーディング会</li>
+        </ul>
       </v-expansion-panel-content-stub>
     </v-expansion-panel-stub>
     <v-expansion-panel-stub>

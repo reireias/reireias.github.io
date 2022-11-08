@@ -19,6 +19,9 @@ exports[`profile should be vue instance 1`] = `
               on Railsを用いたアプリケーション開発もたまに担当したりします。
             </p>
             <p>
+              現在はセキュリティスペシャリストとして社内教育や開発ルールの策定なども担当しています。
+            </p>
+            <p>
               常に新技術や新しいことにチャレンジできる環境に見を置くように心がけています。
             </p>
           </v-card-text-stub>
@@ -75,6 +78,16 @@ exports[`profile should be vue instance 1`] = `
             <v-icon-stub>mdi-link</v-icon-stub>
             <div style=\\"margin-left: 10px;\\">
               Speaker Deck
+            </div>
+          </v-card-title-stub>
+        </v-card-stub>
+      </v-col-stub>
+      <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
+        <v-card-stub loaderheight=\\"4\\" href=\\"https://zenn.dev/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#3ea8ff\\">
+          <v-card-title-stub tag=\\"div\\">
+            <v-icon-stub>mdi-link</v-icon-stub>
+            <div style=\\"margin-left: 10px;\\">
+              Zenn
             </div>
           </v-card-title-stub>
         </v-card-stub>
