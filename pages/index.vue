@@ -147,10 +147,8 @@ export default defineComponent({
         targets: '#grid .el',
         complete: () => {
           step1.value = false
-          step2.value = true
-          setTimeout(() => {
-            runStep2()
-          }, 500)
+          step3.value = true
+          runStep3()
         },
       })
       timeline.add({
@@ -159,112 +157,19 @@ export default defineComponent({
         duration: 1,
       })
       timeline.add({
-        scale: [{ value: 1, easing: 'easeInQuad', duration: 1200 }],
+        scale: [{ value: 1, easing: 'easeInQuad', duration: 600 }],
         opacity: [{ value: 1, easing: 'linear', duration: 1 }],
-        delay: anime.stagger(200, { grid: [18, 18], from: 'center' }),
-      })
-      timeline.add({
-        backgroundColor: vuetify.theme.themes.dark.primary,
-        delay: anime.stagger(80, { grid: [18, 18], from: 'center' }),
-      })
-      timeline.add({
-        backgroundColor: vuetify.theme.themes.dark.secondary,
-        delay: anime.stagger(40, { grid: [18, 18], from: 'first' }),
+        delay: anime.stagger(100, { grid: [18, 18], from: 'center' }),
       })
       timeline.add({
         backgroundColor: vuetify.theme.themes.dark.error,
-        delay: anime.stagger(40, { grid: [18, 18], from: 'last' }),
+        delay: anime.stagger(20, { grid: [18, 18], from: 'last' }),
       })
       timeline.add({
         scale: 0,
         easing: 'linear',
         duration: 300,
-        delay: () => anime.random(0, 2000),
-      })
-    }
-    const runStep2 = () => {
-      // 始点が12時
-      const path1 = anime.path('#step2Path1')
-      // 始点が4時
-      const path2 = anime.path('#step2Path2')
-      // 始点が8時
-      const path3 = anime.path('#step2Path3')
-      // 始点が12時
-      const path4 = anime.path('#step2Path4')
-      // 始点が4時
-      const path5 = anime.path('#step2Path5')
-      // 始点が8時
-      const path6 = anime.path('#step2Path6')
-      const firstBase = (path: any) => ({
-        translateX: path('x'),
-        translateY: path('y'),
-        rotate: path('angle'),
-        scale: [0, 0],
-        easing: 'linear',
-        duration: 100,
-      })
-      const timeline = anime.timeline({
-        complete: () => {
-          const callback = () => {
-            step2.value = false
-            runStep3()
-          }
-          const els = [
-            ['#el1', path1, path4, callback],
-            ['#el2', path2, path5, () => {}],
-            ['#el3', path3, path6, () => {}],
-          ]
-          for (const el of els) {
-            const timeline = anime.timeline({
-              targets: el[0],
-              complete: el[3],
-            })
-            const circle = {
-              translateX: el[1]('x'),
-              translateY: el[1]('y'),
-              rotate: el[1]('angle'),
-              easing: 'linear',
-              duration: 1000,
-            }
-            const ellipse = {
-              translateX: el[2]('x'),
-              translateY: el[2]('y'),
-              rotate: el[2]('angle'),
-              easing: 'linear',
-              duration: 1000,
-            }
-            timeline.add(circle)
-            timeline.add(circle)
-            timeline.add(ellipse)
-            timeline.add(ellipse)
-            timeline.add({
-              translateX: 200,
-              translateY: 200,
-            })
-            timeline.add({
-              scale: 0,
-            })
-          }
-        },
-      })
-      timeline.add({
-        ...firstBase(path1),
-        targets: '#el1',
-      })
-      timeline.add({
-        ...firstBase(path2),
-        targets: '#el2',
-      })
-      timeline.add({
-        ...firstBase(path3),
-        targets: '#el3',
-      })
-      timeline.add({
-        targets: '#step2 .el',
-        scale: 1,
-        easing: 'easeOutElastic',
-        duration: 800,
-        delay: 1000,
+        delay: () => anime.random(0, 1000),
       })
     }
     const runStep3 = () => {
