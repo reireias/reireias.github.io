@@ -5,6 +5,36 @@
     <v-row>
       <v-col cols="12" sm="6">
         <v-card
+          href="https://aws.amazon.com/jp/builders-flash/202211/best-practice-game-day/"
+          target="_blank"
+        >
+          <v-img
+            src="https://d1.awsstatic.com/Developer%20Marketing/jp/magazine/2022/thumb_best-practice-game-day.e8c956b14c26eb1cb52e08a998ac38544517f23d.jpg"
+            height="300"
+          ></v-img>
+          <v-card-title>
+            よりリアルな攻撃で⾏うゲームデーで得たベストプラクティスとは ?
+          </v-card-title>
+          <v-card-text>AWSのメディアに寄稿させていただいた記事です</v-card-text>
+        </v-card>
+      </v-col>
+      <v-col cols="12" sm="6">
+        <v-card
+          href="https://speakerdeck.com/reireias/improving-efficiency-of-aws-account-operations-by-medpeer-sre-team"
+          target="_blank"
+        >
+          <v-img
+            src="https://files.speakerdeck.com/presentations/bbcf01585b25479cb993975808c63709/slide_0.jpg?19573755"
+            height="300"
+          ></v-img>
+          <v-card-title> SREチームによるAWSアカウント運用効率化 </v-card-title>
+          <v-card-text> AWSのイベントで登壇した資料です </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+    <v-row>
+      <v-col cols="12" sm="6">
+        <v-card
           href="https://tech.medpeer.co.jp/entry/2021/10/01/090000"
           target="_blank"
         >
@@ -37,19 +67,6 @@
     <v-row>
       <v-col cols="12" sm="6">
         <v-card
-          href="https://speakerdeck.com/reireias/improving-efficiency-of-aws-account-operations-by-medpeer-sre-team"
-          target="_blank"
-        >
-          <v-img
-            src="https://files.speakerdeck.com/presentations/bbcf01585b25479cb993975808c63709/slide_0.jpg?19573755"
-            height="300"
-          ></v-img>
-          <v-card-title> SREチームによるAWSアカウント運用効率化 </v-card-title>
-          <v-card-text> AWSのイベントで登壇した資料です </v-card-text>
-        </v-card>
-      </v-col>
-      <v-col cols="12" sm="6">
-        <v-card
           href="https://qiita.com/reireias/items/2e377b2a42e4cb3aded1"
           target="_blank"
         >
@@ -62,8 +79,6 @@
           </v-card-text>
         </v-card>
       </v-col>
-    </v-row>
-    <v-row>
       <v-col cols="12" sm="6">
         <v-card
           href="https://speakerdeck.com/reireias/medpeer-aws-seminar-ecs"

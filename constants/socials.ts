@@ -27,6 +27,13 @@ const socials = [
     icon: 'mdi-link',
     color: '#009287',
   },
+  {
+    name: 'Zenn',
+    value: 'reireias',
+    url: 'https://zenn.dev/reireias',
+    icon: 'mdi-link',
+    color: '#3ea8ff',
+  },
 ]
 
 export default socials
