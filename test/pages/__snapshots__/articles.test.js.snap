@@ -5,6 +5,20 @@ exports[`articles should be vue instance 1`] = `
   <page-title-stub title=\\"Article\\"></page-title-stub>
   <v-row-stub tag=\\"div\\">
     <v-col-stub cols=\\"12\\" sm=\\"6\\" tag=\\"div\\">
+      <v-card-stub loaderheight=\\"4\\" href=\\"https://tech.medpeer.co.jp/entry/2026/06/26/122446\\" tag=\\"div\\" target=\\"_blank\\">
+        <v-img-stub height=\\"300\\" options=\\"[object Object]\\" position=\\"center center\\" src=\\"https://ogimage.blog.st-hatena.com/8454420450089458396/14945776032045239896/1782444286\\" transition=\\"fade-transition\\"></v-img-stub>
+        <v-card-title-stub tag=\\"div\\">
+          Claude Enterprise全社導入で何を検討し、何をやらなかったか
+        </v-card-title-stub>
+        <v-card-text-stub tag=\\"div\\">
+          メドピア開発者ブログに寄稿した、Claude
+          Enterprise全社導入の検討記事です
+        </v-card-text-stub>
+      </v-card-stub>
+    </v-col-stub>
+  </v-row-stub>
+  <v-row-stub tag=\\"div\\">
+    <v-col-stub cols=\\"12\\" sm=\\"6\\" tag=\\"div\\">
       <v-card-stub loaderheight=\\"4\\" href=\\"https://aws.amazon.com/jp/builders-flash/202211/best-practice-game-day/\\" tag=\\"div\\" target=\\"_blank\\">
         <v-img-stub height=\\"300\\" options=\\"[object Object]\\" position=\\"center center\\" src=\\"https://d1.awsstatic.com/Developer%20Marketing/jp/magazine/2022/thumb_best-practice-game-day.e8c956b14c26eb1cb52e08a998ac38544517f23d.jpg\\" transition=\\"fade-transition\\"></v-img-stub>
         <v-card-title-stub tag=\\"div\\">

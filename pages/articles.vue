@@ -5,6 +5,27 @@
     <v-row>
       <v-col cols="12" sm="6">
         <v-card
+          href="https://tech.medpeer.co.jp/entry/2026/06/26/122446"
+          target="_blank"
+        >
+          <v-img
+            src="https://ogimage.blog.st-hatena.com/8454420450089458396/14945776032045239896/1782444286"
+            height="300"
+          ></v-img>
+          <v-card-title>
+            Claude Enterprise全社導入で何を検討し、何をやらなかったか
+          </v-card-title>
+          <v-card-text>
+            メドピア開発者ブログに寄稿した、Claude
+            Enterprise全社導入の検討記事です
+          </v-card-text>
+        </v-card>
+      </v-col>
+    </v-row>
+
+    <v-row>
+      <v-col cols="12" sm="6">
+        <v-card
           href="https://aws.amazon.com/jp/builders-flash/202211/best-practice-game-day/"
           target="_blank"
         >
