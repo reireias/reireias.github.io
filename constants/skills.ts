@@ -15,12 +15,11 @@ const skills = [
     ],
   },
   {
-    header: 'Infrastracture as Codeの実現',
+    header: 'Infrastructure as Codeの実現',
     content: [
-      'Infrastracture as Codeによる利点と恩恵を考慮した上で、管理/変更/レビュー/運用のしやすいInfrastracture as Codeな世界を実現することができます。',
+      'Infrastructure as Codeによる利点と恩恵を考慮した上で、管理/変更/レビュー/運用のしやすいInfrastructure as Codeな世界を実現することができます。',
       'ツールとしてはTerraformを利用することが多いですが、CloudFormationによる実装経験もあります。',
-      'Terraformに関してはTerraform Cloudによるplan/applyの自動化や、AWS/GCP以外にGitHubやTerraform Cloud自体の管理などヘビーに活用しています。',
-      '最近はGitHub Actionsでplan/applyの自動実行なども行うことがあります。',
+      'Terraform CloudでのCI/CD自動化を経て、現在はコストと開発体験の観点からGitHub Actions上でのplan/apply自動実行に全面移行して運用しています。AWS/GCPに加え、GitHub自体の管理などにも活用しています。',
     ],
   },
   {
@@ -30,6 +29,7 @@ const skills = [
       '特に複数のAWSアカウントを横断したOrganizationやCloudTrail、SecurityHubを用いた一元的なセキュリティ対策と検知の仕組みの構築を推奨しております。',
       'セキュリティKPIの策定と月次レビュー体制の確立、セキュリティロードマップの策定など、組織のセキュリティを継続的に改善する仕組みづくりも担当しています。',
       'ログ改ざん耐性の確保やDB監査ログの取得など、実践的なセキュリティ対策の構築経験もあります。',
+      'サプライチェーン攻撃に対しては、依存バージョンの固定・SASTの導入・CI/CDのハードニングなど、予防的な仕組みを複数リポジトリへ横展開しています。',
     ],
   },
   {
@@ -57,6 +57,13 @@ const skills = [
     content: [
       'Webアプリケーションエンジニア時代から負荷試験や性能改善等を業務で担当してきました。',
       'APMやモニタリングツールやプロファイラーを利用した本番環境やCI上のボトルネックの特定と、WebアプリケーションやRDBMSやLinux OSの知識を活用しパフォーマンス改善を行うことができます。',
+    ],
+  },
+  {
+    header: '可観測性(Observability)基盤の構築',
+    content: [
+      'メトリクス・ログ・トレースを組み合わせた可観測性基盤の設計・構築ができます。',
+      'Amazon Managed Prometheus / GrafanaやOpenTelemetry(ADOT)などのマネージドサービスを活用し、コスト帰属・異常検知・セキュリティ監査の土台となる基盤を本番構築した経験があります。',
     ],
   },
   {
@@ -140,7 +147,8 @@ const skills = [
     header: 'AIを活用した開発と仕組みづくり',
     content: [
       'AIエージェントを活用した開発（AI駆動開発）に日常的に取り組んでいます。',
-      'AIによって変化し続ける開発の在り方に対して、SRE / セキュリティの知見を活かしたガードレールやポリシー・仕組みづくりに関心があります。',
+      '社内規約を組み込んだClaude Codeのプラグインや、Datadog/Notion/AWS Cost ExplorerなどのMCP統合、リポジトリ横断作業のためのマルチエージェント制御など、AIを活用した開発基盤の整備を進めてきました。',
+      'AIによって変化し続ける開発の在り方に対して、SRE / セキュリティの知見を活かしたガードレールやポリシー・仕組みづくりに関心があり、Claude Enterpriseの全社導入におけるセキュリティ設計なども担当しています。',
       'チーム全体でAIエージェントが安全かつ効果的に動作する環境を整備していくことを志向しています。',
     ],
   },
