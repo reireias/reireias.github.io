@@ -97,6 +97,16 @@ exports[`profile should be vue instance 1`] = `
           </v-card-title-stub>
         </v-card-stub>
       </v-col-stub>
+      <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
+        <v-card-stub loaderheight=\\"4\\" href=\\"https://lapras.com/public/LHJNON4\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#3d5afe\\">
+          <v-card-title-stub tag=\\"div\\">
+            <v-icon-stub>mdi-link</v-icon-stub>
+            <div style=\\"margin-left: 10px;\\">
+              LAPRAS
+            </div>
+          </v-card-title-stub>
+        </v-card-stub>
+      </v-col-stub>
     </v-row-stub>
   </v-container-stub>
 </div>"

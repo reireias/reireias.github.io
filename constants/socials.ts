@@ -34,6 +34,13 @@ const socials = [
     icon: 'mdi-link',
     color: '#3ea8ff',
   },
+  {
+    name: 'LAPRAS',
+    value: 'reireias',
+    url: 'https://lapras.com/public/LHJNON4',
+    icon: 'mdi-link',
+    color: '#3d5afe',
+  },
 ]
 
 export default socials
