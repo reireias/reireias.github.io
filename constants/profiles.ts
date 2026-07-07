@@ -5,7 +5,7 @@ const profiles = [
   },
   {
     key: '職業',
-    value: 'SRE',
+    value: 'SRE / セキュリティエンジニア',
   },
   {
     key: '好きな動物',

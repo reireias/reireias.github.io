@@ -15,21 +15,26 @@ exports[`profile should be vue instance 1`] = `
           <v-card-title-stub tag=\\"div\\">自己紹介</v-card-title-stub>
           <v-card-text-stub tag=\\"div\\">
             <p>
-              ヘルステックベンチャーで働くSREエンジニアです。<br>アーキテクチャ設計、インフラ構築、モニタリング環境構築、ボトルネック改善等のSRE的業務を中心にしつつも、Ruby
-              on Railsを用いたアプリケーション開発もたまに担当したりします。
+              ヘルステックベンチャーでプリンシパルエンジニアとして働くSRE /
+              セキュリティエンジニアです。<br>複数サービスのアーキテクチャ設計、インフラ基盤の構築・運用、ボトルネック改善やコスト最適化等のSRE業務を中心に、Ruby
+              on Railsを用いたアプリケーション開発も担当したりします。
             </p>
             <p>
-              現在はセキュリティスペシャリストとして社内教育や開発ルールの策定なども担当しています。
+              セキュリティエンジニアとして、全社横断のセキュリティ対策やKPI策定、社内教育、開発ルールの策定なども担当しています。
             </p>
             <p>
-              常に新技術や新しいことにチャレンジできる環境に見を置くように心がけています。
+              最近はAIの台頭で変化する開発の在り方に対して、SRE /
+              セキュリティの知見を活かしたガードレールや仕組み・組織づくりに関心があります。
+            </p>
+            <p>
+              常に新技術や新しいことにチャレンジできる環境に身を置くように心がけています。
             </p>
           </v-card-text-stub>
         </v-card-stub>
       </v-col-stub>
     </v-row-stub>
     <key-value-row-stub k=\\"生年月日\\" v=\\"1988/xx/xx\\"></key-value-row-stub>
-    <key-value-row-stub k=\\"職業\\" v=\\"SRE\\"></key-value-row-stub>
+    <key-value-row-stub k=\\"職業\\" v=\\"SRE / セキュリティエンジニア\\"></key-value-row-stub>
     <key-value-row-stub k=\\"好きな動物\\" v=\\"猫\\"></key-value-row-stub>
     <key-value-row-stub k=\\"好きなOS\\" v=\\"Linux\\"></key-value-row-stub>
     <key-value-row-stub k=\\"好きなLinux Distribution\\" v=\\"Linux Mint\\"></key-value-row-stub>
