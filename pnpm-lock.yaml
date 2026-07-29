@@ -135,6 +135,9 @@ importers:
       vue-template-compiler:
         specifier: 2.7.16
         version: 2.7.16
+      vuetify:
+        specifier: 2.5.10
+        version: 2.5.10(vue@2.7.16)
 
 packages:
 
@@ -7193,6 +7196,11 @@ packages:
         optional: true
       sharp:
         optional: true
+
+  vuetify@2.5.10:
+    resolution: {integrity: sha512-UODZQrib36l7i1WGg0MUvurczLspYTe0nKAmfbwyMs6dC2lG1Q1VV9caqPbCAB9zgG6QIJaOmRQKSKduw9eZTw==}
+    peerDependencies:
+      vue: ^2.6.4
 
   vuetify@2.7.2:
     resolution: {integrity: sha512-qr04ww7uzAPQbpk751x4fSdjsJ+zREzjQ/rBlcQGuWS6MIMFMXcXcwvp4+/tnGsULZxPMWfQ0kmZmg5Yc/XzgQ==}
@@ -16407,6 +16415,10 @@ snapshots:
       vue: 2.7.16
       vuetify: 2.7.2(vue@2.7.16)
       webpack: 4.47.0
+
+  vuetify@2.5.10(vue@2.7.16):
+    dependencies:
+      vue: 2.7.16
 
   vuetify@2.7.2(vue@2.7.16):
     dependencies:
