@@ -19,3 +19,5 @@ coverage
 .gemini/brain/
 .gemini/tmp/
 .gemini/history/
+static/screenshots/
+
