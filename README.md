@@ -10,6 +10,15 @@ Vue.js + Vuetify.js + Nuxt.js
 ## Lighthouse Score
 ![lighthouse](https://user-images.githubusercontent.com/24800246/59352011-a0736180-8d5a-11e9-9634-876c991be867.png)
 
+## Setup / Requirements
+
+This project uses [mise](https://mise.jdx.dev/) for tool version management.
+
+```bash
+# Install tools using mise
+mise install
+```
+
 ## install
 
 ```bash
