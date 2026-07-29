@@ -1,39 +1,17 @@
 <template>
   <v-container class="index-page">
-    <v-row v-show="step1" justify="center">
+    <v-row justify="center">
       <v-col class="contents-container">
-        <div class="main-contents avatar-container">
-          <v-avatar size="140" class="icon-avatar">
-            <img src="/icon.png" alt="icon" />
-          </v-avatar>
+        <div class="animation-wrapper">
+          <div id="grid" class="grid main-contents">
+            <div v-for="i in 324" :key="i" :class="squareClass(i)"></div>
+          </div>
+          <div v-show="showAvatar" class="avatar-overlay">
+            <v-avatar size="160" class="icon-avatar">
+              <img src="/icon.png" alt="icon" />
+            </v-avatar>
+          </div>
         </div>
-      </v-col>
-    </v-row>
-    <v-row v-show="step3" justify="center">
-      <v-col id="step3" class="contents-container">
-        <svg
-          class="svg main-contents"
-          width="400"
-          height="400"
-          viewBox="-1 0 384 67.701"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <g
-            id="svgGroup"
-            stroke-linecap="round"
-            fill-rule="evenodd"
-            font-size="9pt"
-            stroke-width="0.25mm"
-            fill="none"
-          >
-            <path
-              v-for="(data, index) in logo"
-              :key="data"
-              :d="data"
-              :stroke="colors[index]"
-            />
-          </g>
-        </svg>
       </v-col>
     </v-row>
   </v-container>
@@ -47,72 +25,72 @@ import {
   onMounted,
 } from '@vue/composition-api'
 import anime from 'animejs'
-import { logo } from '~/constants/svg'
 
 const useVuetify = () => {
   const instance = getCurrentInstance()
   return instance!.proxy.$vuetify
 }
 
+const COLOR_CLASSES = [
+  'v-green',
+  'v-cyan',
+  'v-red',
+  'v-orange',
+  'v-purple',
+  'v-yellow',
+]
+
 export default defineComponent({
   layout: 'gridless',
   setup() {
-    const step1 = ref(true)
-    const step3 = ref(false)
+    const showAvatar = ref(false)
     const vuetify = useVuetify()
-    const colors = [
-      vuetify.theme.themes.dark.primary,
-      vuetify.theme.themes.dark.primary,
-      vuetify.theme.themes.dark.primary,
-      vuetify.theme.themes.dark.primary,
-      vuetify.theme.themes.dark.primary,
-      vuetify.theme.themes.dark.primary,
-      vuetify.theme.themes.dark.error,
-      vuetify.theme.themes.dark.error,
-    ]
-    const runStep1 = () => {
-      anime({
-        targets: '.icon-avatar',
-        scale: [0.3, 1],
-        opacity: [0, 1],
-        easing: 'easeOutBack',
-        duration: 300,
-        complete: () => {
-          step1.value = false
-          step3.value = true
-          runStep3()
-        },
-      })
-    }
-    const runStep3 = () => {
-      step3.value = true
+
+    const runAnimation = () => {
       const timeline = anime.timeline({
-        targets: '#step3 path',
-      })
-      timeline.add({
-        strokeDashoffset: [anime.setDashoffset, 0],
-        easing: 'easeInOutSine',
-        duration: 300,
-        delay: (_: any, i: number) => i * 30,
-      })
-      timeline.add(
-        {
-          easing: 'easeInOutSine',
-          fill: ['transparent', (_: any, i: number) => colors[i]],
-          duration: 200,
+        complete: () => {
+          showAvatar.value = true
+          anime({
+            targets: '.icon-avatar',
+            scale: [0.3, 1],
+            opacity: [0, 1],
+            easing: 'easeOutBack',
+            duration: 300,
+          })
         },
-        '-=100'
-      )
+      })
+
+      // 1. タイルが中央から拡大表示
+      timeline.add({
+        targets: '#grid .el',
+        scale: [{ value: 1, easing: 'easeInQuad', duration: 150 }],
+        opacity: [{ value: 1, easing: 'linear', duration: 1 }],
+        delay: anime.stagger(8, { grid: [18, 18], from: 'center' }),
+      })
+
+      // 2. タイルが変色しながら中央から収縮（タイルが収縮して消えるアニメーション）
+      timeline.add({
+        targets: '#grid .el',
+        scale: 0,
+        backgroundColor: vuetify.theme.themes.dark.primary,
+        easing: 'easeInQuad',
+        duration: 150,
+        delay: anime.stagger(8, { grid: [18, 18], from: 'center' }),
+      })
     }
+
     onMounted(() => {
-      runStep1()
+      runAnimation()
     })
 
+    const squareClass = (index: number) => {
+      const color = COLOR_CLASSES[index % COLOR_CLASSES.length]
+      return `square small el ${color}`
+    }
+
     return {
-      step1,
-      step3,
-      logo,
-      colors,
+      showAvatar,
+      squareClass,
     }
   },
 })
@@ -126,10 +104,20 @@ export default defineComponent({
     height: 100%;
   }
 
+  .animation-wrapper {
+    position: relative;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 360px;
+    height: 360px;
+  }
+
   .square {
     pointer-events: none;
-    width: 28px;
-    height: 28px;
+    width: 18px;
+    height: 18px;
     margin: 1px;
     font-size: 12px;
     background-color: white;
@@ -169,23 +157,11 @@ export default defineComponent({
   .main-contents {
     margin: auto;
   }
-  .circle {
-    pointer-events: none;
-    width: 28px;
-    height: 28px;
-    margin: 1px;
-    font-size: 12px;
-    border-radius: 50%;
-    transform: scale(0);
-  }
-  .small {
-    width: 18px;
-    height: 18px;
-  }
-  .follow-path {
+  .avatar-overlay {
     position: absolute;
-    margin-top: -9px;
-    margin-left: -9px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 </style>
