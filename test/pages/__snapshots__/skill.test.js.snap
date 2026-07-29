@@ -3,10 +3,10 @@
 exports[`skills should be vue instance 1`] = `
 "<div class=\\"skill-page\\">
   <page-title-stub title=\\"Skill\\"></page-title-stub>
-  <v-expansion-panels-stub valuecomparator=\\"[Function]\\" activeclass=\\"v-item--active\\" multiple=\\"true\\" tag=\\"div\\" class=\\"panel\\">
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">システムアーキテクト</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+  <v-expansion-panels multiple=\\"\\" class=\\"panel\\">
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">システムアーキテクト</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>可用性、コスト、拡張性、運用などを考慮したシステム全体のアーキテクチャ設計を行うことが得意です。</p>
         <p>プラットフォームはAWS、GCP、自社データセンター等を利用してきました。OSはLinux系を一通り構築に使ったことがあります。</p>
         <p>最近はAWSのマネージドサービスを活用し極力運用負荷が少なく、過度に複雑すぎない、負債になりにくいシステム設計を心がけて設計しています。</p>
@@ -17,36 +17,36 @@ exports[`skills should be vue instance 1`] = `
           <li>API Gateway + LambdaやCloudFront + Lambda Edge等のサーバーレス構成</li>
           <li>SQS + SNS + Lambdaを利用したキューチェーン型システム</li>
         </ul>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">Infrastructure as Codeの実現</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">Infrastructure as Codeの実現</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>Infrastructure as Codeによる利点と恩恵を考慮した上で、管理/変更/レビュー/運用のしやすいInfrastructure as Codeな世界を実現することができます。</p>
         <p>ツールとしてはTerraformを利用することが多いですが、CloudFormationによる実装経験もあります。</p>
         <p>Terraform CloudでのCI/CD自動化を経て、現在はコストと開発体験の観点からGitHub Actions上でのplan/apply自動実行に全面移行して運用しています。AWS/GCPに加え、GitHub自体の管理などにも活用しています。</p>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">社内の全AWSアカウント横断でのセキュリティ対策</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">社内の全AWSアカウント横断でのセキュリティ対策</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>\\"AWS Well-Architected\\"やベストプラクティスに則ったセキュリティ対策の実施が可能です。</p>
         <p>特に複数のAWSアカウントを横断したOrganizationやCloudTrail、SecurityHubを用いた一元的なセキュリティ対策と検知の仕組みの構築を推奨しております。</p>
         <p>セキュリティKPIの策定と月次レビュー体制の確立、セキュリティロードマップの策定など、組織のセキュリティを継続的に改善する仕組みづくりも担当しています。</p>
         <p>ログ改ざん耐性の確保やDB監査ログの取得など、実践的なセキュリティ対策の構築経験もあります。</p>
         <p>サプライチェーン攻撃に対しては、依存バージョンの固定・SASTの導入・CI/CDのハードニングなど、予防的な仕組みを複数リポジトリへ横展開しています。</p>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">ゲームデーの開催</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">ゲームデーの開催</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>実際のセキュリティインシデントさながらの攻撃シナリオを用意し、テスト環境に攻撃を行いそれをチームで調査・対応する訓練を過去に何度か開催してきました。</p>
         <p>AWSとセキュリティの知識を駆使してより実践的なゲームデーを開催することが可能です。</p>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">クラウドコストの最適化</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">クラウドコストの最適化</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>AWSを中心としたクラウドコストの分析と削減を得意としています。</p>
         <p>単なる削減に留まらず、開発体験や運用効率の向上を同時に実現する施策を心がけています。</p>
         <p>過去に業務で行ってきた主な取り組みは次の通りです。</p>
@@ -55,25 +55,25 @@ exports[`skills should be vue instance 1`] = `
           <li>ARM(Graviton)化やS3ストレージクラス移行など、全サービス横断でのコスト削減施策の提案・推進</li>
           <li>コスト削減ノウハウのドキュメント化による、チーム全体での継続的な最適化体制の構築</li>
         </ul>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">パフォーマンスチューニング</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">パフォーマンスチューニング</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>Webアプリケーションエンジニア時代から負荷試験や性能改善等を業務で担当してきました。</p>
         <p>APMやモニタリングツールやプロファイラーを利用した本番環境やCI上のボトルネックの特定と、WebアプリケーションやRDBMSやLinux OSの知識を活用しパフォーマンス改善を行うことができます。</p>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">可観測性(Observability)基盤の構築</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">可観測性(Observability)基盤の構築</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>メトリクス・ログ・トレースを組み合わせた可観測性基盤の設計・構築ができます。</p>
         <p>Amazon Managed Prometheus / GrafanaやOpenTelemetry(ADOT)などのマネージドサービスを活用し、コスト帰属・異常検知・セキュリティ監査の土台となる基盤を本番構築した経験があります。</p>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">CI/CDパイプラインの構築</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">CI/CDパイプラインの構築</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>CIに関しては、GitHub Actions/CircleCI/Travis CI等の使用経験があり、Linux + Dockerの知識も合わせて適切な設定を行うことができます。</p>
         <p>CDに関しては主にAWSのCodeシリーズを利用しての構築が得意です。</p>
         <p>以下に業務で実際に行ってきたものを列挙します。</p>
@@ -84,26 +84,26 @@ exports[`skills should be vue instance 1`] = `
           <li>Dockerイメージビルドの高速化</li>
           <li>CI/CDパイプラインにおける適切なキャッシュ設定</li>
         </ul>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">運用系ツールの作成と運用</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">運用系ツールの作成と運用</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>もともとサービスのフロントエンド/バックエンドの開発が長く、現在でも社内のリソース状況に応じてアプリケーションの実装を担当したり、趣味での実装の多くがWebアプリケーション開発なので、実はインフラと同等以上にアプリケーション開発のスキルもあったりします。</p>
         <p>これを活かし、省リソース(要はワンオペ)での管理機能等の小さいサービスのインフラとアプリケーション両方の開発や、日々の運用で利用するような夜間停止やSlack連携などの軽いLambdaアプリケーション等、開発時の便利系スクリプト等の実装を担当することが多くありました。</p>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">データ分析/可視化基盤の構築</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">データ分析/可視化基盤の構築</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>ビッグデータ解析とまではいかないですが、それなりに多量のデータを格納し、分析/可視化するための基盤の構築も何度か経験があります。</p>
         <p>データ量やリアルタイム性、分析する対象に応じて適切なデータ格納方法やデータパイプラインを構築し、ビジネスメンバーの興味関心に応じたダッシュボード作成等を実践してきました。</p>
         <p>個人的にはエンジニアサイドでSQL等のクエリを実行できるBI環境を提供し、ビジネスサイドでKPIや施策に応じたクエリを日々作成していくスタイルが理想です。</p>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">社内教育</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">社内教育</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>社内のエンジニアへAWSやDocker、Linux、ネットワーク、Webアプリケーションのセキュリティ等の社内勉強会を主催したりもしています。</p>
         <p>入門〜上級までニーズに応じて様ざなま形式で開催し、社内の技術力の底上げに貢献しています。</p>
         <p>特に好評な勉強会をいくつか掲載します。</p>
@@ -112,11 +112,11 @@ exports[`skills should be vue instance 1`] = `
           <li>OWASP Top 10(RailsGoatハンズオン)</li>
           <li>Terraformコールドリーディング会</li>
         </ul>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">Webアプリケーション開発のリーディング</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">Webアプリケーション開発のリーディング</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>過去にBtoBやBtoCを含め、6プロダクトほどサービス開発を経験してきました。</p>
         <p>セキュリティや可用性、性能等の非機能要件を考慮した開発や、メンバーのスキルや学習コスト/メンテナンスコストを考慮した技術選択等を実践できます。</p>
         <p>認証や非同期処理、大規模システムの結合ビルドの調整等、比較的難易度の高い部分を担当することが多いです。</p>
@@ -124,11 +124,11 @@ exports[`skills should be vue instance 1`] = `
         <p>また、IPAの資格で応用情報技術者、セキュリティスペシャリスト、データベーススペシャリストを保有しています。</p>
         <p>1年以上業務で利用経験のある言語: Ruby, Java, C#, js, ts</p>
         <p>同フレームワーク: Ruby on Rails, Spring, Vue.js</p>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">開発言語</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">開発言語</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>各開発言語の経験とスキルは次の通りです。</p>
         <ul>
           <li>Ruby: 実務1年半。Ruby on Railsを利用したWebアプリケーション開発で利用。</li>
@@ -137,29 +137,29 @@ exports[`skills should be vue instance 1`] = `
           <li>JavaScript(TypeScript): 社会人歴と同じくらい。実は一番得意な言語。フロントエンド開発以外にもサーバーサイドやLambda関数の実装等に多用しています。</li>
           <li>C#: .NET Framework時代にアプリケーションを構築したり、MS Officeのプラグインを開発したりしていました。</li>
         </ul>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">開発環境の構築や改善</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">開発環境の構築や改善</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>Webアプリケーションと本番環境のインフラ構成に加え、DockerやLinux等の知識があるため、開発環境まわりの構築や改善を実施してきました。</p>
         <p>これらの知識を組み合わせることで、本番環境をなるべく再現しつつも起動が高速で扱いやすいローカルの開発環境を構築したり、クレデンシャル/API</p>
         <p>Tokenのセキュリティや職能/職種に合わせた権限設定を考慮したリポジトリや成果物管理の仕組み等、開発環境とその周辺を構築してきました。</p>
         <p>技術的にこれらを構築するだけでなく、開発フローやブランチ戦略の考案/改善といったことも得意だったりします。</p>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">AIを活用した開発と仕組みづくり</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">AIを活用した開発と仕組みづくり</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>AIエージェントを活用した開発（AI駆動開発）に日常的に取り組んでいます。</p>
         <p>社内規約を組み込んだClaude Codeのプラグインや、Datadog/Notion/AWS Cost ExplorerなどのMCP統合、リポジトリ横断作業のためのマルチエージェント制御など、AIを活用した開発基盤の整備を進めてきました。</p>
         <p>AIによって変化し続ける開発の在り方に対して、SRE / セキュリティの知見を活かしたガードレールやポリシー・仕組みづくりに関心があり、Claude Enterpriseの全社導入におけるセキュリティ設計なども担当しています。</p>
         <p>チーム全体でAIエージェントが安全かつ効果的に動作する環境を整備していくことを志向しています。</p>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-    <v-expansion-panel-stub>
-      <v-expansion-panel-header-stub expandicon=\\"$expand\\" class=\\"title\\">資格</v-expansion-panel-header-stub>
-      <v-expansion-panel-content-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+    <v-expansion-panel>
+      <v-expansion-panel-header class=\\"title\\">資格</v-expansion-panel-header>
+      <v-expansion-panel-content>
         <p>以下の資格を有しています。</p>
         <ul>
           <li>AWS セキュリティ スペシャリスト</li>
@@ -169,8 +169,8 @@ exports[`skills should be vue instance 1`] = `
           <li>IPA データベーススペシャリスト</li>
           <li>IPA セキュリティスペシャリスト</li>
         </ul>
-      </v-expansion-panel-content-stub>
-    </v-expansion-panel-stub>
-  </v-expansion-panels-stub>
+      </v-expansion-panel-content>
+    </v-expansion-panel>
+  </v-expansion-panels>
 </div>"
 `;

@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`index should be vue instance 1`] = `
-"<v-container-stub tag=\\"div\\" class=\\"index-page\\">
-  <v-row-stub tag=\\"div\\" justify=\\"center\\">
-    <v-col-stub tag=\\"div\\" class=\\"contents-container\\">
+"<v-container class=\\"index-page\\">
+  <v-row justify=\\"center\\">
+    <v-col class=\\"contents-container\\">
       <div class=\\"animation-wrapper\\">
         <div id=\\"grid\\" class=\\"grid main-contents\\">
           <div class=\\"square small el v-cyan\\"></div>
@@ -331,11 +331,11 @@ exports[`index should be vue instance 1`] = `
           <div class=\\"square small el v-yellow\\"></div>
           <div class=\\"square small el v-green\\"></div>
         </div>
-        <div class=\\"avatar-overlay\\" style=\\"display: none;\\">
-          <v-avatar-stub size=\\"160\\" class=\\"icon-avatar\\"><img src=\\"/icon.png\\" alt=\\"icon\\"></v-avatar-stub>
+        <div class=\\"avatar-overlay\\">
+          <v-avatar size=\\"160\\" class=\\"icon-avatar\\"><img src=\\"/icon.png\\" alt=\\"icon\\"></v-avatar>
         </div>
       </div>
-    </v-col-stub>
-  </v-row-stub>
-</v-container-stub>"
+    </v-col>
+  </v-row>
+</v-container>"
 `;
