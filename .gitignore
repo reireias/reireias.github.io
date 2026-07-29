@@ -14,3 +14,8 @@ dist
 tmp
 .env
 coverage
+
+# Antigravity / Gemini agent artifacts
+.gemini/brain/
+.gemini/tmp/
+.gemini/history/
