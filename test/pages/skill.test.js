@@ -10,10 +10,16 @@ localVue.use(Vuetify)
 localVue.use(CompositionApi)
 
 describe('skills', () => {
+  let vuetify
+
+  beforeEach(() => {
+    vuetify = new Vuetify()
+  })
+
   it('should be vue instance', () => {
     const wrapper = shallowMount(target, {
       localVue,
-      Vuetify,
+      vuetify,
     })
     expect(wrapper.html()).toMatchSnapshot()
   })

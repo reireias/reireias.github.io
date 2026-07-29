@@ -3,43 +3,43 @@
 exports[`jobs should be vue instance 1`] = `
 "<div class=\\"job-page\\">
   <page-title-stub title=\\"Job\\"></page-title-stub>
-  <v-timeline dense=\\"\\">
-    <v-timeline-item fill-dot=\\"\\" small=\\"\\" color=\\"secondary\\">
-      <v-card>
-        <v-card-title class=\\"secondary--text\\">筑波大学 入学</v-card-title>
-        <v-card-text>理工学群 工学システム学類</v-card-text>
-      </v-card>
-    </v-timeline-item>
-    <v-timeline-item fill-dot=\\"\\" small=\\"\\" color=\\"secondary\\">
-      <v-card>
-        <v-card-title class=\\"secondary--text\\">同大学 卒業</v-card-title>
-        <v-card-text>学位（工学）を取得</v-card-text>
-      </v-card>
-    </v-timeline-item>
-    <v-timeline-item fill-dot=\\"\\" small=\\"\\" color=\\"accent\\">
-      <v-card>
-        <v-card-title class=\\"accent--text\\">筑波大学大学院 入学</v-card-title>
-        <v-card-text>システム情報工学研究科 リスク工学専攻</v-card-text>
-      </v-card>
-    </v-timeline-item>
-    <v-timeline-item fill-dot=\\"\\" small=\\"\\" color=\\"accent\\">
-      <v-card>
-        <v-card-title class=\\"accent--text\\">同大学院 卒業</v-card-title>
-        <v-card-text>修士（工学）を取得</v-card-text>
-      </v-card>
-    </v-timeline-item>
-    <v-timeline-item fill-dot=\\"\\" small=\\"\\" color=\\"warning\\">
-      <v-card>
-        <v-card-title class=\\"warning--text\\">富士ゼロックス株式会社</v-card-title>
-        <v-card-text>ソリューション開発部にて、開発リーダーとしてBtoBのSaaSを開発 (〜2019)</v-card-text>
-      </v-card>
-    </v-timeline-item>
-    <v-timeline-item fill-dot=\\"\\" small=\\"\\" color=\\"warning\\">
-      <v-card>
-        <v-card-title class=\\"warning--text\\">メドピア株式会社</v-card-title>
-        <v-card-text>SRE / セキュリティエンジニアとして、複数サービスのアーキテクチャ設計・インフラ基盤・全社セキュリティを担当。現在はプリンシパルエンジニアとしてプラットフォームSREとセキュリティ領域をリードしています。</v-card-text>
-      </v-card>
-    </v-timeline-item>
-  </v-timeline>
+  <v-timeline-stub dense=\\"true\\">
+    <v-timeline-item-stub color=\\"secondary\\" filldot=\\"true\\" small=\\"true\\">
+      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
+        <v-card-title-stub class=\\"secondary--text\\">筑波大学 入学</v-card-title-stub>
+        <v-card-text-stub>理工学群 工学システム学類</v-card-text-stub>
+      </v-card-stub>
+    </v-timeline-item-stub>
+    <v-timeline-item-stub color=\\"secondary\\" filldot=\\"true\\" small=\\"true\\">
+      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
+        <v-card-title-stub class=\\"secondary--text\\">同大学 卒業</v-card-title-stub>
+        <v-card-text-stub>学位（工学）を取得</v-card-text-stub>
+      </v-card-stub>
+    </v-timeline-item-stub>
+    <v-timeline-item-stub color=\\"accent\\" filldot=\\"true\\" small=\\"true\\">
+      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
+        <v-card-title-stub class=\\"accent--text\\">筑波大学大学院 入学</v-card-title-stub>
+        <v-card-text-stub>システム情報工学研究科 リスク工学専攻</v-card-text-stub>
+      </v-card-stub>
+    </v-timeline-item-stub>
+    <v-timeline-item-stub color=\\"accent\\" filldot=\\"true\\" small=\\"true\\">
+      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
+        <v-card-title-stub class=\\"accent--text\\">同大学院 卒業</v-card-title-stub>
+        <v-card-text-stub>修士（工学）を取得</v-card-text-stub>
+      </v-card-stub>
+    </v-timeline-item-stub>
+    <v-timeline-item-stub color=\\"warning\\" filldot=\\"true\\" small=\\"true\\">
+      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
+        <v-card-title-stub class=\\"warning--text\\">富士ゼロックス株式会社</v-card-title-stub>
+        <v-card-text-stub>ソリューション開発部にて、開発リーダーとしてBtoBのSaaSを開発 (〜2019)</v-card-text-stub>
+      </v-card-stub>
+    </v-timeline-item-stub>
+    <v-timeline-item-stub color=\\"warning\\" filldot=\\"true\\" small=\\"true\\">
+      <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
+        <v-card-title-stub class=\\"warning--text\\">メドピア株式会社</v-card-title-stub>
+        <v-card-text-stub>SRE / セキュリティエンジニアとして、複数サービスのアーキテクチャ設計・インフラ基盤・全社セキュリティを担当。現在はプリンシパルエンジニアとしてプラットフォームSREとセキュリティ領域をリードしています。</v-card-text-stub>
+      </v-card-stub>
+    </v-timeline-item-stub>
+  </v-timeline-stub>
 </div>"
 `;
