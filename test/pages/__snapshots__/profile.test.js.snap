@@ -12,8 +12,8 @@ exports[`profile should be vue instance 1`] = `
     <v-row-stub tag=\\"div\\">
       <v-col-stub tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" tag=\\"div\\">
-          <v-card-title-stub tag=\\"div\\">自己紹介</v-card-title-stub>
-          <v-card-text-stub tag=\\"div\\">
+          <v-card-title-stub>自己紹介</v-card-title-stub>
+          <v-card-text-stub>
             <p>
               ヘルステックベンチャーでプリンシパルエンジニアとして働くSRE /
               セキュリティエンジニアです。<br>複数サービスのアーキテクチャ設計、インフラ基盤の構築・運用、ボトルネック改善やコスト最適化等のSRE業務を中心に、Ruby
@@ -49,7 +49,7 @@ exports[`profile should be vue instance 1`] = `
     <v-row-stub tag=\\"div\\">
       <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" href=\\"http://github.com/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#363636\\">
-          <v-card-title-stub tag=\\"div\\">
+          <v-card-title-stub>
             <v-icon-stub>mdi-github</v-icon-stub>
             <div style=\\"margin-left: 10px;\\">
               GitHub
@@ -59,7 +59,7 @@ exports[`profile should be vue instance 1`] = `
       </v-col-stub>
       <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" href=\\"http://twitter.com/reirei_As\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#1da1f2\\">
-          <v-card-title-stub tag=\\"div\\">
+          <v-card-title-stub>
             <v-icon-stub>mdi-twitter</v-icon-stub>
             <div style=\\"margin-left: 10px;\\">
               Twitter
@@ -69,7 +69,7 @@ exports[`profile should be vue instance 1`] = `
       </v-col-stub>
       <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" href=\\"http://qiita.com/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#55c500\\">
-          <v-card-title-stub tag=\\"div\\">
+          <v-card-title-stub>
             <v-icon-stub>mdi-link</v-icon-stub>
             <div style=\\"margin-left: 10px;\\">
               Qiita
@@ -79,7 +79,7 @@ exports[`profile should be vue instance 1`] = `
       </v-col-stub>
       <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" href=\\"https://speakerdeck.com/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#009287\\">
-          <v-card-title-stub tag=\\"div\\">
+          <v-card-title-stub>
             <v-icon-stub>mdi-link</v-icon-stub>
             <div style=\\"margin-left: 10px;\\">
               Speaker Deck
@@ -89,7 +89,7 @@ exports[`profile should be vue instance 1`] = `
       </v-col-stub>
       <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" href=\\"https://zenn.dev/reireias\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#3ea8ff\\">
-          <v-card-title-stub tag=\\"div\\">
+          <v-card-title-stub>
             <v-icon-stub>mdi-link</v-icon-stub>
             <div style=\\"margin-left: 10px;\\">
               Zenn
@@ -99,7 +99,7 @@ exports[`profile should be vue instance 1`] = `
       </v-col-stub>
       <v-col-stub cols=\\"6\\" md=\\"4\\" tag=\\"div\\">
         <v-card-stub loaderheight=\\"4\\" href=\\"https://lapras.com/public/LHJNON4\\" tag=\\"div\\" target=\\"_blank\\" color=\\"#3d5afe\\">
-          <v-card-title-stub tag=\\"div\\">
+          <v-card-title-stub>
             <v-icon-stub>mdi-link</v-icon-stub>
             <div style=\\"margin-left: 10px;\\">
               LAPRAS

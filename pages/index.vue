@@ -28,7 +28,7 @@ import anime from 'animejs'
 
 const useVuetify = () => {
   const instance = getCurrentInstance()
-  return instance!.proxy.$vuetify
+  return instance?.proxy?.$vuetify
 }
 
 const COLOR_CLASSES = [
@@ -72,7 +72,7 @@ export default defineComponent({
       timeline.add({
         targets: '#grid .el',
         scale: 0,
-        backgroundColor: vuetify.theme.themes.dark.primary,
+        backgroundColor: vuetify?.theme?.themes?.dark?.primary || '#1976D2',
         easing: 'easeInQuad',
         duration: 150,
         delay: anime.stagger(8, { grid: [18, 18], from: 'center' }),

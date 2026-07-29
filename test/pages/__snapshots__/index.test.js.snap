@@ -331,7 +331,7 @@ exports[`index should be vue instance 1`] = `
           <div class=\\"square small el v-yellow\\"></div>
           <div class=\\"square small el v-green\\"></div>
         </div>
-        <div class=\\"avatar-overlay\\" style=\\"display: none;\\">
+        <div class=\\"avatar-overlay\\">
           <v-avatar-stub size=\\"160\\" class=\\"icon-avatar\\"><img src=\\"/icon.png\\" alt=\\"icon\\"></v-avatar-stub>
         </div>
       </div>
