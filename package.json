@@ -14,7 +14,7 @@
     "generate": "nuxt generate && echo 'reireias.dev' > dist/CNAME",
     "benchmark": "node scripts/benchmark.js https://reireias.github.io $(git rev-parse HEAD)",
     "test": "jest",
-    "prepare": "husky install"
+    "prepare": "lefthook install"
   },
   "lint-staged": {
     "*.{js,ts,vue}": [
@@ -55,8 +55,8 @@
     "eslint-plugin-standard": ">=5.0.0",
     "eslint-plugin-vue": ">=9.7.0",
     "http-server": "^14.1.1",
-    "husky": "8.0.3",
     "jest": "^26",
+    "lefthook": "^2.1.10",
     "lint-staged": "13.3.0",
     "nuxt-webfontloader": "^1.1.0",
     "prettier": "^2.3.2",
