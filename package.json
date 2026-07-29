@@ -13,7 +13,13 @@
     "lintfix": "eslint --fix --ext .js,.ts,.vue --ignore-path .gitignore .",
     "generate": "nuxt generate && echo 'reireias.dev' > dist/CNAME",
     "benchmark": "node scripts/benchmark.js https://reireias.github.io $(git rev-parse HEAD)",
-    "test": "jest"
+    "test": "jest",
+    "prepare": "lefthook install"
+  },
+  "lint-staged": {
+    "*.{js,ts,vue}": [
+      "eslint --fix"
+    ]
   },
   "dependencies": {
     "@nuxtjs/composition-api": "^0.31.0",
@@ -50,6 +56,8 @@
     "eslint-plugin-vue": ">=9.7.0",
     "http-server": "^14.1.1",
     "jest": "^26",
+    "lefthook": "^2.1.10",
+    "lint-staged": "13.3.0",
     "nuxt-webfontloader": "^1.1.0",
     "prettier": "^2.3.2",
     "stylus": "^0.59.0",
