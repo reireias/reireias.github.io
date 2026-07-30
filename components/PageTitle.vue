@@ -1,16 +1,13 @@
 <template>
   <v-row justify="center">
-    <div
-      class="display-3 primary--text"
-      style="margin-top: 30px; margin-bottom: 10px"
-    >
+    <h1 class="page-title text-primary">
       {{ title }}
-    </div>
+    </h1>
   </v-row>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent } from 'vue'
 
 export default defineComponent({
   props: {
@@ -21,3 +18,15 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped lang="scss">
+.page-title {
+  font-size: 3.75rem;
+  font-weight: 300;
+  line-height: 3.75rem;
+  letter-spacing: -0.0083333333em;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  color: rgb(var(--v-theme-primary));
+}
+</style>

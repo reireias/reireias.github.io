@@ -1,13 +1,9 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" app width="200">
+    <v-navigation-drawer v-model="drawer" app width="200" color="#363636">
       <v-list>
         <v-list-item>
-          <v-list-item-content>
-            <v-list-item-title class="title primary--text"
-              >reireas.dev</v-list-item-title
-            >
-          </v-list-item-content>
+          <v-list-item-title class="brand-logo">reireas.dev</v-list-item-title>
         </v-list-item>
 
         <v-divider></v-divider>
@@ -34,7 +30,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@vue/composition-api'
+import { defineComponent, ref } from 'vue'
 
 export default defineComponent({
   setup() {
@@ -72,3 +68,13 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped lang="scss">
+.brand-logo {
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: 0.0125em;
+  line-height: 2rem;
+  color: rgb(var(--v-theme-primary));
+}
+</style>

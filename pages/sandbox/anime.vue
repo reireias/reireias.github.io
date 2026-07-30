@@ -195,7 +195,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from '@vue/composition-api'
+import { defineComponent, ref } from 'vue'
 import anime from 'animejs'
 import PageTitle from '@/components/PageTitle.vue'
 
@@ -203,8 +203,12 @@ export default defineComponent({
   components: {
     PageTitle,
   },
-  layout: 'gridless',
   setup() {
+    if (typeof definePageMeta !== 'undefined') {
+      definePageMeta({
+        layout: 'gridless',
+      })
+    }
     const ratio = 0.93
     const loops = 10
     let radius = 200

@@ -5,6 +5,7 @@
     <v-row>
       <v-col cols="12" sm="6">
         <v-card
+          color="#363636"
           href="https://tech.medpeer.co.jp/entry/2026/06/26/122446"
           target="_blank"
         >
@@ -26,6 +27,7 @@
     <v-row>
       <v-col cols="12" sm="6">
         <v-card
+          color="#363636"
           href="https://aws.amazon.com/jp/builders-flash/202211/best-practice-game-day/"
           target="_blank"
         >
@@ -41,6 +43,7 @@
       </v-col>
       <v-col cols="12" sm="6">
         <v-card
+          color="#363636"
           href="https://speakerdeck.com/reireias/improving-efficiency-of-aws-account-operations-by-medpeer-sre-team"
           target="_blank"
         >
@@ -56,6 +59,7 @@
     <v-row>
       <v-col cols="12" sm="6">
         <v-card
+          color="#363636"
           href="https://tech.medpeer.co.jp/entry/2021/10/01/090000"
           target="_blank"
         >
@@ -74,6 +78,7 @@
       </v-col>
       <v-col cols="12" sm="6">
         <v-card
+          color="#363636"
           href="https://qiita.com/reireias/items/0d87de18f43f27a8ed9b"
           target="_blank"
         >
@@ -88,6 +93,7 @@
     <v-row>
       <v-col cols="12" sm="6">
         <v-card
+          color="#363636"
           href="https://qiita.com/reireias/items/2e377b2a42e4cb3aded1"
           target="_blank"
         >
@@ -102,6 +108,7 @@
       </v-col>
       <v-col cols="12" sm="6">
         <v-card
+          color="#363636"
           href="https://speakerdeck.com/reireias/medpeer-aws-seminar-ecs"
           target="_blank"
         >
@@ -117,14 +124,6 @@
   </v-container>
 </template>
 
-<script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+<script setup lang="ts">
 import PageTitle from '@/components/PageTitle.vue'
-
-export default defineComponent({
-  components: {
-    PageTitle,
-  },
-  layout: 'gridless',
-})
 </script>

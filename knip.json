@@ -9,14 +9,12 @@
   "project": [
     "**/*.{vue,js,ts}"
   ],
+  "ignore": [
+    ".output/**",
+    ".nuxt/**"
+  ],
   "ignoreDependencies": [
-    "@nuxtjs/composition-api",
-    "@nuxtjs/pwa",
-    "@nuxtjs/vuetify",
-    "@nuxt/typescript-build",
-    "@nuxt/types",
     "@mdi/font",
-    "eslint-loader",
     "eslint-plugin-import",
     "eslint-plugin-node",
     "eslint-plugin-promise",
@@ -25,6 +23,10 @@
     "stylelint-config-recommended",
     "stylus-loader",
     "node-fetch-native",
-    "ufo"
+    "ufo",
+    "sass-embedded",
+    "vuetify-nuxt-module",
+    "vue-eslint-parser",
+    "@babel/preset-typescript"
   ]
 }

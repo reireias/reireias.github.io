@@ -1,19 +1,18 @@
 <template>
-  <v-app>
+  <v-app theme="dark" class="app-container">
     <navigation-drawer></navigation-drawer>
-    <v-main>
-      <nuxt />
+    <v-main class="fill-height">
+      <slot />
     </v-main>
   </v-app>
 </template>
 
-<script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+<script setup lang="ts">
 import NavigationDrawer from '@/components/NavigationDrawer.vue'
-
-export default defineComponent({
-  components: {
-    NavigationDrawer,
-  },
-})
 </script>
+
+<style scoped>
+.app-container {
+  background-color: #272822;
+}
+</style>
