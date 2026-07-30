@@ -6,7 +6,7 @@
           <div id="grid" class="grid main-contents">
             <div v-for="i in 324" :key="i" :class="squareClass(i)"></div>
           </div>
-          <div v-show="showAvatar" class="avatar-overlay">
+          <div class="avatar-overlay">
             <v-avatar size="160" class="icon-avatar">
               <img src="/icon.png" alt="icon" />
             </v-avatar>
@@ -51,7 +51,7 @@ export default defineComponent({
         complete: () => {
           showAvatar.value = true
           anime({
-            targets: '.icon-avatar',
+            targets: '.avatar-overlay',
             scale: [0.3, 1],
             opacity: [0, 1],
             easing: 'easeOutBack',
@@ -162,6 +162,7 @@ export default defineComponent({
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0;
   }
 }
 </style>
