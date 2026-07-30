@@ -17,6 +17,7 @@
     "benchmark": "node scripts/benchmark.js https://reireias.github.io $(git rev-parse HEAD)",
     "test": "jest",
     "test:e2e": "playwright test",
+    "capture": "playwright test test/e2e/take-captures.spec.ts",
     "knip": "knip",
     "prepare": "lefthook install"
   },

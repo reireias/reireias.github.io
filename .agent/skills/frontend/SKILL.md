@@ -76,3 +76,11 @@ pnpm generate
 4. **コミット・PRルール**:
    - 不要な試行錯誤コミットを整理し、テーマごとに1つのクリーンなコミットにまとめる。
    - PR 作成・更新時は `env gh` コマンドを使用する。
+   - **PRヘのキャプチャ画像埋め込み手法**:
+     - スクリーンショットをリポジトリへ直接コミットすることは避ける。
+     - **CLI（`env gh`）での画像自動埋め込み手法**:
+       1. `env gh release create <tag-name> screenshots/*.png --notes "..." --draft` でドラッグ＆ドロップ同等のリモート URL を作成・画像アップロードする。
+       2. アップロードしたアセットの直リンク（`https://github.com/.../releases/download/.../image.png`）を `![alt](url)` 形式で Markdown 埋め込み、`env gh issue comment <PR番号>` または `env gh pr create` で投稿する。
+
+
+
