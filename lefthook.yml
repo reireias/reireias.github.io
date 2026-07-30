@@ -3,3 +3,6 @@ pre-commit:
     lint:
       glob: "*.{js,ts,vue}"
       run: pnpm lint-staged
+    knip:
+      run: pnpm knip
+
