@@ -2,4 +2,4 @@ pre-commit:
   commands:
     lint:
       glob: "*.{js,ts,vue}"
-      run: yarn lintstaged
+      run: pnpm lint-staged

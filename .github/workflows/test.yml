@@ -12,10 +12,14 @@ jobs:
           version: 8.15.9
       - uses: actions/setup-node@v3
         with:
-          node-version: '16'
+          node-version: '20'
           cache: 'pnpm'
       - run: pnpm install
       - run: pnpm lint
       - run: pnpm test
       - run: pnpm generate
+      - name: Install Playwright Browsers
+        run: pnpm exec playwright install --with-deps chromium
+      - name: Run Playwright E2E tests
+        run: pnpm test:e2e
 

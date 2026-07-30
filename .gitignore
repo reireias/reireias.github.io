@@ -20,4 +20,7 @@ coverage
 .gemini/tmp/
 .gemini/history/
 static/screenshots/
+.pnpm-store
+test-results/
+playwright-report/
 
