@@ -10,11 +10,14 @@ npm-debug.log
 
 # Nuxt generate
 dist
+dist*
 
 # other
 tmp
 .env
 coverage
+.gemini
+.gemini/
 
 # Antigravity / Gemini agent artifacts
 .gemini/brain/
