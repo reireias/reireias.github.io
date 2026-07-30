@@ -1,0 +1,30 @@
+{
+  "$schema": "https://unpkg.com/knip@5/schema.json",
+  "entry": [
+    "pages/**/*.{vue,js,ts}",
+    "layouts/**/*.{vue,js,ts}",
+    "components/**/*.{vue,js,ts}",
+    "scripts/**/*.js"
+  ],
+  "project": [
+    "**/*.{vue,js,ts}"
+  ],
+  "ignoreDependencies": [
+    "@nuxtjs/composition-api",
+    "@nuxtjs/pwa",
+    "@nuxtjs/vuetify",
+    "@nuxt/typescript-build",
+    "@nuxt/types",
+    "@mdi/font",
+    "eslint-config-standard",
+    "eslint-loader",
+    "eslint-plugin-import",
+    "eslint-plugin-node",
+    "eslint-plugin-promise",
+    "eslint-plugin-standard",
+    "eslint-plugin-vue",
+    "eslint-plugin-jest",
+    "stylelint-config-recommended",
+    "stylus-loader"
+  ]
+}

@@ -17,6 +17,7 @@
     "benchmark": "node scripts/benchmark.js https://reireias.github.io $(git rev-parse HEAD)",
     "test": "jest",
     "test:e2e": "playwright test",
+    "knip": "knip",
     "prepare": "lefthook install"
   },
   "lint-staged": {
@@ -61,6 +62,7 @@
     "eslint-plugin-vue": "^7.20.0",
     "http-server": "^14.1.1",
     "jest": "^26",
+    "knip": "^6.29.0",
     "lefthook": "^2.1.10",
     "lint-staged": "13.3.0",
     "node-fetch-native": "^1.6.7",
