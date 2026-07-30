@@ -20,10 +20,10 @@
   .v-timeline-item
   .v-timeline-item__body
   > .v-card {
-  &:before {
+  &::before {
     border-right-color: rgba(0, 0, 0, 0);
   }
-  &:after {
+  &::after {
     border-right-color: #363636;
   }
 }
