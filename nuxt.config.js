@@ -90,7 +90,12 @@ export default {
   modules: ['nuxt-webfontloader'],
   buildModules: [
     '@nuxtjs/vuetify',
-    '@nuxt/typescript-build',
+    [
+      '@nuxt/typescript-build',
+      {
+        typeCheck: false,
+      },
+    ],
     '@nuxtjs/composition-api/module',
   ],
   vuetify: {

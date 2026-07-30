@@ -37,7 +37,7 @@ importers:
         specifier: ^1.12.1
         version: 1.12.3(vue@2.7.16)(webpack@4.47.0)
       '@playwright/test':
-        specifier: ^1.40.0
+        specifier: ^1.62.0
         version: 1.62.0
       '@types/animejs':
         specifier: ^3.1.4
@@ -114,6 +114,9 @@ importers:
       lint-staged:
         specifier: 13.3.0
         version: 13.3.0(enquirer@2.4.1)
+      node-fetch-native:
+        specifier: ^1.6.7
+        version: 1.6.7
       nuxt-webfontloader:
         specifier: ^1.1.0
         version: 1.1.0
@@ -150,6 +153,9 @@ importers:
       ts-jest:
         specifier: ^26
         version: 26.5.6(jest@26.6.3)(typescript@4.2.4)
+      ufo:
+        specifier: ^1.6.4
+        version: 1.6.4
       vue:
         specifier: 2.7.16
         version: 2.7.16

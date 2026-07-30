@@ -25,6 +25,8 @@
     "eslint-plugin-vue",
     "eslint-plugin-jest",
     "stylelint-config-recommended",
-    "stylus-loader"
+    "stylus-loader",
+    "node-fetch-native",
+    "ufo"
   ]
 }
