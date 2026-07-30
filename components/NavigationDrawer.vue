@@ -17,7 +17,17 @@
         }}</v-list-item>
       </v-list>
     </v-navigation-drawer>
-    <v-btn v-if="!drawer" absolute fab icon @click="drawer = !drawer">
+    <v-btn
+      v-if="!drawer"
+      fixed
+      top
+      left
+      fab
+      small
+      class="ma-2"
+      style="z-index: 6"
+      @click="drawer = !drawer"
+    >
       <v-icon>mdi-menu</v-icon>
     </v-btn>
   </div>
