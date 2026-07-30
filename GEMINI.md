@@ -21,6 +21,7 @@
 
 ## 4. 基本原則
 - **パッケージマネージャー**: 必ず `pnpm` を使用すること (`npm` / `yarn` は絶対に使用しないこと)。シェル実行時は PATH に `~/.local/share/mise/shims` を含めて `export PATH="$HOME/.local/share/mise/shims:$PATH" && pnpm ...` または `pnpm` を直接実行すること。GitHub Actions やローカル設定も常に `pnpm` を前提とすること。
+- **クリーンなコミット履歴の厳格維持 (絶対遵守ルール)**: push および PR 提出・更新の直前には、必ず `git log origin/master..HEAD` を確認し、複数コミットに分かれている場合は `git reset --soft origin/master` 等で **必ず1つのクリーンなコミット** にスクワッシュしてから push / 報告すること。細切れコミットのまま push・報告することは厳禁。
 - 変更を加える前に必ず既存のコードスタイルを確認すること。
 - 作業を完了する前に、`pnpm lint` および `pnpm test` を実行して動作・規約を確認すること。
 - ユーザーの明示的な許可なしに `master` ブランチへ直接コミットやマージを行わないこと。
