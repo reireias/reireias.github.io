@@ -60,6 +60,18 @@ export PATH="$HOME/.local/share/mise/shims:$PATH"
 pnpm generate
 ```
 
+### E2E テスト実行 (Playwright)
+```bash
+export PATH="$HOME/.local/share/mise/shims:$PATH"
+pnpm test:e2e
+```
+
+### スクリーンショット自動取得 (キャプチャ)
+```bash
+export PATH="$HOME/.local/share/mise/shims:$PATH"
+pnpm capture
+```
+
 ---
 
 ## 4. 変更作業時の開発フロー
