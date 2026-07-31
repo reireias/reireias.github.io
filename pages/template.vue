@@ -15,7 +15,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent } from 'vue'
 import PageTitle from '@/components/PageTitle.vue'
 import KeyValueRow from '@/components/KeyValueRow.vue'
 

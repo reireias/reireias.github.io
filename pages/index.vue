@@ -1,14 +1,18 @@
 <template>
-  <v-container class="index-page">
-    <v-row justify="center">
-      <v-col class="contents-container">
+  <v-container class="index-page fill-height" fluid>
+    <v-row justify="center" align="center">
+      <v-col class="contents-container" cols="12">
         <div class="animation-wrapper">
           <div id="grid" class="grid main-contents">
             <div v-for="i in 324" :key="i" :class="squareClass(i)"></div>
           </div>
           <div class="avatar-overlay">
             <v-avatar size="160" class="icon-avatar">
-              <img src="/icon.png" alt="icon" />
+              <img
+                src="/icon.png"
+                alt="icon"
+                style="width: 100%; height: 100%"
+              />
             </v-avatar>
           </div>
         </div>
@@ -18,12 +22,7 @@
 </template>
 
 <script lang="ts">
-import {
-  defineComponent,
-  ref,
-  getCurrentInstance,
-  onMounted,
-} from '@vue/composition-api'
+import { defineComponent, ref, getCurrentInstance, onMounted } from 'vue'
 import anime from 'animejs'
 
 const useVuetify = () => {
@@ -41,19 +40,24 @@ const COLOR_CLASSES = [
 ]
 
 export default defineComponent({
-  layout: 'gridless',
   setup() {
+    if (typeof definePageMeta !== 'undefined') {
+      definePageMeta({
+        layout: 'gridless',
+      })
+    }
     const showAvatar = ref(false)
     const vuetify = useVuetify()
 
     const runAnimation = () => {
+      if (!anime?.timeline) return
       const timeline = anime.timeline({
         complete: () => {
           showAvatar.value = true
           anime({
             targets: '.avatar-overlay',
             scale: [0.3, 1],
-            opacity: [0, 1],
+            opacity: 1,
             easing: 'easeOutBack',
             duration: 300,
           })
@@ -98,10 +102,18 @@ export default defineComponent({
 
 <style lang="scss">
 .index-page {
-  height: 100%;
+  height: 100vh;
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  padding: 0 !important;
 
-  .row {
+  .v-row {
     height: 100%;
+    width: 100%;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
   }
 
   .animation-wrapper {
@@ -152,7 +164,9 @@ export default defineComponent({
     width: 360px;
   }
   .contents-container {
-    display: contents;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
   .main-contents {
     margin: auto;

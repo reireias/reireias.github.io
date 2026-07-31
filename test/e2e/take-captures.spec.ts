@@ -24,6 +24,9 @@ test.describe('Capture Page UI Screenshots', () => {
       await page.setViewportSize({ width: 1280, height: 800 })
       await page.goto(p.path)
       await page.waitForLoadState('networkidle')
+      if (p.name === 'home') {
+        await page.waitForTimeout(1000)
+      }
       await page.screenshot({
         path: path.join(outputDir, `${p.name}-desktop.png`),
         fullPage: true,

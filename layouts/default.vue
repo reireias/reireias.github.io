@@ -1,11 +1,11 @@
 <template>
-  <v-app>
+  <v-app theme="dark" class="app-container">
     <navigation-drawer></navigation-drawer>
     <v-main>
       <v-container>
         <v-row justify="center">
           <v-col cols="12" sm="8">
-            <nuxt />
+            <slot />
           </v-col>
         </v-row>
       </v-container>
@@ -13,13 +13,12 @@
   </v-app>
 </template>
 
-<script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+<script setup lang="ts">
 import NavigationDrawer from '@/components/NavigationDrawer.vue'
-
-export default defineComponent({
-  components: {
-    NavigationDrawer,
-  },
-})
 </script>
+
+<style scoped>
+.app-container {
+  background-color: #272822;
+}
+</style>

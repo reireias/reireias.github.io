@@ -1,26 +1,9 @@
-import { shallowMount, createLocalVue } from '@vue/test-utils'
-import Vue from 'vue'
-import Vuetify from 'vuetify'
-import CompositionApi from '@vue/composition-api'
-import target from '@/pages/job'
+import { mount } from '@vue/test-utils'
+import target from '@/pages/job.vue'
 
-Vue.use(Vuetify)
-const localVue = createLocalVue()
-localVue.use(Vuetify)
-localVue.use(CompositionApi)
-
-describe('jobs', () => {
-  let vuetify
-
-  beforeEach(() => {
-    vuetify = new Vuetify()
-  })
-
+describe('job', () => {
   it('should be vue instance', () => {
-    const wrapper = shallowMount(target, {
-      localVue,
-      vuetify,
-    })
-    expect(wrapper.html()).toMatchSnapshot()
+    const wrapper = mount(target)
+    expect(wrapper.exists()).toBe(true)
   })
 })

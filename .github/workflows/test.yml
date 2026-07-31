@@ -35,6 +35,7 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
+      - run: pnpm nuxi prepare
       - run: pnpm test
 
   e2e-test:

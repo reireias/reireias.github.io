@@ -11,7 +11,7 @@
 
       <v-row>
         <v-col>
-          <v-card>
+          <v-card color="#363636">
             <v-card-title>自己紹介</v-card-title>
             <v-card-text>
               <p>
@@ -47,14 +47,17 @@
     <v-container>
       <v-row>
         <v-col v-for="account in socials" :key="account.name" cols="6" md="4">
-          <v-card :href="account.url" target="_blank" :color="account.color">
-            <v-card-title>
-              <v-icon>{{ account.icon }}</v-icon>
-              <div style="margin-left: 10px">
-                {{ account.name }}
-              </div>
-            </v-card-title>
-          </v-card>
+          <a
+            :href="account.url"
+            target="_blank"
+            class="social-card"
+            :class="`social-bg-${account.name
+              .toLowerCase()
+              .replace(/\s+/g, '')}`"
+          >
+            <v-icon>{{ account.icon }}</v-icon>
+            <span class="social-name">{{ account.name }}</span>
+          </a>
         </v-col>
       </v-row>
     </v-container>
@@ -62,7 +65,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@vue/composition-api'
+import { defineComponent } from 'vue'
 import PageTitle from '@/components/PageTitle.vue'
 import KeyValueRow from '@/components/KeyValueRow.vue'
 import socials from '@/constants/socials'
@@ -78,3 +81,38 @@ export default defineComponent({
   },
 })
 </script>
+
+<style scoped lang="scss">
+.social-card {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-radius: 4px;
+  color: #ffffff;
+  text-decoration: none;
+
+  .social-name {
+    margin-left: 10px;
+    font-size: 1.25rem;
+    font-weight: 500;
+  }
+}
+.social-bg-github {
+  background-color: #363636;
+}
+.social-bg-twitter {
+  background-color: #1da1f2;
+}
+.social-bg-qiita {
+  background-color: #55c500;
+}
+.social-bg-speakerdeck {
+  background-color: #009287;
+}
+.social-bg-zenn {
+  background-color: #3ea8ff;
+}
+.social-bg-lapras {
+  background-color: #3d5afe;
+}
+</style>
