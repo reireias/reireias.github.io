@@ -1,0 +1,1 @@
+import{p as e}from"./D2WzJJiV.js";var t=e({class:[String,Array,Object],style:{type:[String,Array,Object],default:null}},`component`),n=e({tag:{type:[String,Object,Function],default:`div`}},`tag`);export{t as n,n as t};
