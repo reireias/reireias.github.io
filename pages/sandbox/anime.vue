@@ -195,7 +195,7 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref } from 'vue'
+import { defineComponent, ref, nextTick } from 'vue'
 import anime from 'animejs'
 import PageTitle from '@/components/PageTitle.vue'
 
@@ -232,8 +232,9 @@ export default defineComponent({
     const run3 = ref(false)
     const run4 = ref(false)
 
-    const startAnime1 = () => {
+    const startAnime1 = async () => {
       run1.value = true
+      await nextTick()
       const path = anime.path('#anime1 path')
       anime({
         targets: '#anime1 .el',
@@ -245,8 +246,9 @@ export default defineComponent({
         loop: true,
       })
     }
-    const startAnime2 = () => {
+    const startAnime2 = async () => {
       run2.value = true
+      await nextTick()
       for (const i of [1, 2, 3]) {
         setTimeout(() => {
           const path = anime.path(`#anime2 path.path${i}`)
@@ -262,8 +264,9 @@ export default defineComponent({
         }, 300 * (i - 1))
       }
     }
-    const startAnime3 = () => {
+    const startAnime3 = async () => {
       run3.value = true
+      await nextTick()
       const path = anime.path(`#anime3 path`)
       for (const i of [1, 2, 3]) {
         setTimeout(() => {
@@ -279,8 +282,9 @@ export default defineComponent({
         }, 1000 * (i - 1))
       }
     }
-    const startAnime4 = () => {
+    const startAnime4 = async () => {
       run4.value = true
+      await nextTick()
       const path = anime.path('#anime4 path')
       anime({
         targets: '#anime4 .el',
@@ -356,7 +360,7 @@ export default defineComponent({
 <style lang="scss">
 .anime-page {
   .display-1 {
-    color: var(--v-secondary-base);
+    color: rgb(var(--v-theme-secondary));
   }
 
   .square {
@@ -365,7 +369,7 @@ export default defineComponent({
     height: 28px;
     margin: 1px;
     font-size: 12px;
-    background-color: var(--v-error-base);
+    background-color: rgb(var(--v-theme-error));
   }
 
   .circle {
@@ -374,16 +378,16 @@ export default defineComponent({
     height: 28px;
     margin: 1px;
     font-size: 12px;
-    background-color: var(--v-error-base);
+    background-color: rgb(var(--v-theme-error));
     border-radius: 50%;
   }
 
   .orange {
-    background-color: var(--v-warning-base);
+    background-color: rgb(var(--v-theme-warning));
   }
 
   .purple {
-    background-color: var(--v-accent-base);
+    background-color: rgb(var(--v-theme-accent));
   }
 
   .small {
@@ -421,7 +425,7 @@ export default defineComponent({
         border: 1px solid #000;
         border-radius: 100%;
         box-sizing: border-box;
-        background: var(--v-primary-base);
+        background: rgb(var(--v-theme-primary));
 
         &:nth-child(1) {
           top: 30px;
@@ -451,9 +455,9 @@ export default defineComponent({
       width: 50px;
       height: 50px;
       border-radius: 100%;
-      background: var(--v-primary-base);
-      box-shadow: 8px 10px 0 0 var(--v-primary-base),
-        -8px 10px 0 0 var(--v-primary-base);
+      background: rgb(var(--v-theme-primary));
+      box-shadow: 8px 10px 0 0 rgb(var(--v-theme-primary)),
+        -8px 10px 0 0 rgb(var(--v-theme-primary));
     }
   }
 }
