@@ -21,8 +21,6 @@
     "eslint-plugin-vue",
     "eslint-plugin-jest",
     "stylelint-config-recommended",
-    "stylus-loader",
-    "node-fetch-native",
     "ufo",
     "sass-embedded",
     "vuetify-nuxt-module",
