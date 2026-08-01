@@ -21,6 +21,9 @@ jobs:
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
       - run: pnpm lint
+      - run: pnpm lint:style
+      - run: pnpm nuxi prepare
+      - run: pnpm knip
 
   unit-test:
     runs-on: ubuntu-latest

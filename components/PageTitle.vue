@@ -24,7 +24,7 @@ export default defineComponent({
   font-size: 3.75rem;
   font-weight: 300;
   line-height: 3.75rem;
-  letter-spacing: -0.0083333333em;
+  letter-spacing: -0.0083em;
   margin-top: 30px;
   margin-bottom: 10px;
   color: rgb(var(--v-theme-primary));
