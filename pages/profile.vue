@@ -88,7 +88,7 @@ export default defineComponent({
   align-items: center;
   padding: 16px;
   border-radius: 4px;
-  color: #ffffff;
+  color: #fff;
   text-decoration: none;
 
   .social-name {
