@@ -22,13 +22,8 @@
 </template>
 
 <script lang="ts">
-import { defineComponent, ref, getCurrentInstance, onMounted } from 'vue'
+import { defineComponent, ref, onMounted } from 'vue'
 import anime from 'animejs'
-
-const useVuetify = () => {
-  const instance = getCurrentInstance()
-  return instance?.proxy?.$vuetify
-}
 
 const COLOR_CLASSES = [
   'v-green',
@@ -47,7 +42,6 @@ export default defineComponent({
       })
     }
     const showAvatar = ref(false)
-    const vuetify = useVuetify()
 
     const runAnimation = () => {
       if (!anime?.timeline) return
@@ -76,7 +70,7 @@ export default defineComponent({
       timeline.add({
         targets: '#grid .el',
         scale: 0,
-        backgroundColor: vuetify?.theme?.themes?.dark?.primary || '#1976D2',
+        backgroundColor: '#a6e22e',
         easing: 'easeInQuad',
         duration: 150,
         delay: anime.stagger(8, { grid: [18, 18], from: 'center' }),
@@ -136,22 +130,22 @@ export default defineComponent({
     opacity: 0;
   }
   .v-green {
-    background-color: var(--v-primary-base);
+    background-color: rgb(var(--v-theme-primary));
   }
   .v-cyan {
-    background-color: var(--v-secondary-base);
+    background-color: rgb(var(--v-theme-secondary));
   }
   .v-red {
-    background-color: var(--v-error-base);
+    background-color: rgb(var(--v-theme-error));
   }
   .v-orange {
-    background-color: var(--v-warning-base);
+    background-color: rgb(var(--v-theme-warning));
   }
   .v-purple {
-    background-color: var(--v-accent-base);
+    background-color: rgb(var(--v-theme-accent));
   }
   .v-yellow {
-    background-color: var(--v-info-base);
+    background-color: rgb(var(--v-theme-info));
   }
   .small {
     width: 18px;
