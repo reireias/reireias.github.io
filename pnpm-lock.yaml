@@ -138,11 +138,11 @@ importers:
         specifier: ^10.4.1
         version: 10.4.1(eslint@7.32.0)
       vuetify:
-        specifier: 3.13.0
-        version: 3.13.0(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3))
+        specifier: 4.1.6
+        version: 4.1.6(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3))
       vuetify-nuxt-module:
         specifier: 1.0.0-rc.3
-        version: 1.0.0-rc.3(@nuxt/schema@4.5.1)(esbuild@0.28.1)(magic-string@1.1.0)(magicast@0.5.3)(oxc-parser@0.140.0)(rolldown@1.2.1)(rollup@4.62.3)(sass-embedded@1.100.0)(sass@1.100.0)(unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.62.3)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0)))(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0))(vue@3.5.40(typescript@5.9.3))(vuetify@3.13.0(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3)))
+        version: 1.0.0-rc.3(@nuxt/schema@4.5.1)(esbuild@0.28.1)(magic-string@1.1.0)(magicast@0.5.3)(oxc-parser@0.140.0)(rolldown@1.2.1)(rollup@4.62.3)(sass-embedded@1.100.0)(sass@1.100.0)(unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.62.3)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0)))(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0))(vue@3.5.40(typescript@5.9.3))(vuetify@4.1.6(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3)))
 
 packages:
 
@@ -6946,8 +6946,8 @@ packages:
     peerDependencies:
       vuetify: ^3.4.0 || ^4.0.0
 
-  vuetify@3.13.0:
-    resolution: {integrity: sha512-ODQZHKni5d9o2XVBVfnmlRwssdIko1WCM8DlPvpo4maeoPrNgjoIa38VvhLWYH/FeKgif4w0LlUTdW5Rkg7R5Q==}
+  vuetify@4.1.6:
+    resolution: {integrity: sha512-VOsRTsNfs+FE4JXMONZkqX2yznSqC/FXG9/pgVVjsoqIjUvJg+CfFTuOlgyWVFrZYY+crk7LV9uaiN8bZREV/g==}
     peerDependencies:
       typescript: '>=4.7'
       vite-plugin-vuetify: '>=2.1.0'
@@ -9781,11 +9781,11 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
 
-  '@vuetify/loader-shared@2.1.2(vue@3.5.40(typescript@5.9.3))(vuetify@3.13.0(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3)))':
+  '@vuetify/loader-shared@2.1.2(vue@3.5.40(typescript@5.9.3))(vuetify@4.1.6(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3)))':
     dependencies:
       upath: 2.0.1
       vue: 3.5.40(typescript@5.9.3)
-      vuetify: 3.13.0(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3))
+      vuetify: 4.1.6(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3))
 
   '@vuetify/unplugin-styles@1.0.0-beta.11(@nuxt/kit@4.5.1(magic-string@1.1.0)(magicast@0.5.3)(oxc-parser@0.140.0)(rolldown@1.2.1)(unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.62.3)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0))))(@nuxt/schema@4.5.1)(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.62.3)(sass-embedded@1.100.0)(sass@1.100.0)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0))':
     dependencies:
@@ -14924,10 +14924,10 @@ snapshots:
     optionalDependencies:
       typescript: 5.9.3
 
-  vuetify-nuxt-module@1.0.0-rc.3(@nuxt/schema@4.5.1)(esbuild@0.28.1)(magic-string@1.1.0)(magicast@0.5.3)(oxc-parser@0.140.0)(rolldown@1.2.1)(rollup@4.62.3)(sass-embedded@1.100.0)(sass@1.100.0)(unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.62.3)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0)))(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0))(vue@3.5.40(typescript@5.9.3))(vuetify@3.13.0(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3))):
+  vuetify-nuxt-module@1.0.0-rc.3(@nuxt/schema@4.5.1)(esbuild@0.28.1)(magic-string@1.1.0)(magicast@0.5.3)(oxc-parser@0.140.0)(rolldown@1.2.1)(rollup@4.62.3)(sass-embedded@1.100.0)(sass@1.100.0)(unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.62.3)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0)))(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0))(vue@3.5.40(typescript@5.9.3))(vuetify@4.1.6(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3))):
     dependencies:
       '@nuxt/kit': 4.5.1(magic-string@1.1.0)(magicast@0.5.3)(oxc-parser@0.140.0)(rolldown@1.2.1)(unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.62.3)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0)))
-      '@vuetify/loader-shared': 2.1.2(vue@3.5.40(typescript@5.9.3))(vuetify@3.13.0(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3)))
+      '@vuetify/loader-shared': 2.1.2(vue@3.5.40(typescript@5.9.3))(vuetify@4.1.6(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3)))
       '@vuetify/unplugin-styles': 1.0.0-beta.11(@nuxt/kit@4.5.1(magic-string@1.1.0)(magicast@0.5.3)(oxc-parser@0.140.0)(rolldown@1.2.1)(unplugin@3.3.0(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.62.3)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0))))(@nuxt/schema@4.5.1)(esbuild@0.28.1)(rolldown@1.2.1)(rollup@4.62.3)(sass-embedded@1.100.0)(sass@1.100.0)(vite@8.2.0(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(stylus@0.59.0)(terser@5.49.0)(yaml@2.9.0))
       defu: 6.1.7
       local-pkg: 1.2.1
@@ -14936,7 +14936,7 @@ snapshots:
       semver: 7.8.5
       ufo: 1.6.4
       unconfig: 7.5.0
-      vuetify: 3.13.0(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3))
+      vuetify: 4.1.6(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3))
     transitivePeerDependencies:
       - '@farmfe/core'
       - '@nuxt/schema'
@@ -14957,7 +14957,7 @@ snapshots:
       - vue
       - webpack
 
-  vuetify@3.13.0(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3)):
+  vuetify@4.1.6(typescript@5.9.3)(vue@3.5.40(typescript@5.9.3)):
     dependencies:
       vue: 3.5.40(typescript@5.9.3)
     optionalDependencies:
