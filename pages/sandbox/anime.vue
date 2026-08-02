@@ -250,18 +250,21 @@ export default defineComponent({
       run2.value = true
       await nextTick()
       for (const i of [1, 2, 3]) {
-        setTimeout(() => {
-          const path = anime.path(`#anime2 path.path${i}`)
-          anime({
-            targets: `#anime2 .el${i}`,
-            translateX: path('x'),
-            translateY: path('y'),
-            rotate: path('angle'),
-            easing: 'linear',
-            duration: 1000,
-            loop: true,
-          })
-        }, 300 * (i - 1))
+        setTimeout(
+          () => {
+            const path = anime.path(`#anime2 path.path${i}`)
+            anime({
+              targets: `#anime2 .el${i}`,
+              translateX: path('x'),
+              translateY: path('y'),
+              rotate: path('angle'),
+              easing: 'linear',
+              duration: 1000,
+              loop: true,
+            })
+          },
+          300 * (i - 1)
+        )
       }
     }
     const startAnime3 = async () => {
@@ -269,17 +272,20 @@ export default defineComponent({
       await nextTick()
       const path = anime.path(`#anime3 path`)
       for (const i of [1, 2, 3]) {
-        setTimeout(() => {
-          anime({
-            targets: `#anime3 .el${i}`,
-            translateX: path('x'),
-            translateY: path('y'),
-            rotate: path('angle'),
-            easing: 'linear',
-            duration: 3000,
-            loop: true,
-          })
-        }, 1000 * (i - 1))
+        setTimeout(
+          () => {
+            anime({
+              targets: `#anime3 .el${i}`,
+              translateX: path('x'),
+              translateY: path('y'),
+              rotate: path('angle'),
+              easing: 'linear',
+              duration: 3000,
+              loop: true,
+            })
+          },
+          1000 * (i - 1)
+        )
       }
     }
     const startAnime4 = async () => {
@@ -456,7 +462,8 @@ export default defineComponent({
       height: 50px;
       border-radius: 100%;
       background: rgb(var(--v-theme-primary));
-      box-shadow: 8px 10px 0 0 rgb(var(--v-theme-primary)),
+      box-shadow:
+        8px 10px 0 0 rgb(var(--v-theme-primary)),
         -8px 10px 0 0 rgb(var(--v-theme-primary));
     }
   }
