@@ -67,9 +67,7 @@ export default defineNuxtConfig({
   css: ['@/assets/app.scss'],
   modules: ['vuetify-nuxt-module'],
   vuetify: {
-    moduleOptions: {
-      /* module specific options */
-    },
+    moduleOptions: {/* module specific options */},
     vuetifyOptions: {
       theme: {
         defaultTheme: 'dark',
