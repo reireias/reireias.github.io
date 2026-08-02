@@ -54,7 +54,7 @@
     "jest-environment-jsdom": "^30.4.1",
     "knip": "^6.29.0",
     "lefthook": "^2.1.10",
-    "lint-staged": "13.3.0",
+    "lint-staged": "17.2.0",
     "nuxt": "^4.5.1",
     "postcss-html": "^1.8.1",
     "prettier": "^3.9.6",
