@@ -15,8 +15,12 @@
   ],
   "ignoreDependencies": [
     "@mdi/font",
+    "@eslint/js",
+    "@eslint/compat",
+    "typescript-eslint",
+    "globals",
     "eslint-plugin-import",
-    "eslint-plugin-node",
+    "eslint-plugin-n",
     "eslint-plugin-promise",
     "eslint-plugin-vue",
     "eslint-plugin-jest",

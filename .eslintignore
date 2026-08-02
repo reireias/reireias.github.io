@@ -1,6 +1,0 @@
-dist
-dist*
-.nuxt
-.gemini
-node_modules
-coverage
