@@ -1,0 +1,1 @@
+import{C as e,ft as t,pt as n}from"./DPot3tbh.js";import{n as r}from"./Cw6MJeLA.js";import{i}from"./KpLZmfDD.js";function a(a,o=`div`,s){return r()({name:s??n(t(a.replace(/__/g,`-`))),props:{tag:{type:String,default:o},...i()},setup(t,{slots:n}){return()=>e(t.tag,{class:[a,t.class],style:t.style},n.default?.())}})}export{a as t};
