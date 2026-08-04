@@ -1,0 +1,79 @@
+@import 'tailwindcss';
+@import '@nuxt/ui';
+
+:root {
+  --color-background: #131613;
+  --color-surface: #1d211d;
+  --color-surface-hover: #242924;
+  --color-text: #f1f4ec;
+  --color-text-muted: #9da69a;
+  --color-border: #323a31;
+  --color-border-strong: #657064;
+  --color-primary: #a6e22e;
+  --color-secondary: #66d9ef;
+  --color-accent: #ae81ff;
+  --color-warning: #fd971f;
+  --color-error: #f92672;
+}
+
+html {
+  color-scheme: dark;
+  background: var(--color-background);
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  color: var(--color-text);
+  font-family: Inter, 'Noto Sans JP', system-ui, sans-serif;
+  line-height: 1.75;
+  background: var(--color-background);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 3px;
+}
+
+.app-shell {
+  min-height: 100vh;
+  background: var(--color-background);
+}
+
+.page-container {
+  width: min(100% - 32px, 960px);
+  margin-inline: auto;
+}
+
+.page-container--wide {
+  width: min(100% - 32px, 1120px);
+  margin-inline: auto;
+}
+
+.surface-card {
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+}
+
+@media (width >= 640px) {
+  .page-container,
+  .page-container--wide {
+    width: min(100% - 48px, 960px);
+  }
+
+  .page-container--wide {
+    width: min(100% - 48px, 1120px);
+  }
+}

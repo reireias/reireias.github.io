@@ -1,13 +1,13 @@
 <template>
-  <v-container class="anime-page">
+  <AppContainer class="anime-page">
     <page-title title="Anime"></page-title>
 
-    <v-row justify="center">
-      <v-col cols="6">
-        <v-row justify="center">
+    <AppRow justify="center">
+      <AppColumn cols="6">
+        <AppRow justify="center">
           <div class="display-1">Motion Path</div>
-        </v-row>
-        <v-row justify="center">
+        </AppRow>
+        <AppRow justify="center">
           <div id="anime1">
             <div v-show="run1" class="circle small el follow-path"></div>
             <svg id="svg" width="200" height="200" viewBox="-10 -60 120 120">
@@ -19,17 +19,17 @@
               ></path>
             </svg>
           </div>
-        </v-row>
-        <v-row justify="center">
-          <v-btn outlined @click="startAnime1">start</v-btn>
-        </v-row>
-      </v-col>
+        </AppRow>
+        <AppRow justify="center">
+          <AppButton outlined @click="startAnime1">start</AppButton>
+        </AppRow>
+      </AppColumn>
 
-      <v-col cols="6">
-        <v-row justify="center">
+      <AppColumn cols="6">
+        <AppRow justify="center">
           <div class="display-1">Multi Motion Path</div>
-        </v-row>
-        <v-row justify="center">
+        </AppRow>
+        <AppRow justify="center">
           <div id="anime2">
             <div v-show="run2" class="circle small el1 follow-path"></div>
             <div
@@ -64,19 +64,19 @@
               ></path>
             </svg>
           </div>
-        </v-row>
-        <v-row justify="center">
-          <v-btn outlined @click="startAnime2">start</v-btn>
-        </v-row>
-      </v-col>
-    </v-row>
+        </AppRow>
+        <AppRow justify="center">
+          <AppButton outlined @click="startAnime2">start</AppButton>
+        </AppRow>
+      </AppColumn>
+    </AppRow>
 
-    <v-row justify="center">
-      <v-col cols="6">
-        <v-row justify="center">
+    <AppRow justify="center">
+      <AppColumn cols="6">
+        <AppRow justify="center">
           <div class="display-1">Delay Motion Path</div>
-        </v-row>
-        <v-row justify="center">
+        </AppRow>
+        <AppRow justify="center">
           <div id="anime3">
             <div v-show="run3" class="circle small el1 follow-path"></div>
             <div
@@ -96,16 +96,16 @@
               ></path>
             </svg>
           </div>
-        </v-row>
-        <v-row justify="center">
-          <v-btn outlined @click="startAnime3">start</v-btn>
-        </v-row>
-      </v-col>
-      <v-col cols="6">
-        <v-row justify="center">
+        </AppRow>
+        <AppRow justify="center">
+          <AppButton outlined @click="startAnime3">start</AppButton>
+        </AppRow>
+      </AppColumn>
+      <AppColumn cols="6">
+        <AppRow justify="center">
           <div class="display-1">Spiral</div>
-        </v-row>
-        <v-row justify="center">
+        </AppRow>
+        <AppRow justify="center">
           <div id="anime4">
             <div v-show="run4" class="circle small el follow-path"></div>
             <svg id="svg" width="200" height="200" viewBox="0 0 400 400">
@@ -117,19 +117,19 @@
               ></path>
             </svg>
           </div>
-        </v-row>
-        <v-row justify="center">
-          <v-btn outlined @click="startAnime4">start</v-btn>
-        </v-row>
-      </v-col>
-    </v-row>
+        </AppRow>
+        <AppRow justify="center">
+          <AppButton outlined @click="startAnime4">start</AppButton>
+        </AppRow>
+      </AppColumn>
+    </AppRow>
 
-    <v-row justify="center">
-      <v-col cols="6">
-        <v-row justify="center">
+    <AppRow justify="center">
+      <AppColumn cols="6">
+        <AppRow justify="center">
           <div class="display-1">Grid</div>
-        </v-row>
-        <v-row justify="center">
+        </AppRow>
+        <AppRow justify="center">
           <div id="grid1" class="grid">
             <div
               v-for="i in new Array(81)"
@@ -137,37 +137,37 @@
               class="square small el"
             ></div>
           </div>
-        </v-row>
-        <v-row justify="center">
-          <v-btn outlined @click="startAnime5">start</v-btn>
-        </v-row>
-      </v-col>
-      <v-col cols="6">
-        <v-row justify="center">
+        </AppRow>
+        <AppRow justify="center">
+          <AppButton outlined @click="startAnime5">start</AppButton>
+        </AppRow>
+      </AppColumn>
+      <AppColumn cols="6">
+        <AppRow justify="center">
           <div class="display-1">Image</div>
-        </v-row>
-        <v-row justify="center">
+        </AppRow>
+        <AppRow justify="center">
           <div style="height: 200px; display: grid">
-            <v-img
+            <AppImage
               id="image1"
               src="/icon.png"
               width="100"
               style="margin: auto"
-            ></v-img>
+            ></AppImage>
           </div>
-        </v-row>
-        <v-row justify="center">
-          <v-btn outlined @click="startAnime6">start</v-btn>
-        </v-row>
-      </v-col>
-    </v-row>
+        </AppRow>
+        <AppRow justify="center">
+          <AppButton outlined @click="startAnime6">start</AppButton>
+        </AppRow>
+      </AppColumn>
+    </AppRow>
 
-    <v-row justify="center">
-      <v-col cols="6">
-        <v-row justify="center">
+    <AppRow justify="center">
+      <AppColumn cols="6">
+        <AppRow justify="center">
           <div class="display-1">Footprints</div>
-        </v-row>
-        <v-row justify="center">
+        </AppRow>
+        <AppRow justify="center">
           <div id="footprints" style="height: 200px">
             <div
               v-for="(position, i) in positions"
@@ -184,14 +184,14 @@
               <div class="palm"></div>
             </div>
           </div>
-        </v-row>
-        <v-row justify="center">
-          <v-btn outlined @click="startAnime7">start</v-btn>
-        </v-row>
-      </v-col>
-      <v-col cols="6"></v-col>
-    </v-row>
-  </v-container>
+        </AppRow>
+        <AppRow justify="center">
+          <AppButton outlined @click="startAnime7">start</AppButton>
+        </AppRow>
+      </AppColumn>
+      <AppColumn cols="6"></AppColumn>
+    </AppRow>
+  </AppContainer>
 </template>
 
 <script lang="ts">
@@ -366,7 +366,7 @@ export default defineComponent({
 <style lang="scss">
 .anime-page {
   .display-1 {
-    color: rgb(var(--v-theme-secondary));
+    color: var(--color-secondary);
   }
 
   .square {
@@ -375,7 +375,7 @@ export default defineComponent({
     height: 28px;
     margin: 1px;
     font-size: 12px;
-    background-color: rgb(var(--v-theme-error));
+    background-color: var(--color-error);
   }
 
   .circle {
@@ -384,16 +384,16 @@ export default defineComponent({
     height: 28px;
     margin: 1px;
     font-size: 12px;
-    background-color: rgb(var(--v-theme-error));
+    background-color: var(--color-error);
     border-radius: 50%;
   }
 
   .orange {
-    background-color: rgb(var(--v-theme-warning));
+    background-color: var(--color-warning);
   }
 
   .purple {
-    background-color: rgb(var(--v-theme-accent));
+    background-color: var(--color-accent);
   }
 
   .small {
@@ -431,7 +431,7 @@ export default defineComponent({
         border: 1px solid #000;
         border-radius: 100%;
         box-sizing: border-box;
-        background: rgb(var(--v-theme-primary));
+        background: var(--color-primary);
 
         &:nth-child(1) {
           top: 30px;
@@ -461,10 +461,10 @@ export default defineComponent({
       width: 50px;
       height: 50px;
       border-radius: 100%;
-      background: rgb(var(--v-theme-primary));
+      background: var(--color-primary);
       box-shadow:
-        8px 10px 0 0 rgb(var(--v-theme-primary)),
-        -8px 10px 0 0 rgb(var(--v-theme-primary));
+        8px 10px 0 0 var(--color-primary),
+        -8px 10px 0 0 var(--color-primary);
     }
   }
 }

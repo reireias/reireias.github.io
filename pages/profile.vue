@@ -1,118 +1,121 @@
 <template>
   <div>
-    <page-title title="Profile"></page-title>
-
-    <v-container>
-      <v-row justify="center">
-        <v-avatar color="#5e5e5e" size="128">
-          <v-img src="/icon.png"></v-img>
-        </v-avatar>
-      </v-row>
-
-      <v-row>
-        <v-col>
-          <v-card color="#363636">
-            <v-card-title>自己紹介</v-card-title>
-            <v-card-text>
-              <p>
-                ヘルステックベンチャーでプリンシパルエンジニアとして働くSRE /
-                セキュリティエンジニアです。<br />複数サービスのアーキテクチャ設計、インフラ基盤の構築・運用、ボトルネック改善やコスト最適化等のSRE業務を中心に、Ruby
-                on Railsを用いたアプリケーション開発も担当したりします。
-              </p>
-              <p>
-                セキュリティエンジニアとして、全社横断のセキュリティ対策やKPI策定、社内教育、開発ルールの策定なども担当しています。
-              </p>
-              <p>
-                最近はAIの台頭で変化する開発の在り方に対して、SRE /
-                セキュリティの知見を活かしたガードレールや仕組み・組織づくりに関心があります。
-              </p>
-              <p>
-                常に新技術や新しいことにチャレンジできる環境に身を置くように心がけています。
-              </p>
-            </v-card-text>
-          </v-card>
-        </v-col>
-      </v-row>
-
-      <key-value-row
+    <PageTitle title="Profile" />
+    <div class="profile-avatar">
+      <UAvatar src="/icon.png" alt="reireiasのアイコン" size="3xl" />
+    </div>
+    <UCard class="intro-card">
+      <h2>自己紹介</h2>
+      <div class="intro-copy">
+        <p>
+          ヘルステックベンチャーでプリンシパルエンジニアとして働くSRE /
+          セキュリティエンジニアです。複数サービスのアーキテクチャ設計、インフラ基盤の構築・運用、ボトルネック改善やコスト最適化等のSRE業務を中心に、Ruby
+          on Railsを用いたアプリケーション開発も担当したりします。
+        </p>
+        <p>
+          セキュリティエンジニアとして、全社横断のセキュリティ対策やKPI策定、社内教育、開発ルールの策定なども担当しています。
+        </p>
+        <p>
+          最近はAIの台頭で変化する開発の在り方に対して、SRE /
+          セキュリティの知見を活かしたガードレールや仕組み・組織づくりに関心があります。
+        </p>
+        <p>
+          常に新技術や新しいことにチャレンジできる環境に身を置くように心がけています。
+        </p>
+      </div>
+    </UCard>
+    <dl class="profile-list">
+      <KeyValueRow
         v-for="profile in profiles"
         :key="profile.key"
         :k="profile.key"
         :v="profile.value"
-      ></key-value-row>
-    </v-container>
-
-    <page-title title="Socials" style="margin-top: 20px"></page-title>
-
-    <v-container>
-      <v-row>
-        <v-col v-for="account in socials" :key="account.name" cols="6" md="4">
-          <a
-            :href="account.url"
-            target="_blank"
-            class="social-card"
-            :class="`social-bg-${account.name
-              .toLowerCase()
-              .replace(/\s+/g, '')}`"
-          >
-            <v-icon>{{ account.icon }}</v-icon>
-            <span class="social-name">{{ account.name }}</span>
-          </a>
-        </v-col>
-      </v-row>
-    </v-container>
+      />
+    </dl>
+    <PageTitle title="Socials" />
+    <div class="social-grid">
+      <a
+        v-for="account in socials"
+        :key="account.name"
+        :href="account.url"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="social-card"
+        :class="`social-bg-${account.name.toLowerCase().replace(/\s+/g, '')}`"
+        ><span aria-hidden="true">↗</span><span>{{ account.name }}</span></a
+      >
+    </div>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-import PageTitle from '@/components/PageTitle.vue'
-import KeyValueRow from '@/components/KeyValueRow.vue'
+<script setup lang="ts">
 import socials from '@/constants/socials'
 import profiles from '@/constants/profiles'
-
-export default defineComponent({
-  components: {
-    PageTitle,
-    KeyValueRow,
-  },
-  setup() {
-    return { socials, profiles }
-  },
-})
 </script>
 
 <style scoped lang="scss">
+.profile-avatar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+.intro-card {
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+h2 {
+  margin: 0 0 16px;
+  font-size: 1.35rem;
+}
+.intro-copy {
+  max-width: 720px;
+  color: var(--color-text-muted);
+}
+.intro-copy p {
+  margin: 0 0 16px;
+}
+.profile-list {
+  margin: 32px 0 0;
+}
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+  padding-bottom: 64px;
+}
 .social-card {
   display: flex;
+  gap: 10px;
   align-items: center;
   padding: 16px;
-  border-radius: 4px;
   color: #fff;
+  font-weight: 600;
   text-decoration: none;
-
-  .social-name {
-    margin-left: 10px;
-    font-size: 1.25rem;
-    font-weight: 500;
-  }
+  border-radius: 8px;
 }
 .social-bg-github {
-  background-color: #363636;
+  background: #363636;
 }
 .social-bg-twitter {
-  background-color: #1da1f2;
+  background: #1d8cd8;
 }
 .social-bg-qiita {
-  background-color: #55c500;
+  background: #438f13;
 }
 .social-bg-speakerdeck {
-  background-color: #009287;
+  background: #007a71;
 }
 .social-bg-zenn {
-  background-color: #3ea8ff;
+  background: #247ab5;
 }
 .social-bg-lapras {
-  background-color: #3d5afe;
+  background: #3348ca;
+}
+
+@media (width >= 640px) {
+  .social-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 </style>

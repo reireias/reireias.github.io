@@ -8,7 +8,7 @@ Portfolio site published at [reireias.dev](https://reireias.dev).
 ## Tech stack
 
 - Nuxt 4 / Vue 3
-- Vuetify
+- Nuxt UI
 - TypeScript / JavaScript
 - pnpm
 - Jest / Playwright

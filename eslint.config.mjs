@@ -50,7 +50,7 @@ export default [
         ...globals.jest,
         defineNuxtConfig: 'readonly',
         definePageMeta: 'readonly',
-        useVuetify: 'readonly',
+        defineAppConfig: 'readonly',
       },
     },
     plugins: {
