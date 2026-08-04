@@ -1,0 +1,1 @@
+import{H as e,R as t,Z as n,d as r,f as i,v as a}from"./C85QNUmy.js";import{t as o}from"./BDNMzG2s.js";import{n as s,t as c}from"./TyGojL5I.js";var l={},u={class:`page-container`};function d(o,l){let d=s,f=c;return t(),i(f,{class:`app-shell`},{default:n(()=>[a(d),r(`main`,u,[e(o.$slots,`default`)])]),_:3})}var f=o(l,[[`render`,d]]);export{f as default};
