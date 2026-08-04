@@ -1,24 +1,24 @@
 <template>
-  <v-container class="index-page fill-height" fluid>
-    <v-row justify="center" align="center">
-      <v-col class="contents-container" cols="12">
+  <div class="index-page">
+    <div class="index-row">
+      <div class="contents-container">
         <div class="animation-wrapper">
           <div id="grid" class="grid main-contents">
             <div v-for="i in 324" :key="i" :class="squareClass(i)"></div>
           </div>
           <div class="avatar-overlay">
-            <v-avatar size="160" class="icon-avatar">
+            <div class="icon-avatar">
               <img
                 src="/icon.png"
                 alt="icon"
                 style="width: 100%; height: 100%"
               />
-            </v-avatar>
+            </div>
           </div>
         </div>
-      </v-col>
-    </v-row>
-  </v-container>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
@@ -96,13 +96,14 @@ export default defineComponent({
 
 <style lang="scss">
 .index-page {
-  height: 100vh;
+  min-height: calc(100svh - 64px);
   display: flex !important;
   justify-content: center;
   align-items: center;
   padding: 0 !important;
 
-  .v-row {
+  .index-row {
+    display: flex;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -130,22 +131,22 @@ export default defineComponent({
     opacity: 0;
   }
   .v-green {
-    background-color: rgb(var(--v-theme-primary));
+    background-color: var(--color-primary);
   }
   .v-cyan {
-    background-color: rgb(var(--v-theme-secondary));
+    background-color: var(--color-secondary);
   }
   .v-red {
-    background-color: rgb(var(--v-theme-error));
+    background-color: var(--color-error);
   }
   .v-orange {
-    background-color: rgb(var(--v-theme-warning));
+    background-color: var(--color-warning);
   }
   .v-purple {
-    background-color: rgb(var(--v-theme-accent));
+    background-color: var(--color-accent);
   }
   .v-yellow {
-    background-color: rgb(var(--v-theme-info));
+    background-color: #e6db74;
   }
   .small {
     width: 18px;
@@ -171,6 +172,18 @@ export default defineComponent({
     justify-content: center;
     align-items: center;
     opacity: 0;
+  }
+  .icon-avatar {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+    border-radius: 50%;
+  }
+}
+
+@media (width >= 768px) {
+  .index-page {
+    min-height: calc(100svh - 72px);
   }
 }
 </style>

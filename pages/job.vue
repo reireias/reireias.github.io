@@ -1,61 +1,84 @@
 <template>
-  <div class="job-page">
-    <page-title title="Job"></page-title>
-
-    <v-timeline side="end" align="start">
-      <v-timeline-item
+  <div>
+    <PageTitle title="Experience" />
+    <ol class="timeline">
+      <li
         v-for="item in formattedTimeline"
         :key="item.title"
-        size="small"
-        :dot-color="item.hexColor"
+        :style="{ '--timeline-color': item.hexColor }"
       >
-        <template #opposite>
-          <div class="title" style="margin-top: 4px; color: #fff">
-            {{ item.year }}
-          </div>
-        </template>
-        <v-card color="#363636">
-          <v-card-title :style="{ color: item.hexColor }">{{
-            item.title
-          }}</v-card-title>
-          <v-card-text>{{ item.text }}</v-card-text>
-        </v-card>
-      </v-timeline-item>
-    </v-timeline>
+        <time>{{ item.year }}</time>
+        <UCard class="timeline-card">
+          <h2>{{ item.title }}</h2>
+          <p>{{ item.text }}</p>
+        </UCard>
+      </li>
+    </ol>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, computed } from 'vue'
-import PageTitle from '@/components/PageTitle.vue'
+<script setup lang="ts">
+import { computed } from 'vue'
 import timeline from '@/constants/timeline'
-
 const colorMap: Record<string, string> = {
   secondary: '#66d9ef',
   accent: '#ae81ff',
   warning: '#fd971f',
 }
-
-export default defineComponent({
-  components: {
-    PageTitle,
-  },
-  setup() {
-    const formattedTimeline = computed(() =>
-      timeline.map((item) => ({
-        ...item,
-        hexColor: colorMap[item.color] || '#a6e22e',
-      }))
-    )
-    return { formattedTimeline }
-  },
-})
+const formattedTimeline = computed(() =>
+  timeline.map((item) => ({
+    ...item,
+    hexColor: colorMap[item.color] || '#a6e22e',
+  }))
+)
 </script>
 
-<style lang="scss">
-.job-page {
-  .v-timeline-item__body {
-    width: 100%;
+<style scoped lang="scss">
+.timeline {
+  margin: 0;
+  padding: 0 0 64px;
+  list-style: none;
+}
+.timeline li {
+  position: relative;
+  display: grid;
+  gap: 12px;
+  padding: 0 0 32px 32px;
+  border-left: 1px solid var(--color-border-strong);
+}
+.timeline li::before {
+  position: absolute;
+  top: 8px;
+  left: -6px;
+  width: 11px;
+  height: 11px;
+  content: '';
+  background: var(--timeline-color);
+  border-radius: 50%;
+}
+time {
+  color: var(--color-text-muted);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.875rem;
+}
+.timeline-card {
+  color: var(--color-text);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+h2 {
+  margin: 0 0 8px;
+  color: var(--timeline-color);
+  font-size: 1.25rem;
+}
+p {
+  margin: 0;
+}
+
+@media (width >= 640px) {
+  .timeline li {
+    grid-template-columns: 100px 1fr;
+    padding-left: 40px;
   }
 }
 </style>

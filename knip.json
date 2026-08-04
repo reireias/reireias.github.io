@@ -14,7 +14,6 @@
     ".nuxt/**"
   ],
   "ignoreDependencies": [
-    "@mdi/font",
     "@eslint/js",
     "@eslint/compat",
     "typescript-eslint",
@@ -27,7 +26,6 @@
     "stylelint-config-recommended",
     "ufo",
     "sass-embedded",
-    "vuetify-nuxt-module",
     "vue-eslint-parser",
     "@babel/preset-typescript"
   ]

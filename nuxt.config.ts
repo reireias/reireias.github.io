@@ -64,41 +64,11 @@ export default defineNuxtConfig({
       ],
     },
   },
-  css: ['@/assets/app.scss'],
-  modules: ['vuetify-nuxt-module'],
-  vuetify: {
-    moduleOptions: {/* module specific options */},
-    vuetifyOptions: {
-      theme: {
-        defaultTheme: 'dark',
-        themes: {
-          dark: {
-            colors: {
-              background: '#272822',
-              surface: '#363636',
-              primary: '#a6e22e', // green
-              accent: '#ae81ff', // purple
-              secondary: '#66d9ef', // cyan
-              success: '#a6e22e', // green
-              info: '#e6db74', // yellow
-              warning: '#fd971f', // orange
-              error: '#f92672', // red
-            },
-          },
-          light: {
-            colors: {
-              primary: '#1976D2',
-              accent: '#e91e63',
-              secondary: '#30b1dc',
-              success: '#4CAF50',
-              info: '#2196F3',
-              warning: '#FB8C00',
-              error: '#FF5252',
-            },
-          },
-        },
-      },
-    },
+  css: ['@/assets/app.css'],
+  modules: ['@nuxt/ui'],
+  colorMode: {
+    preference: 'dark',
+    fallback: 'dark',
   },
   compatibilityDate: '2024-04-03',
 })

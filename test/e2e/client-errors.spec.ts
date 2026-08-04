@@ -1,7 +1,15 @@
 import { test, expect } from '@playwright/test'
 
 test.describe('E2E Client Error Check', () => {
-  const pages = ['/', '/profile', '/skill', '/job', '/articles', '/sandbox']
+  const pages = [
+    '/',
+    '/profile',
+    '/skill',
+    '/job',
+    '/articles',
+    '/sandbox',
+    '/sandbox/anime',
+  ]
 
   for (const pagePath of pages) {
     test(`page ${pagePath} should load without console errors or 404 responses`, async ({

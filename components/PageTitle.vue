@@ -1,32 +1,33 @@
 <template>
-  <v-row justify="center">
-    <h1 class="page-title text-primary">
-      {{ title }}
-    </h1>
-  </v-row>
+  <header class="page-heading">
+    <p class="page-heading__label">// {{ title.toLowerCase() }}</p>
+    <h1>{{ title }}</h1>
+  </header>
 </template>
 
-<script lang="ts">
-import { defineComponent } from 'vue'
-
-export default defineComponent({
-  props: {
-    title: {
-      type: String,
-      required: true,
-    },
-  },
-})
+<script setup lang="ts">
+defineProps<{ title: string }>()
 </script>
 
-<style scoped lang="scss">
-.page-title {
-  font-size: 3.75rem;
-  font-weight: 300;
-  line-height: 3.75rem;
-  letter-spacing: -0.0083em;
-  margin-top: 30px;
-  margin-bottom: 10px;
-  color: rgb(var(--v-theme-primary));
+<style scoped>
+.page-heading {
+  padding: 64px 0 32px;
+}
+
+.page-heading__label {
+  margin: 0 0 8px;
+  color: var(--color-primary);
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 0;
+  color: var(--color-text);
+  font-size: clamp(2.5rem, 7vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.1;
 }
 </style>
