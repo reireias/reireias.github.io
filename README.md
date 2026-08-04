@@ -1,86 +1,78 @@
-[![deploy](https://github.com/reireias/reireias.github.io/workflows/deploy/badge.svg)](https://github.com/reireias/reireias.github.io/actions/workflows/deploy.yml) [![test](https://github.com/reireias/reireias.github.io/workflows/test/badge.svg)](https://github.com/reireias/reireias.github.io/actions/workflows/test.yml)
-# REIREIAS'S GITHUB PAGES
+# reireias.dev
 
-https://reireias.dev
+[![deploy](https://github.com/reireias/reireias.github.io/workflows/deploy/badge.svg)](https://github.com/reireias/reireias.github.io/actions/workflows/deploy.yml)
+[![test](https://github.com/reireias/reireias.github.io/workflows/test/badge.svg)](https://github.com/reireias/reireias.github.io/actions/workflows/test.yml)
 
-Vue.js + Vuetify.js + Nuxt.js
+Portfolio site published at [reireias.dev](https://reireias.dev).
 
-![vue_vuetify_nuxt](https://user-images.githubusercontent.com/24800246/59352598-014f6980-8d5c-11e9-890a-41757d81207d.png)
+## Tech stack
 
-## Lighthouse Score
-![lighthouse](https://user-images.githubusercontent.com/24800246/59352011-a0736180-8d5a-11e9-9634-876c991be867.png)
+- Nuxt 4 / Vue 3
+- Vuetify
+- TypeScript / JavaScript
+- pnpm
+- Jest / Playwright
+- ESLint / Prettier / Stylelint
 
-## Setup / Requirements
+## Setup
 
-This project uses [mise](https://mise.jdx.dev/) for tool version management.
+Tool versions are managed with [mise](https://mise.jdx.dev/) and defined in
+`.mise.toml`.
 
 ```bash
-# Install tools using mise
 mise install
+pnpm install --frozen-lockfile
 ```
 
-## AI Agent configuration
+## Development
+
+Start the development server:
+
+```bash
+pnpm dev
+```
+
+Generate the static site and serve the generated `dist` directory:
+
+```bash
+pnpm generate
+pnpm start-static
+```
+
+## Quality checks
+
+Run checks according to the scope of the change:
+
+```bash
+pnpm lint
+pnpm lint:style
+pnpm test
+pnpm generate
+pnpm test:e2e
+pnpm knip
+```
+
+To update files automatically where supported, use `pnpm lintfix` and
+`pnpm lint:style:fix`. UI captures can be created with `pnpm capture`.
+
+## Deployment
+
+A push to `master` triggers the deploy workflow. It generates the static site
+and publishes `dist` to the `release` branch. Do not deploy manually or push
+directly to `master`; submit changes through a pull request.
+
+## AI agent configuration
 
 Antigravity CLI and Codex CLI share their project rules and skills through
 [Rulesync](https://github.com/dyoshikawa/rulesync).
 
-- Edit `.rulesync/` and `rulesync.jsonc` as the source of truth.
+- Edit `.rulesync/` and `rulesync.jsonc`, which are the source of truth.
 - Do not edit generated `AGENTS.md` or files under `.agents/` directly.
 - Commit both the source files and generated files.
+
+After changing the configuration, regenerate it and verify synchronization:
 
 ```bash
 pnpm ai:generate
 pnpm ai:check
 ```
-
-## install
-
-```bash
-yarn install
-```
-
-## run develop mode
-
-```bash
-yarn dev
-```
-
-## build for static site
-
-```bash
-yarn generate
-```
-
-## deploy to master branch
-
-```bash
-yarn deploy
-```
-
-## run static site for local
-
-```bash
-yarn start-static
-```
-
-## run lint
-
-```bash
-yarn lint
-```
-
-## fix lint error
-
-```bash
-yarn lintfix
-```
-
-## benchmark with PageSpeed Insights
-
-```bash
-mkdir -p tmp/raw
-yarn benchmark
-# create result file in tmp directory.
-```
-
-View result [Lighthouse Report Viewer](https://googlechrome.github.io/lighthouse/viewer/)

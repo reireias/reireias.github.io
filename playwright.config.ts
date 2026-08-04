@@ -25,7 +25,7 @@ export default defineConfig({
     },
   ],
   webServer: {
-    command: 'npx http-server ./dist -p 3000',
+    command: 'pnpm exec http-server ./dist -p 3000',
     url: 'http://localhost:3000',
     reuseExistingServer: !process.env.CI,
   },
