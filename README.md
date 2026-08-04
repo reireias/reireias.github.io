@@ -19,6 +19,20 @@ This project uses [mise](https://mise.jdx.dev/) for tool version management.
 mise install
 ```
 
+## AI Agent configuration
+
+Antigravity CLI and Codex CLI share their project rules and skills through
+[Rulesync](https://github.com/dyoshikawa/rulesync).
+
+- Edit `.rulesync/` and `rulesync.jsonc` as the source of truth.
+- Do not edit generated `AGENTS.md` or files under `.agents/` directly.
+- Commit both the source files and generated files.
+
+```bash
+pnpm ai:generate
+pnpm ai:check
+```
+
 ## install
 
 ```bash
