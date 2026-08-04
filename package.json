@@ -18,6 +18,8 @@
     "test": "jest",
     "test:e2e": "playwright test",
     "capture": "playwright test test/e2e/take-captures.spec.ts",
+    "ai:generate": "rulesync generate",
+    "ai:check": "rulesync generate --check && rulesync doctor --strict",
     "knip": "knip",
     "prepare": "lefthook install"
   },
@@ -62,6 +64,7 @@
     "postcss-html": "^2.0.0",
     "prettier": "^3.9.6",
     "qs": "^6.15.3",
+    "rulesync": "^16.6.0",
     "sass-embedded": "^1.100.0",
     "stylelint": "^17.14.1",
     "stylelint-config-html": "^2.0.0",

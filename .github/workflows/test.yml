@@ -20,6 +20,7 @@ jobs:
           node-version: '20'
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
+      - run: pnpm ai:check
       - run: pnpm lint
       - run: pnpm lint:style
       - run: pnpm nuxi prepare
