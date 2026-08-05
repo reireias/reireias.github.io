@@ -12,10 +12,12 @@ test('home shows its primary information without scrolling', async ({
   await expect(page.locator('#experience .timeline li')).toHaveCount(2)
 })
 
-test('experience shows the complete timeline', async ({ page }) => {
+test('experience shows work highlights and education', async ({ page }) => {
   await page.goto('/experience')
 
-  await expect(page.locator('.timeline li')).toHaveCount(6)
+  await expect(page.locator('.work-experience')).toHaveCount(2)
+  await expect(page.locator('.experience-highlight')).toHaveCount(6)
+  await expect(page.locator('.timeline li')).toHaveCount(4)
 })
 
 test('profile keeps personal details and external profiles', async ({
