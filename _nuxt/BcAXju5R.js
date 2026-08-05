@@ -1,0 +1,1 @@
+import{r as e}from"./Dn6eYzwe.js";var t=e(`/icon.png`);export{t};
