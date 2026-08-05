@@ -1,1 +1,0 @@
-import{_t as e,m as t,x as n,y as r,z as i}from"./BVniFzLs.js";import{t as a}from"./CWA5HQtL.js";import{n as o,t as s}from"./DehgHDUw.js";var c=n({__name:`experience`,setup(n){return(n,c)=>{let l=a,u=o;return i(),t(`div`,null,[r(l,{title:`Experience`,description:`学歴とこれまでの職歴を掲載しています。`}),r(u,{items:e(s)},null,8,[`items`])])}}});export{c as default};
