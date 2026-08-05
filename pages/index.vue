@@ -1,10 +1,7 @@
 <template>
   <div>
-    <section ref="heroSection" class="hero" aria-labelledby="hero-title">
+    <section class="hero" aria-labelledby="hero-title">
       <div class="hero__sticky">
-        <div class="hero__grid" aria-hidden="true">
-          <span v-for="i in 48" :key="i" :style="{ '--cell-index': i }"></span>
-        </div>
         <div class="hero__content">
           <div class="hero__identity" aria-hidden="true">
             <img src="/icon.png" alt="" />
@@ -133,7 +130,7 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import { computed } from 'vue'
 import articles from '@/constants/articles'
 import timeline from '@/constants/timeline'
 
@@ -141,7 +138,6 @@ if (typeof definePageMeta !== 'undefined') {
   definePageMeta({ layout: 'gridless' })
 }
 
-const heroSection = ref<HTMLElement | null>(null)
 const featuredArticles = articles.filter((article) => article.featured)
 const workTimeline = computed(() =>
   timeline.filter((item) => item.color === 'warning')
@@ -170,43 +166,11 @@ const expertise = [
     tags: ['Cloud Security', 'IaC', 'AI'],
   },
 ]
-
-const updateHeroProgress = () => {
-  const element = heroSection.value
-  if (!element) return
-  const range = element.offsetHeight - window.innerHeight
-  const progress =
-    range > 0
-      ? Math.min(Math.max(-element.getBoundingClientRect().top / range, 0), 1)
-      : 1
-  element.style.setProperty('--hero-progress', progress.toString())
-}
-
-onMounted(() => {
-  if (
-    typeof window.matchMedia === 'function' &&
-    window.matchMedia('(prefers-reduced-motion: reduce)').matches
-  ) {
-    heroSection.value?.style.setProperty('--hero-progress', '1')
-    return
-  }
-  updateHeroProgress()
-  window.addEventListener('scroll', updateHeroProgress, { passive: true })
-  window.addEventListener('resize', updateHeroProgress)
-})
-
-onBeforeUnmount(() => {
-  window.removeEventListener('scroll', updateHeroProgress)
-  window.removeEventListener('resize', updateHeroProgress)
-})
 </script>
 
 <style scoped lang="scss">
 .hero {
-  --hero-progress: 1;
-
   position: relative;
-  height: 150svh;
   background:
     linear-gradient(rgb(19 22 19 / 0.84), rgb(19 22 19 / 0.96)),
     linear-gradient(90deg, var(--color-border) 1px, transparent 1px),
@@ -218,8 +182,6 @@ onBeforeUnmount(() => {
 }
 
 .hero__sticky {
-  position: sticky;
-  top: 64px;
   display: grid;
   min-height: calc(100svh - 64px);
   overflow: hidden;
@@ -235,48 +197,12 @@ onBeforeUnmount(() => {
   width: min(100% - 32px, 1120px);
 }
 
-.hero__grid {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  display: grid;
-  grid-template-columns: repeat(8, 14px);
-  gap: 4px;
-  opacity: calc(0.12 + var(--hero-progress) * 0.2);
-  transform: translate(-50%, -50%) scale(calc(0.8 + var(--hero-progress) * 0.2));
-}
-
-.hero__grid span {
-  width: 14px;
-  height: 14px;
-  background: var(--color-primary);
-  opacity: clamp(
-    0,
-    calc(var(--hero-progress) * 2.5 - var(--cell-index) * 0.018),
-    0.8
-  );
-}
-
-.hero__grid::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  color: var(--color-secondary);
-  font-family: var(--font-technical);
-  font-size: 2rem;
-  content: '>';
-  opacity: clamp(0, calc(1 - var(--hero-progress) * 3), 1);
-  transform: translate(-50%, -50%);
-}
-
 .hero__identity {
   width: clamp(96px, 24vw, 160px);
   aspect-ratio: 1;
   overflow: hidden;
-  opacity: clamp(0, calc(var(--hero-progress) * 3 - 1.2), 1);
   border: 2px solid var(--color-primary);
   border-radius: var(--radius-full);
-  transform: scale(calc(0.8 + var(--hero-progress) * 0.2));
 }
 
 .hero__identity img {
@@ -333,7 +259,6 @@ h1 {
   color: var(--color-text-muted);
   font-family: var(--font-technical);
   font-size: 0.7rem;
-  opacity: calc(1 - var(--hero-progress) * 2);
 }
 
 .home-container {
@@ -453,10 +378,6 @@ h1 {
 }
 
 @media (width >= 640px) {
-  .hero {
-    height: 200svh;
-  }
-
   .hero__content {
     grid-template-columns: auto 1fr;
     gap: 56px;
@@ -483,22 +404,11 @@ h1 {
 
 @media (width >= 768px) {
   .hero__sticky {
-    top: 72px;
     min-height: calc(100svh - 72px);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero {
-    height: auto;
-  }
-
-  .hero__sticky {
-    position: relative;
-  }
-
-  .hero__grid,
-  .hero__identity,
   .hero__copy,
   .hero__scroll,
   .expertise-card {

@@ -6,6 +6,8 @@ test('home shows its primary information without scrolling', async ({
   await page.goto('/')
 
   await expect(page.locator('.hero__copy')).toHaveCSS('opacity', '1')
+  await expect(page.locator('.hero__identity')).toHaveCSS('opacity', '1')
+  await expect(page.locator('.hero__identity img')).toBeVisible()
   await expect(page.getByRole('heading', { name: 'reireias' })).toBeVisible()
   await expect(page.locator('#experience .timeline li')).toHaveCount(2)
 })
