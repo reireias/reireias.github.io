@@ -27,15 +27,20 @@
           id="about-heading"
           index="01"
           label="About"
-          title="SREを専門とするプリンシパルエンジニア"
+          title="SRE・セキュリティを軸に、AI時代の開発基盤をつくるプリンシパルエンジニア"
         />
         <div class="about-grid">
           <div class="about-copy">
             <p>
-              ヘルステック領域で、SREを主な専門領域としながら、全社横断のセキュリティ施策にも取り組んでいます。複数サービスのアーキテクチャ設計やインフラ基盤の構築・運用を担当しています。
+              ヘルステック領域のプリンシパルエンジニアとして、SREとセキュリティを軸に、20前後のサービスと40を超えるAWSアカウントを支える基盤づくりをリードしています。アーキテクチャ設計、Infrastructure
+              as
+              Code、可観測性、コスト最適化、全社セキュリティを横断して担当しています。
             </p>
             <p>
-              セキュリティ領域では、セキュリティKPIの策定、社内教育、開発ルールの策定などを担当しています。最近はAIを活用した開発のガードレールや運用設計にも取り組んでいます。
+              アプリケーション開発の経験を活かし、インフラからアプリケーション、組織運営までを俯瞰した課題解決を得意としています。個別の問題を解くだけでなく、コード化・標準化・自動化によって、複数のプロジェクトへ展開できる仕組みとして残すことを重視しています。
+            </p>
+            <p>
+              最近は、AIエージェントを安全かつ効果的に活用するための開発基盤、ガードレール、可観測性、サプライチェーンセキュリティの整備に取り組んでいます。
             </p>
           </div>
           <dl class="about-facts">
@@ -45,11 +50,11 @@
             </div>
             <div>
               <dt>FOCUS</dt>
-              <dd>SRE / Security</dd>
+              <dd>SRE / Security / AI Enablement</dd>
             </div>
             <div>
-              <dt>BASE</dt>
-              <dd>Japan</dd>
+              <dt>SCALE</dt>
+              <dd>~20 Services / 40+ AWS Accounts</dd>
             </div>
           </dl>
         </div>
@@ -75,9 +80,42 @@
             :key="item.title"
             class="expertise-card"
           >
-            <span class="expertise-card__icon" aria-hidden="true">{{
-              item.icon
-            }}</span>
+            <span class="expertise-card__icon" aria-hidden="true">
+              <svg
+                viewBox="0 0 40 40"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <template v-if="item.icon === 'platform'">
+                  <rect x="5" y="7" width="30" height="9" rx="2" />
+                  <rect x="5" y="24" width="30" height="9" rx="2" />
+                  <path d="M10 11.5h.01M10 28.5h.01M16 11.5h14M16 28.5h14" />
+                  <path d="M20 16v8" />
+                </template>
+                <template v-else-if="item.icon === 'security'">
+                  <path
+                    d="M20 4 33 9v9c0 8.5-5.2 14.4-13 18-7.8-3.6-13-9.5-13-18V9l13-5Z"
+                  />
+                  <path d="m14 20 4 4 8-9" />
+                </template>
+                <template v-else-if="item.icon === 'ai'">
+                  <circle cx="20" cy="20" r="5" />
+                  <circle cx="7" cy="9" r="3" />
+                  <circle cx="33" cy="9" r="3" />
+                  <circle cx="7" cy="31" r="3" />
+                  <circle cx="33" cy="31" r="3" />
+                  <path
+                    d="m10 11.5 6 5M30 11.5l-6 5M10 28.5l6-5M30 28.5l-6-5"
+                  />
+                </template>
+                <template v-else>
+                  <rect x="4" y="5" width="13" height="10" rx="2" />
+                  <rect x="23" y="5" width="13" height="10" rx="2" />
+                  <rect x="13.5" y="25" width="13" height="10" rx="2" />
+                  <path d="M10.5 15v5h19v-5M20 20v5" />
+                </template>
+              </svg>
+            </span>
             <h3>{{ item.title }}</h3>
             <p>{{ item.description }}</p>
             <ul class="tag-list" :aria-label="`${item.title}の技術要素`">
@@ -145,25 +183,32 @@ const workTimeline = computed(() =>
 
 const expertise = [
   {
-    icon: '△',
-    title: 'Architecture',
+    icon: 'platform',
+    title: 'Platform SRE',
     description:
-      'AWSやGCPを利用したシステムアーキテクチャの設計・構築を行っています。',
-    tags: ['AWS', 'GCP', 'Serverless'],
+      '20前後のサービスを支えるクラウド基盤を設計・運用し、可用性、性能、開発体験を継続的に改善しています。',
+    tags: ['AWS', 'Terraform', 'Observability', 'CI/CD'],
   },
   {
-    icon: '◎',
-    title: 'Site Reliability',
+    icon: 'security',
+    title: 'Security Engineering',
     description:
-      '可観測性、パフォーマンス、CI/CD、クラウドコストの改善に取り組んでいます。',
-    tags: ['SRE', 'Observability', 'CI/CD'],
+      '40を超えるAWSアカウントの統制、セキュリティKPI、インシデント対応、サプライチェーン攻撃対策を推進しています。',
+    tags: ['Cloud Security', 'Governance', 'Supply Chain', 'GameDay'],
   },
   {
-    icon: '◇',
-    title: 'Security',
+    icon: 'ai',
+    title: 'AI Engineering',
     description:
-      'クラウドセキュリティ、セキュリティKPI、社内教育、開発ルールを担当しています。',
-    tags: ['Cloud Security', 'IaC', 'AI'],
+      'AIエージェントを組織で安全に活用するための基盤、ガードレール、MCP統合、可観測性を設計・実装しています。',
+    tags: ['AI Agents', 'MCP', 'Guardrails', 'Observability'],
+  },
+  {
+    icon: 'architecture',
+    title: 'Architecture & Enablement',
+    description:
+      'アプリケーションからインフラまでを俯瞰し、コード化・標準化・自動化によって複数プロジェクトへ展開できる仕組みを構築しています。',
+    tags: ['Architecture', 'Standardization', 'Automation', 'DevEx'],
   },
 ]
 </script>
@@ -333,9 +378,20 @@ h1 {
 }
 
 .expertise-card__icon {
+  display: block;
+  width: 40px;
+  height: 40px;
   color: var(--color-secondary);
-  font-family: var(--font-technical);
-  font-size: 1.5rem;
+}
+
+.expertise-card__icon svg {
+  width: 100%;
+  height: 100%;
+  stroke: currentcolor;
+  stroke-width: 1.5;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  vector-effect: non-scaling-stroke;
 }
 
 .expertise-card h3 {
@@ -396,7 +452,10 @@ h1 {
     gap: 64px;
   }
 
-  .expertise-grid,
+  .expertise-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
   .work-grid {
     grid-template-columns: repeat(3, 1fr);
   }
