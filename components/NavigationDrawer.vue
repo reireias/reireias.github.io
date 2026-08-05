@@ -4,7 +4,12 @@
       <NuxtLink class="brand-logo" to="/">reireias.dev</NuxtLink>
 
       <nav class="desktop-nav" aria-label="メインナビゲーション">
-        <NuxtLink v-for="link in links" :key="link.to" :to="link.to">
+        <NuxtLink
+          v-for="link in links"
+          :key="link.to"
+          :to="link.to"
+          :active-class="link.to.includes('#') ? '' : undefined"
+        >
           {{ link.name }}
         </NuxtLink>
       </nav>
@@ -32,6 +37,7 @@
         v-for="link in links"
         :key="link.to"
         :to="link.to"
+        :active-class="link.to.includes('#') ? '' : undefined"
         @click="menuOpen = false"
       >
         {{ link.name }}
@@ -45,16 +51,17 @@ import { ref } from 'vue'
 
 const menuOpen = ref(false)
 const links = [
-  { name: 'About', to: '/profile' },
-  { name: 'Experience', to: '/job' },
-  { name: 'Skills', to: '/skill' },
+  { name: 'About', to: '/#about' },
+  { name: 'Experience', to: '/experience' },
+  { name: 'Skills', to: '/skills' },
   { name: 'Articles', to: '/articles' },
 ]
 </script>
 
 <style scoped lang="scss">
 .site-header {
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 10;
   background: rgb(19 22 19 / 0.92);
   border-bottom: 1px solid var(--color-border);
@@ -80,6 +87,11 @@ nav a {
   color: var(--color-primary);
   font-size: 1.1rem;
   font-weight: 700;
+}
+
+.brand-logo::before {
+  color: var(--color-secondary);
+  content: '> ';
 }
 
 .desktop-nav {

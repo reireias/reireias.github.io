@@ -2,16 +2,20 @@
   <header class="page-heading">
     <p class="page-heading__label">// {{ title.toLowerCase() }}</p>
     <h1>{{ title }}</h1>
+    <p v-if="description" class="page-heading__description">
+      {{ description }}
+    </p>
   </header>
 </template>
 
 <script setup lang="ts">
-defineProps<{ title: string }>()
+defineProps<{ title: string; description?: string }>()
 </script>
 
 <style scoped>
 .page-heading {
-  padding: 64px 0 32px;
+  max-width: 720px;
+  padding: 72px 0 48px;
 }
 
 .page-heading__label {
@@ -29,5 +33,11 @@ h1 {
   font-size: clamp(2.5rem, 7vw, 3.5rem);
   font-weight: 700;
   line-height: 1.1;
+}
+
+.page-heading__description {
+  margin: 20px 0 0;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
 }
 </style>

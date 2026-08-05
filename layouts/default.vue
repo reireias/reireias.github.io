@@ -4,5 +4,6 @@
     <main class="page-container">
       <slot />
     </main>
+    <SiteFooter />
   </UApp>
 </template>
