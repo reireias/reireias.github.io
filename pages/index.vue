@@ -1,189 +1,509 @@
 <template>
-  <div class="index-page">
-    <div class="index-row">
-      <div class="contents-container">
-        <div class="animation-wrapper">
-          <div id="grid" class="grid main-contents">
-            <div v-for="i in 324" :key="i" :class="squareClass(i)"></div>
+  <div>
+    <section ref="heroSection" class="hero" aria-labelledby="hero-title">
+      <div class="hero__sticky">
+        <div class="hero__grid" aria-hidden="true">
+          <span v-for="i in 48" :key="i" :style="{ '--cell-index': i }"></span>
+        </div>
+        <div class="hero__content">
+          <div class="hero__identity" aria-hidden="true">
+            <img src="/icon.png" alt="" />
           </div>
-          <div class="avatar-overlay">
-            <div class="icon-avatar">
-              <img
-                src="/icon.png"
-                alt="icon"
-                style="width: 100%; height: 100%"
-              />
-            </div>
+          <div class="hero__copy">
+            <p class="hero__eyebrow">
+              <span aria-hidden="true">&gt;</span> reireias.dev
+            </p>
+            <h1 id="hero-title">reireias</h1>
+            <p class="hero__lead">
+              SREを専門とするプリンシパルエンジニアです。セキュリティ領域にも取り組んでいます。
+            </p>
+            <a class="hero__cta" href="#about">プロフィール</a>
           </div>
         </div>
+        <p class="hero__scroll" aria-hidden="true">SCROLL ↓</p>
       </div>
+    </section>
+
+    <div class="home-container">
+      <section id="about" class="home-section" aria-labelledby="about-heading">
+        <SectionHeading
+          id="about-heading"
+          index="01"
+          label="About"
+          title="SREを専門とするプリンシパルエンジニア"
+        />
+        <div class="about-grid">
+          <div class="about-copy">
+            <p>
+              ヘルステック領域で、SREを主な専門領域としながら、全社横断のセキュリティ施策にも取り組んでいます。複数サービスのアーキテクチャ設計やインフラ基盤の構築・運用を担当しています。
+            </p>
+            <p>
+              セキュリティ領域では、セキュリティKPIの策定、社内教育、開発ルールの策定などを担当しています。最近はAIを活用した開発のガードレールや運用設計にも取り組んでいます。
+            </p>
+          </div>
+          <dl class="about-facts">
+            <div>
+              <dt>ROLE</dt>
+              <dd>Principal Engineer</dd>
+            </div>
+            <div>
+              <dt>FOCUS</dt>
+              <dd>SRE / Security</dd>
+            </div>
+            <div>
+              <dt>BASE</dt>
+              <dd>Japan</dd>
+            </div>
+          </dl>
+        </div>
+        <NuxtLink class="text-link" to="/profile"
+          >プロフィール詳細を見る →</NuxtLink
+        >
+      </section>
+
+      <section
+        id="expertise"
+        class="home-section"
+        aria-labelledby="expertise-heading"
+      >
+        <SectionHeading
+          id="expertise-heading"
+          index="02"
+          label="Expertise"
+          title="専門領域"
+        />
+        <div class="expertise-grid">
+          <article
+            v-for="item in expertise"
+            :key="item.title"
+            class="expertise-card"
+          >
+            <span class="expertise-card__icon" aria-hidden="true">{{
+              item.icon
+            }}</span>
+            <h3>{{ item.title }}</h3>
+            <p>{{ item.description }}</p>
+            <ul class="tag-list" :aria-label="`${item.title}の技術要素`">
+              <li v-for="tag in item.tags" :key="tag">{{ tag }}</li>
+            </ul>
+          </article>
+        </div>
+        <NuxtLink class="text-link" to="/skills"
+          >スキルと経験を詳しく見る →</NuxtLink
+        >
+      </section>
+
+      <section
+        id="experience"
+        class="home-section"
+        aria-labelledby="experience-heading"
+      >
+        <SectionHeading
+          id="experience-heading"
+          index="03"
+          label="Experience"
+          title="経歴"
+        />
+        <ExperienceTimeline :items="workTimeline" />
+        <NuxtLink class="text-link" to="/experience"
+          >すべての経歴を見る →</NuxtLink
+        >
+      </section>
+
+      <section id="work" class="home-section" aria-labelledby="work-heading">
+        <SectionHeading
+          id="work-heading"
+          index="04"
+          label="Selected work"
+          title="記事・登壇・制作物"
+        />
+        <div class="work-grid">
+          <ArticleCard
+            v-for="article in featuredArticles"
+            :key="article.href"
+            :article="article"
+          />
+        </div>
+        <NuxtLink class="text-link" to="/articles"
+          >すべての記事・登壇を見る →</NuxtLink
+        >
+      </section>
     </div>
   </div>
 </template>
 
-<script lang="ts">
-import { defineComponent, ref, onMounted } from 'vue'
-import anime from 'animejs'
+<script setup lang="ts">
+import { computed, onBeforeUnmount, onMounted, ref } from 'vue'
+import articles from '@/constants/articles'
+import timeline from '@/constants/timeline'
 
-const COLOR_CLASSES = [
-  'v-green',
-  'v-cyan',
-  'v-red',
-  'v-orange',
-  'v-purple',
-  'v-yellow',
+if (typeof definePageMeta !== 'undefined') {
+  definePageMeta({ layout: 'gridless' })
+}
+
+const heroSection = ref<HTMLElement | null>(null)
+const featuredArticles = articles.filter((article) => article.featured)
+const workTimeline = computed(() =>
+  timeline.filter((item) => item.color === 'warning')
+)
+
+const expertise = [
+  {
+    icon: '△',
+    title: 'Architecture',
+    description:
+      'AWSやGCPを利用したシステムアーキテクチャの設計・構築を行っています。',
+    tags: ['AWS', 'GCP', 'Serverless'],
+  },
+  {
+    icon: '◎',
+    title: 'Site Reliability',
+    description:
+      '可観測性、パフォーマンス、CI/CD、クラウドコストの改善に取り組んでいます。',
+    tags: ['SRE', 'Observability', 'CI/CD'],
+  },
+  {
+    icon: '◇',
+    title: 'Security',
+    description:
+      'クラウドセキュリティ、セキュリティKPI、社内教育、開発ルールを担当しています。',
+    tags: ['Cloud Security', 'IaC', 'AI'],
+  },
 ]
 
-export default defineComponent({
-  setup() {
-    if (typeof definePageMeta !== 'undefined') {
-      definePageMeta({
-        layout: 'gridless',
-      })
-    }
-    const showAvatar = ref(false)
+const updateHeroProgress = () => {
+  const element = heroSection.value
+  if (!element) return
+  const range = element.offsetHeight - window.innerHeight
+  const progress =
+    range > 0
+      ? Math.min(Math.max(-element.getBoundingClientRect().top / range, 0), 1)
+      : 1
+  element.style.setProperty('--hero-progress', progress.toString())
+}
 
-    const runAnimation = () => {
-      if (!anime?.timeline) return
-      const timeline = anime.timeline({
-        complete: () => {
-          showAvatar.value = true
-          anime({
-            targets: '.avatar-overlay',
-            scale: [0.3, 1],
-            opacity: 1,
-            easing: 'easeOutBack',
-            duration: 300,
-          })
-        },
-      })
+onMounted(() => {
+  if (
+    typeof window.matchMedia === 'function' &&
+    window.matchMedia('(prefers-reduced-motion: reduce)').matches
+  ) {
+    heroSection.value?.style.setProperty('--hero-progress', '1')
+    return
+  }
+  updateHeroProgress()
+  window.addEventListener('scroll', updateHeroProgress, { passive: true })
+  window.addEventListener('resize', updateHeroProgress)
+})
 
-      // 1. タイルが中央から拡大表示
-      timeline.add({
-        targets: '#grid .el',
-        scale: [{ value: 1, easing: 'easeInQuad', duration: 150 }],
-        opacity: [{ value: 1, easing: 'linear', duration: 1 }],
-        delay: anime.stagger(8, { grid: [18, 18], from: 'center' }),
-      })
-
-      // 2. タイルが変色しながら中央から収縮（タイルが収縮して消えるアニメーション）
-      timeline.add({
-        targets: '#grid .el',
-        scale: 0,
-        backgroundColor: '#a6e22e',
-        easing: 'easeInQuad',
-        duration: 150,
-        delay: anime.stagger(8, { grid: [18, 18], from: 'center' }),
-      })
-    }
-
-    onMounted(() => {
-      runAnimation()
-    })
-
-    const squareClass = (index: number) => {
-      const color = COLOR_CLASSES[index % COLOR_CLASSES.length]
-      return `square small el ${color}`
-    }
-
-    return {
-      showAvatar,
-      squareClass,
-    }
-  },
+onBeforeUnmount(() => {
+  window.removeEventListener('scroll', updateHeroProgress)
+  window.removeEventListener('resize', updateHeroProgress)
 })
 </script>
 
-<style lang="scss">
-.index-page {
+<style scoped lang="scss">
+.hero {
+  --hero-progress: 1;
+
+  position: relative;
+  height: 150svh;
+  background:
+    linear-gradient(rgb(19 22 19 / 0.84), rgb(19 22 19 / 0.96)),
+    linear-gradient(90deg, var(--color-border) 1px, transparent 1px),
+    linear-gradient(var(--color-border) 1px, transparent 1px);
+  background-size:
+    auto,
+    40px 40px,
+    40px 40px;
+}
+
+.hero__sticky {
+  position: sticky;
+  top: 64px;
+  display: grid;
   min-height: calc(100svh - 64px);
-  display: flex !important;
-  justify-content: center;
+  overflow: hidden;
+  place-items: center;
+}
+
+.hero__content {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  gap: 32px;
   align-items: center;
-  padding: 0 !important;
+  width: min(100% - 32px, 1120px);
+}
 
-  .index-row {
-    display: flex;
-    height: 100%;
-    width: 100%;
-    margin: 0;
-    align-items: center;
-    justify-content: center;
+.hero__grid {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: grid;
+  grid-template-columns: repeat(8, 14px);
+  gap: 4px;
+  opacity: calc(0.12 + var(--hero-progress) * 0.2);
+  transform: translate(-50%, -50%) scale(calc(0.8 + var(--hero-progress) * 0.2));
+}
+
+.hero__grid span {
+  width: 14px;
+  height: 14px;
+  background: var(--color-primary);
+  opacity: clamp(
+    0,
+    calc(var(--hero-progress) * 2.5 - var(--cell-index) * 0.018),
+    0.8
+  );
+}
+
+.hero__grid::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  color: var(--color-secondary);
+  font-family: var(--font-technical);
+  font-size: 2rem;
+  content: '>';
+  opacity: clamp(0, calc(1 - var(--hero-progress) * 3), 1);
+  transform: translate(-50%, -50%);
+}
+
+.hero__identity {
+  width: clamp(96px, 24vw, 160px);
+  aspect-ratio: 1;
+  overflow: hidden;
+  opacity: clamp(0, calc(var(--hero-progress) * 3 - 1.2), 1);
+  border: 2px solid var(--color-primary);
+  border-radius: var(--radius-full);
+  transform: scale(calc(0.8 + var(--hero-progress) * 0.2));
+}
+
+.hero__identity img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__copy {
+  opacity: 1;
+}
+
+.hero__eyebrow {
+  margin: 0 0 16px;
+  color: var(--color-secondary);
+  font-family: var(--font-technical);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(3rem, 14vw, 6.75rem);
+  font-weight: 700;
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.hero__lead {
+  max-width: 620px;
+  margin: 24px 0 28px;
+  color: var(--color-text-muted);
+  font-size: clamp(1rem, 2vw, 1.125rem);
+}
+
+.hero__cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 10px 20px;
+  color: var(--color-background);
+  font-weight: 700;
+  text-decoration: none;
+  background: var(--color-primary);
+  border-radius: var(--radius-md);
+}
+
+.hero__scroll {
+  position: absolute;
+  right: 16px;
+  bottom: 20px;
+  margin: 0;
+  color: var(--color-text-muted);
+  font-family: var(--font-technical);
+  font-size: 0.7rem;
+  opacity: calc(1 - var(--hero-progress) * 2);
+}
+
+.home-container {
+  width: min(100% - 32px, 1120px);
+  margin-inline: auto;
+}
+
+.home-section {
+  padding-top: 72px;
+  scroll-margin-top: 64px;
+}
+
+.about-grid {
+  display: grid;
+  gap: 32px;
+}
+
+.about-copy {
+  max-width: 720px;
+  color: var(--color-text-muted);
+  font-size: 1.05rem;
+}
+
+.about-copy p {
+  margin: 0 0 20px;
+}
+
+.about-facts {
+  margin: 0;
+  border-top: 1px solid var(--color-border);
+}
+
+.about-facts div {
+  display: grid;
+  grid-template-columns: 88px 1fr;
+  gap: 16px;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.about-facts dt,
+.about-facts dd {
+  margin: 0;
+}
+
+.about-facts dt {
+  color: var(--color-secondary);
+  font-family: var(--font-technical);
+  font-size: 0.75rem;
+}
+
+.expertise-grid,
+.work-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.expertise-card {
+  padding: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-left: 2px solid var(--color-secondary);
+  border-radius: var(--radius-md);
+  transition:
+    background-color var(--motion-fast) ease-out,
+    transform var(--motion-normal) ease-out;
+}
+
+.expertise-card:hover {
+  background: var(--color-surface-hover);
+  transform: translateY(-2px);
+}
+
+.expertise-card__icon {
+  color: var(--color-secondary);
+  font-family: var(--font-technical);
+  font-size: 1.5rem;
+}
+
+.expertise-card h3 {
+  margin: 12px 0 8px;
+  font-size: 1.3rem;
+}
+
+.expertise-card p {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tag-list li {
+  padding: 3px 8px;
+  color: var(--color-secondary);
+  font-family: var(--font-technical);
+  font-size: 0.7rem;
+  background: rgb(102 217 239 / 0.08);
+  border-radius: var(--radius-full);
+}
+
+.text-link {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  margin-top: 24px;
+  color: var(--color-primary);
+  font-family: var(--font-technical);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+@media (width >= 640px) {
+  .hero {
+    height: 200svh;
   }
 
-  .animation-wrapper {
-    position: relative;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 360px;
-    height: 360px;
+  .hero__content {
+    grid-template-columns: auto 1fr;
+    gap: 56px;
   }
 
-  .square {
-    pointer-events: none;
-    width: 18px;
-    height: 18px;
-    margin: 1px;
-    font-size: 12px;
-    background-color: white;
-    opacity: 0;
+  .home-container {
+    width: min(100% - 48px, 1120px);
   }
-  .v-green {
-    background-color: var(--color-primary);
+
+  .home-section {
+    padding-top: 96px;
   }
-  .v-cyan {
-    background-color: var(--color-secondary);
+
+  .about-grid {
+    grid-template-columns: minmax(0, 2fr) minmax(240px, 1fr);
+    gap: 64px;
   }
-  .v-red {
-    background-color: var(--color-error);
-  }
-  .v-orange {
-    background-color: var(--color-warning);
-  }
-  .v-purple {
-    background-color: var(--color-accent);
-  }
-  .v-yellow {
-    background-color: #e6db74;
-  }
-  .small {
-    width: 18px;
-    height: 18px;
-  }
-  .grid {
-    margin: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    width: 360px;
-  }
-  .contents-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  .main-contents {
-    margin: auto;
-  }
-  .avatar-overlay {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-  }
-  .icon-avatar {
-    width: 160px;
-    height: 160px;
-    overflow: hidden;
-    border-radius: 50%;
+
+  .expertise-grid,
+  .work-grid {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
 @media (width >= 768px) {
-  .index-page {
+  .hero__sticky {
+    top: 72px;
     min-height: calc(100svh - 72px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero {
+    height: auto;
+  }
+
+  .hero__sticky {
+    position: relative;
+  }
+
+  .hero__grid,
+  .hero__identity,
+  .hero__copy,
+  .hero__scroll,
+  .expertise-card {
+    transition: none;
+    transform: none;
   }
 }
 </style>

@@ -4,5 +4,6 @@
     <main>
       <slot />
     </main>
+    <SiteFooter />
   </UApp>
 </template>

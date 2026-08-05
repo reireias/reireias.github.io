@@ -4,10 +4,11 @@ import { test } from '@playwright/test'
 
 const pages = [
   { name: 'home', path: '/' },
-  { name: 'articles', path: '/articles' },
-  { name: 'job', path: '/job' },
   { name: 'profile', path: '/profile' },
-  { name: 'skill', path: '/skill' },
+  { name: 'experience', path: '/experience' },
+  { name: 'articles', path: '/articles' },
+  { name: 'skills', path: '/skills' },
+  { name: 'sandbox', path: '/sandbox' },
 ]
 
 test.describe('Capture Page UI Screenshots', () => {
