@@ -200,14 +200,14 @@ const expertise = [
     icon: 'ai',
     title: 'AI Engineering',
     description:
-      'AIエージェントを組織で安全に活用するための基盤、ガードレール、MCP統合、可観測性を設計・実装しています。',
-    tags: ['AI Agents', 'MCP', 'Guardrails', 'Observability'],
+      'AIエージェントを組織で安全に活用する基盤を整え、リポジトリ横断の調査・実装を効率化し、Skillとして標準化しています。',
+    tags: ['AI Agents', 'MCP', 'Skills', 'Guardrails'],
   },
   {
     icon: 'architecture',
     title: 'Architecture & Enablement',
     description:
-      'アプリケーションからインフラまでを俯瞰し、コード化・標準化・自動化によって複数プロジェクトへ展開できる仕組みを構築しています。',
+      '技術課題を自ら発見し、関係者と調整しながら、コード化・標準化・自動化した改善を多数のリポジトリへ展開しています。',
     tags: ['Architecture', 'Standardization', 'Automation', 'DevEx'],
   },
 ]
