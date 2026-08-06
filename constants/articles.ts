@@ -25,6 +25,30 @@ const articles: Article[] = [
     featured: true,
   },
   {
+    href: 'https://tech.medpeer.co.jp/entry/2025/10/27/091904',
+    image:
+      'https://cdn.image.st-hatena.com/image/scale/9397139b32066115671a7279009670fe9e908d55/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fs%2Fsatoshitakumi%2F20251022%2F20251022175154.png',
+    title: 'GitHub ActionsでTerraformを実行する',
+    description:
+      'Terraform CloudからGitHub Actionsへ、使い勝手や機能を維持しながら移行した工夫を紹介します。',
+    type: 'Article',
+    source: 'MedPeer Developer Blog',
+    year: 2025,
+    tags: ['Terraform', 'GitHub Actions'],
+  },
+  {
+    href: 'https://tech.medpeer.co.jp/entry/2025/07/23/120000',
+    image:
+      'https://ogimage.blog.st-hatena.com/8454420450089458396/6802418398514934556/1753239603',
+    title: 'SREチームで「AIエージェント縛り」をやってみた',
+    description:
+      'SREチームが2週間AIエージェントを活用して開発し、得られた課題と知見をまとめました。',
+    type: 'Article',
+    source: 'MedPeer Developer Blog',
+    year: 2025,
+    tags: ['AI', 'SRE'],
+  },
+  {
     href: 'https://aws.amazon.com/jp/builders-flash/202211/best-practice-game-day/',
     image:
       'https://d1.awsstatic.com/Developer%20Marketing/jp/magazine/2022/thumb_best-practice-game-day.e8c956b14c26eb1cb52e08a998ac38544517f23d.jpg',
@@ -64,6 +88,43 @@ const articles: Article[] = [
     tags: ['AWS', 'Security'],
   },
   {
+    href: 'https://tech.medpeer.co.jp/entry/2021/03/24/080000',
+    image:
+      'https://cdn-ak.f.st-hatena.com/images/fotolife/s/satoshitakumi/20210308/20210308135840.png',
+    title: 'SREチームのセキュリティインシデントゲームデー',
+    description:
+      '実際の攻撃に近いシナリオでゲームデーを行い、インシデント対応の学びをまとめました。',
+    type: 'Article',
+    source: 'MedPeer Developer Blog',
+    year: 2021,
+    tags: ['AWS', 'Security'],
+  },
+  {
+    href: 'https://tech.medpeer.co.jp/entry/2020/11/24/090000',
+    image:
+      'https://cdn.image.st-hatena.com/image/scale/709ac0af3746414e3fe0f9ca5bf308dd03a8fd4e/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fs%2Fsatoshitakumi%2F20201118%2F20201118153720.png',
+    title: 'メドピアのECSデプロイ方法の変遷',
+    description:
+      'ECSの導入からデプロイ方式とタスク定義の管理方法を改善してきた変遷を紹介します。',
+    type: 'Article',
+    source: 'MedPeer Developer Blog',
+    year: 2020,
+    tags: ['AWS', 'ECS'],
+  },
+  {
+    href: 'https://tech.medpeer.co.jp/entry/2020/05/25/080000',
+    image:
+      'https://cdn-ak.f.st-hatena.com/images/fotolife/s/satoshitakumi/20200520/20200520154554.png',
+    title:
+      'Terraform用のGitHub Actionsをterraform-github-actionsから後継のsetup-terraformに移行する',
+    description:
+      'TerraformのCIを後継のsetup-terraformへ移行した際の設定と注意点を解説します。',
+    type: 'Article',
+    source: 'MedPeer Developer Blog',
+    year: 2020,
+    tags: ['Terraform', 'GitHub Actions'],
+  },
+  {
     href: 'https://qiita.com/reireias/items/0d87de18f43f27a8ed9b',
     image: '/article01.jpg',
     title: 'ラズパイ4で作るディスプレイ付きKubernetesクラスター',
@@ -73,6 +134,18 @@ const articles: Article[] = [
     source: 'Qiita',
     year: 2020,
     tags: ['Kubernetes', 'Raspberry Pi'],
+  },
+  {
+    href: 'https://tech.medpeer.co.jp/entry/2019/10/30/110000',
+    image:
+      'https://cdn.image.st-hatena.com/image/scale/9487d55c93d0b9b22fa3693e1cced9d618db6ee6/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fs%2Fsatoshitakumi%2F20191029%2F20191029102404.png',
+    title: '半年間の開発環境の改善を振り返る',
+    description:
+      'Railsプロジェクトの実装と並行して進めた、開発環境の改善施策を振り返ります。',
+    type: 'Article',
+    source: 'MedPeer Developer Blog',
+    year: 2019,
+    tags: ['Rails', 'Developer Experience'],
   },
   {
     href: 'https://qiita.com/reireias/items/2e377b2a42e4cb3aded1',
