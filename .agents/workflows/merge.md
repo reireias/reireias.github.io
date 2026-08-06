@@ -9,6 +9,7 @@ turbo: true
 
 1. `env gh pr view --json number -q .number` で現在のブランチのPR番号を取得する。
 2. `env gh pr merge <番号> --merge` でマージする。必ずマージコミット方式を使う。
-3. `git switch master` と `git pull` でmasterを最新化する。
+3. `git switch master` と `git pull --ff-only origin master` でローカルのmasterを最新化する。
+4. `git status --short --branch` などで、ローカル変更がなく、masterとorigin/masterが同期していることを確認する。
 
 // turbo

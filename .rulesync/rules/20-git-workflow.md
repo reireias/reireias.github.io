@@ -21,6 +21,7 @@ antigravity:
 - 新機能や修正ではトピックブランチを作成し、Pull Requestを経由する。
 - CIが成功しても、ユーザーの明示的な承認なしにPull Requestをマージしない。
 - マージを依頼された場合は、squashやrebaseではなく `env gh pr merge <番号> --merge` でマージコミットを作る。
+- Pull Requestをマージした後は、`git switch master` と `git pull --ff-only origin master` を実行し、ローカルの `master` を最新化する。最後にローカル変更がなく、`master` と `origin/master` が同期していることを確認する。
 
 ## コミット
 
