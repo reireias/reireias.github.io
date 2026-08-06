@@ -2,6 +2,38 @@
   <div>
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero__sticky">
+        <svg
+          class="hero__topology"
+          viewBox="0 0 1000 640"
+          preserveAspectRatio="xMidYMid slice"
+          aria-hidden="true"
+        >
+          <g class="hero__topology-links">
+            <path pathLength="1" d="M0 96 142 178 282 76 438 174" />
+            <path pathLength="1" d="M142 178 76 374 226 532 438 442" />
+            <path pathLength="1" d="M282 76 438 174 612 70 754 176 1000 92" />
+            <path pathLength="1" d="M438 174 438 442 612 548 754 424" />
+            <path pathLength="1" d="M754 176 918 300 754 424 1000 548" />
+            <path pathLength="1" d="M612 70 612 548" />
+          </g>
+          <g class="hero__topology-nodes">
+            <circle cx="0" cy="96" r="5" />
+            <circle cx="142" cy="178" r="7" />
+            <circle cx="282" cy="76" r="5" />
+            <circle cx="438" cy="174" r="7" />
+            <circle cx="76" cy="374" r="5" />
+            <circle cx="226" cy="532" r="7" />
+            <circle cx="438" cy="442" r="5" />
+            <circle cx="612" cy="70" r="7" />
+            <circle cx="754" cy="176" r="5" />
+            <circle cx="918" cy="300" r="7" />
+            <circle cx="754" cy="424" r="7" />
+            <circle cx="612" cy="548" r="5" />
+            <circle cx="1000" cy="92" r="5" />
+            <circle cx="1000" cy="548" r="5" />
+          </g>
+        </svg>
+        <div class="hero__content-shield" aria-hidden="true"></div>
         <div class="hero__content">
           <div class="hero__identity" aria-hidden="true">
             <img src="/icon.png" alt="" />
@@ -227,10 +259,57 @@ const expertise = [
 }
 
 .hero__sticky {
+  position: relative;
   display: grid;
   min-height: calc(100svh - 64px);
   overflow: hidden;
   place-items: center;
+}
+
+.hero__topology {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  fill: none;
+  pointer-events: none;
+}
+
+.hero__topology-links {
+  stroke: var(--color-secondary);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.25;
+}
+
+.hero__topology-links path {
+  opacity: 0.2;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  vector-effect: non-scaling-stroke;
+}
+
+.hero__topology-nodes {
+  fill: var(--color-secondary);
+}
+
+.hero__topology-nodes circle {
+  opacity: 0.28;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hero__content-shield {
+  position: absolute;
+  inset: 10% 4%;
+  background: radial-gradient(
+    ellipse at center,
+    rgb(19 22 19 / 0.96) 0%,
+    rgb(19 22 19 / 0.88) 36%,
+    rgb(19 22 19 / 0.56) 58%,
+    transparent 78%
+  );
+  pointer-events: none;
 }
 
 .hero__content {
@@ -433,6 +512,19 @@ h1 {
   text-decoration: none;
 }
 
+@media (width < 640px) {
+  .hero__content-shield {
+    inset: 12% -12%;
+    background: radial-gradient(
+      ellipse at 38% 50%,
+      rgb(19 22 19 / 0.99) 0%,
+      rgb(19 22 19 / 0.96) 52%,
+      rgb(19 22 19 / 0.78) 70%,
+      transparent 88%
+    );
+  }
+}
+
 @media (width >= 640px) {
   .hero__content {
     grid-template-columns: auto 1fr;
@@ -461,16 +553,152 @@ h1 {
   }
 }
 
+@supports (animation-timeline: scroll()) {
+  .hero {
+    height: 135svh;
+  }
+
+  .hero__sticky {
+    position: sticky;
+    top: 64px;
+  }
+
+  .hero__topology-links path {
+    animation-name: connect-topology;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 35svh;
+  }
+
+  .hero__topology-links path:nth-child(2),
+  .hero__topology-links path:nth-child(5) {
+    animation-name: connect-topology-late;
+  }
+
+  .hero__topology-nodes circle {
+    animation-name: activate-topology-node;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 35svh;
+  }
+
+  .hero__scroll {
+    animation-name: dismiss-scroll-hint;
+    animation-duration: 1ms;
+    animation-timing-function: linear;
+    animation-fill-mode: both;
+    animation-timeline: scroll(root block);
+    animation-range: 0 18svh;
+  }
+}
+
+@keyframes connect-topology {
+  0% {
+    opacity: 0.04;
+    stroke-dashoffset: 1;
+  }
+
+  62% {
+    opacity: 0.7;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    opacity: 0.2;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes connect-topology-late {
+  0%,
+  24% {
+    opacity: 0.04;
+    stroke-dashoffset: 1;
+  }
+
+  72% {
+    opacity: 0.7;
+    stroke-dashoffset: 0;
+  }
+
+  100% {
+    opacity: 0.2;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes activate-topology-node {
+  0% {
+    opacity: 0.08;
+    transform: scale(0.72);
+  }
+
+  56% {
+    opacity: 0.82;
+    transform: scale(1.18);
+  }
+
+  100% {
+    opacity: 0.28;
+    transform: scale(1);
+  }
+}
+
+@keyframes dismiss-scroll-hint {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
 @media (width >= 768px) {
   .hero__sticky {
     min-height: calc(100svh - 72px);
   }
+
+  @supports (animation-timeline: scroll()) {
+    .hero {
+      height: 180svh;
+    }
+
+    .hero__sticky {
+      top: 72px;
+    }
+
+    .hero__topology-links path,
+    .hero__topology-nodes circle {
+      animation-range: 0 80svh;
+    }
+
+    .hero__scroll {
+      animation-range: 0 28svh;
+    }
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .hero {
+    height: auto;
+  }
+
+  .hero__sticky {
+    position: relative;
+    top: auto;
+  }
+
+  .hero__topology-links path,
+  .hero__topology-nodes circle,
   .hero__copy,
   .hero__scroll,
   .expertise-card {
+    animation: none;
     transition: none;
     transform: none;
   }
