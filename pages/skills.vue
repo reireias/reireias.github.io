@@ -2,7 +2,7 @@
   <div>
     <PageTitle
       title="Skills"
-      description="SRE、セキュリティ、クラウドインフラなどの経験を掲載しています。"
+      description="SRE、セキュリティ、AI、アーキテクチャの課題を見つけ、解決を仕組みとして組織へ展開するスキルを紹介します。"
     />
     <section aria-labelledby="core-skills-heading">
       <SectionHeading
@@ -10,6 +10,7 @@
         index="01"
         label="Core"
         title="専門領域"
+        description="顕在化した課題への対応だけでなく、サービスや組織を横断して潜在的な課題を発見し、優先順位をつけて改善へつなげます。"
       />
       <div class="core-grid">
         <article
@@ -27,10 +28,34 @@
       </div>
     </section>
 
-    <section class="detail-section" aria-labelledby="details-heading">
+    <section class="skill-section" aria-labelledby="tech-stack-heading">
+      <SectionHeading
+        id="tech-stack-heading"
+        index="02"
+        label="Technology"
+        title="技術スタック"
+        description="現在の専門領域に関わる主な技術を整理しています。"
+      />
+      <div class="technology-grid">
+        <article
+          v-for="group in technologyGroups"
+          :key="group.title"
+          class="technology-group"
+        >
+          <h3>{{ group.title }}</h3>
+          <ul>
+            <li v-for="technology in group.items" :key="technology">
+              {{ technology }}
+            </li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="skill-section" aria-labelledby="details-heading">
       <SectionHeading
         id="details-heading"
-        index="02"
+        index="03"
         label="Details"
         title="経験と実績"
       />
@@ -70,22 +95,75 @@ import skills from '@/constants/skills'
 const coreSkills = [
   {
     number: '01',
-    title: 'Cloud Architecture',
-    description: 'AWSやGCPを利用したクラウド基盤の設計・構築経験があります。',
-    tags: ['AWS', 'GCP', 'Terraform', 'Serverless'],
+    title: 'Platform SRE',
+    description:
+      '20前後のサービスを支えるクラウド基盤を設計・運用し、可用性、性能、開発体験を継続的に改善しています。',
+    tags: ['AWS', 'Terraform', 'Observability', 'CI/CD'],
   },
   {
     number: '02',
-    title: 'Reliability Engineering',
-    description: '可観測性、性能、コスト、CI/CDの構築・改善を担当しています。',
-    tags: ['SRE', 'OpenTelemetry', 'CI/CD', 'FinOps'],
+    title: 'Security Engineering',
+    description:
+      '40を超えるAWSアカウントの統制、セキュリティKPI、インシデント対応、サプライチェーン攻撃対策を推進しています。',
+    tags: ['Cloud Security', 'Governance', 'Supply Chain', 'GameDay'],
   },
   {
     number: '03',
-    title: 'Security Engineering',
+    title: 'AI Engineering',
     description:
-      'クラウドの技術対策、KPI、社内教育、開発ルールの策定を担当しています。',
-    tags: ['Security', 'Governance', 'GameDay', 'AI Safety'],
+      'AIエージェントを組織で安全に活用する基盤を整え、リポジトリ横断の調査・実装を効率化し、Skillとして標準化しています。',
+    tags: ['AI Agents', 'MCP', 'Skills', 'Guardrails'],
+  },
+  {
+    number: '04',
+    title: 'Architecture & Enablement',
+    description:
+      '技術課題を自ら発見し、関係者と調整しながら、コード化・標準化・自動化した改善を多数のリポジトリへ展開しています。',
+    tags: ['Architecture', 'Standardization', 'Automation', 'DevEx'],
+  },
+]
+
+const technologyGroups = [
+  {
+    title: 'Cloud & Platform',
+    items: [
+      'AWS',
+      'GCP',
+      'Terraform',
+      'Kubernetes',
+      'Docker',
+      'Linux',
+      'Amazon ECS / Lambda',
+      'AWS Organizations',
+      'GitHub Actions',
+      'CircleCI',
+    ],
+  },
+  {
+    title: 'Application Development',
+    items: [
+      'TypeScript / JavaScript',
+      'Ruby / Ruby on Rails',
+      'Java',
+      'Go',
+      'Vue.js',
+      'SQL',
+    ],
+  },
+  {
+    title: 'Observability & Security',
+    items: [
+      'OpenTelemetry',
+      'Prometheus / Grafana',
+      'Datadog',
+      'CloudTrail / Security Hub',
+      'Renovate',
+      'gitleaks / zizmor',
+    ],
+  },
+  {
+    title: 'AI & Developer Experience',
+    items: ['Claude Code', 'MCP', 'AI Agents', 'Agent Skills / Plugins'],
   },
 ]
 </script>
@@ -138,8 +216,37 @@ const coreSkills = [
   border-radius: var(--radius-full);
 }
 
-.detail-section {
+.skill-section {
   padding-top: 96px;
+}
+
+.technology-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.technology-group {
+  padding: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+}
+
+.technology-group h3 {
+  margin: 0 0 16px;
+  font-size: 1rem;
+}
+
+.technology-group ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.technology-group li {
+  padding: 10px 0;
+  font-weight: 600;
+  border-top: 1px solid var(--color-border);
 }
 
 .skill-list {
@@ -200,7 +307,11 @@ summary:hover {
 
 @media (width >= 640px) {
   .core-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .technology-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   summary {
