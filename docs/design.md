@@ -358,24 +358,25 @@ Motionは、状態変化、空間的な関係、サイトの個性を伝える�
 
 ### Home Scroll-linked Animation
 
-Homeは、通常のスクロールに連動するシグネチャーアニメーションを使用する。スクロール操作を奪うscroll-jackingは行わない。
+Homeは、通常のスクロールに連動するシグネチャーアニメーションを使用する。Heroは固定せず、スクロール操作と同時にAboutが画面内へ入り始める構造とする。
 
-Heroを一時的にsticky表示し、scroll progressを0〜100%として次のsequenceを表現する。
+アバター、名前、肩書き、紹介文は最初から完成状態で表示し、背景のTopologyのみをscroll progress 0〜100%として変化させる。
 
 | Progress | State |
 | --- | --- |
-| `0–25%` | 薄いtechnical gridとcyanのcursorまたは`>`を表示する |
-| `25–50%` | Monokai greenのcellが中心または左上から組み上がる |
-| `50–75%` | cellが収束し、iconまたは`reireias.dev`のsymbolを形成する |
-| `75–100%` | symbolを移動し、名前、肩書き、紹介文を表示してAboutへつなぐ |
+| `0–25%` | 薄いtechnical gridと疎らなcyanのnodeを表示する |
+| `25–70%` | node間の経路が段階的に接続され、Topologyが明るくなる |
+| `70–100%` | 接続状態を保ったままTopologyを弱め、Aboutへつなぐ |
 
 実装時は次を必須とする。
 
-- desktopの演出区間は`180–220vh`を目安とする。
-- mobileは`130–160vh`へ短縮し、cell数と移動量を減らす。
+- Heroはheaderを除く1画面以内とし、追加のスクロール領域を設けない。
+- 背景アニメーションの進行範囲はdesktopで`75svh`、mobileで`65svh`を目安とする。
+- mobileはTopologyを中央部分へ絞り、node数と経路の情報量を減らす。
+- 前景コンテンツの背面には保護領域を設け、Topologyとのコントラストを一定に保つ。
 - wheel、touch、keyboardによる通常のスクロール位置や速度を変更しない。
 - Hero演出にscroll snapを使用しない。
-- animation完了前でも主要情報へアクセスできる構造にする。
+- animationの進行にかかわらず主要情報へアクセスできる構造にする。
 - JavaScriptが無効または失敗した場合は、最終状態の内容を表示する。
 - Core Web Vitalsへ影響する大きな画像やlayout shiftを発生させない。
 

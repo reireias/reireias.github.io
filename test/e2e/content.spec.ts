@@ -12,7 +12,7 @@ test('home shows its primary information without scrolling', async ({
   await expect(page.locator('#experience .timeline li')).toHaveCount(2)
 })
 
-test('home connects topology nodes in both scroll directions while keeping the hero content fixed', async ({
+test('home connects topology nodes in both directions while scrolling the hero naturally', async ({
   page,
 }) => {
   await page.setViewportSize({ width: 1280, height: 800 })
@@ -29,10 +29,10 @@ test('home connects topology nodes in both scroll directions while keeping the h
     await topologyPath.evaluate((element) => getComputedStyle(element).opacity)
   )
 
-  await expect(hero).toHaveCSS('height', '1440px')
+  await expect(hero).toHaveCSS('height', '728px')
   await expect(topologyPath).toHaveCSS('stroke-dashoffset', '1px')
 
-  await page.evaluate(() => window.scrollTo(0, 400))
+  await page.evaluate(() => window.scrollTo(0, 240))
   await page.waitForTimeout(100)
 
   const activeContentBox = await content.boundingBox()
@@ -40,9 +40,10 @@ test('home connects topology nodes in both scroll directions while keeping the h
     await topologyPath.evaluate((element) => getComputedStyle(element).opacity)
   )
 
-  expect(
-    Math.abs((activeContentBox?.y ?? 0) - (initialContentBox?.y ?? 0))
-  ).toBeLessThanOrEqual(2)
+  expect((activeContentBox?.y ?? 0) - (initialContentBox?.y ?? 0)).toBeCloseTo(
+    -240,
+    0
+  )
   expect(activePathOpacity).toBeGreaterThan(initialPathOpacity + 0.2)
   await expect(page.locator('.hero__identity img')).toBeVisible()
   await expect(page.getByRole('heading', { name: 'reireias' })).toBeVisible()
@@ -75,9 +76,7 @@ test('home connects topology nodes in both scroll directions while keeping the h
       )
     )
     .toBeCloseTo(initialPathOpacity, 2)
-  expect(
-    Math.abs((returnedContentBox?.y ?? 0) - (initialContentBox?.y ?? 0))
-  ).toBeLessThanOrEqual(2)
+  expect(returnedContentBox?.y).toBeCloseTo(initialContentBox?.y ?? 0, 0)
 })
 
 test('home keeps the mobile hero sequence compact', async ({ page }) => {
@@ -87,9 +86,10 @@ test('home keeps the mobile hero sequence compact', async ({ page }) => {
   const heroHeight = await page
     .locator('.hero')
     .evaluate((element) => element.getBoundingClientRect().height)
+  const initialContentBox = await page.locator('.hero__content').boundingBox()
 
-  expect(heroHeight).toBeCloseTo(844 * 1.35, 0)
-  expect(heroHeight).toBeLessThan(844 * 1.5)
+  expect(heroHeight).toBeCloseTo(844 - 64, 0)
+  expect(heroHeight).toBeLessThan(844)
 
   await page.evaluate(() => window.scrollTo(0, 295))
   await page.waitForTimeout(300)
@@ -104,6 +104,7 @@ test('home keeps the mobile hero sequence compact', async ({ page }) => {
   expect(viewportMetrics.scrollWidth).toBe(viewportMetrics.innerWidth)
   expect(viewportMetrics.scrollX).toBe(0)
   expect(contentBox?.x).toBeGreaterThanOrEqual(16)
+  expect(contentBox?.y).toBeLessThan((initialContentBox?.y ?? 0) - 250)
 })
 
 test('home shows the settled topology without a sticky sequence for reduced motion', async ({

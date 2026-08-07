@@ -554,22 +554,13 @@ h1 {
 }
 
 @supports (animation-timeline: scroll()) {
-  .hero {
-    height: 135svh;
-  }
-
-  .hero__sticky {
-    position: sticky;
-    top: 64px;
-  }
-
   .hero__topology-links path {
     animation-name: connect-topology;
     animation-duration: 1ms;
     animation-timing-function: linear;
     animation-fill-mode: both;
     animation-timeline: scroll(root block);
-    animation-range: 0 35svh;
+    animation-range: 0 65svh;
   }
 
   .hero__topology-links path:nth-child(2),
@@ -583,7 +574,7 @@ h1 {
     animation-timing-function: linear;
     animation-fill-mode: both;
     animation-timeline: scroll(root block);
-    animation-range: 0 35svh;
+    animation-range: 0 65svh;
   }
 
   .hero__scroll {
@@ -664,17 +655,9 @@ h1 {
   }
 
   @supports (animation-timeline: scroll()) {
-    .hero {
-      height: 180svh;
-    }
-
-    .hero__sticky {
-      top: 72px;
-    }
-
     .hero__topology-links path,
     .hero__topology-nodes circle {
-      animation-range: 0 80svh;
+      animation-range: 0 75svh;
     }
 
     .hero__scroll {
@@ -684,15 +667,6 @@ h1 {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .hero {
-    height: auto;
-  }
-
-  .hero__sticky {
-    position: relative;
-    top: auto;
-  }
-
   .hero__topology-links path,
   .hero__topology-nodes circle,
   .hero__copy,
