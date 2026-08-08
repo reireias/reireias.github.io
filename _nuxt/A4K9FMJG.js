@@ -1,1 +1,0 @@
-import{Q as e,U as t,d as n,f as r,y as i,z as a}from"./BVniFzLs.js";import{t as o}from"./BDNMzG2s.js";import{n as s,r as c,t as l}from"./DQ8saHh9.js";var u={};function d(o,u){let d=c,f=s,p=l;return a(),r(p,{class:`app-shell`},{default:e(()=>[i(d),n(`main`,null,[t(o.$slots,`default`)]),i(f)]),_:3})}var f=o(u,[[`render`,d]]);export{f as default};
