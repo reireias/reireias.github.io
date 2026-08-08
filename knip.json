@@ -4,7 +4,8 @@
     "pages/**/*.{vue,js,ts}",
     "layouts/**/*.{vue,js,ts}",
     "components/**/*.{vue,js,ts}",
-    "scripts/**/*.js"
+    "scripts/**/*.js",
+    "unlighthouse.config.ts"
   ],
   "project": [
     "**/*.{vue,js,ts}"

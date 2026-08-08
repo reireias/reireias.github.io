@@ -18,6 +18,7 @@
     "lint:style": "stylelint \"**/*.{css,scss,vue}\" --ignore-path .gitignore",
     "lint:style:fix": "stylelint \"**/*.{css,scss,vue}\" --ignore-path .gitignore --fix",
     "generate": "nuxi generate && rm -rf dist && cp -r .output/public dist && echo 'reireias.dev' > dist/CNAME",
+    "audit:performance": "pnpm generate && start-server-and-test 'http-server ./dist -p 3000 -c-1 -s' http://127.0.0.1:3000 'unlighthouse-ci --site http://127.0.0.1:3000'",
     "benchmark": "node scripts/benchmark.js https://reireias.github.io $(git rev-parse HEAD)",
     "test": "jest",
     "test:e2e": "playwright test",
@@ -71,6 +72,7 @@
     "qs": "^6.15.3",
     "rulesync": "^16.9.1",
     "sass-embedded": "^1.100.0",
+    "start-server-and-test": "^3.0.12",
     "stylelint": "^17.14.1",
     "stylelint-config-html": "^2.0.0",
     "stylelint-config-recommended": "18.0.0",
@@ -81,6 +83,7 @@
     "typescript": "^5.9.3",
     "typescript-eslint": "^8.66.0",
     "ufo": "^1.6.4",
+    "unlighthouse": "^0.18.0",
     "vue": "3.5.41",
     "vue-eslint-parser": "^10.4.1"
   }
