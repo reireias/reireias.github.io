@@ -55,7 +55,8 @@ jobs:
           node-version: '24.19.0'
           cache: 'pnpm'
       - run: pnpm install --frozen-lockfile
-      - run: pnpm generate
+      - name: Run Unlighthouse performance audit
+        run: pnpm audit:performance
       - name: Run Playwright E2E tests
         run: PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 pnpm test:e2e
       - name: Upload Playwright report
@@ -65,5 +66,3 @@ jobs:
           name: playwright-report
           path: playwright-report/
           retention-days: 30
-
-

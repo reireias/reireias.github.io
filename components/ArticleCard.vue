@@ -12,7 +12,7 @@
       <p class="article-card__meta">
         {{ article.type }} · {{ article.source }} · {{ article.year }}
       </p>
-      <h3>{{ article.title }}</h3>
+      <h2>{{ article.title }}</h2>
       <p class="article-card__description">{{ article.description }}</p>
       <ul class="tag-list" aria-label="技術カテゴリ">
         <li v-for="tag in article.tags" :key="tag">{{ tag }}</li>
@@ -84,7 +84,7 @@ img {
   font-size: 0.75rem;
 }
 
-h3 {
+h2 {
   margin: 0;
   font-size: 1.25rem;
   line-height: 1.4;
