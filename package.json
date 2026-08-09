@@ -18,7 +18,7 @@
     "lint:style": "stylelint \"**/*.{css,scss,vue}\" --ignore-path .gitignore",
     "lint:style:fix": "stylelint \"**/*.{css,scss,vue}\" --ignore-path .gitignore --fix",
     "generate": "nuxi generate && rm -rf dist && cp -r .output/public dist && echo 'reireias.dev' > dist/CNAME",
-    "audit:performance": "pnpm generate && start-server-and-test 'http-server ./dist -p 3000 -c-1 -s' http://127.0.0.1:3000 'unlighthouse-ci --site http://127.0.0.1:3000'",
+    "audit:performance": "pnpm generate && start-server-and-test 'http-server ./dist -p 3000 -c-1 -s' http://127.0.0.1:3000 'unlighthouse-ci --site http://127.0.0.1:3000 && node scripts/verify-performance-audit.mjs'",
     "benchmark": "node scripts/benchmark.js https://reireias.github.io $(git rev-parse HEAD)",
     "test": "jest",
     "test:e2e": "playwright test",
