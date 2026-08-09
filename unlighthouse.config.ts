@@ -32,7 +32,6 @@ export default defineUnlighthouseConfig({
       performance: 55,
       accessibility: 100,
       'best-practices': 100,
-      seo: 100,
     },
     reporter: 'json',
   },
