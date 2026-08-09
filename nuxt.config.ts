@@ -65,7 +65,7 @@ export default defineNuxtConfig({
     },
   },
   css: ['@/assets/app.css'],
-  modules: ['@nuxt/ui'],
+  modules: ['@nuxt/image', '@nuxt/ui'],
   colorMode: {
     preference: 'dark',
     fallback: 'dark',

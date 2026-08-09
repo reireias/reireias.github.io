@@ -36,7 +36,16 @@
         <div class="hero__content-shield" aria-hidden="true"></div>
         <div class="hero__content">
           <div class="hero__identity" aria-hidden="true">
-            <img src="/icon.png" alt="" />
+            <NuxtPicture
+              src="/icon.png"
+              alt=""
+              format="avif,webp"
+              width="160"
+              height="160"
+              sizes="96px md:160px"
+              preload
+              :img-attrs="{ class: 'hero__identity-image' }"
+            />
           </div>
           <div class="hero__copy">
             <p class="hero__eyebrow">
@@ -329,7 +338,11 @@ const expertise = [
   border-radius: var(--radius-full);
 }
 
-.hero__identity img {
+.hero__identity :deep(picture) {
+  display: contents;
+}
+
+.hero__identity :deep(.hero__identity-image) {
   width: 100%;
   height: 100%;
   object-fit: cover;
