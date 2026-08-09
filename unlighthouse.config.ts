@@ -16,7 +16,8 @@ export default defineUnlighthouseConfig({
   ],
   scanner: {
     device: 'mobile',
-    samples: 1,
+    // Unlighthouse selects Lighthouse's median run when multiple samples exist.
+    samples: 3,
     throttle: true,
   },
   chrome: {
