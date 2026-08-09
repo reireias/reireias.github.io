@@ -6,7 +6,16 @@
     />
 
     <section class="profile-intro" aria-labelledby="profile-intro-heading">
-      <img src="/icon.png" alt="reireiasのアイコン" />
+      <NuxtPicture
+        src="/icon.png"
+        alt="reireiasのアイコン"
+        format="avif,webp"
+        width="120"
+        height="120"
+        sizes="120px"
+        preload
+        :img-attrs="{ class: 'profile-intro__image' }"
+      />
       <div>
         <h2 id="profile-intro-heading">現在の仕事</h2>
         <p>
@@ -79,7 +88,11 @@ import socials from '@/constants/socials'
   border-radius: var(--radius-md);
 }
 
-.profile-intro img {
+.profile-intro :deep(picture) {
+  display: contents;
+}
+
+.profile-intro :deep(.profile-intro__image) {
   width: 120px;
   aspect-ratio: 1;
   object-fit: cover;

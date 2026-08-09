@@ -1,5 +1,5 @@
 <template>
-  <img :src="src" :alt="alt" />
+  <NuxtImg :src="src" :alt="alt" format="webp" />
 </template>
 <script setup lang="ts">
 withDefaults(defineProps<{ src: string; alt?: string }>(), { alt: '' })

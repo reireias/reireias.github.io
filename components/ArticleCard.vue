@@ -6,7 +6,28 @@
     rel="noopener noreferrer"
   >
     <div class="article-card__image">
-      <img :src="article.image" :alt="article.title" loading="lazy" />
+      <NuxtPicture
+        v-if="article.image.startsWith('/')"
+        :src="article.image"
+        :alt="article.title"
+        class="article-card__picture"
+        format="avif,webp"
+        legacy-format="jpg"
+        width="544"
+        height="306"
+        sizes="384px lg:544px"
+        loading="lazy"
+        :img-attrs="{ class: 'article-card__img' }"
+      />
+      <img
+        v-else
+        :src="article.image"
+        :alt="article.title"
+        class="article-card__img"
+        width="544"
+        height="306"
+        loading="lazy"
+      />
     </div>
     <div class="article-card__body">
       <p class="article-card__meta">
@@ -59,7 +80,11 @@ defineProps<{ article: Article }>()
   background: var(--color-background);
 }
 
-img {
+.article-card__picture {
+  display: contents;
+}
+
+:deep(.article-card__img) {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9;
@@ -67,7 +92,7 @@ img {
   transition: transform var(--motion-slow) ease-out;
 }
 
-.article-card:hover img {
+.article-card:hover :deep(.article-card__img) {
   transform: scale(1.015);
 }
 
@@ -122,13 +147,13 @@ h2 {
 
 @media (prefers-reduced-motion: reduce) {
   .article-card,
-  img {
+  :deep(.article-card__img) {
     transition: none;
   }
 
   .article-card:hover,
   .article-card:focus-visible,
-  .article-card:hover img {
+  .article-card:hover :deep(.article-card__img) {
     transform: none;
   }
 }
