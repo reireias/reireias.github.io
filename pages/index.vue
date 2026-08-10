@@ -213,9 +213,7 @@ import { computed } from 'vue'
 import articles from '@/constants/articles'
 import timeline from '@/constants/timeline'
 
-if (typeof definePageMeta !== 'undefined') {
-  definePageMeta({ layout: 'gridless' })
-}
+definePageMeta({ layout: 'gridless' })
 
 const featuredArticles = articles.filter((article) => article.featured)
 const workTimeline = computed(() =>

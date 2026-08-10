@@ -194,6 +194,10 @@
   </AppContainer>
 </template>
 
+<script setup lang="ts">
+definePageMeta({ layout: 'gridless' })
+</script>
+
 <script lang="ts">
 import { defineComponent, ref, nextTick } from 'vue'
 import anime from 'animejs'
@@ -204,11 +208,6 @@ export default defineComponent({
     PageTitle,
   },
   setup() {
-    if (typeof definePageMeta !== 'undefined') {
-      definePageMeta({
-        layout: 'gridless',
-      })
-    }
     const ratio = 0.93
     const loops = 10
     let radius = 200
