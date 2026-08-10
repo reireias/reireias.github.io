@@ -1,0 +1,1 @@
+import{F as e,St as t,f as n,l as r,y as i}from"./Dqgsb3zK.js";import{t as a}from"./BDNMzG2s.js";var o={class:`key-value-row`},s=Object.assign(a(i({__name:`KeyValueRow`,props:{k:{},v:{}},setup(i){return(a,s)=>(e(),n(`div`,o,[r(`dt`,null,t(i.k),1),r(`dd`,null,t(i.v),1)]))}}),[[`__scopeId`,`data-v-2105514c`]]),{__name:`KeyValueRow`});export{s as t};
