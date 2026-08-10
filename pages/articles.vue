@@ -12,9 +12,11 @@
     </div>
     <div class="article-grid">
       <ArticleCard
-        v-for="article in articles"
+        v-for="(article, index) in articles"
         :key="article.href"
         :article="article"
+        :image-loading="index === 0 ? 'eager' : 'lazy'"
+        :image-fetch-priority="index === 0 ? 'high' : 'auto'"
       />
     </div>
   </div>

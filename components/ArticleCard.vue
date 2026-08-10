@@ -7,26 +7,19 @@
   >
     <div class="article-card__image">
       <NuxtPicture
-        v-if="article.image.startsWith('/')"
         :src="article.image"
         :alt="article.title"
         class="article-card__picture"
         format="avif,webp"
-        legacy-format="jpg"
+        legacy-format="webp"
         width="544"
         height="306"
         sizes="384px lg:544px"
-        loading="lazy"
-        :img-attrs="{ class: 'article-card__img' }"
-      />
-      <img
-        v-else
-        :src="article.image"
-        :alt="article.title"
-        class="article-card__img"
-        width="544"
-        height="306"
-        loading="lazy"
+        :loading="imageLoading"
+        :img-attrs="{
+          class: 'article-card__img',
+          fetchpriority: imageFetchPriority,
+        }"
       />
     </div>
     <div class="article-card__body">
@@ -49,7 +42,17 @@
 <script setup lang="ts">
 import type { Article } from '@/constants/articles'
 
-defineProps<{ article: Article }>()
+withDefaults(
+  defineProps<{
+    article: Article
+    imageLoading?: 'eager' | 'lazy'
+    imageFetchPriority?: 'auto' | 'high' | 'low'
+  }>(),
+  {
+    imageLoading: 'lazy',
+    imageFetchPriority: 'auto',
+  }
+)
 </script>
 
 <style scoped>

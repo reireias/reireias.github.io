@@ -27,7 +27,7 @@ const articles: Article[] = [
   {
     href: 'https://tech.medpeer.co.jp/entry/2025/10/27/091904',
     image:
-      'https://cdn.image.st-hatena.com/image/scale/9397139b32066115671a7279009670fe9e908d55/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fs%2Fsatoshitakumi%2F20251022%2F20251022175154.png',
+      'https://cdn-ak.f.st-hatena.com/images/fotolife/s/satoshitakumi/20251022/20251022175154.png',
     title: 'GitHub ActionsでTerraformを実行する',
     description:
       'Terraform CloudからGitHub Actionsへ、使い勝手や機能を維持しながら移行した工夫を紹介します。',
@@ -64,7 +64,7 @@ const articles: Article[] = [
   {
     href: 'https://speakerdeck.com/reireias/improving-efficiency-of-aws-account-operations-by-medpeer-sre-team',
     image:
-      'https://files.speakerdeck.com/presentations/bbcf01585b25479cb993975808c63709/slide_0.jpg?19573755',
+      'https://files.speakerdeck.com/presentations/bbcf01585b25479cb993975808c63709/slide_0.jpg',
     title: 'SREチームによるAWSアカウント運用効率化',
     description:
       '複数AWSアカウントの運用を、安全性を保ちながら効率化した取り組みです。',
@@ -102,7 +102,7 @@ const articles: Article[] = [
   {
     href: 'https://tech.medpeer.co.jp/entry/2020/11/24/090000',
     image:
-      'https://cdn.image.st-hatena.com/image/scale/709ac0af3746414e3fe0f9ca5bf308dd03a8fd4e/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fs%2Fsatoshitakumi%2F20201118%2F20201118153720.png',
+      'https://cdn-ak.f.st-hatena.com/images/fotolife/s/satoshitakumi/20201118/20201118153720.png',
     title: 'メドピアのECSデプロイ方法の変遷',
     description:
       'ECSの導入からデプロイ方式とタスク定義の管理方法を改善してきた変遷を紹介します。',
@@ -138,7 +138,7 @@ const articles: Article[] = [
   {
     href: 'https://tech.medpeer.co.jp/entry/2019/10/30/110000',
     image:
-      'https://cdn.image.st-hatena.com/image/scale/9487d55c93d0b9b22fa3693e1cced9d618db6ee6/backend=imagemagick;version=1;width=1300/https%3A%2F%2Fcdn-ak.f.st-hatena.com%2Fimages%2Ffotolife%2Fs%2Fsatoshitakumi%2F20191029%2F20191029102404.png',
+      'https://cdn-ak.f.st-hatena.com/images/fotolife/s/satoshitakumi/20191029/20191029102404.png',
     title: '半年間の開発環境の改善を振り返る',
     description:
       'Railsプロジェクトの実装と並行して進めた、開発環境の改善施策を振り返ります。',
@@ -161,7 +161,7 @@ const articles: Article[] = [
   {
     href: 'https://speakerdeck.com/reireias/medpeer-aws-seminar-ecs',
     image:
-      'https://files.speakerdeck.com/presentations/f93589dc55794dc8b722be041a7997d1/slide_0.jpg?672505',
+      'https://files.speakerdeck.com/presentations/f93589dc55794dc8b722be041a7997d1/slide_0.jpg',
     title: 'AWS勉強会 ECS編',
     description:
       'コンテナとECSの基礎から実運用までを解説した社内勉強会資料です。',
