@@ -42,7 +42,7 @@ export default defineNuxtConfig({
     },
   },
   css: ['@/assets/app.css'],
-  modules: ['@nuxt/image', '@nuxt/ui', '@nuxtjs/sitemap'],
+  modules: ['@nuxt/fonts', '@nuxt/image', '@nuxtjs/sitemap'],
   fonts: {
     defaults: {
       styles: ['normal'],
@@ -61,10 +61,6 @@ export default defineNuxtConfig({
     '/skill': { sitemap: false },
     '/template': { sitemap: false },
     '/sandbox/**': { sitemap: false },
-  },
-  colorMode: {
-    preference: 'dark',
-    fallback: 'dark',
   },
   compatibilityDate: '2024-04-03',
 })
