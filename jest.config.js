@@ -16,6 +16,7 @@ module.exports = {
   ],
   testPathIgnorePatterns: ['/node_modules/', '/test/e2e/'],
   testEnvironment: 'jsdom',
+  setupFiles: ['<rootDir>/test/setup.ts'],
   testEnvironmentOptions: {
     customExportConditions: ['node', 'node-addons'],
   },
