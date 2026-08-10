@@ -21,7 +21,7 @@
           </div>
         </AppRow>
         <AppRow justify="center">
-          <AppButton outlined @click="startAnime1">start</AppButton>
+          <AppButton @click="startAnime1">start</AppButton>
         </AppRow>
       </AppColumn>
 
@@ -66,7 +66,7 @@
           </div>
         </AppRow>
         <AppRow justify="center">
-          <AppButton outlined @click="startAnime2">start</AppButton>
+          <AppButton @click="startAnime2">start</AppButton>
         </AppRow>
       </AppColumn>
     </AppRow>
@@ -98,7 +98,7 @@
           </div>
         </AppRow>
         <AppRow justify="center">
-          <AppButton outlined @click="startAnime3">start</AppButton>
+          <AppButton @click="startAnime3">start</AppButton>
         </AppRow>
       </AppColumn>
       <AppColumn cols="6">
@@ -119,7 +119,7 @@
           </div>
         </AppRow>
         <AppRow justify="center">
-          <AppButton outlined @click="startAnime4">start</AppButton>
+          <AppButton @click="startAnime4">start</AppButton>
         </AppRow>
       </AppColumn>
     </AppRow>
@@ -139,7 +139,7 @@
           </div>
         </AppRow>
         <AppRow justify="center">
-          <AppButton outlined @click="startAnime5">start</AppButton>
+          <AppButton @click="startAnime5">start</AppButton>
         </AppRow>
       </AppColumn>
       <AppColumn cols="6">
@@ -157,7 +157,7 @@
           </div>
         </AppRow>
         <AppRow justify="center">
-          <AppButton outlined @click="startAnime6">start</AppButton>
+          <AppButton @click="startAnime6">start</AppButton>
         </AppRow>
       </AppColumn>
     </AppRow>
@@ -186,7 +186,7 @@
           </div>
         </AppRow>
         <AppRow justify="center">
-          <AppButton outlined @click="startAnime7">start</AppButton>
+          <AppButton @click="startAnime7">start</AppButton>
         </AppRow>
       </AppColumn>
       <AppColumn cols="6"></AppColumn>

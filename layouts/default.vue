@@ -1,9 +1,9 @@
 <template>
-  <UApp class="app-shell">
+  <div class="app-shell">
     <NavigationDrawer />
     <main class="page-container">
       <slot />
     </main>
     <SiteFooter />
-  </UApp>
+  </div>
 </template>

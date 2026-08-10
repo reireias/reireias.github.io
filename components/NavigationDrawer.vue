@@ -14,17 +14,16 @@
         </NuxtLink>
       </nav>
 
-      <UButton
+      <button
         class="menu-button"
-        color="neutral"
-        variant="ghost"
+        type="button"
         :aria-expanded="menuOpen"
         aria-controls="mobile-navigation"
         :aria-label="menuOpen ? 'メニューを閉じる' : 'メニューを開く'"
         @click="menuOpen = !menuOpen"
       >
         <span aria-hidden="true">{{ menuOpen ? '×' : '☰' }}</span>
-      </UButton>
+      </button>
     </div>
 
     <nav
@@ -116,7 +115,17 @@ nav a {
 }
 
 .menu-button {
+  display: inline-grid;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border-radius: 6px;
+  place-items: center;
   font-size: 1.4rem;
+}
+
+.menu-button:hover {
+  background: var(--color-surface-hover);
 }
 
 .mobile-nav {
