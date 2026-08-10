@@ -4,6 +4,14 @@ import process from 'node:process'
 const REPORT_ROOT = '.unlighthouse/reports'
 const PUBLIC_PERFORMANCE_BUDGET = 60
 const SANDBOX_PERFORMANCE_BUDGET = 55
+const SEO_BUDGET = 100
+const INDEXABLE_ROUTES = new Set([
+  '/',
+  '/articles/',
+  '/experience/',
+  '/profile/',
+  '/skills/',
+])
 
 const formatMetric = (audit, divisor = 1, suffix = '') => {
   if (typeof audit?.numericValue !== 'number') return 'n/a'
@@ -33,7 +41,8 @@ const rows = await Promise.all(
   simpleReports.map(async (simpleReport) => {
     if (
       typeof simpleReport.path !== 'string' ||
-      !Number.isFinite(simpleReport.performance)
+      !Number.isFinite(simpleReport.performance) ||
+      !Number.isFinite(simpleReport.seo)
     ) {
       throw new Error('Unlighthouse produced an invalid route result')
     }
@@ -47,6 +56,8 @@ const rows = await Promise.all(
       path: simpleReport.path,
       performance: simpleReport.performance * 100,
       budget,
+      seo: simpleReport.seo * 100,
+      seoBudget: INDEXABLE_ROUTES.has(simpleReport.path) ? SEO_BUDGET : null,
       fcp: formatMetric(report.audits['first-contentful-paint'], 1000, 's'),
       lcp: formatMetric(report.audits['largest-contentful-paint'], 1000, 's'),
       tbt: formatMetric(report.audits['total-blocking-time'], 1, 'ms'),
@@ -60,11 +71,11 @@ const markdown = [
   '',
   'Scores and metrics use the median Lighthouse run from three mobile samples.',
   '',
-  '| Route | Performance | Budget | FCP | LCP | TBT | CLS |',
-  '| --- | ---: | ---: | ---: | ---: | ---: | ---: |',
+  '| Route | Performance | Budget | SEO | SEO budget | FCP | LCP | TBT | CLS |',
+  '| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |',
   ...rows.map(
-    ({ path, performance, budget, fcp, lcp, tbt, cls }) =>
-      `| \`${path}\` | ${Math.round(performance)} | ${budget} | ${fcp} | ${lcp} | ${tbt} | ${cls} |`
+    ({ path, performance, budget, seo, seoBudget, fcp, lcp, tbt, cls }) =>
+      `| \`${path}\` | ${Math.round(performance)} | ${budget} | ${Math.round(seo)} | ${seoBudget ?? 'n/a'} | ${fcp} | ${lcp} | ${tbt} | ${cls} |`
   ),
   '',
 ].join('\n')
@@ -75,13 +86,17 @@ if (process.env.GITHUB_STEP_SUMMARY) {
   await appendFile(process.env.GITHUB_STEP_SUMMARY, markdown)
 }
 
-const failures = rows.filter(({ performance, budget }) => performance < budget)
+const failures = rows.filter(
+  ({ performance, budget, seo, seoBudget }) =>
+    performance < budget || (seoBudget !== null && seo < seoBudget)
+)
 
 if (failures.length > 0) {
   const details = failures
     .map(
-      ({ path, performance, budget }) => `${path}: ${performance} < ${budget}`
+      ({ path, performance, budget, seo, seoBudget }) =>
+        `${path}: Performance ${performance}/${budget}, SEO ${seo}/${seoBudget ?? 'n/a'}`
     )
     .join(', ')
-  throw new Error(`Performance budget failed: ${details}`)
+  throw new Error(`Audit budget failed: ${details}`)
 }
