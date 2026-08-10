@@ -43,6 +43,12 @@ export default defineNuxtConfig({
   },
   css: ['@/assets/app.css'],
   modules: ['@nuxt/image', '@nuxt/ui', '@nuxtjs/sitemap'],
+  fonts: {
+    defaults: {
+      styles: ['normal'],
+      subsets: ['latin'],
+    },
+  },
   site: {
     url: 'https://reireias.dev',
     name: 'reireias.dev',
