@@ -3,7 +3,6 @@ import process from 'node:process'
 
 const REPORT_ROOT = '.unlighthouse/reports'
 const PUBLIC_PERFORMANCE_BUDGET = 60
-const SANDBOX_PERFORMANCE_BUDGET = 55
 const SEO_BUDGET = 100
 const INDEXABLE_ROUTES = new Set([
   '/',
@@ -23,11 +22,6 @@ const getReportPath = (routePath) => {
   const relativePath = routePath === '/' ? '' : routePath.replace(/^\//, '')
   return `${REPORT_ROOT}/${relativePath}lighthouse.json`
 }
-
-const getBudget = (routePath) =>
-  routePath.startsWith('/sandbox/') || routePath === '/sandbox/'
-    ? SANDBOX_PERFORMANCE_BUDGET
-    : PUBLIC_PERFORMANCE_BUDGET
 
 const simpleReports = JSON.parse(
   await readFile('.unlighthouse/ci-result.json', 'utf8')
@@ -50,12 +44,10 @@ const rows = await Promise.all(
     const report = JSON.parse(
       await readFile(getReportPath(simpleReport.path), 'utf8')
     )
-    const budget = getBudget(simpleReport.path)
-
     return {
       path: simpleReport.path,
       performance: simpleReport.performance * 100,
-      budget,
+      budget: PUBLIC_PERFORMANCE_BUDGET,
       seo: simpleReport.seo * 100,
       seoBudget: INDEXABLE_ROUTES.has(simpleReport.path) ? SEO_BUDGET : null,
       fcp: formatMetric(report.audits['first-contentful-paint'], 1000, 's'),
