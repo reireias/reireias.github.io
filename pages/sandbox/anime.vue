@@ -195,171 +195,131 @@
 </template>
 
 <script setup lang="ts">
+import { ref, nextTick } from 'vue'
+import { animate, createMotionPath, stagger } from 'animejs'
+
 definePageMeta({ layout: 'gridless' })
-</script>
 
-<script lang="ts">
-import { defineComponent, ref, nextTick } from 'vue'
-import anime from 'animejs'
-import PageTitle from '@/components/PageTitle.vue'
+const ratio = 0.93
+const loops = 10
+let radius = 200
+const spiralParts = ['M0,200']
+const signs = [
+  ['', '-'],
+  ['', ''],
+  ['-', ''],
+  ['-', '-'],
+]
+for (let loop = 0; loop < loops; loop++) {
+  for (const i of [0, 1, 2, 3]) {
+    spiralParts.push(
+      `a${radius},${radius} 0,0,1 ${signs[i][0]}${radius},${signs[i][1]}${radius}`
+    )
+    radius *= ratio
+  }
+}
+const spiral = spiralParts.join(' ')
+const run1 = ref(false)
+const run2 = ref(false)
+const run3 = ref(false)
+const run4 = ref(false)
 
-export default defineComponent({
-  components: {
-    PageTitle,
-  },
-  setup() {
-    const ratio = 0.93
-    const loops = 10
-    let radius = 200
-    const spiral = ['M0,200']
-    const signs = [
-      ['', '-'],
-      ['', ''],
-      ['-', ''],
-      ['-', '-'],
-    ]
-    for (let loop = 0; loop < loops; loop++) {
-      for (const i of [0, 1, 2, 3]) {
-        spiral.push(
-          `a${radius},${radius} 0,0,1 ${signs[i][0]}${radius},${signs[i][1]}${radius}`
-        )
-        radius *= ratio
-      }
-    }
-    const run1 = ref(false)
-    const run2 = ref(false)
-    const run3 = ref(false)
-    const run4 = ref(false)
+const startAnime1 = async () => {
+  run1.value = true
+  await nextTick()
+  const motionPath = createMotionPath('#anime1 path')
+  animate('#anime1 .el', {
+    ...motionPath,
+    ease: 'linear',
+    duration: 2000,
+    loop: true,
+  })
+}
+const startAnime2 = async () => {
+  run2.value = true
+  await nextTick()
+  for (const i of [1, 2, 3]) {
+    setTimeout(
+      () => {
+        const motionPath = createMotionPath(`#anime2 path.path${i}`)
+        animate(`#anime2 .el${i}`, {
+          ...motionPath,
+          ease: 'linear',
+          duration: 1000,
+          loop: true,
+        })
+      },
+      300 * (i - 1)
+    )
+  }
+}
+const startAnime3 = async () => {
+  run3.value = true
+  await nextTick()
+  const motionPath = createMotionPath(`#anime3 path`)
+  for (const i of [1, 2, 3]) {
+    setTimeout(
+      () => {
+        animate(`#anime3 .el${i}`, {
+          ...motionPath,
+          ease: 'linear',
+          duration: 3000,
+          loop: true,
+        })
+      },
+      1000 * (i - 1)
+    )
+  }
+}
+const startAnime4 = async () => {
+  run4.value = true
+  await nextTick()
+  const motionPath = createMotionPath('#anime4 path')
+  animate('#anime4 .el', {
+    ...motionPath,
+    ease: 'linear',
+    duration: 10000,
+    loop: true,
+  })
+}
+const startAnime5 = () => {
+  animate('#grid1 .el', {
+    scale: [
+      { to: 0.1, ease: 'outSine', duration: 500 },
+      { to: 1, ease: 'inOutQuad', duration: 1200 },
+    ],
+    delay: stagger(200, { grid: [9, 9], from: 'center' }),
+  })
+}
+const startAnime6 = () => {
+  animate('#image1', {
+    scale: [
+      { to: 1.3, ease: 'outSine', duration: 100 },
+      { to: 1, ease: 'inOutQuad', duration: 500 },
+    ],
+  })
+}
+const startAnime7 = () => {
+  animate('#footprints .pad', {
+    scale: [
+      { to: 0, ease: 'linear', duration: 1 },
+      { to: 1, ease: 'inOutElastic', duration: 500 },
+    ],
+    opacity: [
+      { to: 1, ease: 'linear', duration: 1 },
+      { to: 1, ease: 'linear', duration: 500 },
+      { to: 0, ease: 'linear', duration: 1500 },
+    ],
+    delay: stagger(1000),
+  })
+}
 
-    const startAnime1 = async () => {
-      run1.value = true
-      await nextTick()
-      const path = anime.path('#anime1 path')
-      anime({
-        targets: '#anime1 .el',
-        translateX: path('x'),
-        translateY: path('y'),
-        rotate: path('angle'),
-        easing: 'linear',
-        duration: 2000,
-        loop: true,
-      })
-    }
-    const startAnime2 = async () => {
-      run2.value = true
-      await nextTick()
-      for (const i of [1, 2, 3]) {
-        setTimeout(
-          () => {
-            const path = anime.path(`#anime2 path.path${i}`)
-            anime({
-              targets: `#anime2 .el${i}`,
-              translateX: path('x'),
-              translateY: path('y'),
-              rotate: path('angle'),
-              easing: 'linear',
-              duration: 1000,
-              loop: true,
-            })
-          },
-          300 * (i - 1)
-        )
-      }
-    }
-    const startAnime3 = async () => {
-      run3.value = true
-      await nextTick()
-      const path = anime.path(`#anime3 path`)
-      for (const i of [1, 2, 3]) {
-        setTimeout(
-          () => {
-            anime({
-              targets: `#anime3 .el${i}`,
-              translateX: path('x'),
-              translateY: path('y'),
-              rotate: path('angle'),
-              easing: 'linear',
-              duration: 3000,
-              loop: true,
-            })
-          },
-          1000 * (i - 1)
-        )
-      }
-    }
-    const startAnime4 = async () => {
-      run4.value = true
-      await nextTick()
-      const path = anime.path('#anime4 path')
-      anime({
-        targets: '#anime4 .el',
-        translateX: path('x'),
-        translateY: path('y'),
-        rotate: path('angle'),
-        easing: 'linear',
-        duration: 10000,
-        loop: true,
-      })
-    }
-    const startAnime5 = () => {
-      anime({
-        targets: '#grid1 .el',
-        scale: [
-          { value: 0.1, easing: 'easeOutSine', duration: 500 },
-          { value: 1, easing: 'easeInOutQuad', duration: 1200 },
-        ],
-        delay: anime.stagger(200, { grid: [9, 9], from: 'center' }),
-      })
-    }
-    const startAnime6 = () => {
-      anime({
-        targets: '#image1',
-        scale: [
-          { value: 1.3, easing: 'easeOutSine', duration: 100 },
-          { value: 1, easing: 'easeInOutQuad', duration: 500 },
-        ],
-      })
-    }
-    const startAnime7 = () => {
-      anime({
-        targets: '#footprints .pad',
-        scale: [
-          { value: 0, easing: 'linear', duration: 1 },
-          { value: 1, easing: 'easeInOutElastic', duration: 500 },
-        ],
-        opacity: [
-          { value: 1, easing: 'linear', duration: 1 },
-          { value: 1, easing: 'linear', duration: 500 },
-          { value: 0, easing: 'linear', duration: 1500 },
-        ],
-        delay: anime.stagger(1000),
-      })
-    }
-
-    const positions = [
-      { top: 70, left: 150, deg: -90 },
-      { top: 10, left: 20, deg: -90 },
-      { top: 70, left: -110, deg: -90 },
-      { top: 10, left: -240, deg: -90 },
-    ]
-
-    return {
-      spiral: spiral.join(' '),
-      run1,
-      run2,
-      run3,
-      run4,
-      positions,
-      startAnime1,
-      startAnime2,
-      startAnime3,
-      startAnime4,
-      startAnime5,
-      startAnime6,
-      startAnime7,
-    }
-  },
-})
+const positions = [
+  { top: 70, left: 150, deg: -90 },
+  { top: 10, left: 20, deg: -90 },
+  { top: 70, left: -110, deg: -90 },
+  { top: 10, left: -240, deg: -90 },
+]
 </script>
 
 <style lang="scss">
