@@ -49,6 +49,14 @@ export default defineNuxtConfig({
       subsets: ['latin'],
     },
   },
+  image: {
+    domains: [
+      'ogimage.blog.st-hatena.com',
+      'cdn-ak.f.st-hatena.com',
+      'd1.awsstatic.com',
+      'files.speakerdeck.com',
+    ],
+  },
   site: {
     url: 'https://reireias.dev',
     name: 'reireias.dev',
