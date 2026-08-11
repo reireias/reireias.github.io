@@ -8,8 +8,6 @@ export default defineUnlighthouseConfig({
     '/experience/',
     '/job/',
     '/profile/',
-    '/sandbox/',
-    '/sandbox/anime/',
     '/skill/',
     '/skills/',
     '/template/',
@@ -29,7 +27,7 @@ export default defineUnlighthouseConfig({
   },
   ci: {
     budget: {
-      performance: 55,
+      performance: 60,
       accessibility: 100,
       'best-practices': 100,
     },

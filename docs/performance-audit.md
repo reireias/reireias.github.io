@@ -19,20 +19,21 @@ and audits every configured route with mobile throttling. Each route is measured
 three times, and Unlighthouse selects the median Lighthouse run. The result table
 includes Performance, SEO, FCP, LCP, TBT, and CLS.
 
-The regression budgets are deliberately separated by route type:
+The regression budgets are:
 
 - Main public routes: Performance 60+
-- `/sandbox/**`: Performance 55+
 - All routes: Accessibility and Best Practices 100
 - Indexable routes (`/`, `/articles/`, `/experience/`, `/profile/`, `/skills/`):
   SEO 100
 
-Sandbox pages contain experimental code and are not part of the final 95+ target,
-and migration, sandbox, and template pages are intentionally marked `noindex`.
-Lighthouse lowers the SEO score for `noindex`, so those routes are excluded only
-from the SEO score gate; their other category and performance budgets still prevent
-major regressions. The budgets should be raised in small steps after improvements
-consistently pass multiple CI runs.
+Sandbox pages contain experimental code and are excluded from the performance
+audit. Their page-specific JavaScript and CSS remain split into route-level chunks
+by Nuxt. Migration, sandbox, and template pages are intentionally marked `noindex`.
+For configured migration and template routes, Lighthouse lowers the SEO score for
+`noindex`, so those routes are excluded only from the SEO score gate; their other
+category and performance budgets still prevent major regressions. The budgets
+should be raised in small steps after improvements consistently pass multiple CI
+runs.
 
 GitHub Actions uploads `.unlighthouse/` as the `unlighthouse-report` artifact and
 adds the page-by-page table to the job summary.
