@@ -71,7 +71,7 @@
     "postcss-html": "^2.0.0",
     "prettier": "^3.9.6",
     "qs": "^6.15.3",
-    "rulesync": "^16.9.1",
+    "rulesync": "^16.17.0",
     "sass-embedded": "^1.100.0",
     "start-server-and-test": "^3.0.12",
     "stylelint": "^17.14.1",
