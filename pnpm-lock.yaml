@@ -51,8 +51,8 @@ importers:
         specifier: ^4.5.0
         version: 4.5.0
       axios:
-        specifier: ^1.19.0
-        version: 1.19.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+        specifier: ^1.20.0
+        version: 1.20.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
       babel-jest:
         specifier: ^29.7.0
         version: 29.7.0(@babel/core@7.29.7(supports-color@10.2.2))(supports-color@10.2.2)
@@ -160,7 +160,7 @@ importers:
         version: 1.6.4
       unlighthouse:
         specifier: ^0.18.0
-        version: 0.18.0(078a5798b4a077a3822d7826a676cd6c)
+        version: 0.18.0(6a320a7dcc157315a31a9a33b32c8f36)
       vue:
         specifier: 3.5.41
         version: 3.5.41(typescript@5.9.3)
@@ -3752,8 +3752,8 @@ packages:
     resolution: {integrity: sha512-UzGt8zg7Ny8djbYMhxl2zuEevVa7r2gJjYY5Lwr1xM7+XU2nd6CkIWFTVcCIbAP63vSz71NaVyyuSk9lHKcy0A==}
     engines: {node: '>=4'}
 
-  axios@1.19.0:
-    resolution: {integrity: sha512-ht/iuYZXEjFxLH/Hkezgd7m6JKlHHXEUSneaDz8uZe1Gj5QZtCnpyDsckvAiEnT89OEbCLmnte4R4sn7P0EKFw==}
+  axios@1.20.0:
+    resolution: {integrity: sha512-r8aOh8j9cGKpgQAqpzrUHnSIc6a59Y3Xf/cv8sy1DrHCkZHzQGEuoq1tARk6qSyDdtQGSDgpb9kFlruzPvrgwg==}
 
   b4a@1.8.1:
     resolution: {integrity: sha512-aiqre1Nr0B/6DgE2N5vwTc+2/oQZ4Wh1t4NznYY4E00y8LCt6NqdRv81so00oo27D8MVKTpUa/MwUUtBLXCoDw==}
@@ -4866,6 +4866,7 @@ packages:
   eslint@9.39.5:
     resolution: {integrity: sha512-DgZS62aPLXKlnxILS/AYCoRvHaZeXceIzlXPkkGGzJWSow1aEk0lbTlxUSlyjC8jcaKxAdOnTDz+o1JFSBsyjw==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
+    deprecated: This version is no longer supported. Please see https://eslint.org/version-support for other options.
     hasBin: true
     peerDependencies:
       jiti: '*'
@@ -11442,7 +11443,7 @@ snapshots:
       rc9: 3.0.1
       std-env: 4.2.0
 
-  '@nuxt/ui@4.10.0(4427c2322f18cae846ae6b149d5fa45a)':
+  '@nuxt/ui@4.10.0(5424a352f5d48f658d9894e3b8373ca0)':
     dependencies:
       '@floating-ui/dom': 1.8.0
       '@iconify/vue': 5.0.1(vue@3.5.41(typescript@5.9.3))
@@ -11475,7 +11476,7 @@ snapshots:
       '@tiptap/vue-3': 3.29.2(@floating-ui/dom@1.8.0)(@tiptap/core@3.29.2(@tiptap/pm@3.29.2))(@tiptap/pm@3.29.2)(vue@3.5.41(typescript@5.9.3))
       '@unhead/vue': 2.1.17(vue@3.5.41(typescript@5.9.3))
       '@vueuse/core': 14.4.0(vue@3.5.41(typescript@5.9.3))
-      '@vueuse/integrations': 14.4.0(axios@1.19.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2))(fuse.js@7.5.0)(vue@3.5.41(typescript@5.9.3))
+      '@vueuse/integrations': 14.4.0(axios@1.20.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2))(fuse.js@7.5.0)(vue@3.5.41(typescript@5.9.3))
       '@vueuse/shared': 14.4.0(vue@3.5.41(typescript@5.9.3))
       colortranslator: 5.0.0
       consola: 3.4.2
@@ -12890,12 +12891,12 @@ snapshots:
       - rollup
       - unloader
 
-  '@unlighthouse/cli@0.18.0(43eed38fc63629324268a4e28dae9a76)':
+  '@unlighthouse/cli@0.18.0(21ca90272daec37c4f23b489ac3e0271)':
     dependencies:
       '@lhci/utils': 0.15.1(supports-color@10.2.2)
-      '@unlighthouse/client': 0.18.0(dd11eba9e48ee7a40eff0c143424c2af)
-      '@unlighthouse/core': 0.18.0(889b5d26cb981e2bd9f5ef33acdb5085)
-      '@unlighthouse/server': 0.18.0(43eed38fc63629324268a4e28dae9a76)
+      '@unlighthouse/client': 0.18.0(646eceee82912f26b53ed53242569840)
+      '@unlighthouse/core': 0.18.0(bdf2567d19cb6c1dda70d8641a99331a)
+      '@unlighthouse/server': 0.18.0(21ca90272daec37c4f23b489ac3e0271)
       cac: 7.0.0
       consola: 3.4.2
       defu: 6.1.7
@@ -12994,9 +12995,9 @@ snapshots:
       - yup
       - zod
 
-  '@unlighthouse/client@0.18.0(dd11eba9e48ee7a40eff0c143424c2af)':
+  '@unlighthouse/client@0.18.0(646eceee82912f26b53ed53242569840)':
     dependencies:
-      '@nuxt/ui': 4.10.0(4427c2322f18cae846ae6b149d5fa45a)
+      '@nuxt/ui': 4.10.0(5424a352f5d48f658d9894e3b8373ca0)
       '@tailwindcss/vite': 4.3.3(vite@8.2.1(@types/node@26.1.2)(esbuild@0.28.1)(jiti@2.7.0)(sass-embedded@1.100.0)(sass@1.100.0)(terser@5.49.2)(yaml@2.9.0))
       defu: 6.1.7
       fuse.js: 7.5.0
@@ -13082,11 +13083,11 @@ snapshots:
       - yup
       - zod
 
-  '@unlighthouse/core@0.18.0(889b5d26cb981e2bd9f5ef33acdb5085)':
+  '@unlighthouse/core@0.18.0(bdf2567d19cb6c1dda70d8641a99331a)':
     dependencies:
       '@clack/prompts': 1.7.0
       '@puppeteer/browsers': 3.1.0(yauzl@2.10.0)
-      '@unlighthouse/client': 0.18.0(dd11eba9e48ee7a40eff0c143424c2af)
+      '@unlighthouse/client': 0.18.0(646eceee82912f26b53ed53242569840)
       c12: 3.3.4(magicast@0.5.4)
       chrome-launcher: 1.2.1(supports-color@10.2.2)
       consola: 3.4.2
@@ -13196,9 +13197,9 @@ snapshots:
       - yup
       - zod
 
-  '@unlighthouse/server@0.18.0(43eed38fc63629324268a4e28dae9a76)':
+  '@unlighthouse/server@0.18.0(21ca90272daec37c4f23b489ac3e0271)':
     dependencies:
-      '@unlighthouse/core': 0.18.0(889b5d26cb981e2bd9f5ef33acdb5085)
+      '@unlighthouse/core': 0.18.0(bdf2567d19cb6c1dda70d8641a99331a)
       h3: 1.15.11
       listhen: 1.10.1(@parcel/watcher@2.6.0)(srvx@0.11.22)
     transitivePeerDependencies:
@@ -13484,13 +13485,13 @@ snapshots:
       '@vueuse/shared': 14.4.0(vue@3.5.41(typescript@5.9.3))
       vue: 3.5.41(typescript@5.9.3)
 
-  '@vueuse/integrations@14.4.0(axios@1.19.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2))(fuse.js@7.5.0)(vue@3.5.41(typescript@5.9.3))':
+  '@vueuse/integrations@14.4.0(axios@1.20.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2))(fuse.js@7.5.0)(vue@3.5.41(typescript@5.9.3))':
     dependencies:
       '@vueuse/core': 14.4.0(vue@3.5.41(typescript@5.9.3))
       '@vueuse/shared': 14.4.0(vue@3.5.41(typescript@5.9.3))
       vue: 3.5.41(typescript@5.9.3)
     optionalDependencies:
-      axios: 1.19.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      axios: 1.20.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
       fuse.js: 7.5.0
 
   '@vueuse/metadata@10.11.1': {}
@@ -13739,7 +13740,7 @@ snapshots:
 
   axe-core@4.13.0: {}
 
-  axios@1.19.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2):
+  axios@1.20.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2):
     dependencies:
       follow-redirects: 1.16.0(debug@4.4.3(supports-color@10.2.2))
       form-data: 4.0.6
@@ -17782,7 +17783,7 @@ snapshots:
 
   pipenet@1.4.2(supports-color@10.2.2):
     dependencies:
-      axios: 1.19.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      axios: 1.20.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
       debug: 4.4.3(supports-color@10.2.2)
       human-readable-ids: 1.0.4
       koa: 3.2.1
@@ -19585,11 +19586,11 @@ snapshots:
 
   universalify@0.2.0: {}
 
-  unlighthouse@0.18.0(078a5798b4a077a3822d7826a676cd6c):
+  unlighthouse@0.18.0(6a320a7dcc157315a31a9a33b32c8f36):
     dependencies:
-      '@unlighthouse/cli': 0.18.0(43eed38fc63629324268a4e28dae9a76)
-      '@unlighthouse/client': 0.18.0(dd11eba9e48ee7a40eff0c143424c2af)
-      '@unlighthouse/core': 0.18.0(889b5d26cb981e2bd9f5ef33acdb5085)
+      '@unlighthouse/cli': 0.18.0(21ca90272daec37c4f23b489ac3e0271)
+      '@unlighthouse/client': 0.18.0(646eceee82912f26b53ed53242569840)
+      '@unlighthouse/core': 0.18.0(bdf2567d19cb6c1dda70d8641a99331a)
     optionalDependencies:
       puppeteer: 25.5.0(yauzl@2.10.0)
       vue: 3.5.41(typescript@5.9.3)
@@ -20009,7 +20010,7 @@ snapshots:
 
   wait-on@9.1.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2):
     dependencies:
-      axios: 1.19.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
+      axios: 1.20.0(debug@4.4.3(supports-color@10.2.2))(supports-color@10.2.2)
       joi: 18.2.3
       lodash: 4.18.1
       minimist: 1.2.8
