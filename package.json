@@ -67,7 +67,7 @@
     "knip": "^6.32.0",
     "lefthook": "^2.1.10",
     "lint-staged": "17.3.0",
-    "nuxt": "^4.5.2",
+    "nuxt": "^4.6.2",
     "postcss-html": "^2.0.0",
     "prettier": "^3.9.6",
     "qs": "^6.15.3",
